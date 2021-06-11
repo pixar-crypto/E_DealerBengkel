@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17FB66C7-82ED-4DB9-B266-B6CA2098CB94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_DealerBengkel</RootNamespace>
+    <AssemblyName>E_DealerBengkel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Master.Designer.cs">
+      <DependentUpon>Admin_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir_Transaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir_Transaksi.Designer.cs">
+      <DependentUpon>Kasir_Transaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LupaPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LupaPassword.Designer.cs">
+      <DependentUpon>LupaPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Report.Designer.cs">
+      <DependentUpon>Manager_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\CRUD_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\CRUD_Employee.Designer.cs">
+      <DependentUpon>CRUD_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Member\CRUD_Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Member\CRUD_Member.Designer.cs">
+      <DependentUpon>CRUD_Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Posisi\CRUD_Posisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Posisi\CRUD_Posisi.Designer.cs">
+      <DependentUpon>CRUD_Posisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Supplier\CRUD_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Supplier\CRUD_Supplier.Designer.cs">
+      <DependentUpon>CRUD_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VroomDGDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VroomDGDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin_Master.resx">
+      <DependentUpon>Admin_Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir_Transaksi.resx">
+      <DependentUpon>Kasir_Transaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LupaPassword.resx">
+      <DependentUpon>LupaPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Report.resx">
+      <DependentUpon>Manager_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\CRUD_Employee.resx">
+      <DependentUpon>CRUD_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Member\CRUD_Member.resx">
+      <DependentUpon>CRUD_Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Posisi\CRUD_Posisi.resx">
+      <DependentUpon>CRUD_Posisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Supplier\CRUD_Supplier.resx">
+      <DependentUpon>CRUD_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VroomDGDataSet.xsc">
+      <DependentUpon>VroomDGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VroomDGDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VroomDGDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VroomDGDataSet.xss">
+      <DependentUpon>VroomDGDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pictures\" />
+    <Folder Include="Reports\" />
+    <Folder Include="Transaksi\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
