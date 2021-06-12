@@ -142,6 +142,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -171,6 +172,33 @@
     <Folder Include="Pictures\" />
     <Folder Include="Reports\" />
     <Folder Include="Transaksi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Cancel-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_management_30px_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_collaborator_male_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_member_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_car_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_quad_bike_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_request_service_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_gear_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_management_30px_9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
