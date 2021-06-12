@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace E_DealerBengkel
         public Admin_Master()
         {
             InitializeComponent();
+            tampilKaryawan();
+            tampilMember();
 
             timer.Tick += new EventHandler(timer_Tick);
             //1000 = 1 detik
@@ -78,6 +81,69 @@ namespace E_DealerBengkel
             CRUD_Supplier M_Supplier = new CRUD_Supplier();
             M_Supplier.Show();
             this.Hide();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Login logn = new Login();
+            logn.Show();
+            this.Hide();
+        }
+
+        public void tampilMember()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tMember", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                txtMember.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
+        }
+
+        public void tampilKaryawan()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tKaryawan", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                txtKaryawan.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
         }
     }
 }

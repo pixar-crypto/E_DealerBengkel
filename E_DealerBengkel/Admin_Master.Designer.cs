@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Master));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -66,7 +65,6 @@
             this.BtnPosisi = new System.Windows.Forms.Button();
             this.BtnKaryawan = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LogoutIcon = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -86,6 +84,9 @@
             this.txtMobil = new System.Windows.Forms.TextBox();
             this.txtMotor = new System.Windows.Forms.TextBox();
             this.txtSukuCadang = new System.Windows.Forms.TextBox();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -101,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -115,8 +115,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.LogoutIcon);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(-9, -2);
@@ -124,20 +123,11 @@
             this.panel1.Size = new System.Drawing.Size(989, 38);
             this.panel1.TabIndex = 1;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(52, 8);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 19);
-            this.label10.TabIndex = 117;
-            this.label10.Text = "LOG-OUT";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SlateGray;
+            this.panel2.Controls.Add(this.button12);
+            this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.BtnSupplier);
@@ -149,9 +139,10 @@
             this.panel2.Controls.Add(this.BtnPosisi);
             this.panel2.Controls.Add(this.BtnKaryawan);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 34);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 593);
+            this.panel2.Size = new System.Drawing.Size(200, 627);
             this.panel2.TabIndex = 2;
             // 
             // panel5
@@ -451,7 +442,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(200, 32);
             this.button6.TabIndex = 64;
-            this.button6.Text = "     MOBIL";
+            this.button6.Text = "    MOBIL";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -468,7 +459,7 @@
             this.BtnSupplier.Name = "BtnSupplier";
             this.BtnSupplier.Size = new System.Drawing.Size(200, 32);
             this.BtnSupplier.TabIndex = 63;
-            this.BtnSupplier.Text = "     SUPPLIER";
+            this.BtnSupplier.Text = "    SUPPLIER";
             this.BtnSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSupplier.UseVisualStyleBackColor = true;
@@ -486,7 +477,7 @@
             this.BtnSukuCadang.Name = "BtnSukuCadang";
             this.BtnSukuCadang.Size = new System.Drawing.Size(200, 32);
             this.BtnSukuCadang.TabIndex = 62;
-            this.BtnSukuCadang.Text = "     SUKU CADANG";
+            this.BtnSukuCadang.Text = "    SUKU CADANG";
             this.BtnSukuCadang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSukuCadang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSukuCadang.UseVisualStyleBackColor = true;
@@ -503,7 +494,7 @@
             this.BtnServices.Name = "BtnServices";
             this.BtnServices.Size = new System.Drawing.Size(200, 32);
             this.BtnServices.TabIndex = 61;
-            this.BtnServices.Text = "     SERVICES";
+            this.BtnServices.Text = "    SERVICES";
             this.BtnServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnServices.UseVisualStyleBackColor = true;
@@ -520,7 +511,7 @@
             this.BtnMotor.Name = "BtnMotor";
             this.BtnMotor.Size = new System.Drawing.Size(200, 32);
             this.BtnMotor.TabIndex = 60;
-            this.BtnMotor.Text = "     MOTOR";
+            this.BtnMotor.Text = "    MOTOR";
             this.BtnMotor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMotor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnMotor.UseVisualStyleBackColor = true;
@@ -554,7 +545,7 @@
             this.BtnMember.Name = "BtnMember";
             this.BtnMember.Size = new System.Drawing.Size(200, 32);
             this.BtnMember.TabIndex = 58;
-            this.BtnMember.Text = "     MEMBER";
+            this.BtnMember.Text = "    MEMBER";
             this.BtnMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnMember.UseVisualStyleBackColor = true;
@@ -572,7 +563,7 @@
             this.BtnPosisi.Name = "BtnPosisi";
             this.BtnPosisi.Size = new System.Drawing.Size(200, 32);
             this.BtnPosisi.TabIndex = 57;
-            this.BtnPosisi.Text = "     POSISI";
+            this.BtnPosisi.Text = "    POSISI";
             this.BtnPosisi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPosisi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnPosisi.UseVisualStyleBackColor = true;
@@ -590,7 +581,7 @@
             this.BtnKaryawan.Name = "BtnKaryawan";
             this.BtnKaryawan.Size = new System.Drawing.Size(200, 36);
             this.BtnKaryawan.TabIndex = 56;
-            this.BtnKaryawan.Text = "     KARYAWAN";
+            this.BtnKaryawan.Text = "    KARYAWAN";
             this.BtnKaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnKaryawan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnKaryawan.UseVisualStyleBackColor = true;
@@ -605,17 +596,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
-            // 
-            // LogoutIcon
-            // 
-            this.LogoutIcon.Image = ((System.Drawing.Image)(resources.GetObject("LogoutIcon.Image")));
-            this.LogoutIcon.Location = new System.Drawing.Point(18, 3);
-            this.LogoutIcon.Name = "LogoutIcon";
-            this.LogoutIcon.Size = new System.Drawing.Size(28, 30);
-            this.LogoutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LogoutIcon.TabIndex = 116;
-            this.LogoutIcon.TabStop = false;
-            this.LogoutIcon.Click += new System.EventHandler(this.LogoutIcon_Click);
             // 
             // button1
             // 
@@ -742,12 +722,13 @@
             // 
             this.txtMember.BackColor = System.Drawing.Color.LightSlateGray;
             this.txtMember.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMember.Enabled = false;
             this.txtMember.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtMember.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtMember.Location = new System.Drawing.Point(37, 93);
+            this.txtMember.Location = new System.Drawing.Point(27, 93);
             this.txtMember.Multiline = true;
             this.txtMember.Name = "txtMember";
-            this.txtMember.Size = new System.Drawing.Size(50, 41);
+            this.txtMember.Size = new System.Drawing.Size(60, 41);
             this.txtMember.TabIndex = 125;
             this.txtMember.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -755,12 +736,13 @@
             // 
             this.txtKaryawan.BackColor = System.Drawing.Color.LightSlateGray;
             this.txtKaryawan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKaryawan.Enabled = false;
             this.txtKaryawan.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtKaryawan.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtKaryawan.Location = new System.Drawing.Point(36, 93);
+            this.txtKaryawan.Location = new System.Drawing.Point(26, 93);
             this.txtKaryawan.Multiline = true;
             this.txtKaryawan.Name = "txtKaryawan";
-            this.txtKaryawan.Size = new System.Drawing.Size(50, 41);
+            this.txtKaryawan.Size = new System.Drawing.Size(60, 41);
             this.txtKaryawan.TabIndex = 126;
             this.txtKaryawan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -768,12 +750,13 @@
             // 
             this.txtService.BackColor = System.Drawing.Color.LightSlateGray;
             this.txtService.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtService.Enabled = false;
             this.txtService.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtService.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtService.Location = new System.Drawing.Point(38, 94);
+            this.txtService.Location = new System.Drawing.Point(28, 94);
             this.txtService.Multiline = true;
             this.txtService.Name = "txtService";
-            this.txtService.Size = new System.Drawing.Size(50, 41);
+            this.txtService.Size = new System.Drawing.Size(60, 41);
             this.txtService.TabIndex = 127;
             this.txtService.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -781,12 +764,13 @@
             // 
             this.txtSupplier.BackColor = System.Drawing.Color.LightSlateGray;
             this.txtSupplier.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplier.Enabled = false;
             this.txtSupplier.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtSupplier.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtSupplier.Location = new System.Drawing.Point(38, 94);
+            this.txtSupplier.Location = new System.Drawing.Point(28, 94);
             this.txtSupplier.Multiline = true;
             this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.Size = new System.Drawing.Size(50, 41);
+            this.txtSupplier.Size = new System.Drawing.Size(60, 41);
             this.txtSupplier.TabIndex = 128;
             this.txtSupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -794,12 +778,13 @@
             // 
             this.txtPosisi.BackColor = System.Drawing.Color.SteelBlue;
             this.txtPosisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPosisi.Enabled = false;
             this.txtPosisi.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtPosisi.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtPosisi.Location = new System.Drawing.Point(38, 92);
+            this.txtPosisi.Location = new System.Drawing.Point(28, 92);
             this.txtPosisi.Multiline = true;
             this.txtPosisi.Name = "txtPosisi";
-            this.txtPosisi.Size = new System.Drawing.Size(50, 41);
+            this.txtPosisi.Size = new System.Drawing.Size(60, 41);
             this.txtPosisi.TabIndex = 127;
             this.txtPosisi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -807,12 +792,13 @@
             // 
             this.txtMobil.BackColor = System.Drawing.Color.SteelBlue;
             this.txtMobil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMobil.Enabled = false;
             this.txtMobil.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtMobil.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtMobil.Location = new System.Drawing.Point(38, 91);
+            this.txtMobil.Location = new System.Drawing.Point(28, 91);
             this.txtMobil.Multiline = true;
             this.txtMobil.Name = "txtMobil";
-            this.txtMobil.Size = new System.Drawing.Size(50, 41);
+            this.txtMobil.Size = new System.Drawing.Size(60, 41);
             this.txtMobil.TabIndex = 128;
             this.txtMobil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -820,12 +806,13 @@
             // 
             this.txtMotor.BackColor = System.Drawing.Color.SteelBlue;
             this.txtMotor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMotor.Enabled = false;
             this.txtMotor.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtMotor.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtMotor.Location = new System.Drawing.Point(36, 94);
+            this.txtMotor.Location = new System.Drawing.Point(26, 94);
             this.txtMotor.Multiline = true;
             this.txtMotor.Name = "txtMotor";
-            this.txtMotor.Size = new System.Drawing.Size(50, 41);
+            this.txtMotor.Size = new System.Drawing.Size(60, 41);
             this.txtMotor.TabIndex = 128;
             this.txtMotor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -833,14 +820,61 @@
             // 
             this.txtSukuCadang.BackColor = System.Drawing.Color.SteelBlue;
             this.txtSukuCadang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSukuCadang.Enabled = false;
             this.txtSukuCadang.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
             this.txtSukuCadang.ForeColor = System.Drawing.Color.Honeydew;
-            this.txtSukuCadang.Location = new System.Drawing.Point(37, 94);
+            this.txtSukuCadang.Location = new System.Drawing.Point(27, 94);
             this.txtSukuCadang.Multiline = true;
             this.txtSukuCadang.Name = "txtSukuCadang";
-            this.txtSukuCadang.Size = new System.Drawing.Size(50, 41);
+            this.txtSukuCadang.Size = new System.Drawing.Size(60, 41);
             this.txtSukuCadang.TabIndex = 128;
             this.txtSukuCadang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 592);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(200, 32);
+            this.btnLogOut.TabIndex = 126;
+            this.btnLogOut.Text = "    LOG-OUT";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // button12
+            // 
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(0, 471);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(254, 35);
+            this.button12.TabIndex = 127;
+            this.button12.Text = "    TENTANG APLIKASI";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Honeydew;
+            this.label3.Location = new System.Drawing.Point(211, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 31);
+            this.label3.TabIndex = 128;
+            this.label3.Text = "Halaman Admin";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Admin_Master
             // 
@@ -876,7 +910,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Master";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -900,7 +933,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoutIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -942,8 +974,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox LogoutIcon;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel3;
@@ -972,5 +1002,8 @@
         private System.Windows.Forms.TextBox txtSukuCadang;
         private System.Windows.Forms.TextBox txtSupplier;
         private System.Windows.Forms.TextBox txtMobil;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button12;
     }
 }
