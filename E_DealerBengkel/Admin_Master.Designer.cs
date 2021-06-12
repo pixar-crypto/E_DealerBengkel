@@ -120,7 +120,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(-9, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(989, 38);
+            this.panel1.Size = new System.Drawing.Size(1032, 38);
             this.panel1.TabIndex = 1;
             // 
             // panel2
@@ -150,7 +150,7 @@
             this.panel5.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel5.Controls.Add(this.txtKaryawan);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(245, 177);
+            this.panel5.Location = new System.Drawing.Point(271, 183);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(114, 149);
             this.panel5.TabIndex = 107;
@@ -160,7 +160,7 @@
             this.panel6.BackColor = System.Drawing.Color.SteelBlue;
             this.panel6.Controls.Add(this.txtPosisi);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(430, 176);
+            this.panel6.Location = new System.Drawing.Point(456, 182);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(114, 149);
             this.panel6.TabIndex = 109;
@@ -170,7 +170,7 @@
             this.panel8.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel8.Controls.Add(this.txtMember);
             this.panel8.Controls.Add(this.pictureBox6);
-            this.panel8.Location = new System.Drawing.Point(622, 177);
+            this.panel8.Location = new System.Drawing.Point(648, 183);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(114, 149);
             this.panel8.TabIndex = 110;
@@ -180,7 +180,7 @@
             this.panel7.BackColor = System.Drawing.Color.SteelBlue;
             this.panel7.Controls.Add(this.txtMotor);
             this.panel7.Controls.Add(this.pictureBox8);
-            this.panel7.Location = new System.Drawing.Point(245, 382);
+            this.panel7.Location = new System.Drawing.Point(271, 388);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(114, 149);
             this.panel7.TabIndex = 111;
@@ -190,7 +190,7 @@
             this.panel10.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel10.Controls.Add(this.txtService);
             this.panel10.Controls.Add(this.pictureBox9);
-            this.panel10.Location = new System.Drawing.Point(430, 382);
+            this.panel10.Location = new System.Drawing.Point(456, 388);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(114, 149);
             this.panel10.TabIndex = 112;
@@ -200,7 +200,7 @@
             this.panel9.BackColor = System.Drawing.Color.SteelBlue;
             this.panel9.Controls.Add(this.txtSukuCadang);
             this.panel9.Controls.Add(this.pictureBox10);
-            this.panel9.Location = new System.Drawing.Point(622, 382);
+            this.panel9.Location = new System.Drawing.Point(648, 388);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(114, 149);
             this.panel9.TabIndex = 113;
@@ -210,7 +210,7 @@
             this.panel11.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel11.Controls.Add(this.txtSupplier);
             this.panel11.Controls.Add(this.pictureBox11);
-            this.panel11.Location = new System.Drawing.Point(803, 382);
+            this.panel11.Location = new System.Drawing.Point(829, 388);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(114, 149);
             this.panel11.TabIndex = 114;
@@ -222,7 +222,7 @@
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(677, 41);
+            this.panel4.Location = new System.Drawing.Point(727, 41);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
@@ -248,20 +248,19 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(319, 65);
+            this.label1.Location = new System.Drawing.Point(301, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 35);
             this.label1.TabIndex = 117;
-            this.label1.Text = "VROOM! DnG";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Text = "VROOM! D&&G";
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(329, 100);
+            this.label9.Location = new System.Drawing.Point(301, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 25);
             this.label9.TabIndex = 118;
@@ -273,7 +272,7 @@
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Controls.Add(this.txtMobil);
             this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Location = new System.Drawing.Point(803, 177);
+            this.panel3.Location = new System.Drawing.Point(829, 183);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(114, 149);
             this.panel3.TabIndex = 110;
@@ -286,7 +285,7 @@
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Honeydew;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(228, 331);
+            this.button2.Location = new System.Drawing.Point(254, 337);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 33);
             this.button2.TabIndex = 64;
@@ -302,7 +301,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(413, 331);
+            this.button4.Location = new System.Drawing.Point(439, 337);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(145, 33);
             this.button4.TabIndex = 64;
@@ -317,7 +316,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(605, 332);
+            this.button5.Location = new System.Drawing.Point(631, 338);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(145, 33);
             this.button5.TabIndex = 64;
@@ -332,7 +331,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(785, 332);
+            this.button7.Location = new System.Drawing.Point(811, 338);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(145, 33);
             this.button7.TabIndex = 119;
@@ -347,7 +346,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(228, 537);
+            this.button8.Location = new System.Drawing.Point(254, 543);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(145, 33);
             this.button8.TabIndex = 120;
@@ -362,7 +361,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(413, 537);
+            this.button9.Location = new System.Drawing.Point(439, 543);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(145, 33);
             this.button9.TabIndex = 121;
@@ -377,7 +376,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.Location = new System.Drawing.Point(607, 537);
+            this.button10.Location = new System.Drawing.Point(633, 543);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(145, 33);
             this.button10.TabIndex = 122;
@@ -392,7 +391,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button11.Location = new System.Drawing.Point(785, 537);
+            this.button11.Location = new System.Drawing.Point(811, 543);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(145, 33);
             this.button11.TabIndex = 123;
@@ -604,7 +603,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(943, 2);
+            this.button1.Location = new System.Drawing.Point(999, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 34);
@@ -619,7 +618,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(908, 2);
+            this.button3.Location = new System.Drawing.Point(964, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 34);
@@ -702,7 +701,7 @@
             this.pictureBox12.BackColor = System.Drawing.Color.SlateGray;
             this.pictureBox12.Location = new System.Drawing.Point(206, 149);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(750, 1);
+            this.pictureBox12.Size = new System.Drawing.Size(800, 1);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 124;
             this.pictureBox12.TabStop = false;
@@ -869,7 +868,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Honeydew;
-            this.label3.Location = new System.Drawing.Point(211, 2);
+            this.label3.Location = new System.Drawing.Point(215, 2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 31);
             this.label3.TabIndex = 128;
@@ -881,7 +880,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(972, 627);
+            this.ClientSize = new System.Drawing.Size(1019, 627);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -909,6 +908,7 @@
             this.Name = "Admin_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Master";
+            this.Load += new System.EventHandler(this.Admin_Master_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

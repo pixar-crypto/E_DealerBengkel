@@ -119,8 +119,9 @@ namespace E_DealerBengkel.Master.Employee
 
         private void CRUD_Employee_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vroomDGDataSet.tPosisi' table. You can move, or remove it, as needed.
-            this.tPosisiTableAdapter.Fill(this.vroomDGDataSet.tPosisi);
+            // TODO: This line of code loads data into the 'vroomDGDataSet1.tPosisi' table. You can move, or remove it, as needed.
+            this.tPosisiTableAdapter1.Fill(this.vroomDGDataSet1.tPosisi);
+
 
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
 
@@ -981,6 +982,36 @@ namespace E_DealerBengkel.Master.Employee
             lbMataTutup.Visible = false;
             CbStatus.Text = " - PILIH STATUS -";
             CbPosisi.Text = " - PILIH POSISI -";
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

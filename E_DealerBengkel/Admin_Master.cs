@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
@@ -144,6 +145,11 @@ namespace E_DealerBengkel
             {
                 MessageBox.Show(xcp.ToString());
             }
+        }
+
+        private void Admin_Master_Load(object sender, EventArgs e)
+        {
+            lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
         }
     }
 }
