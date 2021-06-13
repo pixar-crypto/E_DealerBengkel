@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Employee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
@@ -42,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbWaktu = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,8 +69,8 @@
             this.label29 = new System.Windows.Forms.Label();
             this.TxtAlamat = new System.Windows.Forms.TextBox();
             this.CbPosisi = new System.Windows.Forms.ComboBox();
-            this.tPosisiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
+            this.tPosisiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vroomDGDataSet1 = new E_DealerBengkel.VroomDGDataSet1();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.TxtUsername = new System.Windows.Forms.TextBox();
@@ -75,28 +78,29 @@
             this.label26 = new System.Windows.Forms.Label();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.TxtNoTelp = new System.Windows.Forms.TextBox();
+            this.tPosisiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
             this.lbJudul = new System.Windows.Forms.Label();
             this.tPosisiTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tPosisiTableAdapter();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.vroomDGDataSet1 = new E_DealerBengkel.VroomDGDataSet1();
-            this.tPosisiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tPosisiTableAdapter1 = new E_DealerBengkel.VroomDGDataSet1TableAdapters.tPosisiTableAdapter();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbMataBuka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbMataTutup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKaryawan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource1)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +114,17 @@
             this.panel1.Size = new System.Drawing.Size(1032, 38);
             this.panel1.TabIndex = 2;
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Honeydew;
+            this.label6.Location = new System.Drawing.Point(207, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(300, 31);
+            this.label6.TabIndex = 129;
+            this.label6.Text = "Halaman Admin - Master Karyawan";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -117,8 +132,8 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(990, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(985, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 34);
             this.button1.TabIndex = 4;
@@ -132,8 +147,8 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(955, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(950, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 34);
             this.button3.TabIndex = 5;
@@ -142,16 +157,26 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SlateGray;
-            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel2.Controls.Add(this.BtnKembali);
             this.panel2.Controls.Add(this.BtnUbah);
             this.panel2.Controls.Add(this.BtnTambah);
+            this.panel2.Controls.Add(this.panel12);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 627);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(47, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(108, 97);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 65;
+            this.pictureBox4.TabStop = false;
             // 
             // BtnKembali
             // 
@@ -209,9 +234,10 @@
             // 
             // label9
             // 
+            this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(308, 94);
+            this.label9.Location = new System.Drawing.Point(301, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 25);
             this.label9.TabIndex = 121;
@@ -220,9 +246,10 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(308, 59);
+            this.label1.Location = new System.Drawing.Point(301, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 35);
             this.label1.TabIndex = 120;
@@ -230,8 +257,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(222, 59);
+            this.pictureBox2.Location = new System.Drawing.Point(215, 56);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,16 +268,25 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
-            this.panel4.Location = new System.Drawing.Point(746, 46);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(727, 46);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(255, 93);
+            this.panel4.Size = new System.Drawing.Size(281, 93);
             this.panel4.TabIndex = 122;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 116;
+            this.pictureBox3.TabStop = false;
             // 
             // lbWaktu
             // 
@@ -271,7 +308,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.BtnClear);
             this.panel3.Controls.Add(this.BtnHapus);
             this.panel3.Controls.Add(this.BtnSimpan);
@@ -300,7 +338,7 @@
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.TxtPassword);
             this.panel3.Controls.Add(this.TxtNoTelp);
-            this.panel3.Location = new System.Drawing.Point(222, 157);
+            this.panel3.Location = new System.Drawing.Point(218, 209);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(779, 384);
             this.panel3.TabIndex = 123;
@@ -524,14 +562,14 @@
             this.dgvKaryawan.AllowUserToResizeRows = false;
             this.dgvKaryawan.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvKaryawan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKaryawan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKaryawan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKaryawan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKaryawan.Location = new System.Drawing.Point(354, 48);
             this.dgvKaryawan.Name = "dgvKaryawan";
@@ -576,15 +614,15 @@
             this.CbPosisi.TabIndex = 50;
             this.CbPosisi.ValueMember = "id_posisi";
             // 
-            // tPosisiBindingSource
+            // tPosisiBindingSource1
             // 
-            this.tPosisiBindingSource.DataMember = "tPosisi";
-            this.tPosisiBindingSource.DataSource = this.vroomDGDataSet;
+            this.tPosisiBindingSource1.DataMember = "tPosisi";
+            this.tPosisiBindingSource1.DataSource = this.vroomDGDataSet1;
             // 
-            // vroomDGDataSet
+            // vroomDGDataSet1
             // 
-            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
-            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.vroomDGDataSet1.DataSetName = "VroomDGDataSet1";
+            this.vroomDGDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TxtEmail
             // 
@@ -658,11 +696,21 @@
             this.TxtNoTelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TxtNoTelp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNoTelp_KeyPress);
             // 
+            // tPosisiBindingSource
+            // 
+            this.tPosisiBindingSource.DataMember = "tPosisi";
+            this.tPosisiBindingSource.DataSource = this.vroomDGDataSet;
+            // 
+            // vroomDGDataSet
+            // 
+            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
+            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lbJudul
             // 
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(475, 140);
+            this.lbJudul.Location = new System.Drawing.Point(474, 171);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(275, 23);
             this.lbJudul.TabIndex = 124;
@@ -673,50 +721,28 @@
             // 
             this.tPosisiTableAdapter.ClearBeforeFill = true;
             // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Honeydew;
-            this.label6.Location = new System.Drawing.Point(207, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(300, 31);
-            this.label6.TabIndex = 129;
-            this.label6.Text = "Halaman Admin - Master Karyawan";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(7, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 116;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(52, 44);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(97, 94);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 65;
-            this.pictureBox4.TabStop = false;
-            // 
-            // vroomDGDataSet1
-            // 
-            this.vroomDGDataSet1.DataSetName = "VroomDGDataSet1";
-            this.vroomDGDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tPosisiBindingSource1
-            // 
-            this.tPosisiBindingSource1.DataMember = "tPosisi";
-            this.tPosisiBindingSource1.DataSource = this.vroomDGDataSet1;
-            // 
             // tPosisiTableAdapter1
             // 
             this.tPosisiTableAdapter1.ClearBeforeFill = true;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.SlateGray;
+            this.panel12.Controls.Add(this.pictureBox4);
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 151);
+            this.panel12.TabIndex = 129;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox1.Location = new System.Drawing.Point(197, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(824, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 133;
+            this.pictureBox1.TabStop = false;
             // 
             // CRUD_Employee
             // 
@@ -732,6 +758,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CRUD_Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -739,20 +766,22 @@
             this.Load += new System.EventHandler(this.CRUD_Employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbMataBuka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbMataTutup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKaryawan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource1)).EndInit();
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -811,5 +840,7 @@
         private VroomDGDataSet1 vroomDGDataSet1;
         private System.Windows.Forms.BindingSource tPosisiBindingSource1;
         private VroomDGDataSet1TableAdapters.tPosisiTableAdapter tPosisiTableAdapter1;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

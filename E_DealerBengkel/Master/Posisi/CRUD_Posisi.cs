@@ -27,13 +27,7 @@ namespace E_DealerBengkel.Master.Posisi
 
         public CRUD_Posisi()
         {
-            InitializeComponent();
-            BtnTambah.FlatStyle = FlatStyle.Flat;
-            BtnTambah.FlatAppearance.BorderSize = 0;
-            BtnUbah.FlatStyle = FlatStyle.Flat;
-            BtnUbah.FlatAppearance.BorderSize = 0;
-            BtnKembali.FlatStyle = FlatStyle.Flat;
-            BtnKembali.FlatAppearance.BorderSize = 0;
+            InitializeComponent();         
 
             timer.Tick += new EventHandler(timer_Tick);
             //1000 = 1 detik
@@ -69,14 +63,14 @@ namespace E_DealerBengkel.Master.Posisi
         private void BtnUbah_Click(object sender, EventArgs e)
         {
             Clear();
-            lbJudul.Text = "Ubah Role";
+            lbJudul.Text = "UBAH POSISI";
             TxtGaji.Enabled = false;
             CbStatus.Enabled = false;
 
             BtnHapus.Visible = true;
             lbStatus.Visible = true;
             CbStatus.Visible = true;
-            CbStatus.Text = " - PILIH STATUS -";
+            CbStatus.Text = "-- Pilih Status --";
         }
 
         private void BtnKembali_Click(object sender, EventArgs e)
@@ -383,7 +377,7 @@ namespace E_DealerBengkel.Master.Posisi
 
         private void TxtDeskripsi_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "Tambah Role")
+            if (lbJudul.Text == "TAMBAH POSISI")
             {
 
             }

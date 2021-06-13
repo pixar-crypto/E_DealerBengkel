@@ -25,7 +25,12 @@ namespace E_DealerBengkel
         {
             InitializeComponent();
             tampilKaryawan();
+            tampilPosisi();
             tampilMember();
+            tampilMobil();
+            tampilMotor();
+            tampilSukuCadang();
+            tampilSupplier();
 
             timer.Tick += new EventHandler(timer_Tick);
             //1000 = 1 detik
@@ -109,7 +114,35 @@ namespace E_DealerBengkel
                 {
                     jml++;
                 }
-                txtMember.Text = jml.ToString();
+                lblMember.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
+        }
+
+        public void tampilPosisi()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tPosisi", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                lblPosisi.Text = jml.ToString();
 
                 connection.Close();
             }
@@ -137,7 +170,119 @@ namespace E_DealerBengkel
                 {
                     jml++;
                 }
-                txtKaryawan.Text = jml.ToString();
+                lblKaryawan.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
+        }
+
+        public void tampilMobil()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tMobil", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                lblMobil.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
+        }
+
+        public void tampilMotor()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tMotor", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                lblMotor.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
+        }
+
+        public void tampilSukuCadang()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tSukucadang", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                lblSukuCadang.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
+        }
+
+        public void tampilSupplier()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tSupplier", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                lblSupplier.Text = jml.ToString();
 
                 connection.Close();
             }

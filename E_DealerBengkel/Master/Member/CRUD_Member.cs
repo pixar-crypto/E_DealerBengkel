@@ -27,12 +27,6 @@ namespace E_DealerBengkel.Master.Member
         public CRUD_Member()
         {
             InitializeComponent();
-            BtnTambah.FlatStyle = FlatStyle.Flat;
-            BtnTambah.FlatAppearance.BorderSize = 0;
-            BtnUbah.FlatStyle = FlatStyle.Flat;
-            BtnUbah.FlatAppearance.BorderSize = 0;
-            BtnKembali.FlatStyle = FlatStyle.Flat;
-            BtnKembali.FlatAppearance.BorderSize = 0;
 
             timer.Tick += new EventHandler(timer_Tick);
             //1000 = 1 detik
