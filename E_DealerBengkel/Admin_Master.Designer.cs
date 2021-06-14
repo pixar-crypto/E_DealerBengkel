@@ -34,18 +34,25 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblKaryawan = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblPosisi = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lblMember = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lblMotor = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lblServices = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.lblSukuCadang = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.lblSupplier = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbWaktu = new System.Windows.Forms.Label();
@@ -54,6 +61,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblMobil = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -64,24 +72,15 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblPosisi = new System.Windows.Forms.Label();
-            this.lblMotor = new System.Windows.Forms.Label();
-            this.lblKaryawan = new System.Windows.Forms.Label();
-            this.lblMember = new System.Windows.Forms.Label();
-            this.lblServices = new System.Windows.Forms.Label();
-            this.lblSukuCadang = new System.Windows.Forms.Label();
-            this.lblMobil = new System.Windows.Forms.Label();
-            this.lblSupplier = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.BtnKaryawan = new System.Windows.Forms.Button();
             this.BtnPosisi = new System.Windows.Forms.Button();
             this.BtnMember = new System.Windows.Forms.Button();
-            this.BtnMobil = new System.Windows.Forms.Button();
             this.BtnMotor = new System.Windows.Forms.Button();
             this.BtnServices = new System.Windows.Forms.Button();
             this.BtnSukuCadang = new System.Windows.Forms.Button();
             this.BtnSupplier = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BtnMobil = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -175,6 +174,16 @@
             this.panel5.Size = new System.Drawing.Size(114, 149);
             this.panel5.TabIndex = 107;
             // 
+            // lblKaryawan
+            // 
+            this.lblKaryawan.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKaryawan.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblKaryawan.Location = new System.Drawing.Point(28, 103);
+            this.lblKaryawan.Name = "lblKaryawan";
+            this.lblKaryawan.Size = new System.Drawing.Size(60, 41);
+            this.lblKaryawan.TabIndex = 127;
+            this.lblKaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -194,6 +203,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(114, 149);
             this.panel6.TabIndex = 109;
+            // 
+            // lblPosisi
+            // 
+            this.lblPosisi.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosisi.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblPosisi.Location = new System.Drawing.Point(28, 104);
+            this.lblPosisi.Name = "lblPosisi";
+            this.lblPosisi.Size = new System.Drawing.Size(60, 41);
+            this.lblPosisi.TabIndex = 125;
+            this.lblPosisi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
             // 
@@ -215,6 +234,16 @@
             this.panel8.Size = new System.Drawing.Size(114, 149);
             this.panel8.TabIndex = 110;
             // 
+            // lblMember
+            // 
+            this.lblMember.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMember.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblMember.Location = new System.Drawing.Point(27, 103);
+            this.lblMember.Name = "lblMember";
+            this.lblMember.Size = new System.Drawing.Size(60, 41);
+            this.lblMember.TabIndex = 126;
+            this.lblMember.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
@@ -234,6 +263,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(114, 149);
             this.panel7.TabIndex = 111;
+            // 
+            // lblMotor
+            // 
+            this.lblMotor.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotor.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblMotor.Location = new System.Drawing.Point(28, 103);
+            this.lblMotor.Name = "lblMotor";
+            this.lblMotor.Size = new System.Drawing.Size(60, 41);
+            this.lblMotor.TabIndex = 126;
+            this.lblMotor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox8
             // 
@@ -255,6 +294,16 @@
             this.panel10.Size = new System.Drawing.Size(114, 149);
             this.panel10.TabIndex = 112;
             // 
+            // lblServices
+            // 
+            this.lblServices.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServices.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblServices.Location = new System.Drawing.Point(28, 103);
+            this.lblServices.Name = "lblServices";
+            this.lblServices.Size = new System.Drawing.Size(60, 41);
+            this.lblServices.TabIndex = 126;
+            this.lblServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
@@ -275,6 +324,16 @@
             this.panel9.Size = new System.Drawing.Size(114, 149);
             this.panel9.TabIndex = 113;
             // 
+            // lblSukuCadang
+            // 
+            this.lblSukuCadang.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSukuCadang.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblSukuCadang.Location = new System.Drawing.Point(27, 103);
+            this.lblSukuCadang.Name = "lblSukuCadang";
+            this.lblSukuCadang.Size = new System.Drawing.Size(60, 41);
+            this.lblSukuCadang.TabIndex = 126;
+            this.lblSukuCadang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
@@ -294,6 +353,16 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(114, 149);
             this.panel11.TabIndex = 114;
+            // 
+            // lblSupplier
+            // 
+            this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupplier.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblSupplier.Location = new System.Drawing.Point(28, 103);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(60, 41);
+            this.lblSupplier.TabIndex = 126;
+            this.lblSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox11
             // 
@@ -377,6 +446,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(114, 149);
             this.panel3.TabIndex = 110;
+            // 
+            // lblMobil
+            // 
+            this.lblMobil.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobil.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblMobil.Location = new System.Drawing.Point(28, 103);
+            this.lblMobil.Name = "lblMobil";
+            this.lblMobil.Size = new System.Drawing.Size(60, 41);
+            this.lblMobil.TabIndex = 126;
+            this.lblMobil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox7
             // 
@@ -521,86 +600,6 @@
             this.pictureBox2.TabIndex = 116;
             this.pictureBox2.TabStop = false;
             // 
-            // lblPosisi
-            // 
-            this.lblPosisi.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosisi.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblPosisi.Location = new System.Drawing.Point(28, 104);
-            this.lblPosisi.Name = "lblPosisi";
-            this.lblPosisi.Size = new System.Drawing.Size(60, 41);
-            this.lblPosisi.TabIndex = 125;
-            this.lblPosisi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMotor
-            // 
-            this.lblMotor.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotor.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblMotor.Location = new System.Drawing.Point(28, 103);
-            this.lblMotor.Name = "lblMotor";
-            this.lblMotor.Size = new System.Drawing.Size(60, 41);
-            this.lblMotor.TabIndex = 126;
-            this.lblMotor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblKaryawan
-            // 
-            this.lblKaryawan.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKaryawan.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblKaryawan.Location = new System.Drawing.Point(28, 103);
-            this.lblKaryawan.Name = "lblKaryawan";
-            this.lblKaryawan.Size = new System.Drawing.Size(60, 41);
-            this.lblKaryawan.TabIndex = 127;
-            this.lblKaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMember
-            // 
-            this.lblMember.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMember.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblMember.Location = new System.Drawing.Point(27, 103);
-            this.lblMember.Name = "lblMember";
-            this.lblMember.Size = new System.Drawing.Size(60, 41);
-            this.lblMember.TabIndex = 126;
-            this.lblMember.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblServices
-            // 
-            this.lblServices.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServices.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblServices.Location = new System.Drawing.Point(28, 103);
-            this.lblServices.Name = "lblServices";
-            this.lblServices.Size = new System.Drawing.Size(60, 41);
-            this.lblServices.TabIndex = 126;
-            this.lblServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSukuCadang
-            // 
-            this.lblSukuCadang.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSukuCadang.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblSukuCadang.Location = new System.Drawing.Point(27, 103);
-            this.lblSukuCadang.Name = "lblSukuCadang";
-            this.lblSukuCadang.Size = new System.Drawing.Size(60, 41);
-            this.lblSukuCadang.TabIndex = 126;
-            this.lblSukuCadang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMobil
-            // 
-            this.lblMobil.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMobil.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblMobil.Location = new System.Drawing.Point(28, 103);
-            this.lblMobil.Name = "lblMobil";
-            this.lblMobil.Size = new System.Drawing.Size(60, 41);
-            this.lblMobil.TabIndex = 126;
-            this.lblMobil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSupplier
-            // 
-            this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupplier.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblSupplier.Location = new System.Drawing.Point(28, 103);
-            this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(60, 41);
-            this.lblSupplier.TabIndex = 126;
-            this.lblSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -664,23 +663,6 @@
             this.BtnMember.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnMember.UseVisualStyleBackColor = true;
             this.BtnMember.Click += new System.EventHandler(this.BtnMember_Click);
-            // 
-            // BtnMobil
-            // 
-            this.BtnMobil.FlatAppearance.BorderSize = 0;
-            this.BtnMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMobil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMobil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnMobil.Image = global::E_DealerBengkel.Properties.Resources.icons8_car_30px;
-            this.BtnMobil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMobil.Location = new System.Drawing.Point(0, 281);
-            this.BtnMobil.Name = "BtnMobil";
-            this.BtnMobil.Size = new System.Drawing.Size(200, 32);
-            this.BtnMobil.TabIndex = 59;
-            this.BtnMobil.Text = "MOBIL";
-            this.BtnMobil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMobil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnMobil.UseVisualStyleBackColor = true;
             // 
             // BtnMotor
             // 
@@ -751,22 +733,22 @@
             this.BtnSupplier.UseVisualStyleBackColor = true;
             this.BtnSupplier.Click += new System.EventHandler(this.BtnSupplier_Click);
             // 
-            // button6
+            // BtnMobil
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 278);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 32);
-            this.button6.TabIndex = 64;
-            this.button6.Text = "    MOBIL";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnMobil.FlatAppearance.BorderSize = 0;
+            this.BtnMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMobil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMobil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnMobil.Image = ((System.Drawing.Image)(resources.GetObject("BtnMobil.Image")));
+            this.BtnMobil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMobil.Location = new System.Drawing.Point(0, 281);
+            this.BtnMobil.Name = "BtnMobil";
+            this.BtnMobil.Size = new System.Drawing.Size(200, 32);
+            this.BtnMobil.TabIndex = 64;
+            this.BtnMobil.Text = "    MOBIL";
+            this.BtnMobil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMobil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnMobil.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
@@ -813,7 +795,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 31);
             this.label2.TabIndex = 125;
-            this.label2.Text = "HOME";
+            this.label2.Text = "DASHBOARD";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnLogOut
@@ -840,12 +822,11 @@
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.BtnMobil);
             this.panel2.Controls.Add(this.BtnSupplier);
             this.panel2.Controls.Add(this.BtnSukuCadang);
             this.panel2.Controls.Add(this.BtnServices);
             this.panel2.Controls.Add(this.BtnMotor);
-            this.panel2.Controls.Add(this.BtnMobil);
             this.panel2.Controls.Add(this.BtnMember);
             this.panel2.Controls.Add(this.BtnPosisi);
             this.panel2.Controls.Add(this.BtnKaryawan);
@@ -968,12 +949,11 @@
         private System.Windows.Forms.Button BtnKaryawan;
         private System.Windows.Forms.Button BtnPosisi;
         private System.Windows.Forms.Button BtnMember;
-        private System.Windows.Forms.Button BtnMobil;
         private System.Windows.Forms.Button BtnMotor;
         private System.Windows.Forms.Button BtnServices;
         private System.Windows.Forms.Button BtnSukuCadang;
         private System.Windows.Forms.Button BtnSupplier;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BtnMobil;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox1;
