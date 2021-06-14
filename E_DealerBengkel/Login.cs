@@ -175,9 +175,14 @@ namespace E_DealerBengkel
             Clear();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void TxtUsername_Click(object sender, EventArgs e)
         {
+            TxtUsername.Clear();
+        }
 
+        private void TxtPassword_Click(object sender, EventArgs e)
+        {
+            TxtPassword.Clear();
         }
     }
 }
