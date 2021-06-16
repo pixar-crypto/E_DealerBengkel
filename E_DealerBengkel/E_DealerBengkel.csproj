@@ -143,6 +143,9 @@
     <EmbeddedResource Include="Master\Member\CRUD_Member.resx">
       <DependentUpon>CRUD_Member.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Mobil\CRUD_Mobil.resx">
+      <DependentUpon>CRUD_Mobil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Posisi\CRUD_Posisi.resx">
       <DependentUpon>CRUD_Posisi.cs</DependentUpon>
     </EmbeddedResource>
