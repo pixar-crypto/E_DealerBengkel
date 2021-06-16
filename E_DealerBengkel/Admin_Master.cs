@@ -1,6 +1,9 @@
 ﻿using E_DealerBengkel.Master.Employee;
 using E_DealerBengkel.Master.Member;
+using E_DealerBengkel.Master.Mobil;
+using E_DealerBengkel.Master.Motor;
 using E_DealerBengkel.Master.Posisi;
+using E_DealerBengkel.Master.Services;
 using E_DealerBengkel.Master.Supplier;
 using System;
 using System.Collections.Generic;
@@ -31,6 +34,7 @@ namespace E_DealerBengkel
             tampilMotor();
             tampilSukuCadang();
             tampilSupplier();
+            tampilService();
 
             timer.Tick += new EventHandler(timer_Tick);
             //1000 = 1 detik
@@ -292,9 +296,58 @@ namespace E_DealerBengkel
             }
         }
 
+        public void tampilService()
+        {
+            int jml = 0;
+            try
+            {
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                connection.Open();
+
+                SqlCommand command = new SqlCommand
+                    ("SELECT * FROM tService", connection);
+
+                // eksekuai command
+                SqlDataReader dr;
+                dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    jml++;
+                }
+                lblServices.Text = jml.ToString();
+
+                connection.Close();
+            }
+            catch (Exception xcp)
+            {
+                MessageBox.Show(xcp.ToString());
+            }
+        }
+
         private void Admin_Master_Load(object sender, EventArgs e)
         {
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
+        }
+
+        private void BtnMobil_Click(object sender, EventArgs e)
+        {
+            CRUD_Mobil M_Mobil = new CRUD_Mobil();
+            M_Mobil.Show();
+            this.Hide();
+        }
+
+        private void BtnMotor_Click(object sender, EventArgs e)
+        {
+            CRUD_Motor M_Motor = new CRUD_Motor();
+            M_Motor.Show();
+            this.Hide();
+        }
+
+        private void BtnServices_Click(object sender, EventArgs e)
+        {
+            CRUD_Services M_Services = new CRUD_Services();
+            M_Services.Show();
+            this.Hide();
         }
     }
 }

@@ -98,11 +98,23 @@
     <Compile Include="Master\Mobil\CRUD_Mobil.Designer.cs">
       <DependentUpon>CRUD_Mobil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Motor\CRUD_Motor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Motor\CRUD_Motor.Designer.cs">
+      <DependentUpon>CRUD_Motor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\Posisi\CRUD_Posisi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Master\Posisi\CRUD_Posisi.Designer.cs">
       <DependentUpon>CRUD_Posisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Services\CRUD_Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Services\CRUD_Services.Designer.cs">
+      <DependentUpon>CRUD_Services.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\Supplier\CRUD_Supplier.cs">
       <SubType>Form</SubType>
@@ -146,8 +158,14 @@
     <EmbeddedResource Include="Master\Mobil\CRUD_Mobil.resx">
       <DependentUpon>CRUD_Mobil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Motor\CRUD_Motor.resx">
+      <DependentUpon>CRUD_Motor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Posisi\CRUD_Posisi.resx">
       <DependentUpon>CRUD_Posisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Services\CRUD_Services.resx">
+      <DependentUpon>CRUD_Services.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Supplier\CRUD_Supplier.resx">
       <DependentUpon>CRUD_Supplier.cs</DependentUpon>

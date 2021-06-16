@@ -6,19 +6,16 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Security.AccessControl;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
-namespace E_DealerBengkel.Master.Mobil
+namespace E_DealerBengkel.Master.Motor
 {
-    public partial class CRUD_Mobil : Form
+    public partial class CRUD_Motor : Form
     {
-
         //---SERVER UMUM---
 
         string connectionstring =
@@ -27,7 +24,7 @@ namespace E_DealerBengkel.Master.Mobil
 
         Timer timer = new Timer();
 
-        public CRUD_Mobil()
+        public CRUD_Motor()
         {
             InitializeComponent();
 
@@ -43,7 +40,7 @@ namespace E_DealerBengkel.Master.Mobil
             lbWaktu.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
         }
 
-        private void CRUD_Mobil_Load(object sender, EventArgs e)
+        private void CRUD_Motor_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'vroomDGDataSet.tSupplier' table. You can move, or remove it, as needed.
             this.tSupplierTableAdapter.Fill(this.vroomDGDataSet.tSupplier);
@@ -95,7 +92,7 @@ namespace E_DealerBengkel.Master.Mobil
             cmbSup.Enabled = true;
             cbStatus.Enabled = false;
 
-            lbJudul.Text = "TAMBAH MOBIL";
+            lbJudul.Text = "TAMBAH MOTOR";
             BtnHapus.Visible = false;
             lbStatus.Visible = false;
             cbStatus.Visible = false;
@@ -114,7 +111,7 @@ namespace E_DealerBengkel.Master.Mobil
             cmbSup.Enabled = false;
             cbStatus.Enabled = false;
 
-            lbJudul.Text = "UBAH MOBIL";
+            lbJudul.Text = "UBAH MOTOR";
             BtnHapus.Visible = true;
             lbStatus.Visible = true;
             cbStatus.Visible = true;
@@ -165,7 +162,7 @@ namespace E_DealerBengkel.Master.Mobil
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tMobil", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select * from tMotor", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -180,42 +177,41 @@ namespace E_DealerBengkel.Master.Mobil
                 a++;
             }
 
-            dgvMobil.DataSource = dt;
-            dgvMobil.Columns[1].HeaderText = "ID";
-            dgvMobil.Columns[2].HeaderText = "Merek";
-            dgvMobil.Columns[3].HeaderText = "Warna";
-            dgvMobil.Columns[4].HeaderText = "Jenis";
-            dgvMobil.Columns[5].HeaderText = "Harga Beli";
-            dgvMobil.Columns[6].HeaderText = "Harga Jual";
-            dgvMobil.Columns[7].HeaderText = "Jumlah";
-            dgvMobil.Columns[8].HeaderText = "Supplier";
-            dgvMobil.Columns[9].HeaderText = "Status";
+            dgvMotor.DataSource = dt;
+            dgvMotor.Columns[1].HeaderText = "ID";
+            dgvMotor.Columns[2].HeaderText = "Merek";
+            dgvMotor.Columns[3].HeaderText = "Warna";
+            dgvMotor.Columns[4].HeaderText = "Jenis";
+            dgvMotor.Columns[5].HeaderText = "Harga Beli";
+            dgvMotor.Columns[6].HeaderText = "Harga Jual";
+            dgvMotor.Columns[7].HeaderText = "Jumlah";
+            dgvMotor.Columns[8].HeaderText = "Supplier";
+            dgvMotor.Columns[9].HeaderText = "Status";
 
-            foreach (DataGridViewColumn colm in dgvMobil.Columns)
+            this.dgvMotor.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvMotor.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvMotor.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvMotor.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvMotor.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
+            dgvMotor.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
+            connection.Close();
+
+            dgvMotor.BorderStyle = BorderStyle.None;
+            dgvMotor.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvMotor.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvMotor.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgvMotor.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvMotor.BackgroundColor = Color.White;
+
+            foreach (DataGridViewColumn colm in dgvMotor.Columns)
             {
                 colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
-
-            this.dgvMobil.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgvMobil.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            this.dgvMobil.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            this.dgvMobil.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvMobil.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
-            dgvMobil.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
-            connection.Close();
-
-            dgvMobil.BorderStyle = BorderStyle.None;
-            dgvMobil.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgvMobil.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvMobil.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dgvMobil.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dgvMobil.BackgroundColor = Color.White;
-
-            dgvMobil.EnableHeadersVisualStyles = false;
-            dgvMobil.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvMobil.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            dgvMobil.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvMotor.EnableHeadersVisualStyles = false;
+            dgvMotor.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvMotor.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgvMotor.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void TxtHargaBeli_KeyPress(object sender, KeyPressEventArgs e)
@@ -269,13 +265,13 @@ namespace E_DealerBengkel.Master.Mobil
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand insert = new SqlCommand("[sp_UpdateMobil]", connection);
+                    SqlCommand insert = new SqlCommand("[sp_UpdateMotor]", connection);
                     insert.CommandType = CommandType.StoredProcedure;
 
-                    insert.Parameters.AddWithValue("id_mobil", id);
-                    insert.Parameters.AddWithValue("merek_mobil", TxtMerek.Text);
+                    insert.Parameters.AddWithValue("id_motor", id);
+                    insert.Parameters.AddWithValue("merek_motor", TxtMerek.Text);
                     insert.Parameters.AddWithValue("warna", TxtWarna.Text);
-                    insert.Parameters.AddWithValue("jenis_mobil", cbJenis.Text);
+                    insert.Parameters.AddWithValue("jenis_motor", cbJenis.Text);
                     string hargaBeli = Program.toAngka(TxtHargaBeli.Text).ToString();
                     insert.Parameters.AddWithValue("harga_beli", hargaBeli);
                     string hargaJual = Program.toAngka(TxtHargaJual.Text).ToString();
@@ -307,7 +303,7 @@ namespace E_DealerBengkel.Master.Mobil
 
         private void BtnSimpan_Click(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH MOBIL")
+            if (lbJudul.Text == "TAMBAH MOTOR")
             {
                 if (TxtMerek.Text == "" || TxtWarna.Text == "" || cbJenis.Text == " - PILIH JENIS -" ||
                     TxtHargaBeli.Text == "" || TxtJumlah.Text == "" || cmbSup.Text == " - PILIH SUPPLIER -")
@@ -317,8 +313,8 @@ namespace E_DealerBengkel.Master.Mobil
                 }
                 else
                 {
-                    string query = "select top 1 id_mobil from tMobil order by id_mobil desc";
-                    String id = autogenerateID("MBL-", query);
+                    string query = "select top 1 id_motor from tMotor order by id_motor desc";
+                    String id = autogenerateID("MTR-", query);
 
                     SqlConnection connection = new SqlConnection(Program.koneksi());
 
@@ -327,13 +323,13 @@ namespace E_DealerBengkel.Master.Mobil
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand insert = new SqlCommand("[sp_InputMobil]", connection);
+                    SqlCommand insert = new SqlCommand("[sp_InputMotor]", connection);
                     insert.CommandType = CommandType.StoredProcedure;
 
-                    insert.Parameters.AddWithValue("id_mobil", id);
-                    insert.Parameters.AddWithValue("merek_mobil", TxtMerek.Text);
+                    insert.Parameters.AddWithValue("id_motor", id);
+                    insert.Parameters.AddWithValue("merek_motor", TxtMerek.Text);
                     insert.Parameters.AddWithValue("warna", TxtWarna.Text);
-                    insert.Parameters.AddWithValue("jenis_mobil", cbJenis.Text);
+                    insert.Parameters.AddWithValue("jenis_motor", cbJenis.Text);
                     string hargaBeli = Program.toAngka(TxtHargaBeli.Text).ToString();
                     insert.Parameters.AddWithValue("harga_beli", hargaBeli);
                     string hargaJual = Program.toAngka(TxtHargaJual.Text).ToString();
@@ -375,13 +371,13 @@ namespace E_DealerBengkel.Master.Mobil
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand insert = new SqlCommand("[sp_UpdateMobil]", connection);
+                    SqlCommand insert = new SqlCommand("[sp_UpdateMotor]", connection);
                     insert.CommandType = CommandType.StoredProcedure;
 
-                    insert.Parameters.AddWithValue("id_mobil", id);
-                    insert.Parameters.AddWithValue("merek_mobil", TxtMerek.Text);
+                    insert.Parameters.AddWithValue("id_motor", id);
+                    insert.Parameters.AddWithValue("merek_motor", TxtMerek.Text);
                     insert.Parameters.AddWithValue("warna", TxtWarna.Text);
-                    insert.Parameters.AddWithValue("jenis_mobil", cbJenis.Text);
+                    insert.Parameters.AddWithValue("jenis_motor", cbJenis.Text);
                     string hargaBeli = Program.toAngka(TxtHargaBeli.Text).ToString();
                     insert.Parameters.AddWithValue("harga_beli", hargaBeli);
                     string hargaJual = Program.toAngka(TxtHargaJual.Text).ToString();
@@ -410,14 +406,14 @@ namespace E_DealerBengkel.Master.Mobil
 
         private void TxtMerek_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH MOBIL")
+            if (lbJudul.Text == "TAMBAH MOTOR")
             {
 
             }
             else
             {
                 SqlConnection connection = new SqlConnection(Program.koneksi());
-                SqlDataAdapter adapt = new SqlDataAdapter("select * from tMobil where merek_mobil like '" + TxtMerek.Text + "%'", connection);
+                SqlDataAdapter adapt = new SqlDataAdapter("select * from tMotor where merek_motor like '" + TxtMerek.Text + "%'", connection);
                 DataTable dt = new DataTable();
 
                 connection.Open();
@@ -432,48 +428,48 @@ namespace E_DealerBengkel.Master.Mobil
                     a++;
                 }
 
-                dgvMobil.DataSource = dt;
-                dgvMobil.Columns[1].HeaderText = "ID";
-                dgvMobil.Columns[2].HeaderText = "Merek";
-                dgvMobil.Columns[3].HeaderText = "Warna";
-                dgvMobil.Columns[4].HeaderText = "Jenis";
-                dgvMobil.Columns[5].HeaderText = "Harga Beli";
-                dgvMobil.Columns[6].HeaderText = "Harga Jual";
-                dgvMobil.Columns[7].HeaderText = "Jumlah";
-                dgvMobil.Columns[8].HeaderText = "Supplier";
-                dgvMobil.Columns[9].HeaderText = "Status";
+                dgvMotor.DataSource = dt;
+                dgvMotor.Columns[1].HeaderText = "ID";
+                dgvMotor.Columns[2].HeaderText = "Merek";
+                dgvMotor.Columns[3].HeaderText = "Warna";
+                dgvMotor.Columns[4].HeaderText = "Jenis";
+                dgvMotor.Columns[5].HeaderText = "Harga Beli";
+                dgvMotor.Columns[6].HeaderText = "Harga Jual";
+                dgvMotor.Columns[7].HeaderText = "Jumlah";
+                dgvMotor.Columns[8].HeaderText = "Supplier";
+                dgvMotor.Columns[9].HeaderText = "Status";
 
-                foreach (DataGridViewColumn colm in dgvMobil.Columns)
+                foreach (DataGridViewColumn colm in dgvMotor.Columns)
                 {
                     colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
                 }
 
-                this.dgvMobil.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvMobil.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                this.dgvMobil.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                this.dgvMobil.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvMobil.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
-                dgvMobil.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
+                this.dgvMotor.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                this.dgvMotor.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                this.dgvMotor.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                this.dgvMotor.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dgvMotor.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
+                dgvMotor.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
                 connection.Close();
 
-                dgvMobil.BorderStyle = BorderStyle.None;
-                dgvMobil.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-                dgvMobil.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dgvMobil.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-                dgvMobil.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-                dgvMobil.BackgroundColor = Color.White;
+                dgvMotor.BorderStyle = BorderStyle.None;
+                dgvMotor.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+                dgvMotor.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+                dgvMotor.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+                dgvMotor.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+                dgvMotor.BackgroundColor = Color.White;
 
-                dgvMobil.EnableHeadersVisualStyles = false;
-                dgvMobil.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-                dgvMobil.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-                dgvMobil.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                dgvMotor.EnableHeadersVisualStyles = false;
+                dgvMotor.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                dgvMotor.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+                dgvMotor.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             }
         }
 
-        private void dgvMobil_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvMotor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH MOBIL")
+            if (lbJudul.Text == "TAMBAH MOTOR")
             {
 
             }
@@ -491,7 +487,7 @@ namespace E_DealerBengkel.Master.Mobil
                     cmbSup.Enabled = true;
                     cbStatus.Enabled = true;
 
-                    DataGridViewRow row = this.dgvMobil.Rows[e.RowIndex];
+                    DataGridViewRow row = this.dgvMotor.Rows[e.RowIndex];
                     id = row.Cells[1].Value.ToString();
                     TxtMerek.Text = row.Cells[2].Value.ToString();
                     TxtWarna.Text = row.Cells[3].Value.ToString();
@@ -517,7 +513,7 @@ namespace E_DealerBengkel.Master.Mobil
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMobil WHERE status='Tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMotor WHERE status='Tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -532,49 +528,49 @@ namespace E_DealerBengkel.Master.Mobil
                 a++;
             }
 
-            dgvMobil.DataSource = dt;
-            dgvMobil.Columns[1].HeaderText = "ID";
-            dgvMobil.Columns[2].HeaderText = "Merek";
-            dgvMobil.Columns[3].HeaderText = "Warna";
-            dgvMobil.Columns[4].HeaderText = "Jenis";
-            dgvMobil.Columns[5].HeaderText = "Harga Beli";
-            dgvMobil.Columns[6].HeaderText = "Harga Jual";
-            dgvMobil.Columns[7].HeaderText = "Jumlah";
-            dgvMobil.Columns[8].HeaderText = "Supplier";
-            dgvMobil.Columns[9].HeaderText = "Status";
+            dgvMotor.DataSource = dt;
+            dgvMotor.Columns[1].HeaderText = "ID";
+            dgvMotor.Columns[2].HeaderText = "Merek";
+            dgvMotor.Columns[3].HeaderText = "Warna";
+            dgvMotor.Columns[4].HeaderText = "Jenis";
+            dgvMotor.Columns[5].HeaderText = "Harga Beli";
+            dgvMotor.Columns[6].HeaderText = "Harga Jual";
+            dgvMotor.Columns[7].HeaderText = "Jumlah";
+            dgvMotor.Columns[8].HeaderText = "Supplier";
+            dgvMotor.Columns[9].HeaderText = "Status";
 
-            foreach (DataGridViewColumn colm in dgvMobil.Columns)
+            foreach (DataGridViewColumn colm in dgvMotor.Columns)
             {
                 colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
 
-            this.dgvMobil.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgvMobil.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            this.dgvMobil.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            this.dgvMobil.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvMobil.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
-            dgvMobil.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
+            this.dgvMotor.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvMotor.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvMotor.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvMotor.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvMotor.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
+            dgvMotor.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
             connection.Close();
 
-            dgvMobil.BorderStyle = BorderStyle.None;
-            dgvMobil.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgvMobil.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvMobil.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dgvMobil.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dgvMobil.BackgroundColor = Color.White;
+            dgvMotor.BorderStyle = BorderStyle.None;
+            dgvMotor.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvMotor.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvMotor.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgvMotor.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvMotor.BackgroundColor = Color.White;
 
-            dgvMobil.EnableHeadersVisualStyles = false;
-            dgvMobil.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvMobil.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            dgvMobil.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvMotor.EnableHeadersVisualStyles = false;
+            dgvMotor.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvMotor.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgvMotor.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void rbTidakTersedia_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMobil WHERE status='Tidak Tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMotor WHERE status='Tidak Tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -589,42 +585,42 @@ namespace E_DealerBengkel.Master.Mobil
                 a++;
             }
 
-            dgvMobil.DataSource = dt;
-            dgvMobil.Columns[1].HeaderText = "ID";
-            dgvMobil.Columns[2].HeaderText = "Merek";
-            dgvMobil.Columns[3].HeaderText = "Warna";
-            dgvMobil.Columns[4].HeaderText = "Jenis";
-            dgvMobil.Columns[5].HeaderText = "Harga Beli";
-            dgvMobil.Columns[6].HeaderText = "Harga Jual";
-            dgvMobil.Columns[7].HeaderText = "Jumlah";
-            dgvMobil.Columns[8].HeaderText = "Supplier";
-            dgvMobil.Columns[9].HeaderText = "Status";
+            dgvMotor.DataSource = dt;
+            dgvMotor.Columns[1].HeaderText = "ID";
+            dgvMotor.Columns[2].HeaderText = "Merek";
+            dgvMotor.Columns[3].HeaderText = "Warna";
+            dgvMotor.Columns[4].HeaderText = "Jenis";
+            dgvMotor.Columns[5].HeaderText = "Harga Beli";
+            dgvMotor.Columns[6].HeaderText = "Harga Jual";
+            dgvMotor.Columns[7].HeaderText = "Jumlah";
+            dgvMotor.Columns[8].HeaderText = "Supplier";
+            dgvMotor.Columns[9].HeaderText = "Status";
 
-            foreach (DataGridViewColumn colm in dgvMobil.Columns)
+            foreach (DataGridViewColumn colm in dgvMotor.Columns)
             {
                 colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
 
-            this.dgvMobil.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgvMobil.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            this.dgvMobil.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            this.dgvMobil.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvMobil.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
-            dgvMobil.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
+            this.dgvMotor.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvMotor.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvMotor.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvMotor.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvMotor.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
+            dgvMotor.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
             connection.Close();
 
-            dgvMobil.BorderStyle = BorderStyle.None;
-            dgvMobil.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgvMobil.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvMobil.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dgvMobil.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dgvMobil.BackgroundColor = Color.White;
+            dgvMotor.BorderStyle = BorderStyle.None;
+            dgvMotor.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvMotor.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvMotor.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgvMotor.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvMotor.BackgroundColor = Color.White;
 
-            dgvMobil.EnableHeadersVisualStyles = false;
-            dgvMobil.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvMobil.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            dgvMobil.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvMotor.EnableHeadersVisualStyles = false;
+            dgvMotor.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvMotor.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgvMotor.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void rbAll_CheckedChanged(object sender, EventArgs e)

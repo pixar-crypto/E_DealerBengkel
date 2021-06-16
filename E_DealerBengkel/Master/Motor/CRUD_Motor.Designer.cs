@@ -1,6 +1,6 @@
-﻿namespace E_DealerBengkel.Master.Mobil
+﻿namespace E_DealerBengkel.Master.Motor
 {
-    partial class CRUD_Mobil
+    partial class CRUD_Motor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Mobil));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Motor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.BtnUbah = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -51,6 +50,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbJudul = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbJenis = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtHargaJual = new System.Windows.Forms.TextBox();
@@ -62,7 +62,6 @@
             this.TxtJumlah = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbJenis = new System.Windows.Forms.ComboBox();
             this.TxtWarna = new System.Windows.Forms.TextBox();
             this.BtnClear = new System.Windows.Forms.Button();
             this.BtnHapus = new System.Windows.Forms.Button();
@@ -76,14 +75,14 @@
             this.label33 = new System.Windows.Forms.Label();
             this.TxtMerek = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.dgvMobil = new System.Windows.Forms.DataGridView();
+            this.dgvMotor = new System.Windows.Forms.DataGridView();
             this.label29 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -91,7 +90,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMobil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMotor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,20 +100,20 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(-17, -2);
+            this.panel1.Location = new System.Drawing.Point(-20, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1040, 38);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Honeydew;
-            this.label6.Location = new System.Drawing.Point(222, 4);
+            this.label6.Location = new System.Drawing.Point(226, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(300, 31);
             this.label6.TabIndex = 130;
-            this.label6.Text = "Halaman Admin - Master Mobil";
+            this.label6.Text = "Halaman Admin - Master Motor";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
@@ -157,7 +157,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(199, 627);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 6;
             // 
             // BtnKembali
             // 
@@ -216,31 +216,21 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.SlateGray;
-            this.panel12.Controls.Add(this.pictureBox7);
+            this.panel12.Controls.Add(this.pictureBox8);
             this.panel12.Location = new System.Drawing.Point(2, 1);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(200, 151);
             this.panel12.TabIndex = 131;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(42, 31);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(108, 97);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 68;
-            this.pictureBox7.TabStop = false;
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(298, 91);
+            this.label9.Location = new System.Drawing.Point(298, 92);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 25);
-            this.label9.TabIndex = 138;
+            this.label9.TabIndex = 143;
             this.label9.Text = "CAKUNG - JAKARTA TIMUR";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -249,10 +239,10 @@
             this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(298, 58);
+            this.label1.Location = new System.Drawing.Point(298, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 35);
-            this.label1.TabIndex = 137;
+            this.label1.TabIndex = 142;
             this.label1.Text = "VROOM! D&&G";
             // 
             // panel4
@@ -261,11 +251,11 @@
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
-            this.panel4.Location = new System.Drawing.Point(718, 45);
+            this.panel4.Location = new System.Drawing.Point(717, 46);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
-            this.panel4.TabIndex = 136;
+            this.panel4.TabIndex = 141;
             // 
             // pictureBox3
             // 
@@ -299,11 +289,11 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(212, 58);
+            this.pictureBox2.Location = new System.Drawing.Point(212, 59);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 135;
+            this.pictureBox2.TabIndex = 140;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
@@ -313,24 +303,25 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(824, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 139;
+            this.pictureBox1.TabIndex = 144;
             this.pictureBox1.TabStop = false;
             // 
             // lbJudul
             // 
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(470, 170);
+            this.lbJudul.Location = new System.Drawing.Point(464, 170);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(275, 23);
-            this.lbJudul.TabIndex = 140;
-            this.lbJudul.Text = "TAMBAH MOBIL";
+            this.lbJudul.TabIndex = 145;
+            this.lbJudul.Text = "TAMBAH MOTOR";
             this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.cbJenis);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.TxtHargaJual);
@@ -340,7 +331,6 @@
             this.panel3.Controls.Add(this.TxtJumlah);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.cbJenis);
             this.panel3.Controls.Add(this.TxtWarna);
             this.panel3.Controls.Add(this.BtnClear);
             this.panel3.Controls.Add(this.BtnHapus);
@@ -354,13 +344,25 @@
             this.panel3.Controls.Add(this.label33);
             this.panel3.Controls.Add(this.TxtMerek);
             this.panel3.Controls.Add(this.label31);
-            this.panel3.Controls.Add(this.dgvMobil);
+            this.panel3.Controls.Add(this.dgvMotor);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.lbStatus);
-            this.panel3.Location = new System.Drawing.Point(220, 207);
+            this.panel3.Location = new System.Drawing.Point(219, 208);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(779, 394);
-            this.panel3.TabIndex = 141;
+            this.panel3.TabIndex = 146;
+            // 
+            // cbJenis
+            // 
+            this.cbJenis.FormattingEnabled = true;
+            this.cbJenis.Items.AddRange(new object[] {
+            "Matic",
+            "Manual",
+            "Kopling"});
+            this.cbJenis.Location = new System.Drawing.Point(139, 119);
+            this.cbJenis.Name = "cbJenis";
+            this.cbJenis.Size = new System.Drawing.Size(185, 21);
+            this.cbJenis.TabIndex = 122;
             // 
             // label7
             // 
@@ -470,17 +472,6 @@
             this.label8.Size = new System.Drawing.Size(21, 13);
             this.label8.TabIndex = 111;
             this.label8.Text = "Rp";
-            // 
-            // cbJenis
-            // 
-            this.cbJenis.FormattingEnabled = true;
-            this.cbJenis.Items.AddRange(new object[] {
-            "Matic",
-            "Manual"});
-            this.cbJenis.Location = new System.Drawing.Point(139, 119);
-            this.cbJenis.Name = "cbJenis";
-            this.cbJenis.Size = new System.Drawing.Size(185, 21);
-            this.cbJenis.TabIndex = 104;
             // 
             // TxtWarna
             // 
@@ -642,14 +633,14 @@
             this.label31.TabIndex = 44;
             this.label31.Text = "WARNA";
             // 
-            // dgvMobil
+            // dgvMotor
             // 
-            this.dgvMobil.AllowUserToAddRows = false;
-            this.dgvMobil.AllowUserToDeleteRows = false;
-            this.dgvMobil.AllowUserToResizeColumns = false;
-            this.dgvMobil.AllowUserToResizeRows = false;
-            this.dgvMobil.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvMobil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvMotor.AllowUserToAddRows = false;
+            this.dgvMotor.AllowUserToDeleteRows = false;
+            this.dgvMotor.AllowUserToResizeColumns = false;
+            this.dgvMotor.AllowUserToResizeRows = false;
+            this.dgvMotor.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgvMotor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -657,16 +648,16 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMobil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMobil.Location = new System.Drawing.Point(354, 48);
-            this.dgvMobil.Name = "dgvMobil";
-            this.dgvMobil.ReadOnly = true;
-            this.dgvMobil.RowHeadersVisible = false;
-            this.dgvMobil.RowHeadersWidth = 62;
-            this.dgvMobil.Size = new System.Drawing.Size(395, 279);
-            this.dgvMobil.TabIndex = 71;
-            this.dgvMobil.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMobil_CellClick);
+            this.dgvMotor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMotor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMotor.Location = new System.Drawing.Point(354, 48);
+            this.dgvMotor.Name = "dgvMotor";
+            this.dgvMotor.ReadOnly = true;
+            this.dgvMotor.RowHeadersVisible = false;
+            this.dgvMotor.RowHeadersWidth = 62;
+            this.dgvMotor.Size = new System.Drawing.Size(395, 279);
+            this.dgvMotor.TabIndex = 71;
+            this.dgvMotor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMotor_CellClick);
             // 
             // label29
             // 
@@ -697,7 +688,17 @@
             // 
             this.tSupplierTableAdapter.ClearBeforeFill = true;
             // 
-            // CRUD_Mobil
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(46, 27);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(108, 97);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 66;
+            this.pictureBox8.TabStop = false;
+            // 
+            // CRUD_Motor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -713,14 +714,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CRUD_Mobil";
+            this.Name = "CRUD_Motor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CRUD_Mobil";
-            this.Load += new System.EventHandler(this.CRUD_Mobil_Load);
+            this.Text = "CRUD_Motor";
+            this.Load += new System.EventHandler(this.CRUD_Motor_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -730,7 +730,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMobil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMotor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -746,7 +747,6 @@
         private System.Windows.Forms.Button BtnUbah;
         private System.Windows.Forms.Button BtnTambah;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
@@ -757,12 +757,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbJudul;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox cbJenis;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtHargaJual;
+        private System.Windows.Forms.TextBox TxtHargaBeli;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ComboBox cmbSup;
         private System.Windows.Forms.TextBox TxtJumlah;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbJenis;
         private System.Windows.Forms.TextBox TxtWarna;
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Button BtnHapus;
@@ -776,15 +780,12 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox TxtMerek;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.DataGridView dgvMobil;
+        private System.Windows.Forms.DataGridView dgvMotor;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label lbStatus;
         private VroomDGDataSet vroomDGDataSet;
         private System.Windows.Forms.BindingSource tSupplierBindingSource;
         private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
-        private System.Windows.Forms.TextBox TxtHargaJual;
-        private System.Windows.Forms.TextBox TxtHargaBeli;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
