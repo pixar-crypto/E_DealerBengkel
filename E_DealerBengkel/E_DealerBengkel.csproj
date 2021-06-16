@@ -92,6 +92,12 @@
     <Compile Include="Master\Member\CRUD_Member.Designer.cs">
       <DependentUpon>CRUD_Member.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Mobil\CRUD_Mobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Mobil\CRUD_Mobil.Designer.cs">
+      <DependentUpon>CRUD_Mobil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\Posisi\CRUD_Posisi.cs">
       <SubType>Form</SubType>
     </Compile>
