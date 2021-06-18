@@ -1,6 +1,6 @@
-﻿namespace E_DealerBengkel.Master.Mobil
+﻿namespace E_DealerBengkel.Master.SukuCadang
 {
-    partial class CRUD_Mobil
+    partial class CRUD_SukuCadang
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Mobil));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_SukuCadang));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -48,8 +49,6 @@
             this.lbWaktu = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbJudul = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,13 +56,10 @@
             this.TxtHargaBeli = new System.Windows.Forms.TextBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.cmbSup = new System.Windows.Forms.ComboBox();
-            this.tSupplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
             this.TxtJumlah = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbJenis = new System.Windows.Forms.ComboBox();
-            this.TxtWarna = new System.Windows.Forms.TextBox();
+            this.TxtTipe = new System.Windows.Forms.TextBox();
             this.BtnClear = new System.Windows.Forms.Button();
             this.BtnHapus = new System.Windows.Forms.Button();
             this.BtnSimpan = new System.Windows.Forms.Button();
@@ -74,77 +70,29 @@
             this.rbTidakTersedia = new System.Windows.Forms.RadioButton();
             this.rbTersedia = new System.Windows.Forms.RadioButton();
             this.label33 = new System.Windows.Forms.Label();
-            this.TxtMerek = new System.Windows.Forms.TextBox();
+            this.TxtMerk = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.dgvMobil = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label29 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
+            this.lbJudul = new System.Windows.Forms.Label();
+            this.TxtJenis = new System.Windows.Forms.TextBox();
+            this.vroomDGDataSet1 = new E_DealerBengkel.VroomDGDataSet();
+            this.tSupplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMobil)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(-17, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 38);
-            this.panel1.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Honeydew;
-            this.label6.Location = new System.Drawing.Point(222, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(300, 31);
-            this.label6.TabIndex = 130;
-            this.label6.Text = "Halaman Admin - Master Mobil";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1004, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 34);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(969, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 34);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -157,7 +105,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(199, 627);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 6;
             // 
             // BtnKembali
             // 
@@ -232,15 +180,77 @@
             this.pictureBox7.TabIndex = 68;
             this.pictureBox7.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Location = new System.Drawing.Point(-17, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1040, 38);
+            this.panel1.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Honeydew;
+            this.label6.Location = new System.Drawing.Point(222, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(325, 31);
+            this.label6.TabIndex = 130;
+            this.label6.Text = "Halaman Admin - Master SukuCadang";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1004, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 34);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(969, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 34);
+            this.button3.TabIndex = 5;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox1.Location = new System.Drawing.Point(199, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(824, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 140;
+            this.pictureBox1.TabStop = false;
+            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(298, 91);
+            this.label9.Location = new System.Drawing.Point(295, 91);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 25);
-            this.label9.TabIndex = 138;
+            this.label9.TabIndex = 144;
             this.label9.Text = "CAKUNG - JAKARTA TIMUR";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -249,10 +259,10 @@
             this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(298, 58);
+            this.label1.Location = new System.Drawing.Point(295, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 35);
-            this.label1.TabIndex = 137;
+            this.label1.TabIndex = 143;
             this.label1.Text = "VROOM! D&&G";
             // 
             // panel4
@@ -261,11 +271,11 @@
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
-            this.panel4.Location = new System.Drawing.Point(718, 45);
+            this.panel4.Location = new System.Drawing.Point(715, 45);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
-            this.panel4.TabIndex = 136;
+            this.panel4.TabIndex = 142;
             // 
             // pictureBox3
             // 
@@ -299,38 +309,18 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(212, 58);
+            this.pictureBox2.Location = new System.Drawing.Point(209, 58);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 135;
+            this.pictureBox2.TabIndex = 141;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox1.Location = new System.Drawing.Point(199, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(824, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 139;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbJudul
-            // 
-            this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(470, 170);
-            this.lbJudul.Name = "lbJudul";
-            this.lbJudul.Size = new System.Drawing.Size(275, 23);
-            this.lbJudul.TabIndex = 140;
-            this.lbJudul.Text = "TAMBAH MOBIL";
-            this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.TxtJenis);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.TxtHargaJual);
@@ -340,8 +330,7 @@
             this.panel3.Controls.Add(this.TxtJumlah);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.cbJenis);
-            this.panel3.Controls.Add(this.TxtWarna);
+            this.panel3.Controls.Add(this.TxtTipe);
             this.panel3.Controls.Add(this.BtnClear);
             this.panel3.Controls.Add(this.BtnHapus);
             this.panel3.Controls.Add(this.BtnSimpan);
@@ -352,15 +341,15 @@
             this.panel3.Controls.Add(this.rbTidakTersedia);
             this.panel3.Controls.Add(this.rbTersedia);
             this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.TxtMerek);
+            this.panel3.Controls.Add(this.TxtMerk);
             this.panel3.Controls.Add(this.label31);
-            this.panel3.Controls.Add(this.dgvMobil);
+            this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.lbStatus);
             this.panel3.Location = new System.Drawing.Point(220, 207);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(779, 394);
-            this.panel3.TabIndex = 141;
+            this.panel3.TabIndex = 145;
             // 
             // label7
             // 
@@ -430,16 +419,6 @@
             this.cmbSup.TabIndex = 116;
             this.cmbSup.ValueMember = "id_supplier";
             // 
-            // tSupplierBindingSource
-            // 
-            this.tSupplierBindingSource.DataMember = "tSupplier";
-            this.tSupplierBindingSource.DataSource = this.vroomDGDataSet;
-            // 
-            // vroomDGDataSet
-            // 
-            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
-            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // TxtJumlah
             // 
             this.TxtJumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -471,24 +450,13 @@
             this.label8.TabIndex = 111;
             this.label8.Text = "Rp";
             // 
-            // cbJenis
+            // TxtTipe
             // 
-            this.cbJenis.FormattingEnabled = true;
-            this.cbJenis.Items.AddRange(new object[] {
-            "Matic",
-            "Manual"});
-            this.cbJenis.Location = new System.Drawing.Point(139, 119);
-            this.cbJenis.Name = "cbJenis";
-            this.cbJenis.Size = new System.Drawing.Size(185, 21);
-            this.cbJenis.TabIndex = 104;
-            // 
-            // TxtWarna
-            // 
-            this.TxtWarna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtWarna.Location = new System.Drawing.Point(139, 84);
-            this.TxtWarna.Name = "TxtWarna";
-            this.TxtWarna.Size = new System.Drawing.Size(185, 21);
-            this.TxtWarna.TabIndex = 88;
+            this.TxtTipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTipe.Location = new System.Drawing.Point(139, 84);
+            this.TxtTipe.Name = "TxtTipe";
+            this.TxtTipe.Size = new System.Drawing.Size(185, 21);
+            this.TxtTipe.TabIndex = 88;
             // 
             // BtnClear
             // 
@@ -621,14 +589,13 @@
             this.label33.TabIndex = 46;
             this.label33.Text = "MEREK";
             // 
-            // TxtMerek
+            // TxtMerk
             // 
-            this.TxtMerek.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMerek.Location = new System.Drawing.Point(139, 49);
-            this.TxtMerek.Name = "TxtMerek";
-            this.TxtMerek.Size = new System.Drawing.Size(185, 21);
-            this.TxtMerek.TabIndex = 73;
-            this.TxtMerek.TextChanged += new System.EventHandler(this.TxtMerek_TextChanged);
+            this.TxtMerk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMerk.Location = new System.Drawing.Point(139, 49);
+            this.TxtMerk.Name = "TxtMerk";
+            this.TxtMerk.Size = new System.Drawing.Size(185, 21);
+            this.TxtMerk.TabIndex = 73;
             // 
             // label31
             // 
@@ -638,35 +605,35 @@
             this.label31.ForeColor = System.Drawing.Color.Black;
             this.label31.Location = new System.Drawing.Point(20, 87);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(53, 16);
+            this.label31.Size = new System.Drawing.Size(31, 16);
             this.label31.TabIndex = 44;
-            this.label31.Text = "WARNA";
+            this.label31.Text = "TIPE";
             // 
-            // dgvMobil
+            // dataGridView1
             // 
-            this.dgvMobil.AllowUserToAddRows = false;
-            this.dgvMobil.AllowUserToDeleteRows = false;
-            this.dgvMobil.AllowUserToResizeColumns = false;
-            this.dgvMobil.AllowUserToResizeRows = false;
-            this.dgvMobil.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvMobil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMobil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMobil.Location = new System.Drawing.Point(354, 48);
-            this.dgvMobil.Name = "dgvMobil";
-            this.dgvMobil.ReadOnly = true;
-            this.dgvMobil.RowHeadersVisible = false;
-            this.dgvMobil.RowHeadersWidth = 62;
-            this.dgvMobil.Size = new System.Drawing.Size(395, 279);
-            this.dgvMobil.TabIndex = 71;
-            this.dgvMobil.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMobil_CellClick);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(354, 48);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(395, 279);
+            this.dataGridView1.TabIndex = 71;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label29
             // 
@@ -693,18 +660,46 @@
             this.lbStatus.Text = "STATUS";
             this.lbStatus.Visible = false;
             // 
+            // lbJudul
+            // 
+            this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJudul.ForeColor = System.Drawing.Color.Black;
+            this.lbJudul.Location = new System.Drawing.Point(472, 169);
+            this.lbJudul.Name = "lbJudul";
+            this.lbJudul.Size = new System.Drawing.Size(324, 23);
+            this.lbJudul.TabIndex = 141;
+            this.lbJudul.Text = "TAMBAH SUKUCADANG";
+            this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TxtJenis
+            // 
+            this.TxtJenis.Location = new System.Drawing.Point(139, 119);
+            this.TxtJenis.Name = "TxtJenis";
+            this.TxtJenis.Size = new System.Drawing.Size(185, 20);
+            this.TxtJenis.TabIndex = 122;
+            // 
+            // vroomDGDataSet1
+            // 
+            this.vroomDGDataSet1.DataSetName = "VroomDGDataSet";
+            this.vroomDGDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tSupplierBindingSource
+            // 
+            this.tSupplierBindingSource.DataMember = "tSupplier";
+            this.tSupplierBindingSource.DataSource = this.vroomDGDataSet1;
+            // 
             // tSupplierTableAdapter
             // 
             this.tSupplierTableAdapter.ClearBeforeFill = true;
             // 
-            // CRUD_Mobil
+            // CRUD_SukuCadang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1019, 627);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.lbJudul);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
@@ -713,40 +708,41 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CRUD_Mobil";
+            this.Name = "CRUD_SukuCadang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CRUD_Mobil";
-            this.Load += new System.EventHandler(this.CRUD_Mobil_Load);
-            this.panel1.ResumeLayout(false);
+            this.Text = "CRUD_SukuCadang";
+            this.Load += new System.EventHandler(this.CRUD_SukuCadang_Load);
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMobil)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnKembali;
         private System.Windows.Forms.Button BtnUbah;
         private System.Windows.Forms.Button BtnTambah;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
@@ -754,16 +750,17 @@
         private System.Windows.Forms.Label lbWaktu;
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbJudul;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtHargaJual;
+        private System.Windows.Forms.TextBox TxtHargaBeli;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ComboBox cmbSup;
         private System.Windows.Forms.TextBox TxtJumlah;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbJenis;
-        private System.Windows.Forms.TextBox TxtWarna;
+        private System.Windows.Forms.TextBox TxtTipe;
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Button BtnHapus;
         private System.Windows.Forms.Button BtnSimpan;
@@ -774,17 +771,15 @@
         private System.Windows.Forms.RadioButton rbTidakTersedia;
         private System.Windows.Forms.RadioButton rbTersedia;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox TxtMerek;
+        private System.Windows.Forms.TextBox TxtMerk;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.DataGridView dgvMobil;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label lbStatus;
-        private VroomDGDataSet vroomDGDataSet;
+        private System.Windows.Forms.Label lbJudul;
+        private System.Windows.Forms.TextBox TxtJenis;
+        private VroomDGDataSet vroomDGDataSet1;
         private System.Windows.Forms.BindingSource tSupplierBindingSource;
         private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
-        private System.Windows.Forms.TextBox TxtHargaJual;
-        private System.Windows.Forms.TextBox TxtHargaBeli;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
     }
 }

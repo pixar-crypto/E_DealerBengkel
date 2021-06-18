@@ -349,5 +349,10 @@ namespace E_DealerBengkel
             M_Services.Show();
             this.Hide();
         }
+
+        private void BtnSukuCadang_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -116,6 +116,12 @@
     <Compile Include="Master\Services\CRUD_Services.Designer.cs">
       <DependentUpon>CRUD_Services.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\SukuCadang\CRUD_SukuCadang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\SukuCadang\CRUD_SukuCadang.Designer.cs">
+      <DependentUpon>CRUD_SukuCadang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\Supplier\CRUD_Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Services\CRUD_Services.resx">
       <DependentUpon>CRUD_Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\SukuCadang\CRUD_SukuCadang.resx">
+      <DependentUpon>CRUD_SukuCadang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Supplier\CRUD_Supplier.resx">
       <DependentUpon>CRUD_Supplier.cs</DependentUpon>
