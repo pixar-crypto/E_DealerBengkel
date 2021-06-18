@@ -41,8 +41,8 @@ namespace E_DealerBengkel.Master.SukuCadang
 
         private void CRUD_SukuCadang_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vroomDGDataSet1.tSupplier' table. You can move, or remove it, as needed.
-            this.tSupplierTableAdapter.Fill(this.vroomDGDataSet1.tSupplier);
+            // TODO: This line of code loads data into the 'vroomDGDataSet2.tSupplier' table. You can move, or remove it, as needed.
+            this.tSupplierTableAdapter.Fill(this.vroomDGDataSet2.tSupplier);
 
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
 
@@ -239,10 +239,10 @@ namespace E_DealerBengkel.Master.SukuCadang
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand delete = new SqlCommand("[sp_UpdateSukuCadang]", connection);
+                    SqlCommand delete = new SqlCommand("[sp_DeleteSukuCadang]", connection);
                     delete.CommandType = CommandType.StoredProcedure;
 
-                    delete.Parameters.AddWithValue("id_sparepart", id);
+                    delete.Parameters.AddWithValue("id_sukucadang", id);
 
                     try
                     {

@@ -199,6 +199,7 @@ namespace E_DealerBengkel.Master.Supplier
         {
             RefreshDg();
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
+            BtnHapus.Visible = false;
         }
 
         private void TxtNoTelp_KeyPress(object sender, KeyPressEventArgs e)
@@ -238,19 +239,14 @@ namespace E_DealerBengkel.Master.Supplier
                         SqlDataAdapter adapter = new SqlDataAdapter();
                         SqlParameter param = new SqlParameter();
 
-                        SqlCommand insert = new SqlCommand("[sp_UpdateSupplier]", connection);
-                        insert.CommandType = CommandType.StoredProcedure;
+                        SqlCommand delete = new SqlCommand("[sp_DeleteSupplier]", connection);
+                        delete.CommandType = CommandType.StoredProcedure;
 
-                        insert.Parameters.AddWithValue("id_supplier", id);
-                        insert.Parameters.AddWithValue("company_name", TxtCompName.Text);
-                        insert.Parameters.AddWithValue("address", TxtAlamat.Text);
-                        insert.Parameters.AddWithValue("email", TxtEmail.Text);
-                        insert.Parameters.AddWithValue("no_telp", TxtNoTelp.Text);
-                        insert.Parameters.AddWithValue("status", "Tidak aktif");
+                        delete.Parameters.AddWithValue("id_supplier", id);
 
                         try
                         {
-                            insert.ExecuteNonQuery();
+                            delete.ExecuteNonQuery();
                             MessageBox.Show("Delete data succesfully", "Information",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 

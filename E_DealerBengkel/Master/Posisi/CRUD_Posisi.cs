@@ -142,6 +142,7 @@ namespace E_DealerBengkel.Master.Posisi
         {
             RefreshDg();
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
+            BtnHapus.Visible = false;
         }
 
 
@@ -240,17 +241,14 @@ namespace E_DealerBengkel.Master.Posisi
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand insert = new SqlCommand("[sp_UpdatePosisi]", Connection);
-                    insert.CommandType = CommandType.StoredProcedure;
+                    SqlCommand delete = new SqlCommand("[sp_DeletePosisi]", Connection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                    insert.Parameters.AddWithValue("id_posisi", id);
-                    insert.Parameters.AddWithValue("deskripsi", TxtDeskripsi.Text);
-                    insert.Parameters.AddWithValue("gaji", TxtGaji.Text);
-                    insert.Parameters.AddWithValue("status", "Tidak aktif");
+                    delete.Parameters.AddWithValue("id_posisi", id);
 
                     try
                     {
-                        insert.ExecuteNonQuery();
+                        delete.ExecuteNonQuery();
                         MessageBox.Show("Hapus data berhasil", "Information",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 

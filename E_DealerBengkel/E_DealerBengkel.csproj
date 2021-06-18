@@ -140,6 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VroomDGDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VroomDGDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VroomDGDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin_Master.resx">
       <DependentUpon>Admin_Master.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +224,17 @@
     </None>
     <None Include="VroomDGDataSet1.xss">
       <DependentUpon>VroomDGDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VroomDGDataSet2.xsc">
+      <DependentUpon>VroomDGDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VroomDGDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VroomDGDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VroomDGDataSet2.xss">
+      <DependentUpon>VroomDGDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

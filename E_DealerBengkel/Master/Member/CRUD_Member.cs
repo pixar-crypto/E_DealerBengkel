@@ -158,6 +158,7 @@ namespace E_DealerBengkel.Master.Member
 
             RefreshDg();
             CbStatus.Text = " - PILIH STATUS -";
+            BtnHapus.Visible = false;
         }
 
         public void RefreshDg()
@@ -266,20 +267,14 @@ namespace E_DealerBengkel.Master.Member
                         SqlDataAdapter adapter = new SqlDataAdapter();
                         SqlParameter param = new SqlParameter();
 
-                        SqlCommand insert = new SqlCommand("[sp_UpdateMember]", connection);
-                        insert.CommandType = CommandType.StoredProcedure;
+                        SqlCommand delete = new SqlCommand("[sp_DeleteMember]", connection);
+                        delete.CommandType = CommandType.StoredProcedure;
 
-                        insert.Parameters.AddWithValue("id_member", id);
-                        insert.Parameters.AddWithValue("nama_member", TxtNama.Text);
-                        insert.Parameters.AddWithValue("no_KTP", TxtNoKTP.Text);
-                        insert.Parameters.AddWithValue("alamat", TxtAlamat.Text);
-                        insert.Parameters.AddWithValue("email", TxtEmail.Text);
-                        insert.Parameters.AddWithValue("no_telepon", TxtNoTelp.Text);
-                        insert.Parameters.AddWithValue("status", "Tidak aktif");
+                        delete.Parameters.AddWithValue("id_member", id);
 
                         try
                         {
-                            insert.ExecuteNonQuery();
+                            delete.ExecuteNonQuery();
                             MessageBox.Show("Data berhasil dihapus", "Information",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 

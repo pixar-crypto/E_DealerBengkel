@@ -45,15 +45,15 @@ namespace E_DealerBengkel.Master.Mobil
 
         private void CRUD_Mobil_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vroomDGDataSet.tSupplier' table. You can move, or remove it, as needed.
-            this.tSupplierTableAdapter.Fill(this.vroomDGDataSet.tSupplier);
+            // TODO: This line of code loads data into the 'vroomDGDataSet2.tSupplier' table. You can move, or remove it, as needed.
+            this.tSupplierTableAdapter.Fill(this.vroomDGDataSet2.tSupplier);
 
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
 
             RefreshDg();
             cmbSup.Text = " - PILIH SUPPLIER -";
             cbJenis.Text = " - PILIH JENIS -";
-
+            BtnHapus.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -269,20 +269,10 @@ namespace E_DealerBengkel.Master.Mobil
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand insert = new SqlCommand("[sp_UpdateMobil]", connection);
+                    SqlCommand insert = new SqlCommand("[sp_DeleteMobil]", connection);
                     insert.CommandType = CommandType.StoredProcedure;
 
                     insert.Parameters.AddWithValue("id_mobil", id);
-                    insert.Parameters.AddWithValue("merek_mobil", TxtMerek.Text);
-                    insert.Parameters.AddWithValue("warna", TxtWarna.Text);
-                    insert.Parameters.AddWithValue("jenis_mobil", cbJenis.Text);
-                    string hargaBeli = Program.toAngka(TxtHargaBeli.Text).ToString();
-                    insert.Parameters.AddWithValue("harga_beli", hargaBeli);
-                    string hargaJual = Program.toAngka(TxtHargaJual.Text).ToString();
-                    insert.Parameters.AddWithValue("harga_jual", hargaJual);
-                    insert.Parameters.AddWithValue("jumlah", TxtJumlah.Text);
-                    insert.Parameters.AddWithValue("id_supplier", cmbSup.SelectedValue);
-                    insert.Parameters.AddWithValue("status", "Tidak tersedia");
 
                     try
                     {

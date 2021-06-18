@@ -130,7 +130,7 @@ namespace E_DealerBengkel.Master.Employee
             CbStatus.Text = " - PILIH STATUS -";
             TxtPassword.UseSystemPasswordChar = true;
             TxtPassword2.UseSystemPasswordChar = true;
-
+            BtnHapus.Visible = false;
         }
 
         private void txtCari_TextChanged(object sender, EventArgs e)
@@ -307,22 +307,14 @@ namespace E_DealerBengkel.Master.Employee
                         SqlDataAdapter adapter = new SqlDataAdapter();
                         SqlParameter param = new SqlParameter();
 
-                        SqlCommand insert = new SqlCommand("[sp_UpdateKaryawan]", Connection);
-                        insert.CommandType = CommandType.StoredProcedure;
+                        SqlCommand delete = new SqlCommand("[sp_DeleteKaryawan]", Connection);
+                        delete.CommandType = CommandType.StoredProcedure;
 
-                        insert.Parameters.AddWithValue("id_karyawan", id);
-                        insert.Parameters.AddWithValue("nama_karyawan", TxtNamaEmp.Text);
-                        insert.Parameters.AddWithValue("alamat", TxtAlamat.Text);
-                        insert.Parameters.AddWithValue("email", TxtEmail.Text);
-                        insert.Parameters.AddWithValue("no_telepon", TxtNoTelp.Text);
-                        insert.Parameters.AddWithValue("id_posisi", CbPosisi.SelectedValue);
-                        insert.Parameters.AddWithValue("username", TxtUsername.Text);
-                        insert.Parameters.AddWithValue("password", TxtPassword.Text);
-                        insert.Parameters.AddWithValue("status", "Tidak aktif");
+                        delete.Parameters.AddWithValue("id_karyawan", id);
 
                         try
                         {
-                            insert.ExecuteNonQuery();
+                            delete.ExecuteNonQuery();
                             MessageBox.Show("Hapus data berhasil", "Information",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 

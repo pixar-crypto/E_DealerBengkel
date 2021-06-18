@@ -127,6 +127,7 @@ namespace E_DealerBengkel.Master.Services
         {
             RefreshDg();
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
+            BtnHapus.Visible = false;
         }
 
         public void RefreshDg()
@@ -207,18 +208,14 @@ namespace E_DealerBengkel.Master.Services
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand update = new SqlCommand("[sp_UpdateService]", connection);
-                    update.CommandType = CommandType.StoredProcedure;
+                    SqlCommand delete = new SqlCommand("[sp_DeleteService]", connection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                    update.Parameters.AddWithValue("id_service", id);
-                    update.Parameters.AddWithValue("jenis_service", TxtJenisServices.Text);
-                    string harga = Program.toAngka(TxtHarga.Text).ToString();
-                    update.Parameters.AddWithValue("harga", harga);
-                    update.Parameters.AddWithValue("status", "Tidak tersedia");
+                    delete.Parameters.AddWithValue("id_service", id);
 
                     try
                     {
-                        update.ExecuteNonQuery();
+                        delete.ExecuteNonQuery();
                         MessageBox.Show("Data Berhasil Dihapus", "Information",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 

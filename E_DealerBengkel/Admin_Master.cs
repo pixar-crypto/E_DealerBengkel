@@ -4,6 +4,7 @@ using E_DealerBengkel.Master.Mobil;
 using E_DealerBengkel.Master.Motor;
 using E_DealerBengkel.Master.Posisi;
 using E_DealerBengkel.Master.Services;
+using E_DealerBengkel.Master.SukuCadang;
 using E_DealerBengkel.Master.Supplier;
 using System;
 using System.Collections.Generic;
@@ -352,7 +353,9 @@ namespace E_DealerBengkel
 
         private void BtnSukuCadang_Click(object sender, EventArgs e)
         {
-            
+            CRUD_SukuCadang M_SukuCadang = new CRUD_SukuCadang();
+            M_SukuCadang.Show();
+            this.Hide();
         }
     }
 }

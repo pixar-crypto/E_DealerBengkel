@@ -249,6 +249,7 @@
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(358, 19);
             this.TxtPassword.TabIndex = 31;
+            this.TxtPassword.Text = "Password";
             this.TxtPassword.Click += new System.EventHandler(this.TxtPassword_Click);
             // 
             // panel3
@@ -276,7 +277,6 @@
             this.ClientSize = new System.Drawing.Size(869, 586);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.TxtPassword);
             this.Controls.Add(this.TxtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnLupaPassword);
@@ -288,6 +288,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbMataBuka);
             this.Controls.Add(this.lbMataTutup);
+            this.Controls.Add(this.TxtPassword);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";

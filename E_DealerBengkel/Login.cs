@@ -87,7 +87,10 @@ namespace E_DealerBengkel
 
         private void Login_Load(object sender, EventArgs e)
         {
-            TxtPassword.UseSystemPasswordChar = true;
+            if (TxtPassword.Text == "Password")
+            {
+                TxtPassword.UseSystemPasswordChar = false;
+            }
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -177,12 +180,19 @@ namespace E_DealerBengkel
 
         private void TxtUsername_Click(object sender, EventArgs e)
         {
-            TxtUsername.Clear();
+            if (TxtUsername.Text == "Username")
+            {
+                TxtUsername.Clear();
+            }
         }
 
         private void TxtPassword_Click(object sender, EventArgs e)
         {
-            TxtPassword.Clear();
+            if (TxtPassword.Text == "Password")
+            {
+                TxtPassword.Clear();
+            }
+            TxtPassword.UseSystemPasswordChar = true;
         }
     }
 }
