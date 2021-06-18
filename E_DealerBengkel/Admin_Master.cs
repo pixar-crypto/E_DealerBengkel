@@ -357,5 +357,12 @@ namespace E_DealerBengkel
             M_SukuCadang.Show();
             this.Hide();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            TentangAplikasi aplikasi = new TentangAplikasi();
+            aplikasi.Show();
+            this.Hide();
+        }
     }
 }
