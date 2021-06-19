@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_DealerBengkel.Transaksi.Pembelian;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,13 @@ namespace E_DealerBengkel
         private void button1_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.ExitThread();
+        }
+
+        private void BtnPembelian_Click(object sender, EventArgs e)
+        {
+            Pembelian beli = new Pembelian();
+            beli.Show();
+            this.Hide();
         }
     }
 }
