@@ -671,8 +671,8 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             {
                 dgvKeranjang.Rows.RemoveAt(n);
 
-                btnTambah.Enabled = false;
-                btnKurang.Enabled = false;
+                BtnTambah.Enabled = false;
+                BtnKurang.Enabled = false;
             }
             else
             {
