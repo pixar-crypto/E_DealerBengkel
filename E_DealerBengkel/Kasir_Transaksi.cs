@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_DealerBengkel.Transaksi.Penjualan;
+using E_DealerBengkel.Transaksi.Retur;
+using E_DealerBengkel.Transaksi.Services;
 
 namespace E_DealerBengkel
 {
@@ -25,20 +28,28 @@ namespace E_DealerBengkel
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.ExitThread();
-        }
 
         private void BtnPembelian_Click(object sender, EventArgs e)
         {
             Pembelian beli = new Pembelian();
             beli.Show();
+            this.Hide();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.ExitThread();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Login logn = new Login();
+            logn.Show();
             this.Hide();
         }
     }

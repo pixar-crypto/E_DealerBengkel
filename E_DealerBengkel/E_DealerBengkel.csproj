@@ -142,24 +142,6 @@
     <Compile Include="Transaksi\Pembelian\Pembelian.Designer.cs">
       <DependentUpon>Pembelian.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaksi\Penjualan\Penjualan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaksi\Penjualan\Penjualan.Designer.cs">
-      <DependentUpon>Penjualan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaksi\Retur\Retur.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaksi\Retur\Retur.Designer.cs">
-      <DependentUpon>Retur.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaksi\Services\Services.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaksi\Services\Services.Designer.cs">
-      <DependentUpon>Services.cs</DependentUpon>
-    </Compile>
     <Compile Include="VroomDGDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -279,6 +261,9 @@
   <ItemGroup>
     <Folder Include="Pictures\" />
     <Folder Include="Reports\" />
+    <Folder Include="Transaksi\Penjualan\" />
+    <Folder Include="Transaksi\Retur\" />
+    <Folder Include="Transaksi\Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-Cancel-80.png" />

@@ -12,7 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
-//using E_DealerBengkel.Transaksi.Penjualan;
+using E_DealerBengkel.Transaksi.Penjualan;
 //using E_DealerBengkel.Transaksi.Retur;
 //using E_DealerBengkel.Transaksi.Services;
 using System.Configuration;
@@ -42,6 +42,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
 
         private void BtnPenjualan_Click(object sender, EventArgs e)
         {
+            
             
         }
 
@@ -431,7 +432,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
                     reader.Read();
                     string jumlah = Convert.ToString(reader["jumlah"]);
                     int hasil = int.Parse(jumlah) + int.Parse(jum);
-                    updateBarangSpare(hasil, i);
+                    updateBarangSukuCadang(hasil, i);
                 }
                 else
                     MessageBox.Show("Data tidak ditemukan ", "Pemberitahuan",
@@ -466,7 +467,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_mobil", idMobil);
-            insert.Parameters.AddWithValue("merk_mobil", merk);
+            insert.Parameters.AddWithValue("merek_mobil", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_mobil", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
@@ -512,7 +513,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_motor", idMotor);
-            insert.Parameters.AddWithValue("merk_motor", merk);
+            insert.Parameters.AddWithValue("merek_motor", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_motor", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
@@ -534,7 +535,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             }
         }
 
-        private void updateBarangSpare(int hasil, int i)
+        private void updateBarangSukuCadang(int hasil, int i)
         {
             string idSukuCadang = dgvKeranjang.Rows[i].Cells[0].Value.ToString();
             string merk = dgvKeranjang.Rows[i].Cells[1].Value.ToString();
@@ -603,7 +604,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
 
         private void CariMotor(string idMotor)
         {
-            string query = "select * from T_Motor where id_motor='" + idMotor + "'";
+            string query = "select * from tMotor where id_motor='" + idMotor + "'";
 
             SqlConnection connection = new SqlConnection(Program.koneksi());
             SqlCommand search = new SqlCommand(query, connection);
@@ -625,7 +626,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
 
         private void CariSukuCadang(string idSukuCadang)
         {
-            string query = "select * from T_Sparepart where id_sparepart='" + idSukuCadang + "'";
+            string query = "select * from tSukucadang where id_sukucadang='" + idSukuCadang + "'";
 
             SqlConnection connection = new SqlConnection(Program.koneksi());
             SqlCommand search = new SqlCommand(query, connection);
@@ -679,6 +680,135 @@ namespace E_DealerBengkel.Transaksi.Pembelian
                 dgvKeranjang.Rows[n].Cells[5].Value = jumla;
             }
             cekBeli();
+        }
+
+        private void BtnCariBarang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cari = TxtCariBarang.Text;
+
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlDataAdapter adapt = new SqlDataAdapter(
+                    "SELECT id_mobil AS ID, merek_mobil AS Merek, warna AS Warna, jenis_mobil AS Jenis, harga_beli AS HargaBeli, harga_jual AS HargaJual, jumlah AS Jumlah, id_supplier AS Supplier FROM tMobil "
+                    + "WHERE merek_mobil='" + cari + "'"
+                    + " UNION "
+                    + "SELECT id_motor AS ID, merek_motor AS Merek, warna AS Warna, jenis_motor AS Jenis, harga_beli AS HargaBeli, harga_jual AS HargaJual, jumlah AS Jumlah, id_supplier AS Supplier FROM tMotor "
+                    + "WHERE merek_motor='" + cari + "'"
+                    + " UNION "
+                    + "SELECT id_sukucadang AS ID, merek_sukucadang AS Merek, tipe AS Warna, jenis_sukucadang AS Jenis, harga_beli AS HargaBeli, harga_jual AS HargaJual, jumlah AS Jumlah, id_supplier AS Supplier FROM tSukucadang "
+                    + "WHERE jenis_sukucadang='" + cari + "'", connection);
+                DataTable dt = new DataTable();
+
+                connection.Open();
+                adapt.Fill(dt);
+                dgvStok.DataSource = dt;
+                dgvStok.Columns[4].DefaultCellStyle.Format = "Rp #,###";
+                dgvStok.Columns[5].DefaultCellStyle.Format = "Rp #,###";
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Pemberitahuan!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BtnSimpan_Click(object sender, EventArgs e)
+        {
+            if (TxtJumlahBayar.Text == "")
+            {
+                MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                var hasil = MessageBox.Show("Apakah anda yakin?", "Information",
+                                   MessageBoxButtons.YesNo,
+                                   MessageBoxIcon.Question);
+                if (hasil == DialogResult.Yes)
+                {
+                    isiJenisBarang();
+                    isiTPembelian();
+                    isiDetailTPembelian();
+                    MessageBox.Show("Pembelian berhasil dilakukan", "Pemberitahuan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Clear();
+                    this.dgvKeranjang.Rows.Clear();
+                }
+            }
+        }
+
+        private void isiTPembelian()
+        {
+            string query = "select top 1 id_pembelian from tPembelian order by id_pembelian desc";
+            idTran = autogenerateID("TBB-", query);
+            string waktu = DateTime.Now.ToString("dd MMMM yyyy");
+            user = lbUser.Text.Replace("Hallo, kasir ", "");
+            CariId(user);
+
+            SqlConnection connection = new SqlConnection(Program.koneksi());
+
+            connection.Open();
+
+            SqlCommand insert = new SqlCommand("[sp_InputTPembelian]", connection);
+            insert.CommandType = CommandType.StoredProcedure;
+
+            insert.Parameters.AddWithValue("id_pembelian", idTran);
+            insert.Parameters.AddWithValue("tanggal", waktu);
+            insert.Parameters.AddWithValue("total_harga", Int64.Parse(total.ToString()));
+            insert.Parameters.AddWithValue("id_karyawan", id);
+            insert.Parameters.AddWithValue("id_jenisBarang", idKat);
+
+            try
+            {
+                //transaction.Commit();
+                insert.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to update: " + ex.Message);
+            }
+            connection.Close();
+        }
+
+        private void isiDetailTPembelian()
+        {
+            for (int i = 0; i < dgvKeranjang.Rows.Count; i++)
+            {
+                string idKat = dgvKeranjang.Rows[i].Cells[0].Value.ToString();
+                string harga = dgvKeranjang.Rows[i].Cells[4].Value.ToString();
+                string jumlah = dgvKeranjang.Rows[i].Cells[5].Value.ToString();
+                string sup = dgvKeranjang.Rows[i].Cells[6].Value.ToString();
+
+                SqlConnection connection = new SqlConnection(Program.koneksi());
+
+                harga = harga.Replace(".", "");
+                harga = harga.Replace("Rp ", "");
+                connection.Open();
+
+                SqlCommand insert = new SqlCommand("[sp_InputDetailTPembelian]", connection);
+                insert.CommandType = CommandType.StoredProcedure;
+
+                insert.Parameters.AddWithValue("id_pembelian", idTran);
+                insert.Parameters.AddWithValue("jumlah_pembelian", int.Parse(jumlah.ToString()));
+                insert.Parameters.AddWithValue("harga_beli_satuan", double.Parse(harga.ToString()));
+                insert.Parameters.AddWithValue("id_jenisBarang", idKat);
+                insert.Parameters.AddWithValue("id_supplier", sup);
+
+                try
+                {
+                    //transaction.Commit();
+                    insert.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to update: " + ex.Message);
+                }
+                connection.Close();
+            }
         }
 
         void timer_Tick(object sender, EventArgs e)
