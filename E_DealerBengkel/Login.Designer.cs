@@ -65,7 +65,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(399, 586);
+            this.panel2.Size = new System.Drawing.Size(399, 529);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -103,7 +103,7 @@
             // lbMataBuka
             // 
             this.lbMataBuka.Image = ((System.Drawing.Image)(resources.GetObject("lbMataBuka.Image")));
-            this.lbMataBuka.Location = new System.Drawing.Point(813, 322);
+            this.lbMataBuka.Location = new System.Drawing.Point(790, 322);
             this.lbMataBuka.Name = "lbMataBuka";
             this.lbMataBuka.Size = new System.Drawing.Size(47, 30);
             this.lbMataBuka.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +114,7 @@
             // lbMataTutup
             // 
             this.lbMataTutup.Image = ((System.Drawing.Image)(resources.GetObject("lbMataTutup.Image")));
-            this.lbMataTutup.Location = new System.Drawing.Point(813, 322);
+            this.lbMataTutup.Location = new System.Drawing.Point(790, 322);
             this.lbMataTutup.Name = "lbMataTutup";
             this.lbMataTutup.Size = new System.Drawing.Size(47, 30);
             this.lbMataTutup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +161,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(405, 306);
+            this.pictureBox4.Location = new System.Drawing.Point(427, 306);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 38);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -171,7 +171,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(405, 249);
+            this.pictureBox3.Location = new System.Drawing.Point(427, 249);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -195,7 +195,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(808, 0);
+            this.button3.Location = new System.Drawing.Point(819, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(30, 34);
@@ -210,7 +210,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(842, 0);
+            this.button1.Location = new System.Drawing.Point(853, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 34);
@@ -223,9 +223,9 @@
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(-5, 0);
+            this.panel1.Location = new System.Drawing.Point(-35, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 38);
+            this.panel1.Size = new System.Drawing.Size(886, 38);
             this.panel1.TabIndex = 0;
             // 
             // TxtUsername
@@ -233,7 +233,7 @@
             this.TxtUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsername.Location = new System.Drawing.Point(450, 260);
+            this.TxtUsername.Location = new System.Drawing.Point(472, 260);
             this.TxtUsername.Name = "TxtUsername";
             this.TxtUsername.Size = new System.Drawing.Size(357, 19);
             this.TxtUsername.TabIndex = 30;
@@ -245,7 +245,7 @@
             this.TxtPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPassword.Location = new System.Drawing.Point(449, 324);
+            this.TxtPassword.Location = new System.Drawing.Point(471, 324);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(358, 19);
             this.TxtPassword.TabIndex = 31;
@@ -255,17 +255,17 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Location = new System.Drawing.Point(405, 284);
+            this.panel3.Location = new System.Drawing.Point(427, 285);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(402, 3);
+            this.panel3.Size = new System.Drawing.Size(350, 3);
             this.panel3.TabIndex = 32;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
-            this.panel4.Location = new System.Drawing.Point(405, 349);
+            this.panel4.Location = new System.Drawing.Point(427, 349);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(402, 3);
+            this.panel4.Size = new System.Drawing.Size(350, 3);
             this.panel4.TabIndex = 33;
             // 
             // Login
@@ -274,7 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(869, 586);
+            this.ClientSize = new System.Drawing.Size(850, 529);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.TxtUsername);

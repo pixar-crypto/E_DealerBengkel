@@ -164,5 +164,15 @@ namespace E_DealerBengkel
         {
             System.Windows.Forms.Application.ExitThread();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.ExitThread();
+        }
     }
 }
