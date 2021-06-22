@@ -42,9 +42,10 @@ namespace E_DealerBengkel.Master.Motor
 
         private void CRUD_Motor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vroomDGDataSet.tSupplier' table. You can move, or remove it, as needed.
+            this.tSupplierTableAdapter.Fill(this.vroomDGDataSet.tSupplier);
             // TODO: This line of code loads data into the 'vroomDGDataSet2.tSupplier' table. You can move, or remove it, as needed.
-            this.tSupplierTableAdapter.Fill(this.vroomDGDataSet2.tSupplier);
-            // TODO: This line of code loads data into the 'vroomDGDataSet2.tSupplier' table. You can move, or remove it, as needed.
+       
           
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
 

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_SukuCadang));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
@@ -50,6 +50,7 @@
             this.lbUser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TxtJenis = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtHargaJual = new System.Windows.Forms.TextBox();
@@ -76,10 +77,9 @@
             this.label29 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.lbJudul = new System.Windows.Forms.Label();
-            this.TxtJenis = new System.Windows.Forms.TextBox();
-            this.vroomDGDataSet2 = new E_DealerBengkel.VroomDGDataSet2();
-            this.tSupplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSet2TableAdapters.tSupplierTableAdapter();
+            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -90,8 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -351,6 +351,13 @@
             this.panel3.Size = new System.Drawing.Size(779, 394);
             this.panel3.TabIndex = 145;
             // 
+            // TxtJenis
+            // 
+            this.TxtJenis.Location = new System.Drawing.Point(139, 119);
+            this.TxtJenis.Name = "TxtJenis";
+            this.TxtJenis.Size = new System.Drawing.Size(185, 20);
+            this.TxtJenis.TabIndex = 122;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -410,7 +417,7 @@
             // 
             // cmbSup
             // 
-            this.cmbSup.DataSource = this.tSupplierBindingSource;
+            this.cmbSup.DataSource = this.bindingSource1;
             this.cmbSup.DisplayMember = "nama_supplier";
             this.cmbSup.FormattingEnabled = true;
             this.cmbSup.Location = new System.Drawing.Point(139, 255);
@@ -617,14 +624,14 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(354, 48);
             this.dataGridView1.Name = "dataGridView1";
@@ -671,22 +678,15 @@
             this.lbJudul.Text = "TAMBAH SUKUCADANG";
             this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // TxtJenis
+            // vroomDGDataSet
             // 
-            this.TxtJenis.Location = new System.Drawing.Point(139, 119);
-            this.TxtJenis.Name = "TxtJenis";
-            this.TxtJenis.Size = new System.Drawing.Size(185, 20);
-            this.TxtJenis.TabIndex = 122;
+            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
+            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // vroomDGDataSet2
+            // bindingSource1
             // 
-            this.vroomDGDataSet2.DataSetName = "VroomDGDataSet2";
-            this.vroomDGDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tSupplierBindingSource
-            // 
-            this.tSupplierBindingSource.DataMember = "tSupplier";
-            this.tSupplierBindingSource.DataSource = this.vroomDGDataSet2;
+            this.bindingSource1.DataMember = "tSupplier";
+            this.bindingSource1.DataSource = this.vroomDGDataSet;
             // 
             // tSupplierTableAdapter
             // 
@@ -724,8 +724,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -778,8 +778,11 @@
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.Label lbJudul;
         private System.Windows.Forms.TextBox TxtJenis;
-        private VroomDGDataSet2 vroomDGDataSet2;
+  //      private VroomDGDataSet2 vroomDGDataSet2;
         private System.Windows.Forms.BindingSource tSupplierBindingSource;
-        private VroomDGDataSet2TableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
+        private VroomDGDataSet vroomDGDataSet;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
+        //    private VroomDGDataSet2TableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
     }
 }

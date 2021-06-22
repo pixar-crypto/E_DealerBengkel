@@ -110,11 +110,11 @@
     <Compile Include="Master\Posisi\CRUD_Posisi.Designer.cs">
       <DependentUpon>CRUD_Posisi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\Services\CRUD_Services.cs">
+    <Compile Include="Master\Services\CRUD_Service.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\Services\CRUD_Services.Designer.cs">
-      <DependentUpon>CRUD_Services.cs</DependentUpon>
+    <Compile Include="Master\Services\CRUD_Service.Designer.cs">
+      <DependentUpon>CRUD_Service.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\SukuCadang\CRUD_SukuCadang.cs">
       <SubType>Form</SubType>
@@ -142,20 +142,16 @@
     <Compile Include="Transaksi\Pembelian\Pembelian.Designer.cs">
       <DependentUpon>Pembelian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaksi\Penjualan\Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penjualan\Penjualan.Designer.cs">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </Compile>
     <Compile Include="VroomDGDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VroomDGDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="VroomDGDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VroomDGDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="VroomDGDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VroomDGDataSet2.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin_Master.resx">
       <DependentUpon>Admin_Master.cs</DependentUpon>
@@ -187,8 +183,8 @@
     <EmbeddedResource Include="Master\Posisi\CRUD_Posisi.resx">
       <DependentUpon>CRUD_Posisi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\Services\CRUD_Services.resx">
-      <DependentUpon>CRUD_Services.cs</DependentUpon>
+    <EmbeddedResource Include="Master\Services\CRUD_Service.resx">
+      <DependentUpon>CRUD_Service.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\SukuCadang\CRUD_SukuCadang.resx">
       <DependentUpon>CRUD_SukuCadang.cs</DependentUpon>
@@ -212,6 +208,9 @@
     <EmbeddedResource Include="Transaksi\Pembelian\Pembelian.resx">
       <DependentUpon>Pembelian.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penjualan\Penjualan.resx">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -232,28 +231,6 @@
     <None Include="VroomDGDataSet.xss">
       <DependentUpon>VroomDGDataSet.xsd</DependentUpon>
     </None>
-    <None Include="VroomDGDataSet1.xsc">
-      <DependentUpon>VroomDGDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="VroomDGDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VroomDGDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="VroomDGDataSet1.xss">
-      <DependentUpon>VroomDGDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="VroomDGDataSet2.xsc">
-      <DependentUpon>VroomDGDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="VroomDGDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VroomDGDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="VroomDGDataSet2.xss">
-      <DependentUpon>VroomDGDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -261,7 +238,6 @@
   <ItemGroup>
     <Folder Include="Pictures\" />
     <Folder Include="Reports\" />
-    <Folder Include="Transaksi\Penjualan\" />
     <Folder Include="Transaksi\Retur\" />
     <Folder Include="Transaksi\Services\" />
   </ItemGroup>

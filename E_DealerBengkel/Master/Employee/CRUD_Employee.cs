@@ -119,8 +119,7 @@ namespace E_DealerBengkel.Master.Employee
 
         private void CRUD_Employee_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'vroomDGDataSet1.tPosisi' table. You can move, or remove it, as needed.
-            this.tPosisiTableAdapter1.Fill(this.vroomDGDataSet1.tPosisi);
+            
 
 
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;

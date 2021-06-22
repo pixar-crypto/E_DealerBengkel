@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Mobil));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -77,9 +77,9 @@
             this.dgvMobil = new System.Windows.Forms.DataGridView();
             this.label29 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
-            this.vroomDGDataSet2 = new E_DealerBengkel.VroomDGDataSet2();
-            this.tSupplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSet2TableAdapters.tSupplierTableAdapter();
+            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -90,8 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMobil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -421,7 +421,7 @@
             // 
             // cmbSup
             // 
-            this.cmbSup.DataSource = this.tSupplierBindingSource;
+            this.cmbSup.DataSource = this.bindingSource1;
             this.cmbSup.DisplayMember = "nama_supplier";
             this.cmbSup.FormattingEnabled = true;
             this.cmbSup.Location = new System.Drawing.Point(139, 255);
@@ -640,14 +640,14 @@
             this.dgvMobil.AllowUserToResizeRows = false;
             this.dgvMobil.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvMobil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMobil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMobil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMobil.Location = new System.Drawing.Point(354, 48);
             this.dgvMobil.Name = "dgvMobil";
@@ -683,15 +683,15 @@
             this.lbStatus.Text = "STATUS";
             this.lbStatus.Visible = false;
             // 
-            // vroomDGDataSet2
+            // vroomDGDataSet
             // 
-            this.vroomDGDataSet2.DataSetName = "VroomDGDataSet2";
-            this.vroomDGDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
+            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tSupplierBindingSource
+            // bindingSource1
             // 
-            this.tSupplierBindingSource.DataMember = "tSupplier";
-            this.tSupplierBindingSource.DataSource = this.vroomDGDataSet2;
+            this.bindingSource1.DataMember = "tSupplier";
+            this.bindingSource1.DataSource = this.vroomDGDataSet;
             // 
             // tSupplierTableAdapter
             // 
@@ -729,8 +729,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMobil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -783,8 +783,11 @@
         private System.Windows.Forms.TextBox TxtHargaBeli;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private VroomDGDataSet2 vroomDGDataSet2;
+ //       private VroomDGDataSet2 vroomDGDataSet2;
         private System.Windows.Forms.BindingSource tSupplierBindingSource;
-        private VroomDGDataSet2TableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
+        private VroomDGDataSet vroomDGDataSet;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
+        //     private VroomDGDataSet2TableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace E_DealerBengkel.Transaksi.Pembelian
+﻿namespace E_DealerBengkel.Transaksi.Penjualan
 {
-    partial class Pembelian
+    partial class Penjualan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pembelian));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Penjualan));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
@@ -51,6 +46,11 @@
             this.BtnPembelian = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMini = new System.Windows.Forms.Button();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,13 +58,21 @@
             this.lbWaktu = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.lbJudul = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtUangKembali = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtUangBayar = new System.Windows.Forms.TextBox();
+            this.btnCariIDmbr = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtIdCus = new System.Windows.Forms.TextBox();
+            this.txtNamaCus = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnBayar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.BtnKurang = new Bunifu.Framework.UI.BunifuImageButton();
             this.BtnTambah = new Bunifu.Framework.UI.BunifuImageButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.BtnSimpan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvKeranjang = new System.Windows.Forms.DataGridView();
             this.Idd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.merk = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,86 +82,29 @@
             this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvStok = new System.Windows.Forms.DataGridView();
-            this.TxtJumlahBayar = new System.Windows.Forms.TextBox();
+            this.txtJumlahBayar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.BtnCariBarang = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCariBarang = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cbJenisBarang = new System.Windows.Forms.ComboBox();
-            this.cbSupplier = new System.Windows.Forms.ComboBox();
-            this.tSupplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
             this.TxtCariBarang = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
-            this.panel1.SuspendLayout();
+            this.lbJudul = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnKurang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnTambah)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKeranjang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStok)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(-84, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1237, 38);
-            this.panel1.TabIndex = 124;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Honeydew;
-            this.label3.Location = new System.Drawing.Point(295, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 31);
-            this.label3.TabIndex = 130;
-            this.label3.Text = "Halaman Kasir - Pembelian";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1200, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 34);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1165, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 34);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -172,12 +123,12 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 740);
-            this.panel2.TabIndex = 125;
+            this.panel2.TabIndex = 126;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(10, 200);
+            this.panel5.Location = new System.Drawing.Point(10, 243);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(173, 3);
             this.panel5.TabIndex = 148;
@@ -320,6 +271,68 @@
             this.panel12.Size = new System.Drawing.Size(200, 151);
             this.panel12.TabIndex = 128;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.btnMini);
+            this.panel1.Location = new System.Drawing.Point(-84, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1237, 38);
+            this.panel1.TabIndex = 127;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Honeydew;
+            this.label3.Location = new System.Drawing.Point(295, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(252, 31);
+            this.label3.TabIndex = 130;
+            this.label3.Text = "Halaman Kasir - Penjualan";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1200, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 34);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMini
+            // 
+            this.btnMini.BackColor = System.Drawing.Color.Transparent;
+            this.btnMini.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMini.BackgroundImage")));
+            this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMini.FlatAppearance.BorderSize = 0;
+            this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMini.Location = new System.Drawing.Point(1165, 2);
+            this.btnMini.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMini.Name = "btnMini";
+            this.btnMini.Size = new System.Drawing.Size(31, 34);
+            this.btnMini.TabIndex = 5;
+            this.btnMini.UseVisualStyleBackColor = false;
+            this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox12.Location = new System.Drawing.Point(197, 35);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(951, 117);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 128;
+            this.pictureBox12.TabStop = false;
+            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -328,7 +341,7 @@
             this.label9.Location = new System.Drawing.Point(301, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 25);
-            this.label9.TabIndex = 134;
+            this.label9.TabIndex = 133;
             this.label9.Text = "CAKUNG - JAKARTA TIMUR";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -340,7 +353,7 @@
             this.label1.Location = new System.Drawing.Point(301, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 35);
-            this.label1.TabIndex = 133;
+            this.label1.TabIndex = 132;
             this.label1.Text = "VROOM! D&&G";
             // 
             // pictureBox2
@@ -351,7 +364,7 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 132;
+            this.pictureBox2.TabIndex = 131;
             this.pictureBox2.TabStop = false;
             // 
             // panel4
@@ -364,7 +377,7 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
-            this.panel4.TabIndex = 131;
+            this.panel4.TabIndex = 130;
             // 
             // lbWaktu
             // 
@@ -394,43 +407,31 @@
             this.pictureBox3.TabIndex = 104;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox12.Location = new System.Drawing.Point(197, 35);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(951, 117);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 130;
-            this.pictureBox12.TabStop = false;
-            // 
-            // lbJudul
-            // 
-            this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(513, 166);
-            this.lbJudul.Name = "lbJudul";
-            this.lbJudul.Size = new System.Drawing.Size(324, 23);
-            this.lbJudul.TabIndex = 146;
-            this.lbJudul.Text = "PEMBELIAN";
-            this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.txtUangKembali);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.txtUangBayar);
+            this.panel3.Controls.Add(this.btnCariIDmbr);
+            this.panel3.Controls.Add(this.txtIdCus);
+            this.panel3.Controls.Add(this.txtNamaCus);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.btnBayar);
             this.panel3.Controls.Add(this.BtnKurang);
             this.panel3.Controls.Add(this.BtnTambah);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.BtnSimpan);
             this.panel3.Controls.Add(this.dgvKeranjang);
             this.panel3.Controls.Add(this.dgvStok);
-            this.panel3.Controls.Add(this.TxtJumlahBayar);
+            this.panel3.Controls.Add(this.txtJumlahBayar);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.BtnCariBarang);
+            this.panel3.Controls.Add(this.btnCariBarang);
             this.panel3.Controls.Add(this.cbJenisBarang);
-            this.panel3.Controls.Add(this.cbSupplier);
             this.panel3.Controls.Add(this.TxtCariBarang);
             this.panel3.Controls.Add(this.label33);
             this.panel3.Controls.Add(this.label31);
@@ -438,8 +439,168 @@
             this.panel3.Location = new System.Drawing.Point(218, 205);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(913, 510);
-            this.panel3.TabIndex = 147;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.TabIndex = 148;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(710, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 16);
+            this.label8.TabIndex = 153;
+            this.label8.Text = "Rp";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(710, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 16);
+            this.label11.TabIndex = 152;
+            this.label11.Text = "KEMBALI :";
+            // 
+            // txtUangKembali
+            // 
+            this.txtUangKembali.Enabled = false;
+            this.txtUangKembali.Location = new System.Drawing.Point(736, 53);
+            this.txtUangKembali.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUangKembali.Name = "txtUangKembali";
+            this.txtUangKembali.Size = new System.Drawing.Size(158, 20);
+            this.txtUangKembali.TabIndex = 151;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(475, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 16);
+            this.label5.TabIndex = 150;
+            this.label5.Text = "Rp";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(475, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(152, 16);
+            this.label6.TabIndex = 149;
+            this.label6.Text = "UANG YANG DIBERIKAN :";
+            // 
+            // txtUangBayar
+            // 
+            this.txtUangBayar.Location = new System.Drawing.Point(504, 119);
+            this.txtUangBayar.Name = "txtUangBayar";
+            this.txtUangBayar.Size = new System.Drawing.Size(185, 20);
+            this.txtUangBayar.TabIndex = 148;
+            this.txtUangBayar.TextChanged += new System.EventHandler(this.txtUangBayar_TextChanged);
+            this.txtUangBayar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUangBayar_KeyPress);
+            // 
+            // btnCariIDmbr
+            // 
+            this.btnCariIDmbr.Activecolor = System.Drawing.Color.LightSlateGray;
+            this.btnCariIDmbr.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCariIDmbr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCariIDmbr.BorderRadius = 0;
+            this.btnCariIDmbr.ButtonText = "Cari";
+            this.btnCariIDmbr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCariIDmbr.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCariIDmbr.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCariIDmbr.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCariIDmbr.Iconimage")));
+            this.btnCariIDmbr.Iconimage_right = null;
+            this.btnCariIDmbr.Iconimage_right_Selected = null;
+            this.btnCariIDmbr.Iconimage_Selected = null;
+            this.btnCariIDmbr.IconMarginLeft = 0;
+            this.btnCariIDmbr.IconMarginRight = 0;
+            this.btnCariIDmbr.IconRightVisible = true;
+            this.btnCariIDmbr.IconRightZoom = 0D;
+            this.btnCariIDmbr.IconVisible = true;
+            this.btnCariIDmbr.IconZoom = 50D;
+            this.btnCariIDmbr.IsTab = false;
+            this.btnCariIDmbr.Location = new System.Drawing.Point(331, 19);
+            this.btnCariIDmbr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCariIDmbr.Name = "btnCariIDmbr";
+            this.btnCariIDmbr.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btnCariIDmbr.OnHovercolor = System.Drawing.Color.LightSlateGray;
+            this.btnCariIDmbr.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCariIDmbr.selected = false;
+            this.btnCariIDmbr.Size = new System.Drawing.Size(67, 25);
+            this.btnCariIDmbr.TabIndex = 147;
+            this.btnCariIDmbr.Text = "Cari";
+            this.btnCariIDmbr.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCariIDmbr.Textcolor = System.Drawing.Color.White;
+            this.btnCariIDmbr.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCariIDmbr.Click += new System.EventHandler(this.btnCariIDmbr_Click);
+            // 
+            // txtIdCus
+            // 
+            this.txtIdCus.Location = new System.Drawing.Point(139, 21);
+            this.txtIdCus.Name = "txtIdCus";
+            this.txtIdCus.Size = new System.Drawing.Size(185, 20);
+            this.txtIdCus.TabIndex = 144;
+            // 
+            // txtNamaCus
+            // 
+            this.txtNamaCus.Enabled = false;
+            this.txtNamaCus.Location = new System.Drawing.Point(139, 52);
+            this.txtNamaCus.Name = "txtNamaCus";
+            this.txtNamaCus.Size = new System.Drawing.Size(185, 20);
+            this.txtNamaCus.TabIndex = 145;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 16);
+            this.label10.TabIndex = 143;
+            this.label10.Text = "ID MEMBER";
+            // 
+            // btnBayar
+            // 
+            this.btnBayar.Activecolor = System.Drawing.Color.LightSlateGray;
+            this.btnBayar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBayar.BorderRadius = 0;
+            this.btnBayar.ButtonText = "Bayar";
+            this.btnBayar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBayar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBayar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBayar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBayar.Iconimage")));
+            this.btnBayar.Iconimage_right = null;
+            this.btnBayar.Iconimage_right_Selected = null;
+            this.btnBayar.Iconimage_Selected = null;
+            this.btnBayar.IconMarginLeft = 0;
+            this.btnBayar.IconMarginRight = 0;
+            this.btnBayar.IconRightVisible = true;
+            this.btnBayar.IconRightZoom = 0D;
+            this.btnBayar.IconVisible = true;
+            this.btnBayar.IconZoom = 50D;
+            this.btnBayar.IsTab = false;
+            this.btnBayar.Location = new System.Drawing.Point(760, 461);
+            this.btnBayar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBayar.Name = "btnBayar";
+            this.btnBayar.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btnBayar.OnHovercolor = System.Drawing.Color.LightSlateGray;
+            this.btnBayar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBayar.selected = false;
+            this.btnBayar.Size = new System.Drawing.Size(99, 29);
+            this.btnBayar.TabIndex = 142;
+            this.btnBayar.Text = "Bayar";
+            this.btnBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBayar.Textcolor = System.Drawing.Color.White;
+            this.btnBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBayar.Click += new System.EventHandler(this.btnBayar_Click);
             // 
             // BtnKurang
             // 
@@ -480,42 +641,6 @@
             this.label7.TabIndex = 139;
             this.label7.Text = "*Pilih data terlebih dahulu";
             // 
-            // BtnSimpan
-            // 
-            this.BtnSimpan.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.BtnSimpan.BackColor = System.Drawing.Color.SteelBlue;
-            this.BtnSimpan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSimpan.BorderRadius = 0;
-            this.BtnSimpan.ButtonText = "SIMPAN";
-            this.BtnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSimpan.DisabledColor = System.Drawing.Color.Gray;
-            this.BtnSimpan.Iconcolor = System.Drawing.Color.Transparent;
-            this.BtnSimpan.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnSimpan.Iconimage")));
-            this.BtnSimpan.Iconimage_right = null;
-            this.BtnSimpan.Iconimage_right_Selected = null;
-            this.BtnSimpan.Iconimage_Selected = null;
-            this.BtnSimpan.IconMarginLeft = 0;
-            this.BtnSimpan.IconMarginRight = 0;
-            this.BtnSimpan.IconRightVisible = true;
-            this.BtnSimpan.IconRightZoom = 0D;
-            this.BtnSimpan.IconVisible = true;
-            this.BtnSimpan.IconZoom = 50D;
-            this.BtnSimpan.IsTab = false;
-            this.BtnSimpan.Location = new System.Drawing.Point(742, 461);
-            this.BtnSimpan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnSimpan.Name = "BtnSimpan";
-            this.BtnSimpan.Normalcolor = System.Drawing.Color.SteelBlue;
-            this.BtnSimpan.OnHovercolor = System.Drawing.Color.LightSlateGray;
-            this.BtnSimpan.OnHoverTextColor = System.Drawing.Color.White;
-            this.BtnSimpan.selected = false;
-            this.BtnSimpan.Size = new System.Drawing.Size(117, 30);
-            this.BtnSimpan.TabIndex = 138;
-            this.BtnSimpan.Text = "SIMPAN";
-            this.BtnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnSimpan.Textcolor = System.Drawing.Color.White;
-            this.BtnSimpan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSimpan.Click += new System.EventHandler(this.BtnSimpan_Click);
-            // 
             // dgvKeranjang
             // 
             this.dgvKeranjang.AllowUserToAddRows = false;
@@ -524,14 +649,14 @@
             this.dgvKeranjang.AllowUserToResizeRows = false;
             this.dgvKeranjang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvKeranjang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.MediumBlue;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.dgvKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKeranjang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Idd,
@@ -548,7 +673,6 @@
             this.dgvKeranjang.RowHeadersWidth = 62;
             this.dgvKeranjang.Size = new System.Drawing.Size(421, 288);
             this.dgvKeranjang.TabIndex = 137;
-            this.dgvKeranjang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKeranjang_CellClick);
             // 
             // Idd
             // 
@@ -580,10 +704,10 @@
             // 
             // harga
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "#,###";
-            dataGridViewCellStyle8.NullValue = null;
-            this.harga.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle44.Format = "#,###";
+            dataGridViewCellStyle44.NullValue = null;
+            this.harga.DefaultCellStyle = dataGridViewCellStyle44;
             this.harga.HeaderText = "Harga";
             this.harga.MinimumWidth = 8;
             this.harga.Name = "harga";
@@ -591,8 +715,8 @@
             // 
             // jumlah
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.jumlah.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.jumlah.DefaultCellStyle = dataGridViewCellStyle45;
             this.jumlah.HeaderText = "Jumlah";
             this.jumlah.MinimumWidth = 8;
             this.jumlah.Name = "jumlah";
@@ -611,47 +735,47 @@
             this.dgvStok.AllowUserToDeleteRows = false;
             this.dgvStok.AllowUserToResizeColumns = false;
             this.dgvStok.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            this.dgvStok.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            this.dgvStok.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
             this.dgvStok.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvStok.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.MediumBlue;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.dgvStok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStok.Location = new System.Drawing.Point(23, 165);
             this.dgvStok.Name = "dgvStok";
             this.dgvStok.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvStok.RowHeadersVisible = false;
             this.dgvStok.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvStok.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvStok.RowsDefaultCellStyle = dataGridViewCellStyle48;
             this.dgvStok.Size = new System.Drawing.Size(408, 288);
             this.dgvStok.TabIndex = 136;
-            this.dgvStok.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStok_CellClick);
+            this.dgvStok.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellClick);
             // 
-            // TxtJumlahBayar
+            // txtJumlahBayar
             // 
-            this.TxtJumlahBayar.Location = new System.Drawing.Point(504, 82);
-            this.TxtJumlahBayar.Name = "TxtJumlahBayar";
-            this.TxtJumlahBayar.Size = new System.Drawing.Size(185, 20);
-            this.TxtJumlahBayar.TabIndex = 135;
+            this.txtJumlahBayar.Location = new System.Drawing.Point(504, 52);
+            this.txtJumlahBayar.Name = "txtJumlahBayar";
+            this.txtJumlahBayar.Size = new System.Drawing.Size(185, 20);
+            this.txtJumlahBayar.TabIndex = 135;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(475, 83);
+            this.label13.Location = new System.Drawing.Point(475, 53);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 16);
             this.label13.TabIndex = 134;
@@ -663,47 +787,47 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(475, 52);
+            this.label4.Location = new System.Drawing.Point(475, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 16);
+            this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 133;
-            this.label4.Text = "TOTAL HARGA";
+            this.label4.Text = "TOTAL HARGA :";
             // 
-            // BtnCariBarang
+            // btnCariBarang
             // 
-            this.BtnCariBarang.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.BtnCariBarang.BackColor = System.Drawing.Color.SteelBlue;
-            this.BtnCariBarang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnCariBarang.BorderRadius = 0;
-            this.BtnCariBarang.ButtonText = "Cari";
-            this.BtnCariBarang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCariBarang.DisabledColor = System.Drawing.Color.Gray;
-            this.BtnCariBarang.Iconcolor = System.Drawing.Color.Transparent;
-            this.BtnCariBarang.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnCariBarang.Iconimage")));
-            this.BtnCariBarang.Iconimage_right = null;
-            this.BtnCariBarang.Iconimage_right_Selected = null;
-            this.BtnCariBarang.Iconimage_Selected = null;
-            this.BtnCariBarang.IconMarginLeft = 0;
-            this.BtnCariBarang.IconMarginRight = 0;
-            this.BtnCariBarang.IconRightVisible = true;
-            this.BtnCariBarang.IconRightZoom = 0D;
-            this.BtnCariBarang.IconVisible = true;
-            this.BtnCariBarang.IconZoom = 50D;
-            this.BtnCariBarang.IsTab = false;
-            this.BtnCariBarang.Location = new System.Drawing.Point(331, 114);
-            this.BtnCariBarang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnCariBarang.Name = "BtnCariBarang";
-            this.BtnCariBarang.Normalcolor = System.Drawing.Color.SteelBlue;
-            this.BtnCariBarang.OnHovercolor = System.Drawing.Color.LightSlateGray;
-            this.BtnCariBarang.OnHoverTextColor = System.Drawing.Color.White;
-            this.BtnCariBarang.selected = false;
-            this.BtnCariBarang.Size = new System.Drawing.Size(68, 25);
-            this.BtnCariBarang.TabIndex = 132;
-            this.BtnCariBarang.Text = "Cari";
-            this.BtnCariBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnCariBarang.Textcolor = System.Drawing.Color.White;
-            this.BtnCariBarang.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCariBarang.Click += new System.EventHandler(this.BtnCariBarang_Click);
+            this.btnCariBarang.Activecolor = System.Drawing.Color.LightSlateGray;
+            this.btnCariBarang.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCariBarang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCariBarang.BorderRadius = 0;
+            this.btnCariBarang.ButtonText = "Cari";
+            this.btnCariBarang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCariBarang.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCariBarang.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCariBarang.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCariBarang.Iconimage")));
+            this.btnCariBarang.Iconimage_right = null;
+            this.btnCariBarang.Iconimage_right_Selected = null;
+            this.btnCariBarang.Iconimage_Selected = null;
+            this.btnCariBarang.IconMarginLeft = 0;
+            this.btnCariBarang.IconMarginRight = 0;
+            this.btnCariBarang.IconRightVisible = true;
+            this.btnCariBarang.IconRightZoom = 0D;
+            this.btnCariBarang.IconVisible = true;
+            this.btnCariBarang.IconZoom = 50D;
+            this.btnCariBarang.IsTab = false;
+            this.btnCariBarang.Location = new System.Drawing.Point(331, 114);
+            this.btnCariBarang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCariBarang.Name = "btnCariBarang";
+            this.btnCariBarang.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btnCariBarang.OnHovercolor = System.Drawing.Color.LightSlateGray;
+            this.btnCariBarang.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCariBarang.selected = false;
+            this.btnCariBarang.Size = new System.Drawing.Size(68, 25);
+            this.btnCariBarang.TabIndex = 132;
+            this.btnCariBarang.Text = "Cari";
+            this.btnCariBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCariBarang.Textcolor = System.Drawing.Color.White;
+            this.btnCariBarang.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCariBarang.Click += new System.EventHandler(this.btnCariBarang_Click);
             // 
             // cbJenisBarang
             // 
@@ -712,34 +836,13 @@
             this.cbJenisBarang.Items.AddRange(new object[] {
             "Mobil",
             "Motor",
-            "Sukucadang"});
+            "Suku Cadang"});
             this.cbJenisBarang.Location = new System.Drawing.Point(139, 83);
             this.cbJenisBarang.Name = "cbJenisBarang";
             this.cbJenisBarang.Size = new System.Drawing.Size(185, 21);
             this.cbJenisBarang.TabIndex = 124;
             this.cbJenisBarang.ValueMember = "id_supplier";
             this.cbJenisBarang.SelectedValueChanged += new System.EventHandler(this.cbJenisBarang_SelectedValueChanged);
-            // 
-            // cbSupplier
-            // 
-            this.cbSupplier.DataSource = this.tSupplierBindingSource;
-            this.cbSupplier.DisplayMember = "nama_supplier";
-            this.cbSupplier.FormattingEnabled = true;
-            this.cbSupplier.Location = new System.Drawing.Point(139, 49);
-            this.cbSupplier.Name = "cbSupplier";
-            this.cbSupplier.Size = new System.Drawing.Size(185, 21);
-            this.cbSupplier.TabIndex = 123;
-            this.cbSupplier.ValueMember = "id_supplier";
-            // 
-            // tSupplierBindingSource
-            // 
-            this.tSupplierBindingSource.DataMember = "tSupplier";
-            this.tSupplierBindingSource.DataSource = this.vroomDGDataSet;
-            // 
-            // vroomDGDataSet
-            // 
-            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
-            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TxtCariBarang
             // 
@@ -756,9 +859,9 @@
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(20, 52);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(99, 16);
+            this.label33.Size = new System.Drawing.Size(97, 16);
             this.label33.TabIndex = 46;
-            this.label33.Text = "NAMA SUPPLIER";
+            this.label33.Text = "NAMA MEMBER";
             // 
             // label31
             // 
@@ -784,11 +887,18 @@
             this.label29.TabIndex = 42;
             this.label29.Text = "CARI BARANG";
             // 
-            // tSupplierTableAdapter
+            // lbJudul
             // 
-            this.tSupplierTableAdapter.ClearBeforeFill = true;
+            this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJudul.ForeColor = System.Drawing.Color.Black;
+            this.lbJudul.Location = new System.Drawing.Point(504, 166);
+            this.lbJudul.Name = "lbJudul";
+            this.lbJudul.Size = new System.Drawing.Size(324, 23);
+            this.lbJudul.TabIndex = 147;
+            this.lbJudul.Text = "PENJUALAN";
+            this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Pembelian
+            // Penjualan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -804,37 +914,33 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Pembelian";
+            this.Name = "Penjualan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pembelian";
-            this.Load += new System.EventHandler(this.Pembelian_Load);
-            this.panel1.ResumeLayout(false);
+            this.Text = "Penjualan";
+            this.Load += new System.EventHandler(this.Penjualan_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnKurang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnTambah)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKeranjang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStok)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button BtnKembali;
         private System.Windows.Forms.Button BtnTentangAplikasi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnServices;
@@ -843,6 +949,11 @@
         private System.Windows.Forms.Button BtnPembelian;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnMini;
+        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -850,19 +961,10 @@
         private System.Windows.Forms.Label lbWaktu;
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Label lbJudul;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox TxtCariBarang;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ComboBox cbJenisBarang;
-        private System.Windows.Forms.ComboBox cbSupplier;
         private Bunifu.Framework.UI.BunifuImageButton BtnKurang;
         private Bunifu.Framework.UI.BunifuImageButton BtnTambah;
         private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuFlatButton BtnSimpan;
         private System.Windows.Forms.DataGridView dgvKeranjang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Idd;
         private System.Windows.Forms.DataGridViewTextBoxColumn merk;
@@ -872,14 +974,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplier;
         private System.Windows.Forms.DataGridView dgvStok;
-        private System.Windows.Forms.TextBox TxtJumlahBayar;
+        private System.Windows.Forms.TextBox txtJumlahBayar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuFlatButton BtnCariBarang;
-        private VroomDGDataSet vroomDGDataSet;
-        private System.Windows.Forms.BindingSource tSupplierBindingSource;
-        private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
-        private System.Windows.Forms.Button BtnKembali;
-        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCariBarang;
+        private System.Windows.Forms.ComboBox cbJenisBarang;
+        private System.Windows.Forms.TextBox TxtCariBarang;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lbJudul;
+        private Bunifu.Framework.UI.BunifuFlatButton btnBayar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCariIDmbr;
+        private System.Windows.Forms.TextBox txtIdCus;
+        private System.Windows.Forms.TextBox txtNamaCus;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtUangKembali;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtUangBayar;
     }
 }

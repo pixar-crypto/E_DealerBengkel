@@ -36,10 +36,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -69,8 +70,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.TxtAlamat = new System.Windows.Forms.TextBox();
             this.CbPosisi = new System.Windows.Forms.ComboBox();
-            this.tPosisiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vroomDGDataSet1 = new E_DealerBengkel.VroomDGDataSet1();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.TxtUsername = new System.Windows.Forms.TextBox();
@@ -82,11 +81,10 @@
             this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
             this.lbJudul = new System.Windows.Forms.Label();
             this.tPosisiTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tPosisiTableAdapter();
-            this.tPosisiTableAdapter1 = new E_DealerBengkel.VroomDGDataSet1TableAdapters.tPosisiTableAdapter();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -95,11 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbMataBuka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbMataTutup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKaryawan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
-            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,16 +163,6 @@
             this.panel2.Size = new System.Drawing.Size(200, 627);
             this.panel2.TabIndex = 3;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(47, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(108, 97);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 65;
-            this.pictureBox4.TabStop = false;
-            // 
             // BtnKembali
             // 
             this.BtnKembali.FlatAppearance.BorderSize = 0;
@@ -231,6 +216,25 @@
             this.BtnTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnTambah.UseVisualStyleBackColor = true;
             this.BtnTambah.Click += new System.EventHandler(this.BtnTambah_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.SlateGray;
+            this.panel12.Controls.Add(this.pictureBox4);
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 151);
+            this.panel12.TabIndex = 129;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(47, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(108, 97);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 65;
+            this.pictureBox4.TabStop = false;
             // 
             // label9
             // 
@@ -604,8 +608,7 @@
             // 
             // CbPosisi
             // 
-            this.CbPosisi.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tPosisiBindingSource1, "deskripsi", true));
-            this.CbPosisi.DataSource = this.tPosisiBindingSource1;
+            this.CbPosisi.DataSource = this.tPosisiBindingSource;
             this.CbPosisi.DisplayMember = "deskripsi";
             this.CbPosisi.FormattingEnabled = true;
             this.CbPosisi.Location = new System.Drawing.Point(157, 184);
@@ -613,16 +616,6 @@
             this.CbPosisi.Size = new System.Drawing.Size(187, 21);
             this.CbPosisi.TabIndex = 50;
             this.CbPosisi.ValueMember = "id_posisi";
-            // 
-            // tPosisiBindingSource1
-            // 
-            this.tPosisiBindingSource1.DataMember = "tPosisi";
-            this.tPosisiBindingSource1.DataSource = this.vroomDGDataSet1;
-            // 
-            // vroomDGDataSet1
-            // 
-            this.vroomDGDataSet1.DataSetName = "VroomDGDataSet1";
-            this.vroomDGDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TxtEmail
             // 
@@ -721,19 +714,6 @@
             // 
             this.tPosisiTableAdapter.ClearBeforeFill = true;
             // 
-            // tPosisiTableAdapter1
-            // 
-            this.tPosisiTableAdapter1.ClearBeforeFill = true;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.SlateGray;
-            this.panel12.Controls.Add(this.pictureBox4);
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 151);
-            this.panel12.TabIndex = 129;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -766,6 +746,7 @@
             this.Load += new System.EventHandler(this.CRUD_Employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -776,11 +757,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbMataBuka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbMataTutup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKaryawan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tPosisiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
-            this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -837,9 +815,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private VroomDGDataSet1 vroomDGDataSet1;
-        private System.Windows.Forms.BindingSource tPosisiBindingSource1;
-        private VroomDGDataSet1TableAdapters.tPosisiTableAdapter tPosisiTableAdapter1;
+     //   private VroomDGDataSet1TableAdapters.tPosisiTableAdapter tPosisiTableAdapter1;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

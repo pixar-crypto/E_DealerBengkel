@@ -346,7 +346,7 @@ namespace E_DealerBengkel
 
         private void BtnServices_Click(object sender, EventArgs e)
         {
-            CRUD_Services M_Services = new CRUD_Services();
+            CRUD_Service M_Services = new CRUD_Service();
             M_Services.Show();
             this.Hide();
         }

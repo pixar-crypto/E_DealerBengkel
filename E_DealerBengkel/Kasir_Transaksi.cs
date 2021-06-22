@@ -1,4 +1,5 @@
 ﻿using E_DealerBengkel.Transaksi.Pembelian;
+using E_DealerBengkel.Transaksi.Penjualan;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,9 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using E_DealerBengkel.Transaksi.Penjualan;
-using E_DealerBengkel.Transaksi.Retur;
-using E_DealerBengkel.Transaksi.Services;
+
 
 namespace E_DealerBengkel
 {
@@ -47,6 +46,20 @@ namespace E_DealerBengkel
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            Login logn = new Login();
+            logn.Show();
+            this.Hide();
+        }
+
+        private void BtnPenjualan_Click(object sender, EventArgs e)
+        {
+            Penjualan penjualan = new Penjualan();
+            penjualan.Show();
+            this.Hide();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
             Login logn = new Login();
             logn.Show();
