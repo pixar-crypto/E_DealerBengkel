@@ -70,6 +70,8 @@
             this.label29 = new System.Windows.Forms.Label();
             this.TxtAlamat = new System.Windows.Forms.TextBox();
             this.CbPosisi = new System.Windows.Forms.ComboBox();
+            this.tPosisiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.TxtUsername = new System.Windows.Forms.TextBox();
@@ -77,8 +79,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.TxtNoTelp = new System.Windows.Forms.TextBox();
-            this.tPosisiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
             this.lbJudul = new System.Windows.Forms.Label();
             this.tPosisiTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tPosisiTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -617,6 +617,16 @@
             this.CbPosisi.TabIndex = 50;
             this.CbPosisi.ValueMember = "id_posisi";
             // 
+            // tPosisiBindingSource
+            // 
+            this.tPosisiBindingSource.DataMember = "tPosisi";
+            this.tPosisiBindingSource.DataSource = this.vroomDGDataSet;
+            // 
+            // vroomDGDataSet
+            // 
+            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
+            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // TxtEmail
             // 
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -686,18 +696,7 @@
             this.TxtNoTelp.Name = "TxtNoTelp";
             this.TxtNoTelp.Size = new System.Drawing.Size(186, 21);
             this.TxtNoTelp.TabIndex = 60;
-            this.TxtNoTelp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TxtNoTelp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNoTelp_KeyPress);
-            // 
-            // tPosisiBindingSource
-            // 
-            this.tPosisiBindingSource.DataMember = "tPosisi";
-            this.tPosisiBindingSource.DataSource = this.vroomDGDataSet;
-            // 
-            // vroomDGDataSet
-            // 
-            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
-            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbJudul
             // 

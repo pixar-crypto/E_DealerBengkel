@@ -537,7 +537,14 @@ namespace E_DealerBengkel.Master.SukuCadang
 
         private void TxtHargaJual_Leave(object sender, EventArgs e)
         {
-            TxtHargaJual.Text = Program.toRupiah(int.Parse(TxtHargaJual.Text));
+            try
+            {
+                TxtHargaJual.Text = Program.toRupiah(int.Parse(TxtHargaJual.Text));
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void TxtHargaJual_KeyPress(object sender, KeyPressEventArgs e)
@@ -558,7 +565,14 @@ namespace E_DealerBengkel.Master.SukuCadang
 
         private void TxtHargaBeli_Leave(object sender, EventArgs e)
         {
-            TxtHargaBeli.Text = Program.toRupiah(int.Parse(TxtHargaBeli.Text));
+            try
+            {
+                TxtHargaBeli.Text = Program.toRupiah(int.Parse(TxtHargaBeli.Text));
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void TxtHargaBeli_KeyPress(object sender, KeyPressEventArgs e)
