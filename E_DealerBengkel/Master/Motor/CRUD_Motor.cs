@@ -164,7 +164,8 @@ namespace E_DealerBengkel.Master.Motor
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tMotor", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
+                "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier", connection);
             DataTable dt = new DataTable();
 
             connection.Open();

@@ -119,7 +119,8 @@ namespace E_DealerBengkel.Master.Employee
 
         private void CRUD_Employee_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'vroomDGDataSet.tPosisi' table. You can move, or remove it, as needed.
+            this.tPosisiTableAdapter.Fill(this.vroomDGDataSet.tPosisi);
 
 
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
@@ -141,7 +142,7 @@ namespace E_DealerBengkel.Master.Employee
             else
             {
                 SqlConnection connection = new SqlConnection(Program.koneksi());
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM T_Karyawan where nama_karyawan like '" + TxtNamaEmp.Text + "%'", connection);
+                SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan where nama_karyawan like '" + TxtNamaEmp.Text + "%'", connection);
                 DataTable dt = new DataTable();
 
                 connection.Open();
@@ -194,7 +195,8 @@ namespace E_DealerBengkel.Master.Employee
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("SELECT k.id_karyawan, k.nama_karyawan, k.alamat, k.email, k.no_telepon, p.deskripsi, k.username, k.status FROM tKaryawan AS k" +
+                " INNER JOIN tPosisi p on k.id_posisi = p.id_posisi", connection);
             DataTable dt = new DataTable();
 
             connection.Open();

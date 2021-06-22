@@ -166,7 +166,8 @@ namespace E_DealerBengkel.Master.Mobil
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tMobil", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
+                "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
