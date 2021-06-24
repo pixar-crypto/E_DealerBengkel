@@ -219,7 +219,8 @@ namespace E_DealerBengkel.Master.Supplier
         {
             if (TxtCompName.Text == "" || TxtAlamat.Text == "" || TxtNoTelp.Text == "" || TxtEmail.Text == "")
             {
-                MessageBox.Show("Data ada yang kosong!!");
+                MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -265,7 +266,7 @@ namespace E_DealerBengkel.Master.Supplier
                 }
                 else
                 {
-                    MessageBox.Show("Format email salah !", "Pemberitahuan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Format email salah !", "Pemberitahuan!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -277,7 +278,7 @@ namespace E_DealerBengkel.Master.Supplier
                 if (TxtCompName.Text == "" || TxtEmail.Text == "" || TxtAlamat.Text == "" || TxtNoTelp.Text == "")
                 {
                     MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -320,7 +321,7 @@ namespace E_DealerBengkel.Master.Supplier
                     }
                     else
                     {
-                        MessageBox.Show("Format email salah !", "Pemberitahuan!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Format email salah !", "Pemberitahuan!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -328,7 +329,8 @@ namespace E_DealerBengkel.Master.Supplier
             {
                 if (TxtCompName.Text == "" || TxtAlamat.Text == "" || TxtNoTelp.Text == "" || TxtEmail.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -369,7 +371,7 @@ namespace E_DealerBengkel.Master.Supplier
                     else
                     {
                         MessageBox.Show("Format email salah !", "Pemberitahuan!",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

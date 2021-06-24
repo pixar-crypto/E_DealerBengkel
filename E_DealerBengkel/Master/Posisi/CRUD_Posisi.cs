@@ -225,7 +225,8 @@ namespace E_DealerBengkel.Master.Posisi
         {
             if (TxtDeskripsi.Text == "" || TxtGaji.Text == "" || CbStatus.Text == "-- Pilih Status --")
             {
-                MessageBox.Show("Data ada yang kosong!!");
+                MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -274,7 +275,8 @@ namespace E_DealerBengkel.Master.Posisi
 
                 if (TxtDeskripsi.Text == "" || TxtGaji.Text == "" || CbStatus.Text == "-- Pilih Status --")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -326,7 +328,8 @@ namespace E_DealerBengkel.Master.Posisi
             {
                 if (TxtDeskripsi.Text == "" || TxtGaji.Text == "" || CbStatus.Text == "-- Pilih Status --")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

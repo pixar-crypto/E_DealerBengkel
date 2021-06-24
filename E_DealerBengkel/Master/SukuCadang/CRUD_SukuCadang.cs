@@ -225,7 +225,8 @@ namespace E_DealerBengkel.Master.SukuCadang
             if (TxtMerk.Text == "" || TxtTipe.Text == "" || TxtJenis.Text == "" ||
                    TxtHargaBeli.Text == "" || TxtJumlah.Text == "" || cmbSup.Text == " - PILIH SUPPLIER -")
             {
-                MessageBox.Show("Data ada yang kosong!!");
+                MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -270,7 +271,8 @@ namespace E_DealerBengkel.Master.SukuCadang
                 if (TxtMerk.Text == "" || TxtTipe.Text == "" || TxtJenis.Text == "" ||
                 TxtHargaBeli.Text == "" || TxtJumlah.Text == "" || cmbSup.Text == " - PILIH SUPPLIER -")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -320,7 +322,8 @@ namespace E_DealerBengkel.Master.SukuCadang
                 if (TxtMerk.Text == "" || TxtTipe.Text == "" || TxtJenis.Text == "" ||
                    TxtHargaBeli.Text == "" || TxtJumlah.Text == "" || cmbSup.Text == " - PILIH SUPPLIER -")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

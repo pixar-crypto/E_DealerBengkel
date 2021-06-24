@@ -465,13 +465,13 @@ namespace E_DealerBengkel.Master.Employee
                                         else
                                         {
                                             MessageBox.Show("Format email salah !", "Pemberitahuan!",
-                                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         }
                                     }
                                     else
                                     {
                                         MessageBox.Show("Kata sandi tidak cocok !", "Pemberitahuan!",
-                                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
                                 }
                             }

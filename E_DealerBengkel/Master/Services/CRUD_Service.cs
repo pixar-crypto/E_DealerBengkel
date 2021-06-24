@@ -229,7 +229,8 @@ namespace E_DealerBengkel.Master.Services
             {
                 if (txtJenisSer.Text == "" || txtHarga.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -272,7 +273,8 @@ namespace E_DealerBengkel.Master.Services
             {
                 if (txtJenisSer.Text == "" || txtHarga.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

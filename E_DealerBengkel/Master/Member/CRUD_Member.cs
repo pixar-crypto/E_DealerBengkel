@@ -294,7 +294,7 @@ namespace E_DealerBengkel.Master.Member
                 else
                 {
                     MessageBox.Show("Email tidak valid!", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -305,7 +305,7 @@ namespace E_DealerBengkel.Master.Member
             {
                 if (TxtNama.Text == "" || TxtNoKTP.Text == "" || TxtAlamat.Text == "" || TxtEmail.Text == "" || TxtNoTelp.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
+                    MessageBox.Show("Data ada yang kosong!", "Pemberitahuan",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -353,7 +353,7 @@ namespace E_DealerBengkel.Master.Member
                     else
                     {
                         MessageBox.Show("Email tidak valid!", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -361,7 +361,8 @@ namespace E_DealerBengkel.Master.Member
             {
                 if (TxtNama.Text == "" || TxtNoKTP.Text == "" || TxtAlamat.Text == "" || TxtEmail.Text == "" || TxtNoTelp.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!");
+                    MessageBox.Show("Data ada yang kosong!", "Pemberitahuan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -405,7 +406,7 @@ namespace E_DealerBengkel.Master.Member
                     else
                     {
                         MessageBox.Show("Email tidak valid!", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

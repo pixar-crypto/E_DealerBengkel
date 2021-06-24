@@ -36,7 +36,6 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         {
             Pembelian beli = new Pembelian();
             beli.Show();
-    
             this.Hide();
         }
 
@@ -54,7 +53,9 @@ namespace E_DealerBengkel.Transaksi.Pembelian
 
         private void BtnServices_Click(object sender, EventArgs e)
         {
-     
+            Services.Services services = new Services.Services();
+            services.Show();
+            this.Hide();
         }
 
 

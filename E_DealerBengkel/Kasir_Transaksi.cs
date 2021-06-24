@@ -1,5 +1,6 @@
 ﻿using E_DealerBengkel.Transaksi.Pembelian;
 using E_DealerBengkel.Transaksi.Penjualan;
+using E_DealerBengkel.Transaksi.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,6 +64,18 @@ namespace E_DealerBengkel
         {
             Login logn = new Login();
             logn.Show();
+            this.Hide();
+        }
+
+        private void BtnRetur_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnServices_Click(object sender, EventArgs e)
+        {
+            Services services = new Services();
+            services.Show();
             this.Hide();
         }
     }

@@ -149,21 +149,6 @@
         UW/2Xt4Ii7V/3n5C3Z3U8d5/3u6zN7RavwAg1dSfc/37KwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BtnTentangAplikasi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAhNJREFUWEft
-        l01rE1EUhkMIpFDbCNad3WkUBPsl7vUHFMV/UhBa3QmKi9KCi4JtEVzUvbgx1G6q/0GiC6niQrGbtIou
-        9Pic3DcQMs7kJk4IQh54YHLOey6TZDJzUxjxX2Fm5/E2vsI6fpV+vI8rWFU8P1h0HncxlhrOarx/WKSE
-        D/EXOp9xE6/jRTwt/fgGbuEXdHxmDUtarjcYPImtd/0D7+OE2qmQmcQHmnH806ioHQcDZXzt0/AeL6kV
-        DTMzmnX8mimr1R3C/jE7H/GMyj3D7DR+8oVgQ+VsCF7B3/gN51TuG9a4jN+15oLK6RB6ic5dlVJRzvQy
-        FSL3QtJqKv0dAv47d/y3HXPBNdHLVIhU8LAZNjunchKad0LGHqmUG6y5HZa2ZZWS0NwLGVtUKTdY0+8T
-        zq5KSWi+Cxk7q1Imynb9Chxira+3rlISmkchYydUykTZ2BOYCGlrqJSE5nHI2LhKmSib6wm8DZmMK7UN
-        ZWNP4EJI2xuVktDs6SJUNvYEoi7CWyFjj1XKRNnYE3gS0rakUhKaw70ROQRaj+BB3IpfqJQOoTn0zUTe
-        DyNfM+6xTnAdnTwfx6sqd4dwEZ83x8L1cFWtaJi5plnnGRbVioOBzi3ZKp5SOxUyU+h7wf63ZC0Y7NyU
-        NnAHb2IVx6Qfe+0pesb5t01pOywynG15Jyza/sfkA/6UBzi4PyYjBkeh8AcKvqZsZ2USwgAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <data name="BtnServices.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAcdJREFUSEvt
@@ -1560,12 +1545,6 @@
   </data>
   <metadata name="tSupplierBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>164, 17</value>
-  </metadata>
-  <metadata name="tSupplierBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>164, 17</value>
-  </metadata>
-  <metadata name="vroomDGDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="vroomDGDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
