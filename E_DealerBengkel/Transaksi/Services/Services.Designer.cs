@@ -75,6 +75,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.btnMax = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +90,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btnMax);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnMini);
@@ -130,7 +132,7 @@
             this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMini.FlatAppearance.BorderSize = 0;
             this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMini.Location = new System.Drawing.Point(1165, 2);
+            this.btnMini.Location = new System.Drawing.Point(1132, 2);
             this.btnMini.Margin = new System.Windows.Forms.Padding(2);
             this.btnMini.Name = "btnMini";
             this.btnMini.Size = new System.Drawing.Size(31, 34);
@@ -417,7 +419,7 @@
             this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnClear.BorderRadius = 0;
-            this.BtnClear.ButtonText = "Batal";
+            this.BtnClear.ButtonText = "BATAL";
             this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnClear.DisabledColor = System.Drawing.Color.Gray;
             this.BtnClear.Iconcolor = System.Drawing.Color.Transparent;
@@ -432,7 +434,7 @@
             this.BtnClear.IconVisible = true;
             this.BtnClear.IconZoom = 50D;
             this.BtnClear.IsTab = false;
-            this.BtnClear.Location = new System.Drawing.Point(23, 439);
+            this.BtnClear.Location = new System.Drawing.Point(210, 439);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Normalcolor = System.Drawing.Color.SteelBlue;
@@ -441,10 +443,10 @@
             this.BtnClear.selected = false;
             this.BtnClear.Size = new System.Drawing.Size(99, 29);
             this.BtnClear.TabIndex = 157;
-            this.BtnClear.Text = "Batal";
+            this.BtnClear.Text = "BATAL";
             this.BtnClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnClear.Textcolor = System.Drawing.Color.White;
-            this.BtnClear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // dgvService
@@ -468,9 +470,10 @@
             // 
             this.rbMotor.AutoSize = true;
             this.rbMotor.Enabled = false;
+            this.rbMotor.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMotor.Location = new System.Drawing.Point(204, 87);
             this.rbMotor.Name = "rbMotor";
-            this.rbMotor.Size = new System.Drawing.Size(52, 17);
+            this.rbMotor.Size = new System.Drawing.Size(56, 19);
             this.rbMotor.TabIndex = 155;
             this.rbMotor.TabStop = true;
             this.rbMotor.Text = "Motor";
@@ -480,9 +483,10 @@
             // 
             this.rbMobil.AutoSize = true;
             this.rbMobil.Enabled = false;
+            this.rbMobil.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMobil.Location = new System.Drawing.Point(148, 87);
             this.rbMobil.Name = "rbMobil";
-            this.rbMobil.Size = new System.Drawing.Size(50, 17);
+            this.rbMobil.Size = new System.Drawing.Size(55, 19);
             this.rbMobil.TabIndex = 154;
             this.rbMobil.TabStop = true;
             this.rbMobil.Text = "Mobil";
@@ -559,7 +563,7 @@
             this.BtnCari.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnCari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnCari.BorderRadius = 0;
-            this.BtnCari.ButtonText = "Cari";
+            this.BtnCari.ButtonText = "CARI";
             this.BtnCari.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCari.DisabledColor = System.Drawing.Color.Gray;
             this.BtnCari.Iconcolor = System.Drawing.Color.Transparent;
@@ -583,10 +587,10 @@
             this.BtnCari.selected = false;
             this.BtnCari.Size = new System.Drawing.Size(67, 25);
             this.BtnCari.TabIndex = 147;
-            this.BtnCari.Text = "Cari";
+            this.BtnCari.Text = "CARI";
             this.BtnCari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCari.Textcolor = System.Drawing.Color.White;
-            this.BtnCari.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCari.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCari.Click += new System.EventHandler(this.BtnCari_Click);
             // 
             // TxtIdCus
@@ -620,7 +624,7 @@
             this.btnBayar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBayar.BorderRadius = 0;
-            this.btnBayar.ButtonText = "Bayar";
+            this.btnBayar.ButtonText = "BAYAR";
             this.btnBayar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBayar.DisabledColor = System.Drawing.Color.Gray;
             this.btnBayar.Iconcolor = System.Drawing.Color.Transparent;
@@ -635,7 +639,7 @@
             this.btnBayar.IconVisible = true;
             this.btnBayar.IconZoom = 50D;
             this.btnBayar.IsTab = false;
-            this.btnBayar.Location = new System.Drawing.Point(145, 439);
+            this.btnBayar.Location = new System.Drawing.Point(49, 439);
             this.btnBayar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBayar.Name = "btnBayar";
             this.btnBayar.Normalcolor = System.Drawing.Color.SteelBlue;
@@ -644,10 +648,10 @@
             this.btnBayar.selected = false;
             this.btnBayar.Size = new System.Drawing.Size(99, 29);
             this.btnBayar.TabIndex = 142;
-            this.btnBayar.Text = "Bayar";
+            this.btnBayar.Text = "BAYAR";
             this.btnBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBayar.Textcolor = System.Drawing.Color.White;
-            this.btnBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBayar.Click += new System.EventHandler(this.btnBayar_Click);
             // 
             // TxtJumlahBayar
@@ -722,6 +726,20 @@
             this.label29.Size = new System.Drawing.Size(57, 16);
             this.label29.TabIndex = 42;
             this.label29.Text = "NO PLAT";
+            // 
+            // btnMax
+            // 
+            this.btnMax.BackColor = System.Drawing.Color.Transparent;
+            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Location = new System.Drawing.Point(1165, 2);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(31, 34);
+            this.btnMax.TabIndex = 131;
+            this.btnMax.UseVisualStyleBackColor = false;
             // 
             // Services
             // 
@@ -806,5 +824,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label29;
         private Bunifu.Framework.UI.BunifuFlatButton BtnClear;
+        private System.Windows.Forms.Button btnMax;
     }
 }

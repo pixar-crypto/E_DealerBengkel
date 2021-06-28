@@ -488,7 +488,6 @@
             this.TxtNama.Name = "TxtNama";
             this.TxtNama.Size = new System.Drawing.Size(185, 21);
             this.TxtNama.TabIndex = 73;
-            this.TxtNama.TextChanged += new System.EventHandler(this.TxtNama_TextChanged);
             this.TxtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNama_KeyPress);
             // 
             // label31

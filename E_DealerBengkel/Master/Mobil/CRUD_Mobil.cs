@@ -77,12 +77,20 @@ namespace E_DealerBengkel.Master.Mobil
             TxtJumlah.Text = "";
             cmbSup.Text = " - PILIH SUPPLIER -";
 
-            TxtWarna.Enabled = false;
-            cbJenis.Enabled = false;
-            TxtHargaBeli.Enabled = false;
-            TxtHargaJual.Enabled = false;
-            TxtJumlah.Enabled = false;
-            cmbSup.Enabled = false;
+            if (lbJudul.Text == "TAMBAH MOBIL")
+            {
+
+            }
+            else
+            {
+                TxtWarna.Enabled = false;
+                cbJenis.Enabled = false;
+                TxtHargaBeli.Enabled = false;
+                TxtHargaJual.Enabled = false;
+                TxtJumlah.Enabled = false;
+                cmbSup.Enabled = false;
+                cbStatus.Enabled = false;
+            }
         }
 
         private void BtnTambah_Click(object sender, EventArgs e)
@@ -509,7 +517,8 @@ namespace E_DealerBengkel.Master.Mobil
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMobil WHERE status='Tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
+                "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -566,7 +575,8 @@ namespace E_DealerBengkel.Master.Mobil
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMobil WHERE status='Tidak Tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
+                "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tidak Tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -624,27 +634,29 @@ namespace E_DealerBengkel.Master.Mobil
             RefreshDg();
         }
 
-        private void TxtHargaBeli_Leave(object sender, EventArgs e)
+        private void txtHargaBeli_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (TxtHargaBeli.Text == "")
             {
-                TxtHargaBeli.Text = Program.toRupiah(int.Parse(TxtHargaBeli.Text));
+                return;
             }
-            catch (Exception ex)
+            else
             {
-
+                TxtHargaBeli.Text = string.Format("{0:n0}", double.Parse(TxtHargaBeli.Text));
+                TxtHargaBeli.SelectionStart = TxtHargaBeli.Text.Length;
             }
         }
 
-        private void TxtHargaJual_Leave(object sender, EventArgs e)
+        private void TxtHargaJual_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (TxtHargaJual.Text == "")
             {
-                TxtHargaJual.Text = Program.toRupiah(int.Parse(TxtHargaJual.Text));
+                return;
             }
-            catch (Exception ex)
+            else
             {
-
+                TxtHargaJual.Text = string.Format("{0:n0}", double.Parse(TxtHargaJual.Text));
+                TxtHargaJual.SelectionStart = TxtHargaJual.Text.Length;
             }
         }
     }

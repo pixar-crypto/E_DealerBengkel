@@ -16,11 +16,6 @@ namespace E_DealerBengkel.Master.Posisi
 {
     public partial class CRUD_Posisi : Form
     {
-
-        //---SERVER UMUM---
-
-        string connectionstring =
-                "integrated security=true;data source=localhost;initial catalog=VroomDG";
         String id;
 
         Timer timer = new Timer();
@@ -46,6 +41,16 @@ namespace E_DealerBengkel.Master.Posisi
             TxtDeskripsi.Text = "";
             TxtGaji.Text = "";
             CbStatus.Text = "-- Pilih Status --";
+
+            if (lbJudul.Text == "TAMBAH POSISI")
+            {
+
+            }
+            else
+            {
+                TxtGaji.Enabled = false;
+                CbStatus.Enabled = false;
+            }
         }
 
         private void BtnTambah_Click(object sender, EventArgs e)
@@ -55,6 +60,7 @@ namespace E_DealerBengkel.Master.Posisi
             TxtGaji.Enabled = true;
             CbStatus.Enabled = true;
 
+            BtnSimpan.Text = "SIMPAN";
             BtnHapus.Visible = false;
             lbStatus.Visible = false;
             CbStatus.Visible = false;
@@ -67,6 +73,7 @@ namespace E_DealerBengkel.Master.Posisi
             TxtGaji.Enabled = false;
             CbStatus.Enabled = false;
 
+            BtnSimpan.Text = "UBAH";
             BtnHapus.Visible = true;
             lbStatus.Visible = true;
             CbStatus.Visible = true;
@@ -78,32 +85,6 @@ namespace E_DealerBengkel.Master.Posisi
             Admin_Master Adm_M = new Admin_Master();
             Adm_M.Show();
             this.Hide();
-        }
-
-        public double split(String x)
-        {
-            String[] a = x.Split(' ');
-            String[] b = a[1].Split('.');
-            String[] c = b[1].Split(',');
-            String Total = b[0] + c[0];
-            double total = Double.Parse(seperate(Total));
-
-            return total;
-        }
-        public String seperate(String a)
-        {
-            string[] test = a.Split(',');
-            string x = "";
-            foreach (string tst in test)
-            {
-
-                if (tst.Trim() != "")
-                {
-                    x = x + tst;
-                    Console.Write(tst);
-                }
-            }
-            return x;
         }
 
         public string autogenerateID(string firstText, string query)
@@ -272,7 +253,6 @@ namespace E_DealerBengkel.Master.Posisi
         {
             if (lbJudul.Text == "TAMBAH POSISI")
             {
-
                 if (TxtDeskripsi.Text == "" || TxtGaji.Text == "" || CbStatus.Text == "-- Pilih Status --")
                 {
                     MessageBox.Show("Data ada yang kosong!!", "Information!",
@@ -333,7 +313,7 @@ namespace E_DealerBengkel.Master.Posisi
                 }
                 else
                 {
-                    var hasil = MessageBox.Show("Data akan diinput?", "Information",
+                    var hasil = MessageBox.Show("Data akan diupdate?", "Information",
                                MessageBoxButtons.YesNo,
                                MessageBoxIcon.Question);
                     if (hasil == DialogResult.Yes)
@@ -586,6 +566,27 @@ namespace E_DealerBengkel.Master.Posisi
         private void button1_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.ExitThread();
+        }
+
+        private void TxtGaji_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtGaji.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                TxtGaji.Text = string.Format("{0:n0}", double.Parse(TxtGaji.Text));
+                TxtGaji.SelectionStart = TxtGaji.Text.Length;
+            }
+        }
+
+        private void TxtGaji_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

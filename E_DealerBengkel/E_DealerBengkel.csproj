@@ -163,6 +163,12 @@
     <Compile Include="Transaksi\Penjualan\Penjualan.Designer.cs">
       <DependentUpon>Penjualan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaksi\Retur\Retur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Retur\Retur.Designer.cs">
+      <DependentUpon>Retur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaksi\Services\Services.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     <EmbeddedResource Include="Transaksi\Penjualan\Penjualan.resx">
       <DependentUpon>Penjualan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Retur\Retur.resx">
+      <DependentUpon>Retur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaksi\Services\Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,7 +275,6 @@
   <ItemGroup>
     <Folder Include="Pictures\" />
     <Folder Include="Reports\" />
-    <Folder Include="Transaksi\Retur\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-Cancel-80.png" />

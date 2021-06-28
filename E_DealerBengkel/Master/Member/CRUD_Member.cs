@@ -59,11 +59,18 @@ namespace E_DealerBengkel.Master.Member
             TxtNoTelp.Text = "";
             CbStatus.Text = " - PILIH STATUS -";
 
-            TxtNoKTP.Enabled = false;
-            TxtAlamat.Enabled = false;
-            TxtEmail.Enabled = false;
-            TxtNoTelp.Enabled = false;
-            CbStatus.Enabled = false;
+            if (lbJudul.Text == "TAMBAH MEMBER")
+            {
+
+            }
+            else
+            {
+                TxtNoKTP.Enabled = false;
+                TxtAlamat.Enabled = false;
+                TxtEmail.Enabled = false;
+                TxtNoTelp.Enabled = false;
+                CbStatus.Enabled = false;
+            }
         }
 
         private void BtnTambah_Click(object sender, EventArgs e)
@@ -75,6 +82,7 @@ namespace E_DealerBengkel.Master.Member
             TxtNoTelp.Enabled = true;
             CbStatus.Enabled = false;
 
+            BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH MEMBER";
             BtnHapus.Visible = false;
             lbStatus.Visible = false;
@@ -90,6 +98,7 @@ namespace E_DealerBengkel.Master.Member
             TxtNoTelp.Enabled = false;
             CbStatus.Enabled = false;
 
+            BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH MEMBER";
             BtnHapus.Visible = true;
             lbStatus.Visible = true;
@@ -414,60 +423,7 @@ namespace E_DealerBengkel.Master.Member
 
         private void TxtNama_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH MEMBER")
-            {
 
-            }
-            else
-            {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
-                SqlDataAdapter adapt = new SqlDataAdapter("select * from tMember where nama_member like '" + TxtNama.Text + "%'", connection);
-                DataTable dt = new DataTable();
-
-                connection.Open();
-                adapt.Fill(dt);
-
-                DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
-                col.SetOrdinal(0);
-                int a = 1;
-                foreach (DataRow r in dt.Rows)
-                {
-                    r["No"] = a;
-                    a++;
-                }
-
-                dgvMember.DataSource = dt;
-                dgvMember.Columns[1].HeaderText = "ID";
-                dgvMember.Columns[2].HeaderText = "Nama Member";
-                dgvMember.Columns[3].HeaderText = "No KTP";
-                dgvMember.Columns[4].HeaderText = "Alamat";
-                dgvMember.Columns[5].HeaderText = "Email";
-                dgvMember.Columns[6].HeaderText = "No Telepon";
-                dgvMember.Columns[7].HeaderText = "Status";
-
-                foreach (DataGridViewColumn colm in dgvMember.Columns)
-                {
-                    colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                }
-
-                this.dgvMember.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvMember.Columns["no_KTP"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                this.dgvMember.Columns["no_telepon"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                connection.Close();
-
-                dgvMember.BorderStyle = BorderStyle.None;
-                dgvMember.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-                dgvMember.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dgvMember.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-                dgvMember.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-                dgvMember.BackgroundColor = Color.White;
-
-                dgvMember.EnableHeadersVisualStyles = false;
-                dgvMember.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-                dgvMember.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-                dgvMember.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            }
         }
 
         private void dgvMember_CellClick(object sender, DataGridViewCellEventArgs e)

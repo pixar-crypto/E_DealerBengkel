@@ -292,7 +292,7 @@
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.Location = new System.Drawing.Point(140, 149);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(187, 21);
+            this.TxtEmail.Size = new System.Drawing.Size(186, 21);
             this.TxtEmail.TabIndex = 91;
             // 
             // TxtAlamat
@@ -301,7 +301,7 @@
             this.TxtAlamat.Location = new System.Drawing.Point(140, 86);
             this.TxtAlamat.Multiline = true;
             this.TxtAlamat.Name = "TxtAlamat";
-            this.TxtAlamat.Size = new System.Drawing.Size(185, 47);
+            this.TxtAlamat.Size = new System.Drawing.Size(186, 47);
             this.TxtAlamat.TabIndex = 90;
             // 
             // TxtNoTelp
@@ -464,9 +464,8 @@
             this.TxtCompName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCompName.Location = new System.Drawing.Point(139, 49);
             this.TxtCompName.Name = "TxtCompName";
-            this.TxtCompName.Size = new System.Drawing.Size(185, 21);
+            this.TxtCompName.Size = new System.Drawing.Size(187, 21);
             this.TxtCompName.TabIndex = 73;
-            this.TxtCompName.TextChanged += new System.EventHandler(this.TxtCompName_TextChanged);
             // 
             // dgvSupplier
             // 

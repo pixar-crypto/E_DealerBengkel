@@ -50,6 +50,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.btnMax = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btnMax);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
@@ -103,7 +105,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1165, 2);
+            this.button3.Location = new System.Drawing.Point(1132, 2);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 34);
@@ -333,6 +335,20 @@
             this.pictureBox12.TabIndex = 125;
             this.pictureBox12.TabStop = false;
             // 
+            // btnMax
+            // 
+            this.btnMax.BackColor = System.Drawing.Color.Transparent;
+            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Location = new System.Drawing.Point(1165, 2);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(31, 34);
+            this.btnMax.TabIndex = 131;
+            this.btnMax.UseVisualStyleBackColor = false;
+            // 
             // Kasir_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +400,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnMax;
     }
 }

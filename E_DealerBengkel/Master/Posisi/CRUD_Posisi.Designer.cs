@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Posisi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbWaktu = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtGaji = new System.Windows.Forms.TextBox();
             this.BtnClear = new System.Windows.Forms.Button();
             this.BtnHapus = new System.Windows.Forms.Button();
             this.BtnSimpan = new System.Windows.Forms.Button();
@@ -58,19 +59,18 @@
             this.lbJudul = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.TxtGaji = new System.Windows.Forms.TextBox();
             this.TxtDeskripsi = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosisi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -87,6 +87,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1046, 38);
             this.panel1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Honeydew;
+            this.label2.Location = new System.Drawing.Point(224, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(300, 31);
+            this.label2.TabIndex = 132;
+            this.label2.Text = "Halaman Admin - Master Posisi";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
@@ -184,6 +195,16 @@
             this.panel4.Size = new System.Drawing.Size(281, 93);
             this.panel4.TabIndex = 126;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 118;
+            this.pictureBox1.TabStop = false;
+            // 
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
@@ -217,8 +238,9 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.TxtGaji);
+            this.panel3.Controls.Add(this.TxtDeskripsi);
+            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.BtnClear);
             this.panel3.Controls.Add(this.BtnHapus);
             this.panel3.Controls.Add(this.BtnSimpan);
@@ -228,7 +250,6 @@
             this.panel3.Controls.Add(this.rbAktif);
             this.panel3.Controls.Add(this.CbStatus);
             this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.TxtDeskripsi);
             this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.dgvPosisi);
             this.panel3.Controls.Add(this.lbStatus);
@@ -248,16 +269,6 @@
             this.label6.Size = new System.Drawing.Size(27, 16);
             this.label6.TabIndex = 89;
             this.label6.Text = "RP.";
-            // 
-            // TxtGaji
-            // 
-            this.TxtGaji.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtGaji.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtGaji.Location = new System.Drawing.Point(170, 87);
-            this.TxtGaji.Name = "TxtGaji";
-            this.TxtGaji.Size = new System.Drawing.Size(155, 19);
-            this.TxtGaji.TabIndex = 88;
-            this.TxtGaji.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGaji_KeyPress);
             // 
             // BtnClear
             // 
@@ -357,15 +368,14 @@
             // CbStatus
             // 
             this.CbStatus.Enabled = false;
-            this.CbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CbStatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbStatus.FormattingEnabled = true;
             this.CbStatus.Items.AddRange(new object[] {
             "Aktif",
             "Tidak aktif"});
-            this.CbStatus.Location = new System.Drawing.Point(140, 121);
+            this.CbStatus.Location = new System.Drawing.Point(140, 125);
             this.CbStatus.Name = "CbStatus";
-            this.CbStatus.Size = new System.Drawing.Size(186, 25);
+            this.CbStatus.Size = new System.Drawing.Size(186, 21);
             this.CbStatus.TabIndex = 74;
             this.CbStatus.Visible = false;
             // 
@@ -402,14 +412,14 @@
             this.dgvPosisi.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvPosisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPosisi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPosisi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPosisi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPosisi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPosisi.Location = new System.Drawing.Point(354, 48);
             this.dgvPosisi.Name = "dgvPosisi";
@@ -468,27 +478,6 @@
             this.label1.TabIndex = 130;
             this.label1.Text = "VROOM! D&&G";
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(224, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 31);
-            this.label2.TabIndex = 132;
-            this.label2.Text = "Halaman Admin - Master Posisi";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 118;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
@@ -531,16 +520,21 @@
             this.pictureBox12.TabIndex = 132;
             this.pictureBox12.TabStop = false;
             // 
+            // TxtGaji
+            // 
+            this.TxtGaji.Location = new System.Drawing.Point(164, 89);
+            this.TxtGaji.Name = "TxtGaji";
+            this.TxtGaji.Size = new System.Drawing.Size(162, 20);
+            this.TxtGaji.TabIndex = 110;
+            this.TxtGaji.TextChanged += new System.EventHandler(this.TxtGaji_TextChanged);
+            this.TxtGaji.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGaji_KeyPress_1);
+            // 
             // TxtDeskripsi
             // 
-            this.TxtDeskripsi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDeskripsi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDeskripsi.Location = new System.Drawing.Point(140, 53);
+            this.TxtDeskripsi.Location = new System.Drawing.Point(140, 55);
             this.TxtDeskripsi.Name = "TxtDeskripsi";
-            this.TxtDeskripsi.Size = new System.Drawing.Size(185, 19);
-            this.TxtDeskripsi.TabIndex = 73;
-            this.TxtDeskripsi.TextChanged += new System.EventHandler(this.TxtDeskripsi_TextChanged);
-            this.TxtDeskripsi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDeskripsi_KeyPress);
+            this.TxtDeskripsi.Size = new System.Drawing.Size(186, 20);
+            this.TxtDeskripsi.TabIndex = 109;
             // 
             // CRUD_Posisi
             // 
@@ -565,11 +559,11 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPosisi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -604,7 +598,6 @@
         private System.Windows.Forms.DataGridView dgvPosisi;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtGaji;
         private System.Windows.Forms.Label lbJudul;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
@@ -614,6 +607,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.TextBox TxtGaji;
         private System.Windows.Forms.TextBox TxtDeskripsi;
     }
 }

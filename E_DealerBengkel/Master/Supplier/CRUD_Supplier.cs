@@ -64,6 +64,17 @@ namespace E_DealerBengkel.Master.Supplier
             TxtAlamat.Text = "";
             TxtEmail.Text = "";
             TxtNoTelp.Text = "";
+
+            if(lbJudul.Text == "TAMBAH SUPPLIER")
+            {
+
+            }
+            else
+            {
+                TxtAlamat.Enabled = false;
+                TxtEmail.Enabled = false;
+                TxtNoTelp.Enabled = false;
+            }
         }
 
         public bool ValidateEmail()
@@ -121,8 +132,8 @@ namespace E_DealerBengkel.Master.Supplier
             TxtEmail.Enabled = true;
             TxtNoTelp.Enabled = true;
             CbStatus.Enabled = false;
-            
 
+            BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH SUPPLIER";
             BtnHapus.Visible = false;
         }
@@ -135,6 +146,7 @@ namespace E_DealerBengkel.Master.Supplier
             TxtNoTelp.Enabled = false;
             CbStatus.Enabled = false;
 
+            BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH SUPPLIER";
             BtnHapus.Visible = true;
         }

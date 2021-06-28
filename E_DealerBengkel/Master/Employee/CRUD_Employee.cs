@@ -108,6 +108,7 @@ namespace E_DealerBengkel.Master.Employee
             TxtPassword2.Enabled = true;
             CbStatus.Enabled = false;
 
+            BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH KARYAWAN";
             BtnHapus.Visible = false;
             lbStatus.Visible = false;
@@ -383,6 +384,11 @@ namespace E_DealerBengkel.Master.Employee
                     MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (TxtNoTelp.Text.Length < 13)
+                {
+                    MessageBox.Show("No. Telepon harus 13 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     SqlConnection connection = new SqlConnection(Program.koneksi());
@@ -486,6 +492,11 @@ namespace E_DealerBengkel.Master.Employee
                 {
                     MessageBox.Show("Data ada yang kosong!!");
                 }
+                else if (TxtNoTelp.Text.Length < 13)
+                {
+                    MessageBox.Show("No. Telepon harus 13 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     SqlConnection connection = new SqlConnection(Program.koneksi());
@@ -538,11 +549,11 @@ namespace E_DealerBengkel.Master.Employee
                                             insert.Parameters.AddWithValue("username", TxtUsername.Text);
                                             insert.Parameters.AddWithValue("password", TxtPassword.Text);
                                             insert.Parameters.AddWithValue("status", CbStatus.Text);
-
+                                                
                                             try
                                             {
                                                 insert.ExecuteNonQuery();
-                                                MessageBox.Show("Data berhasil disimpan", "Information",
+                                                MessageBox.Show("Data berhasil diupdate", "Information",
                                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                                 RefreshDg();
@@ -964,9 +975,10 @@ namespace E_DealerBengkel.Master.Employee
             CbPosisi.Enabled = false;
             TxtUsername.Enabled = false;
             TxtPassword.Enabled = false;
-            TxtPassword.Enabled = false;
+            TxtPassword2.Enabled = false;
             CbStatus.Enabled = false;
 
+            BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH KARYAWAN";
             BtnHapus.Visible = true;
             lbStatus.Visible = true;

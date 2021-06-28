@@ -75,12 +75,20 @@ namespace E_DealerBengkel.Master.Motor
             TxtJumlah.Text = "";
             cmbSup.Text = " - PILIH SUPPLIER -";
 
-            TxtWarna.Enabled = false;
-            cbJenis.Enabled = false;
-            TxtHargaBeli.Enabled = false;
-            TxtHargaJual.Enabled = false;
-            TxtJumlah.Enabled = false;
-            cmbSup.Enabled = false;
+            if (lbJudul.Text == "TAMBAH MOTOR")
+            {
+
+            }
+            else
+            {
+                TxtWarna.Enabled = false;
+                cbJenis.Enabled = false;
+                TxtHargaBeli.Enabled = false;
+                TxtHargaJual.Enabled = false;
+                TxtJumlah.Enabled = false;
+                cmbSup.Enabled = false;
+                cbStatus.Enabled = false;
+            }
         }
 
         private void BtnTambah_Click(object sender, EventArgs e)
@@ -94,6 +102,7 @@ namespace E_DealerBengkel.Master.Motor
             cmbSup.Enabled = true;
             cbStatus.Enabled = false;
 
+            BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH MOTOR";
             BtnHapus.Visible = false;
             lbStatus.Visible = false;
@@ -113,6 +122,7 @@ namespace E_DealerBengkel.Master.Motor
             cmbSup.Enabled = false;
             cbStatus.Enabled = false;
 
+            BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH MOTOR";
             BtnHapus.Visible = true;
             lbStatus.Visible = true;
@@ -399,65 +409,7 @@ namespace E_DealerBengkel.Master.Motor
 
         private void TxtMerek_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH MOTOR")
-            {
 
-            }
-            else
-            {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
-                SqlDataAdapter adapt = new SqlDataAdapter("select * from tMotor where merek_motor like '" + TxtMerek.Text + "%'", connection);
-                DataTable dt = new DataTable();
-
-                connection.Open();
-                adapt.Fill(dt);
-
-                DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
-                col.SetOrdinal(0);
-                int a = 1;
-                foreach (DataRow r in dt.Rows)
-                {
-                    r["No"] = a;
-                    a++;
-                }
-
-                dgvMotor.DataSource = dt;
-                dgvMotor.Columns[1].HeaderText = "ID";
-                dgvMotor.Columns[2].HeaderText = "Merek";
-                dgvMotor.Columns[3].HeaderText = "Warna";
-                dgvMotor.Columns[4].HeaderText = "Jenis";
-                dgvMotor.Columns[5].HeaderText = "Harga Beli";
-                dgvMotor.Columns[6].HeaderText = "Harga Jual";
-                dgvMotor.Columns[7].HeaderText = "Jumlah";
-                dgvMotor.Columns[8].HeaderText = "Supplier";
-                dgvMotor.Columns[9].HeaderText = "Status";
-
-                foreach (DataGridViewColumn colm in dgvMotor.Columns)
-                {
-                    colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                }
-
-                this.dgvMotor.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvMotor.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                this.dgvMotor.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                this.dgvMotor.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvMotor.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
-                dgvMotor.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
-                connection.Close();
-
-                dgvMotor.BorderStyle = BorderStyle.None;
-                dgvMotor.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-                dgvMotor.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dgvMotor.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-                dgvMotor.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-                dgvMotor.BackgroundColor = Color.White;
-
-                dgvMotor.EnableHeadersVisualStyles = false;
-                dgvMotor.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-                dgvMotor.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-                dgvMotor.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            }
         }
 
         private void dgvMotor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -506,7 +458,8 @@ namespace E_DealerBengkel.Master.Motor
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMotor WHERE status='Tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
+                "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -563,7 +516,8 @@ namespace E_DealerBengkel.Master.Motor
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMotor WHERE status='Tidak Tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
+                "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tidak Tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -621,27 +575,29 @@ namespace E_DealerBengkel.Master.Motor
             RefreshDg();
         }
 
-        private void TxtHargaBeli_Leave(object sender, EventArgs e)
+        private void txtHargaBeli_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (TxtHargaBeli.Text == "")
             {
-                TxtHargaBeli.Text = Program.toRupiah(int.Parse(TxtHargaBeli.Text));
+                return;
             }
-            catch (Exception ex)
+            else
             {
-
+                TxtHargaBeli.Text = string.Format("{0:n0}", double.Parse(TxtHargaBeli.Text));
+                TxtHargaBeli.SelectionStart = TxtHargaBeli.Text.Length;
             }
         }
 
-        private void TxtHargaJual_Leave(object sender, EventArgs e)
+        private void TxtHargaJual_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (TxtHargaJual.Text == "")
             {
-                TxtHargaJual.Text = Program.toRupiah(int.Parse(TxtHargaJual.Text));
+                return;
             }
-            catch (Exception ex)
+            else
             {
-
+                TxtHargaJual.Text = string.Format("{0:n0}", double.Parse(TxtHargaJual.Text));
+                TxtHargaJual.SelectionStart = TxtHargaJual.Text.Length;
             }
         }
     }

@@ -393,8 +393,8 @@
             this.TxtHargaJual.Name = "TxtHargaJual";
             this.TxtHargaJual.Size = new System.Drawing.Size(161, 21);
             this.TxtHargaJual.TabIndex = 119;
+            this.TxtHargaJual.TextChanged += new System.EventHandler(this.TxtHargaJual_TextChanged);
             this.TxtHargaJual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHargaJual_KeyPress);
-            this.TxtHargaJual.Leave += new System.EventHandler(this.TxtHargaJual_Leave);
             // 
             // TxtHargaBeli
             // 
@@ -403,8 +403,8 @@
             this.TxtHargaBeli.Name = "TxtHargaBeli";
             this.TxtHargaBeli.Size = new System.Drawing.Size(161, 21);
             this.TxtHargaBeli.TabIndex = 118;
+            this.TxtHargaBeli.TextChanged += new System.EventHandler(this.txtHargaBeli_TextChanged);
             this.TxtHargaBeli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHargaBeli_KeyPress);
-            this.TxtHargaBeli.Leave += new System.EventHandler(this.TxtHargaBeli_Leave);
             // 
             // cbStatus
             // 
@@ -503,7 +503,7 @@
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(85, 24);
             this.BtnClear.TabIndex = 87;
-            this.BtnClear.Text = "BATAL";
+            this.BtnClear.Text = "CLEAR";
             this.BtnClear.UseVisualStyleBackColor = false;
             this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
@@ -630,7 +630,6 @@
             this.TxtMerek.Name = "TxtMerek";
             this.TxtMerek.Size = new System.Drawing.Size(185, 21);
             this.TxtMerek.TabIndex = 73;
-            this.TxtMerek.TextChanged += new System.EventHandler(this.TxtMerek_TextChanged);
             // 
             // label31
             // 

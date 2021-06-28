@@ -75,6 +75,7 @@ namespace E_DealerBengkel.Master.SukuCadang
             cmbSup.Enabled = true;
             cbStatus.Enabled = false;
 
+            BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH SUKUCADANG";
             BtnHapus.Visible = false;
             lbStatus.Visible = false;
@@ -94,6 +95,7 @@ namespace E_DealerBengkel.Master.SukuCadang
             cmbSup.Enabled = false;
             cbStatus.Enabled = false;
 
+            BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH SUKUCADANG";
             BtnHapus.Visible = true;
             lbStatus.Visible = true;
@@ -151,6 +153,21 @@ namespace E_DealerBengkel.Master.SukuCadang
             TxtJumlah.Text = "";
             cmbSup.Text = " - PILIH SUPPLIER -";
             cbStatus.Text = " - PILIH STATUS -";
+
+            if (lbJudul.Text == "TAMBAH SUKUCADANG")
+            {
+
+            }
+            else
+            {
+                TxtTipe.Enabled = false;
+                TxtJenis.Enabled = false;
+                TxtHargaBeli.Enabled = false;
+                TxtHargaJual.Enabled = false;
+                TxtJumlah.Enabled = false;
+                cmbSup.Enabled = false;
+                cbStatus.Enabled = false;
+            }
         }
 
         public void RefreshDg()
@@ -414,7 +431,8 @@ namespace E_DealerBengkel.Master.SukuCadang
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tSukucadang WHERE status='Tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
+                "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier WHERE a.status='Tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -476,7 +494,8 @@ namespace E_DealerBengkel.Master.SukuCadang
         {
             Clear();
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tSukucadang WHERE status='Tidak tersedia'", connection);
+            SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
+                "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier WHERE a.status='Tidak tersedia'", connection);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -539,18 +558,6 @@ namespace E_DealerBengkel.Master.SukuCadang
             RefreshDg();
         }
 
-        private void TxtHargaJual_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                TxtHargaJual.Text = Program.toRupiah(int.Parse(TxtHargaJual.Text));
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
         private void TxtHargaJual_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -567,23 +574,37 @@ namespace E_DealerBengkel.Master.SukuCadang
             }
         }
 
-        private void TxtHargaBeli_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                TxtHargaBeli.Text = Program.toRupiah(int.Parse(TxtHargaBeli.Text));
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
         private void TxtHargaBeli_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void txtHargaBeli_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtHargaBeli.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                TxtHargaBeli.Text = string.Format("{0:n0}", double.Parse(TxtHargaBeli.Text));
+                TxtHargaBeli.SelectionStart = TxtHargaBeli.Text.Length;
+            }
+        }
+
+        private void TxtHargaJual_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtHargaJual.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                TxtHargaJual.Text = string.Format("{0:n0}", double.Parse(TxtHargaJual.Text));
+                TxtHargaJual.SelectionStart = TxtHargaJual.Text.Length;
             }
         }
     }

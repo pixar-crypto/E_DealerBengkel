@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_SukuCadang));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
@@ -57,6 +57,8 @@
             this.TxtHargaBeli = new System.Windows.Forms.TextBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.cmbSup = new System.Windows.Forms.ComboBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
             this.TxtJumlah = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -77,8 +79,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.lbJudul = new System.Windows.Forms.Label();
-            this.vroomDGDataSet = new E_DealerBengkel.VroomDGDataSet();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -89,9 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -389,8 +389,8 @@
             this.TxtHargaJual.Name = "TxtHargaJual";
             this.TxtHargaJual.Size = new System.Drawing.Size(161, 21);
             this.TxtHargaJual.TabIndex = 119;
+            this.TxtHargaJual.TextChanged += new System.EventHandler(this.TxtHargaJual_TextChanged);
             this.TxtHargaJual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHargaJual_KeyPress);
-            this.TxtHargaJual.Leave += new System.EventHandler(this.TxtHargaJual_Leave);
             // 
             // TxtHargaBeli
             // 
@@ -399,8 +399,8 @@
             this.TxtHargaBeli.Name = "TxtHargaBeli";
             this.TxtHargaBeli.Size = new System.Drawing.Size(161, 21);
             this.TxtHargaBeli.TabIndex = 118;
+            this.TxtHargaBeli.TextChanged += new System.EventHandler(this.txtHargaBeli_TextChanged);
             this.TxtHargaBeli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHargaBeli_KeyPress);
-            this.TxtHargaBeli.Leave += new System.EventHandler(this.TxtHargaBeli_Leave);
             // 
             // cbStatus
             // 
@@ -426,6 +426,16 @@
             this.cmbSup.TabIndex = 116;
             this.cmbSup.ValueMember = "id_supplier";
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "tSupplier";
+            this.bindingSource1.DataSource = this.vroomDGDataSet;
+            // 
+            // vroomDGDataSet
+            // 
+            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
+            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // TxtJumlah
             // 
             this.TxtJumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,10 +449,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(137, 189);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 13);
+            this.label11.Size = new System.Drawing.Size(21, 15);
             this.label11.TabIndex = 113;
             this.label11.Text = "Rp";
             // 
@@ -450,10 +461,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(137, 158);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 13);
+            this.label8.Size = new System.Drawing.Size(21, 15);
             this.label8.TabIndex = 111;
             this.label8.Text = "Rp";
             // 
@@ -470,13 +482,13 @@
             this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnClear.FlatAppearance.BorderSize = 0;
             this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnClear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClear.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnClear.Location = new System.Drawing.Point(223, 351);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(85, 24);
             this.BtnClear.TabIndex = 87;
-            this.BtnClear.Text = "BATAL";
+            this.BtnClear.Text = "CLEAR";
             this.BtnClear.UseVisualStyleBackColor = false;
             this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
@@ -485,7 +497,7 @@
             this.BtnHapus.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnHapus.FlatAppearance.BorderSize = 0;
             this.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHapus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHapus.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnHapus.Location = new System.Drawing.Point(132, 351);
             this.BtnHapus.Name = "BtnHapus";
@@ -500,7 +512,7 @@
             this.BtnSimpan.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnSimpan.FlatAppearance.BorderSize = 0;
             this.BtnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSimpan.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSimpan.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnSimpan.Location = new System.Drawing.Point(41, 351);
             this.BtnSimpan.Name = "BtnSimpan";
@@ -624,14 +636,14 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(354, 48);
             this.dataGridView1.Name = "dataGridView1";
@@ -678,16 +690,6 @@
             this.lbJudul.Text = "TAMBAH SUKUCADANG";
             this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // vroomDGDataSet
-            // 
-            this.vroomDGDataSet.DataSetName = "VroomDGDataSet";
-            this.vroomDGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "tSupplier";
-            this.bindingSource1.DataSource = this.vroomDGDataSet;
-            // 
             // tSupplierTableAdapter
             // 
             this.tSupplierTableAdapter.ClearBeforeFill = true;
@@ -723,9 +725,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

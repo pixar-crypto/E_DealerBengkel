@@ -285,14 +285,14 @@ namespace E_DealerBengkel.Transaksi.Services
 
         private void TxtUangBayar_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (txtHarga.Text == "")
             {
-                double kembali = double.Parse(TxtUangBayar.Text) - double.Parse(TxtJumlahBayar.Text);
-                TxtUangKembali.Text = kembali.ToString("#,###");
+                return;
             }
-            catch (Exception ex)
+            else
             {
-
+                txtHarga.Text = string.Format("{0:n0}", double.Parse(txtHarga.Text));
+                txtHarga.SelectionStart = txtHarga.Text.Length;
             }
         }
 

@@ -358,7 +358,7 @@
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(85, 24);
             this.BtnClear.TabIndex = 87;
-            this.BtnClear.Text = "BATAL";
+            this.BtnClear.Text = "CLEAR";
             this.BtnClear.UseVisualStyleBackColor = false;
             this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 

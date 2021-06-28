@@ -16,7 +16,6 @@ namespace E_DealerBengkel.Master.Services
 {
     public partial class CRUD_Service : Form
     {
-
         String id;
 
         Timer timer = new Timer();
@@ -42,6 +41,7 @@ namespace E_DealerBengkel.Master.Services
             txtHarga.Enabled = true;
             cbStatus.Enabled = false;
 
+            BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH SERVICE";
             BtnHapus.Visible = false;
             lbStatus.Visible = false;
@@ -54,6 +54,7 @@ namespace E_DealerBengkel.Master.Services
             txtHarga.Enabled = false;
             cbStatus.Enabled = false;
 
+            BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH SERVICE";
             BtnHapus.Visible = true;
             lbStatus.Visible = true;
@@ -105,6 +106,12 @@ namespace E_DealerBengkel.Master.Services
             txtJenisSer.Text = "";
             txtHarga.Text = "";
             cbStatus.Text = " - PILIH STATUS -";
+
+            if (lbJudul.Text == "TAMBAH SERVICE")
+            {
+                txtHarga.Enabled = false;
+                cbStatus.Enabled = false;
+            }
         }
 
         private void CRUD_Service_Load(object sender, EventArgs e)
@@ -122,10 +129,10 @@ namespace E_DealerBengkel.Master.Services
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tService", connection);
-            DataTable dt = new DataTable();
-
             connection.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("select * from tService", connection);
+
+            DataTable dt = new DataTable();
             adapt.Fill(dt);
 
             DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
@@ -179,9 +186,10 @@ namespace E_DealerBengkel.Master.Services
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            if (txtJenisSer.Text == "" || txtHarga.Text == "" || cbStatus.Text == "")
+            if (txtJenisSer.Text == "" || txtHarga.Text == "" || cbStatus.Text == " - Pilih Status -")
             {
-                MessageBox.Show("Data ada yang kosong!!");
+                MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -213,7 +221,7 @@ namespace E_DealerBengkel.Master.Services
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Unable to update: " + ex.Message);
+                        MessageBox.Show("Unable to delete: " + ex.Message);
                     }
                 }
                 else
@@ -235,7 +243,7 @@ namespace E_DealerBengkel.Master.Services
                 else
                 {
                     string query = "select top 1 id_service from tService order by id_service desc";
-                    id = autogenerateID("SRV-", query);
+                    String id = autogenerateID("SRV-", query);
 
                     SqlConnection connection = new SqlConnection(Program.koneksi());
 
@@ -249,8 +257,7 @@ namespace E_DealerBengkel.Master.Services
 
                     insert.Parameters.AddWithValue("id_service", id);
                     insert.Parameters.AddWithValue("jenis_service", txtJenisSer.Text);
-                    string harga = Program.toAngka(txtHarga.Text).ToString();
-                    insert.Parameters.AddWithValue("harga", harga);
+                    insert.Parameters.AddWithValue("harga", txtHarga.Text);
                     insert.Parameters.AddWithValue("status", "Tersedia");
 
                     try
@@ -290,15 +297,14 @@ namespace E_DealerBengkel.Master.Services
 
                     update.Parameters.AddWithValue("id_service", id);
                     update.Parameters.AddWithValue("jenis_service", txtJenisSer.Text);
-                    string harga = Program.toAngka(txtHarga.Text).ToString();
-                    update.Parameters.AddWithValue("harga", harga);
+                    update.Parameters.AddWithValue("harga", txtHarga.Text);
                     update.Parameters.AddWithValue("status", cbStatus.SelectedItem);
 
                     try
                     {
                         //transaction.Commit();
                         update.ExecuteNonQuery();
-                        MessageBox.Show("Data Berhasil Disimpan", "Information",
+                        MessageBox.Show("Data Berhasil Diupdate", "Information",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         RefreshDg();
@@ -355,7 +361,6 @@ namespace E_DealerBengkel.Master.Services
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tService WHERE status='Tidak tersedia'", connection);
             DataTable dt = new DataTable();
 
-            connection.Open();
             adapt.Fill(dt);
 
             DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
@@ -429,7 +434,6 @@ namespace E_DealerBengkel.Master.Services
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tService WHERE status='Tersedia'", connection);
             DataTable dt = new DataTable();
 
-            connection.Open();
             adapt.Fill(dt);
 
             DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
@@ -474,6 +478,27 @@ namespace E_DealerBengkel.Master.Services
             dgvJenisSer.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvJenisSer.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dgvJenisSer.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+
+        private void txtHarga_TextChanged(object sender, EventArgs e)
+        {
+            if (txtHarga.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                txtHarga.Text = string.Format("{0:n0}", double.Parse(txtHarga.Text));
+                txtHarga.SelectionStart = txtHarga.Text.Length;
+            }
+        }
+
+        private void txtHarga_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

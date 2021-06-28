@@ -1,6 +1,7 @@
 ﻿using E_DealerBengkel.Transaksi.Pembelian;
 using E_DealerBengkel.Transaksi.Penjualan;
 using E_DealerBengkel.Transaksi.Services;
+using E_DealerBengkel.Transaksi.Retur;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,7 +70,9 @@ namespace E_DealerBengkel
 
         private void BtnRetur_Click(object sender, EventArgs e)
         {
-
+            Retur retur = new Retur();
+            retur.Show();
+            this.Dispose();
         }
 
         private void BtnServices_Click(object sender, EventArgs e)

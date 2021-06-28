@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Service));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
             this.BtnTambah = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +50,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbJudul = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.txtHarga = new System.Windows.Forms.TextBox();
+            this.txtJenisSer = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnClear = new System.Windows.Forms.Button();
             this.BtnHapus = new System.Windows.Forms.Button();
@@ -62,9 +65,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.dgvJenisSer = new System.Windows.Forms.DataGridView();
             this.lbStatus = new System.Windows.Forms.Label();
-            this.cbStatus = new System.Windows.Forms.ComboBox();
-            this.txtHarga = new System.Windows.Forms.TextBox();
-            this.txtJenisSer = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -89,15 +89,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 627);
             this.panel2.TabIndex = 5;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.SlateGray;
-            this.panel12.Controls.Add(this.pictureBox6);
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 151);
-            this.panel12.TabIndex = 133;
             // 
             // BtnKembali
             // 
@@ -152,6 +143,15 @@
             this.BtnTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnTambah.UseVisualStyleBackColor = true;
             this.BtnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.SlateGray;
+            this.panel12.Controls.Add(this.pictureBox6);
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 151);
+            this.panel12.TabIndex = 133;
             // 
             // pictureBox6
             // 
@@ -333,6 +333,35 @@
             this.panel3.Size = new System.Drawing.Size(779, 384);
             this.panel3.TabIndex = 139;
             // 
+            // cbStatus
+            // 
+            this.cbStatus.Enabled = false;
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Tersedia",
+            "Tidak tersedia"});
+            this.cbStatus.Location = new System.Drawing.Point(138, 126);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(187, 21);
+            this.cbStatus.TabIndex = 109;
+            this.cbStatus.Visible = false;
+            // 
+            // txtHarga
+            // 
+            this.txtHarga.Location = new System.Drawing.Point(162, 89);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.Size = new System.Drawing.Size(163, 20);
+            this.txtHarga.TabIndex = 108;
+            this.txtHarga.TextChanged += new System.EventHandler(this.txtHarga_TextChanged);
+            this.txtHarga.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHarga_KeyPress);
+            // 
+            // txtJenisSer
+            // 
+            this.txtJenisSer.Location = new System.Drawing.Point(138, 52);
+            this.txtJenisSer.Name = "txtJenisSer";
+            this.txtJenisSer.Size = new System.Drawing.Size(187, 20);
+            this.txtJenisSer.TabIndex = 107;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -473,14 +502,14 @@
             this.dgvJenisSer.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvJenisSer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvJenisSer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvJenisSer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJenisSer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvJenisSer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJenisSer.Location = new System.Drawing.Point(354, 48);
             this.dgvJenisSer.Name = "dgvJenisSer";
@@ -503,33 +532,6 @@
             this.lbStatus.TabIndex = 58;
             this.lbStatus.Text = "STATUS";
             this.lbStatus.Visible = false;
-            // 
-            // cbStatus
-            // 
-            this.cbStatus.Enabled = false;
-            this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Items.AddRange(new object[] {
-            "Tersedia",
-            "Tidak tersedia"});
-            this.cbStatus.Location = new System.Drawing.Point(138, 126);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(187, 21);
-            this.cbStatus.TabIndex = 109;
-            this.cbStatus.Visible = false;
-            // 
-            // txtHarga
-            // 
-            this.txtHarga.Location = new System.Drawing.Point(162, 89);
-            this.txtHarga.Name = "txtHarga";
-            this.txtHarga.Size = new System.Drawing.Size(163, 20);
-            this.txtHarga.TabIndex = 108;
-            // 
-            // txtJenisSer
-            // 
-            this.txtJenisSer.Location = new System.Drawing.Point(138, 52);
-            this.txtJenisSer.Name = "txtJenisSer";
-            this.txtJenisSer.Size = new System.Drawing.Size(187, 20);
-            this.txtJenisSer.TabIndex = 107;
             // 
             // CRUD_Service
             // 
