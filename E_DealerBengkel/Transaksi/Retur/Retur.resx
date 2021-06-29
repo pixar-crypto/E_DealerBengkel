@@ -821,10 +821,10 @@
   </data>
   <data name="btnMax.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAB+SURBVFhH7ZbRCoAwCEWt///lZnd06yHC4bagxAM+CFc97GmSJJ9DVRfUG2w8YYPgeuSnU3jC
-        BsFToKDqa4zWtY8nbBD0DTTAngAC7N1wNpAA2yaMBxTwwtlAAmybMJ4CAQW8cDaAwAjYkwLdArP5iUAF
-        4ae/3VBxdZLcENkBNvEVfi59cs8AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAH5JREFUWEft
+        ltEKgDAIRa3//+Vmd3TrIcLhtqDEAz4IVz3saZIkn0NVF9QbbDxhg+B65KdTeMIGwVOgoOprjNa1jyds
+        EPQNNMCeAALs3XA2kADbJowHFPDC2UACbJswngIBBbxwNoDACNiTAt0Cs/mJQAXhp7/dUHF1ktwQ2QE2
+        8RV+Ln1yzwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

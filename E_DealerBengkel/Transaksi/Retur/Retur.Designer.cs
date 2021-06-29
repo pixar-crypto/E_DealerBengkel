@@ -40,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMini = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMax = new System.Windows.Forms.Button();
@@ -52,6 +53,8 @@
             this.lbUser = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCariIdCus = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.BtnClear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCariIDtransaksi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtTglRetur = new System.Windows.Forms.TextBox();
@@ -72,9 +75,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.BtnClear = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCariIdCus = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnMini = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -245,6 +245,21 @@
             this.panel1.Size = new System.Drawing.Size(1237, 38);
             this.panel1.TabIndex = 129;
             // 
+            // btnMini
+            // 
+            this.btnMini.BackColor = System.Drawing.Color.Transparent;
+            this.btnMini.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMini.BackgroundImage")));
+            this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMini.FlatAppearance.BorderSize = 0;
+            this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMini.Location = new System.Drawing.Point(1132, 2);
+            this.btnMini.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMini.Name = "btnMini";
+            this.btnMini.Size = new System.Drawing.Size(31, 34);
+            this.btnMini.TabIndex = 131;
+            this.btnMini.UseVisualStyleBackColor = false;
+            this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
+            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -400,6 +415,77 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(828, 434);
             this.panel3.TabIndex = 138;
+            // 
+            // btnCariIdCus
+            // 
+            this.btnCariIdCus.Activecolor = System.Drawing.Color.LightSlateGray;
+            this.btnCariIdCus.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCariIdCus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCariIdCus.BorderRadius = 0;
+            this.btnCariIdCus.ButtonText = "CARI";
+            this.btnCariIdCus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCariIdCus.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCariIdCus.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCariIdCus.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCariIdCus.Iconimage")));
+            this.btnCariIdCus.Iconimage_right = null;
+            this.btnCariIdCus.Iconimage_right_Selected = null;
+            this.btnCariIdCus.Iconimage_Selected = null;
+            this.btnCariIdCus.IconMarginLeft = 0;
+            this.btnCariIdCus.IconMarginRight = 0;
+            this.btnCariIdCus.IconRightVisible = true;
+            this.btnCariIdCus.IconRightZoom = 0D;
+            this.btnCariIdCus.IconVisible = true;
+            this.btnCariIdCus.IconZoom = 50D;
+            this.btnCariIdCus.IsTab = false;
+            this.btnCariIdCus.Location = new System.Drawing.Point(325, 89);
+            this.btnCariIdCus.Name = "btnCariIdCus";
+            this.btnCariIdCus.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btnCariIdCus.OnHovercolor = System.Drawing.Color.LightSlateGray;
+            this.btnCariIdCus.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCariIdCus.selected = false;
+            this.btnCariIdCus.Size = new System.Drawing.Size(77, 25);
+            this.btnCariIdCus.TabIndex = 159;
+            this.btnCariIdCus.Text = "CARI";
+            this.btnCariIdCus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCariIdCus.Textcolor = System.Drawing.Color.White;
+            this.btnCariIdCus.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCariIdCus.Click += new System.EventHandler(this.btnCariIdCus_Click);
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.Activecolor = System.Drawing.Color.LightSlateGray;
+            this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnClear.BorderRadius = 0;
+            this.BtnClear.ButtonText = "BATAL";
+            this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClear.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnClear.Iconcolor = System.Drawing.Color.Transparent;
+            this.BtnClear.Iconimage = null;
+            this.BtnClear.Iconimage_right = null;
+            this.BtnClear.Iconimage_right_Selected = null;
+            this.BtnClear.Iconimage_Selected = null;
+            this.BtnClear.IconMarginLeft = 0;
+            this.BtnClear.IconMarginRight = 0;
+            this.BtnClear.IconRightVisible = true;
+            this.BtnClear.IconRightZoom = 0D;
+            this.BtnClear.IconVisible = true;
+            this.BtnClear.IconZoom = 50D;
+            this.BtnClear.IsTab = false;
+            this.BtnClear.Location = new System.Drawing.Point(304, 381);
+            this.BtnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.BtnClear.OnHovercolor = System.Drawing.Color.LightSlateGray;
+            this.BtnClear.OnHoverTextColor = System.Drawing.Color.White;
+            this.BtnClear.selected = false;
+            this.BtnClear.Size = new System.Drawing.Size(99, 29);
+            this.BtnClear.TabIndex = 158;
+            this.BtnClear.Text = "BATAL";
+            this.BtnClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnClear.Textcolor = System.Drawing.Color.White;
+            this.BtnClear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // btnSimpan
             // 
@@ -642,92 +728,6 @@
             this.label13.Size = new System.Drawing.Size(211, 28);
             this.label13.TabIndex = 139;
             this.label13.Text = "RETUR PEMBELIAN";
-            // 
-            // BtnClear
-            // 
-            this.BtnClear.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
-            this.BtnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnClear.BorderRadius = 0;
-            this.BtnClear.ButtonText = "BATAL";
-            this.BtnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnClear.DisabledColor = System.Drawing.Color.Gray;
-            this.BtnClear.Iconcolor = System.Drawing.Color.Transparent;
-            this.BtnClear.Iconimage = null;
-            this.BtnClear.Iconimage_right = null;
-            this.BtnClear.Iconimage_right_Selected = null;
-            this.BtnClear.Iconimage_Selected = null;
-            this.BtnClear.IconMarginLeft = 0;
-            this.BtnClear.IconMarginRight = 0;
-            this.BtnClear.IconRightVisible = true;
-            this.BtnClear.IconRightZoom = 0D;
-            this.BtnClear.IconVisible = true;
-            this.BtnClear.IconZoom = 50D;
-            this.BtnClear.IsTab = false;
-            this.BtnClear.Location = new System.Drawing.Point(304, 381);
-            this.BtnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Normalcolor = System.Drawing.Color.SteelBlue;
-            this.BtnClear.OnHovercolor = System.Drawing.Color.LightSlateGray;
-            this.BtnClear.OnHoverTextColor = System.Drawing.Color.White;
-            this.BtnClear.selected = false;
-            this.BtnClear.Size = new System.Drawing.Size(99, 29);
-            this.BtnClear.TabIndex = 158;
-            this.BtnClear.Text = "BATAL";
-            this.BtnClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnClear.Textcolor = System.Drawing.Color.White;
-            this.BtnClear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
-            // 
-            // btnCariIdCus
-            // 
-            this.btnCariIdCus.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.btnCariIdCus.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCariIdCus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCariIdCus.BorderRadius = 0;
-            this.btnCariIdCus.ButtonText = "CARI";
-            this.btnCariIdCus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCariIdCus.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCariIdCus.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCariIdCus.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCariIdCus.Iconimage")));
-            this.btnCariIdCus.Iconimage_right = null;
-            this.btnCariIdCus.Iconimage_right_Selected = null;
-            this.btnCariIdCus.Iconimage_Selected = null;
-            this.btnCariIdCus.IconMarginLeft = 0;
-            this.btnCariIdCus.IconMarginRight = 0;
-            this.btnCariIdCus.IconRightVisible = true;
-            this.btnCariIdCus.IconRightZoom = 0D;
-            this.btnCariIdCus.IconVisible = true;
-            this.btnCariIdCus.IconZoom = 50D;
-            this.btnCariIdCus.IsTab = false;
-            this.btnCariIdCus.Location = new System.Drawing.Point(325, 89);
-            this.btnCariIdCus.Name = "btnCariIdCus";
-            this.btnCariIdCus.Normalcolor = System.Drawing.Color.SteelBlue;
-            this.btnCariIdCus.OnHovercolor = System.Drawing.Color.LightSlateGray;
-            this.btnCariIdCus.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCariIdCus.selected = false;
-            this.btnCariIdCus.Size = new System.Drawing.Size(77, 25);
-            this.btnCariIdCus.TabIndex = 159;
-            this.btnCariIdCus.Text = "CARI";
-            this.btnCariIdCus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCariIdCus.Textcolor = System.Drawing.Color.White;
-            this.btnCariIdCus.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCariIdCus.Click += new System.EventHandler(this.btnCariIdCus_Click);
-            // 
-            // btnMini
-            // 
-            this.btnMini.BackColor = System.Drawing.Color.Transparent;
-            this.btnMini.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMini.BackgroundImage")));
-            this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMini.FlatAppearance.BorderSize = 0;
-            this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMini.Location = new System.Drawing.Point(1132, 2);
-            this.btnMini.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMini.Name = "btnMini";
-            this.btnMini.Size = new System.Drawing.Size(31, 34);
-            this.btnMini.TabIndex = 131;
-            this.btnMini.UseVisualStyleBackColor = false;
-            this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
             // 
             // Retur
             // 

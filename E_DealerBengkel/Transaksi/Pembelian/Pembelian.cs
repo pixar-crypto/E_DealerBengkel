@@ -448,7 +448,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         private void updateBarangMobil(int hasil, int i)
         {
             string idMobil = dgvKeranjang.Rows[i].Cells[0].Value.ToString();
-            string merk = dgvKeranjang.Rows[i].Cells[1].Value.ToString();
+            string merek = dgvKeranjang.Rows[i].Cells[1].Value.ToString();
             string tipe = dgvKeranjang.Rows[i].Cells[2].Value.ToString();
             string jenis = dgvKeranjang.Rows[i].Cells[3].Value.ToString();
             string hargaJual = dgvKeranjang.Rows[i].Cells[4].Value.ToString();
@@ -469,7 +469,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_mobil", idMobil);
-            insert.Parameters.AddWithValue("merek_mobil", merk);
+            insert.Parameters.AddWithValue("merk_mobil", merek);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_mobil", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));

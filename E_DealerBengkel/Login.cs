@@ -24,12 +24,9 @@ namespace E_DealerBengkel
 
         public Login()
         {
-            Thread t = new Thread(new ThreadStart(loading));
-            t.Start();
+            
             InitializeComponent();
-            for (int i = 0; i <= 1000; i++)
-                Thread.Sleep(10);
-            t.Abort();
+           
         }
 
         void loading()

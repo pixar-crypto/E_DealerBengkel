@@ -60,7 +60,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(66, 320);
+            this.metroLabel1.Location = new System.Drawing.Point(66, 311);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(65, 19);
             this.metroLabel1.TabIndex = 2;
@@ -70,11 +70,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(659, 379);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroProgressBar1);
             this.Controls.Add(this.metroPanel1);
+            this.DisplayHeader = false;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SplashScreen";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.ResumeLayout(false);
             this.PerformLayout();
 
