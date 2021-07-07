@@ -210,7 +210,7 @@ namespace E_DealerBengkel.Transaksi.Retur
             {
                 string tanggal = Convert.ToString(read["tanggal"]);
                 DateTime Date = DateTime.Parse(tanggal);
-                txtTanggal.Text = Date.ToString("MM/dd/yyyy");
+                txtTanggal.Text = Date.ToString("yyyy-MM-dd");
                 txtHarga.Text = Convert.ToString(read["total_harga"]);
                 txtKaryawan.Text = Convert.ToString(read["id_karyawan"]);
                 txtIdCus.Text = Convert.ToString(read["id_member"]);
@@ -338,7 +338,7 @@ namespace E_DealerBengkel.Transaksi.Retur
         {
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
             RefreshDg();
-            txtTglRetur.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            txtTglRetur.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         private void btnClose_Click(object sender, EventArgs e)

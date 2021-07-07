@@ -745,7 +745,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         {
             string query = "select top 1 id_pembelian from tPembelian order by id_pembelian desc";
             idTran = autogenerateID("TBB-", query);
-            string waktu = DateTime.Now.ToString("dd MMMM yyyy");
+            string waktu = DateTime.Now.ToString("yyyy-MM-dd");
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);
 

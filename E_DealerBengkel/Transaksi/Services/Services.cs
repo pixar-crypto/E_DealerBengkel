@@ -318,7 +318,7 @@ namespace E_DealerBengkel.Transaksi.Services
             idTran = autogenerateID("TSR-", query);
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);
-            string waktu = DateTime.Now.ToString("dd MMMM yyyy");
+            string waktu = DateTime.Now.ToString("yyyy-MM-dd");
 
             if (rbMobil.Checked == true)
             {

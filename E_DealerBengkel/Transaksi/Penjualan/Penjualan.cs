@@ -598,7 +598,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         {
             string query = "select top 1 id_penjualan from tPenjualan order by id_penjualan desc";
             idTran = autogenerateID("TJB-", query);
-            string waktu = DateTime.Now.ToString("dd MMMM yyyy");
+            string waktu = DateTime.Now.ToString("yyyy-MM-dd");
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);
             string idMember = txtIdCus.Text;
@@ -766,7 +766,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_mobil", idMobil);
-            insert.Parameters.AddWithValue("merek_mobil", merk);
+            insert.Parameters.AddWithValue("merk_mobil", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_mobil", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
@@ -809,7 +809,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_motor", idMotor);
-            insert.Parameters.AddWithValue("merek_motor", merk);
+            insert.Parameters.AddWithValue("merk_motor", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_motor", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
