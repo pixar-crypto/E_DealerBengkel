@@ -48,7 +48,9 @@ namespace E_DealerBengkel.Transaksi.Penjualan
 
         private void BtnRetur_Click(object sender, EventArgs e)
         {
-
+            Retur.Retur retur = new Retur.Retur();
+            retur.Show();
+            this.Hide();
         }
 
         private void BtnPenjualan_Click(object sender, EventArgs e)
@@ -67,7 +69,9 @@ namespace E_DealerBengkel.Transaksi.Penjualan
 
         private void BtnServices_Click(object sender, EventArgs e)
         {
-
+            Services.Services services = new Services.Services();
+            services.Show();
+            this.Hide();
         }
 
         private void BtnKembali_Click(object sender, EventArgs e)

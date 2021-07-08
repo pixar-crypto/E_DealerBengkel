@@ -40,7 +40,9 @@ namespace E_DealerBengkel.Transaksi.Services
 
         private void BtnRetur_Click(object sender, EventArgs e)
         {
-
+            Retur.Retur retur = new Retur.Retur();
+            retur.Show();
+            this.Hide();
         }
 
         private void BtnServices_Click(object sender, EventArgs e)
