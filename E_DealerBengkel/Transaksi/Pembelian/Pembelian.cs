@@ -483,7 +483,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             try
             {
                 //transaction.Commit();
-                //insert.ExecuteNonQuery();
+                insert.ExecuteNonQuery();
                 //MessageBox.Show(idMobil + " " + hasil, "Information",
                 //MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -517,7 +517,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_motor", idMotor);
-            insert.Parameters.AddWithValue("merek_motor", merk);
+            insert.Parameters.AddWithValue("merk_motor", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_motor", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
