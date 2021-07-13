@@ -107,9 +107,9 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(10, 275);
+            this.panel5.Location = new System.Drawing.Point(8, 275);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(173, 3);
+            this.panel5.Size = new System.Drawing.Size(176, 3);
             this.panel5.TabIndex = 148;
             // 
             // BtnKembali

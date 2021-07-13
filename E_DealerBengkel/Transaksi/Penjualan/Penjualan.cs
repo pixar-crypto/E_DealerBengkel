@@ -308,18 +308,26 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             {
                 j = 1;
 
-                i = dgvKeranjang.Rows.Add();
-                dgvKeranjang.Rows[i].Cells[0].Value = dgvStok.Rows[n].Cells[0].Value.ToString();
-                dgvKeranjang.Rows[i].Cells[1].Value = dgvStok.Rows[n].Cells[1].Value.ToString();
-                dgvKeranjang.Rows[i].Cells[2].Value = dgvStok.Rows[n].Cells[2].Value.ToString();
-                dgvKeranjang.Rows[i].Cells[3].Value = dgvStok.Rows[n].Cells[3].Value.ToString();
-                Hargabeli = dgvStok.Rows[n].Cells[4].Value.ToString();
-                Hargabeli = Convert.ToDecimal(Hargabeli).ToString("Rp #,###", culture);
-                dgvKeranjang.Rows[i].Cells[4].Value = Hargabeli;
-                dgvKeranjang.Rows[i].Cells[5].Value = j;
-                dgvKeranjang.Rows[i].Cells[6].Value = dgvStok.Rows[n].Cells[6].Value.ToString();
-
-                cekBeli();
+                int cek = int.Parse(dgvStok.Rows[n].Cells[5].Value.ToString());
+                if (cek == 0)
+                {
+                    MessageBox.Show("Maaf, Stock Sudah Habis", "Pemberitahuan!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    i = dgvKeranjang.Rows.Add();
+                    dgvKeranjang.Rows[i].Cells[0].Value = dgvStok.Rows[n].Cells[0].Value.ToString();
+                    dgvKeranjang.Rows[i].Cells[1].Value = dgvStok.Rows[n].Cells[1].Value.ToString();
+                    dgvKeranjang.Rows[i].Cells[2].Value = dgvStok.Rows[n].Cells[2].Value.ToString();
+                    dgvKeranjang.Rows[i].Cells[3].Value = dgvStok.Rows[n].Cells[3].Value.ToString();
+                    Hargabeli = dgvStok.Rows[n].Cells[4].Value.ToString();
+                    Hargabeli = Convert.ToDecimal(Hargabeli).ToString("Rp #,###", culture);
+                    dgvKeranjang.Rows[i].Cells[4].Value = Hargabeli;
+                    dgvKeranjang.Rows[i].Cells[5].Value = j;
+                    dgvKeranjang.Rows[i].Cells[6].Value = dgvStok.Rows[n].Cells[6].Value.ToString();
+                    cekBeli();
+                }
             }
         }
 
@@ -536,14 +544,25 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         private void BtnTambah_Click(object sender, EventArgs e)
         {
             int jumlah;
+            int cek;
 
             int n = dgvKeranjang.CurrentCell.RowIndex;
             jumlah = int.Parse(dgvKeranjang.Rows[n].Cells[5].Value.ToString());
 
             jumlah = jumlah + 1;
 
-            dgvKeranjang.Rows[n].Cells[5].Value = jumlah;
+            cek = int.Parse(dgvStok.Rows[n].Cells[5].Value.ToString()) - jumlah;
+            if (cek < 0)
+            {
+                MessageBox.Show("Maaf, Stok Tidak Cukup", "Pemberitahuan!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+dgvKeranjang.Rows[n].Cells[5].Value = jumlah;
             cekBeli();
+            }
+           
         }
 
         private void BtnKurang_Click(object sender, EventArgs e)

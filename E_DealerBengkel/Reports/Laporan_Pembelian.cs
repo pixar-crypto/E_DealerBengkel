@@ -16,5 +16,11 @@ namespace E_DealerBengkel.Reports
         {
             InitializeComponent();
         }
+
+        private void Laporan_Pembelian_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

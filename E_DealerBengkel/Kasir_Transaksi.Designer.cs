@@ -277,7 +277,7 @@
             this.BtnServices.FlatAppearance.BorderSize = 0;
             this.BtnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnServices.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnServices.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnServices.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnServices.Image = ((System.Drawing.Image)(resources.GetObject("BtnServices.Image")));
             this.BtnServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnServices.Location = new System.Drawing.Point(0, 281);
@@ -295,7 +295,7 @@
             this.BtnRetur.FlatAppearance.BorderSize = 0;
             this.BtnRetur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRetur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRetur.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnRetur.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnRetur.Image = ((System.Drawing.Image)(resources.GetObject("BtnRetur.Image")));
             this.BtnRetur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRetur.Location = new System.Drawing.Point(0, 243);
@@ -313,7 +313,7 @@
             this.BtnPenjualan.FlatAppearance.BorderSize = 0;
             this.BtnPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPenjualan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPenjualan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnPenjualan.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnPenjualan.Image = ((System.Drawing.Image)(resources.GetObject("BtnPenjualan.Image")));
             this.BtnPenjualan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPenjualan.Location = new System.Drawing.Point(0, 205);
@@ -617,6 +617,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Honeydew;
             this.label8.Location = new System.Drawing.Point(22, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 19);
@@ -703,6 +704,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Honeydew;
             this.label10.Location = new System.Drawing.Point(4, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 19);
@@ -789,6 +791,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Honeydew;
             this.label11.Location = new System.Drawing.Point(22, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 19);
@@ -875,6 +878,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Honeydew;
             this.label12.Location = new System.Drawing.Point(29, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 19);
@@ -961,6 +965,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Honeydew;
             this.label13.Location = new System.Drawing.Point(29, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 19);
@@ -1047,6 +1052,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Honeydew;
             this.label14.Location = new System.Drawing.Point(22, 4);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(67, 19);
@@ -1133,6 +1139,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Honeydew;
             this.label15.Location = new System.Drawing.Point(15, 4);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 19);
@@ -1233,7 +1240,7 @@
             this.graphSukuCadang.Location = new System.Drawing.Point(600, 191);
             this.graphSukuCadang.Name = "graphSukuCadang";
             series4.ChartArea = "ChartArea1";
-            series4.Name = "Mobil";
+            series4.Name = "SukuCadang";
             this.graphSukuCadang.Series.Add(series4);
             this.graphSukuCadang.Size = new System.Drawing.Size(350, 200);
             this.graphSukuCadang.TabIndex = 132;

@@ -178,7 +178,7 @@ namespace E_DealerBengkel
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tSukuCadang", connection);
+                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tSukucadang", connection);
                 DataTable dt = new DataTable();
                 adapt.Fill(dt);
                 dgvSukuCadang.DataSource = dt;
@@ -230,7 +230,6 @@ namespace E_DealerBengkel
                 rdr.Close();
                 connection.Close();
 
-                //graphPenjualan.Series["Master"].Points.Clear();
             }
             catch (Exception ex)
             {
