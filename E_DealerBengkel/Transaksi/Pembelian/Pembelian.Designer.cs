@@ -215,7 +215,7 @@
             this.BtnServices.FlatAppearance.BorderSize = 0;
             this.BtnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnServices.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnServices.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnServices.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnServices.Image = ((System.Drawing.Image)(resources.GetObject("BtnServices.Image")));
             this.BtnServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnServices.Location = new System.Drawing.Point(0, 281);
@@ -233,7 +233,7 @@
             this.BtnRetur.FlatAppearance.BorderSize = 0;
             this.BtnRetur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRetur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRetur.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnRetur.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnRetur.Image = ((System.Drawing.Image)(resources.GetObject("BtnRetur.Image")));
             this.BtnRetur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRetur.Location = new System.Drawing.Point(0, 243);
@@ -251,7 +251,7 @@
             this.BtnPenjualan.FlatAppearance.BorderSize = 0;
             this.BtnPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPenjualan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPenjualan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnPenjualan.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnPenjualan.Image = ((System.Drawing.Image)(resources.GetObject("BtnPenjualan.Image")));
             this.BtnPenjualan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPenjualan.Location = new System.Drawing.Point(0, 205);
