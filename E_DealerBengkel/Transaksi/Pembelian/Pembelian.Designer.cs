@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pembelian));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -494,7 +494,7 @@
             this.BtnSimpan.Text = "SIMPAN";
             this.BtnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnSimpan.Textcolor = System.Drawing.Color.White;
-            this.BtnSimpan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSimpan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSimpan.Click += new System.EventHandler(this.BtnSimpan_Click);
             // 
             // dgvKeranjang
@@ -505,14 +505,14 @@
             this.dgvKeranjang.AllowUserToResizeRows = false;
             this.dgvKeranjang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvKeranjang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.MediumBlue;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKeranjang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Idd,
@@ -561,10 +561,10 @@
             // 
             // harga
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "#,###";
-            dataGridViewCellStyle2.NullValue = null;
-            this.harga.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle20.Format = "#,###";
+            dataGridViewCellStyle20.NullValue = null;
+            this.harga.DefaultCellStyle = dataGridViewCellStyle20;
             this.harga.HeaderText = "Harga";
             this.harga.MinimumWidth = 8;
             this.harga.Name = "harga";
@@ -572,8 +572,8 @@
             // 
             // jumlah
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.jumlah.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.jumlah.DefaultCellStyle = dataGridViewCellStyle21;
             this.jumlah.HeaderText = "Jumlah";
             this.jumlah.MinimumWidth = 8;
             this.jumlah.Name = "jumlah";
@@ -592,36 +592,37 @@
             this.dgvStok.AllowUserToDeleteRows = false;
             this.dgvStok.AllowUserToResizeColumns = false;
             this.dgvStok.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            this.dgvStok.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            this.dgvStok.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvStok.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvStok.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.MediumBlue;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvStok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStok.Location = new System.Drawing.Point(23, 165);
             this.dgvStok.Name = "dgvStok";
             this.dgvStok.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvStok.RowHeadersVisible = false;
             this.dgvStok.RowHeadersWidth = 62;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvStok.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvStok.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvStok.Size = new System.Drawing.Size(408, 288);
             this.dgvStok.TabIndex = 136;
             this.dgvStok.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStok_CellClick);
             // 
             // TxtJumlahBayar
             // 
+            this.TxtJumlahBayar.Enabled = false;
             this.TxtJumlahBayar.Location = new System.Drawing.Point(504, 82);
             this.TxtJumlahBayar.Name = "TxtJumlahBayar";
             this.TxtJumlahBayar.Size = new System.Drawing.Size(185, 20);
@@ -656,9 +657,10 @@
             this.BtnCariBarang.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnCariBarang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnCariBarang.BorderRadius = 0;
-            this.BtnCariBarang.ButtonText = "Cari";
+            this.BtnCariBarang.ButtonText = "CARI";
             this.BtnCariBarang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCariBarang.DisabledColor = System.Drawing.Color.Gray;
+            this.BtnCariBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCariBarang.Iconcolor = System.Drawing.Color.Transparent;
             this.BtnCariBarang.Iconimage = ((System.Drawing.Image)(resources.GetObject("BtnCariBarang.Iconimage")));
             this.BtnCariBarang.Iconimage_right = null;
@@ -678,12 +680,12 @@
             this.BtnCariBarang.OnHovercolor = System.Drawing.Color.LightSlateGray;
             this.BtnCariBarang.OnHoverTextColor = System.Drawing.Color.White;
             this.BtnCariBarang.selected = false;
-            this.BtnCariBarang.Size = new System.Drawing.Size(68, 25);
+            this.BtnCariBarang.Size = new System.Drawing.Size(77, 25);
             this.BtnCariBarang.TabIndex = 132;
-            this.BtnCariBarang.Text = "Cari";
+            this.BtnCariBarang.Text = "CARI";
             this.BtnCariBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnCariBarang.Textcolor = System.Drawing.Color.White;
-            this.BtnCariBarang.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCariBarang.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCariBarang.Click += new System.EventHandler(this.BtnCariBarang_Click);
             // 
             // cbJenisBarang

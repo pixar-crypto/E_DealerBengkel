@@ -53,7 +53,6 @@
             this.lbUser = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCariIdCus = new Bunifu.Framework.UI.BunifuFlatButton();
             this.BtnClear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCariIDtransaksi = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -107,7 +106,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(8, 275);
+            this.panel5.Location = new System.Drawing.Point(8, 278);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(176, 3);
             this.panel5.TabIndex = 148;
@@ -390,7 +389,6 @@
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.btnCariIdCus);
             this.panel3.Controls.Add(this.BtnClear);
             this.panel3.Controls.Add(this.btnSimpan);
             this.panel3.Controls.Add(this.btnCariIDtransaksi);
@@ -415,41 +413,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(828, 434);
             this.panel3.TabIndex = 138;
-            // 
-            // btnCariIdCus
-            // 
-            this.btnCariIdCus.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.btnCariIdCus.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCariIdCus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCariIdCus.BorderRadius = 0;
-            this.btnCariIdCus.ButtonText = "CARI";
-            this.btnCariIdCus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCariIdCus.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCariIdCus.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCariIdCus.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCariIdCus.Iconimage")));
-            this.btnCariIdCus.Iconimage_right = null;
-            this.btnCariIdCus.Iconimage_right_Selected = null;
-            this.btnCariIdCus.Iconimage_Selected = null;
-            this.btnCariIdCus.IconMarginLeft = 0;
-            this.btnCariIdCus.IconMarginRight = 0;
-            this.btnCariIdCus.IconRightVisible = true;
-            this.btnCariIdCus.IconRightZoom = 0D;
-            this.btnCariIdCus.IconVisible = true;
-            this.btnCariIdCus.IconZoom = 50D;
-            this.btnCariIdCus.IsTab = false;
-            this.btnCariIdCus.Location = new System.Drawing.Point(325, 89);
-            this.btnCariIdCus.Name = "btnCariIdCus";
-            this.btnCariIdCus.Normalcolor = System.Drawing.Color.SteelBlue;
-            this.btnCariIdCus.OnHovercolor = System.Drawing.Color.LightSlateGray;
-            this.btnCariIdCus.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCariIdCus.selected = false;
-            this.btnCariIdCus.Size = new System.Drawing.Size(77, 25);
-            this.btnCariIdCus.TabIndex = 159;
-            this.btnCariIdCus.Text = "CARI";
-            this.btnCariIdCus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCariIdCus.Textcolor = System.Drawing.Color.White;
-            this.btnCariIdCus.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCariIdCus.Click += new System.EventHandler(this.btnCariIdCus_Click);
             // 
             // BtnClear
             // 
@@ -688,7 +651,7 @@
             this.txtIdCus.Enabled = false;
             this.txtIdCus.Location = new System.Drawing.Point(155, 89);
             this.txtIdCus.Name = "txtIdCus";
-            this.txtIdCus.Size = new System.Drawing.Size(166, 20);
+            this.txtIdCus.Size = new System.Drawing.Size(247, 20);
             this.txtIdCus.TabIndex = 30;
             // 
             // txtNamaCus
@@ -811,7 +774,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private Bunifu.Framework.UI.BunifuFlatButton BtnClear;
-        private Bunifu.Framework.UI.BunifuFlatButton btnCariIdCus;
         private System.Windows.Forms.Button btnMini;
     }
 }

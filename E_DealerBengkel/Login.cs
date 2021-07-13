@@ -31,8 +31,7 @@ namespace E_DealerBengkel
 
         void loading()
         {
-            SplashScreen frame = new SplashScreen();
-            Application.Run(frame);
+            
         }
 
         private DataSet GetRoles(string username)
