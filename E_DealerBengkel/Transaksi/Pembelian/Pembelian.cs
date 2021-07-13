@@ -739,6 +739,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Clear();
                     this.dgvKeranjang.Rows.Clear();
+                    this.dgvStok.DataSource = null;
                 }
             }
         }

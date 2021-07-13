@@ -287,6 +287,16 @@ namespace E_DealerBengkel.Transaksi.Services
 
         private void TxtUangBayar_TextChanged(object sender, EventArgs e)
         {
+            if (TxtUangBayar.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                TxtUangBayar.Text = string.Format("{0:n0}", double.Parse(TxtUangBayar.Text));
+                TxtUangBayar.SelectionStart = TxtUangBayar.Text.Length;
+            }
+
             try
             {
                 double kembali = double.Parse(TxtUangBayar.Text) - double.Parse(TxtJumlahBayar.Text);

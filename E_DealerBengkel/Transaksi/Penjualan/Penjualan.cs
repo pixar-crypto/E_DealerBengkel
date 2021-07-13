@@ -165,11 +165,14 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             txtJumlahBayar.Text = "";
             txtUangBayar.Text = "";
             txtUangKembali.Text = "";
+            cbJenisBarang.Text = " -- PILIH JENIS BARANG --";
         }
 
         private void Penjualan_Load(object sender, EventArgs e)
         {
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
+
+            cbJenisBarang.Text = " -- PILIH JENIS BARANG --";
 
             foreach (DataGridViewColumn col in dgvKeranjang.Columns)
             {
@@ -613,6 +616,7 @@ dgvKeranjang.Rows[n].Cells[5].Value = jumlah;
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Clear();
                     this.dgvKeranjang.Rows.Clear();
+                    this.dgvStok.DataSource = null;
                 }
             }
         }
