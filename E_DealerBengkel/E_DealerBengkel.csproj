@@ -88,6 +88,14 @@
     <Compile Include="Admin_Master.Designer.cs">
       <DependentUpon>Admin_Master.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database_Laporan.cs">
+      <DependentUpon>Database_Laporan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database_Laporan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database_Laporan.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Kasir_Transaksi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +270,7 @@
     <EmbeddedResource Include="Reports\Laporan_Pembelian.resx">
       <DependentUpon>Laporan_Pembelian.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rdlc\Laporan_Pembelian.rdlc" />
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +289,17 @@
     <EmbeddedResource Include="Transaksi\Services\Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Database_Laporan.xsc">
+      <DependentUpon>Database_Laporan.xsd</DependentUpon>
+    </None>
+    <None Include="Database_Laporan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database_Laporan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Database_Laporan.xss">
+      <DependentUpon>Database_Laporan.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

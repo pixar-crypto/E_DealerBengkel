@@ -1,4 +1,5 @@
 ﻿using System;
+using E_DealerBengkel.Reports;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Timer = System.Windows.Forms.Timer;
 
 namespace E_DealerBengkel.Reports
@@ -54,6 +56,16 @@ namespace E_DealerBengkel.Reports
         private void button1_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.ExitThread();
+        }
+
+        private void dateAwal_ValueChanged(object sender, EventArgs e)
+        {
+            string awal = dateAwal.Text;
+            string akhir = dateAkhir.Text;
+
+            
+            this.laporan_BeliTableAdapter.Fill(this.database_Laporan.Laporan_Beli, awal, akhir);
+            this.reportViewer1.RefreshReport();
         }
     }
 }

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laporan_Pembelian));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnKonfirRetur = new System.Windows.Forms.Button();
             this.BtnKembali = new System.Windows.Forms.Button();
@@ -40,7 +42,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMax = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,17 +53,17 @@
             this.dateAwal = new System.Windows.Forms.DateTimePicker();
             this.lbJudul = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateAkhir = new System.Windows.Forms.DateTimePicker();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnMax = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbUser = new System.Windows.Forms.Label();
             this.lbWaktu = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateAkhir = new System.Windows.Forms.DateTimePicker();
+            this.database_Laporan = new E_DealerBengkel.Database_Laporan();
+            this.laporanBeliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.laporan_BeliTableAdapter = new E_DealerBengkel.Database_LaporanTableAdapters.Laporan_BeliTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,6 +72,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laporanBeliBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -222,6 +229,20 @@
             this.panel1.Size = new System.Drawing.Size(1467, 38);
             this.panel1.TabIndex = 131;
             // 
+            // btnMax
+            // 
+            this.btnMax.BackColor = System.Drawing.Color.Transparent;
+            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Location = new System.Drawing.Point(1377, 2);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(31, 34);
+            this.btnMax.TabIndex = 131;
+            this.btnMax.UseVisualStyleBackColor = false;
+            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,6 +253,36 @@
             this.label3.TabIndex = 130;
             this.label3.Text = "Halaman Manager - Laporan Pembelian";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1412, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 34);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(1344, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 34);
+            this.button3.TabIndex = 5;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox12
             // 
@@ -285,6 +336,7 @@
             this.dateAwal.Name = "dateAwal";
             this.dateAwal.Size = new System.Drawing.Size(200, 20);
             this.dateAwal.TabIndex = 150;
+            this.dateAwal.ValueChanged += new System.EventHandler(this.dateAwal_ValueChanged);
             // 
             // lbJudul
             // 
@@ -312,8 +364,31 @@
             this.panel3.Size = new System.Drawing.Size(1122, 525);
             this.panel3.TabIndex = 152;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(646, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 16);
+            this.label4.TabIndex = 154;
+            this.label4.Text = "TANGGAL AWAL";
+            // 
+            // dateAkhir
+            // 
+            this.dateAkhir.CustomFormat = "yyyy-MM-dd";
+            this.dateAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateAkhir.Location = new System.Drawing.Point(767, 39);
+            this.dateAkhir.Name = "dateAkhir";
+            this.dateAkhir.Size = new System.Drawing.Size(200, 20);
+            this.dateAkhir.TabIndex = 153;
+            // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "dsPembelian";
+            reportDataSource1.Value = this.laporanBeliBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "E_DealerBengkel.Reports.Rdlc.Laporan_Pembelian.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(47, 85);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -329,20 +404,6 @@
             this.label10.Size = new System.Drawing.Size(103, 16);
             this.label10.TabIndex = 151;
             this.label10.Text = "TANGGAL AWAL";
-            // 
-            // btnMax
-            // 
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMax.FlatAppearance.BorderSize = 0;
-            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.Location = new System.Drawing.Point(1377, 2);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(31, 34);
-            this.btnMax.TabIndex = 131;
-            this.btnMax.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -384,54 +445,19 @@
             this.panel4.Size = new System.Drawing.Size(281, 93);
             this.panel4.TabIndex = 136;
             // 
-            // button3
+            // database_Laporan
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1344, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 34);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.database_Laporan.DataSetName = "Database_Laporan";
+            this.database_Laporan.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
+            // laporanBeliBindingSource
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1412, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 34);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.laporanBeliBindingSource.DataMember = "Laporan_Beli";
+            this.laporanBeliBindingSource.DataSource = this.database_Laporan;
             // 
-            // label4
+            // laporan_BeliTableAdapter
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(646, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 16);
-            this.label4.TabIndex = 154;
-            this.label4.Text = "TANGGAL AWAL";
-            // 
-            // dateAkhir
-            // 
-            this.dateAkhir.CustomFormat = "yyyy-MM-dd";
-            this.dateAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateAkhir.Location = new System.Drawing.Point(767, 39);
-            this.dateAkhir.Name = "dateAkhir";
-            this.dateAkhir.Size = new System.Drawing.Size(200, 20);
-            this.dateAkhir.TabIndex = 153;
+            this.laporan_BeliTableAdapter.ClearBeforeFill = true;
             // 
             // Laporan_Pembelian
             // 
@@ -463,6 +489,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laporanBeliBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +526,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateAkhir;
+        private System.Windows.Forms.BindingSource laporanBeliBindingSource;
+        private Database_Laporan database_Laporan;
+        private Database_LaporanTableAdapters.Laporan_BeliTableAdapter laporan_BeliTableAdapter;
     }
 }
