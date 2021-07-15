@@ -35,6 +35,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMini = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.BtnKonfirRetur = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnLapServices = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,7 +70,7 @@
             this.panel1.Controls.Add(this.btnMini);
             this.panel1.Location = new System.Drawing.Point(-84, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1237, 38);
+            this.panel1.Size = new System.Drawing.Size(1463, 38);
             this.panel1.TabIndex = 128;
             // 
             // btnMax
@@ -80,7 +80,7 @@
             this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMax.FlatAppearance.BorderSize = 0;
             this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.Location = new System.Drawing.Point(1030, 2);
+            this.btnMax.Location = new System.Drawing.Point(1377, 2);
             this.btnMax.Margin = new System.Windows.Forms.Padding(2);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(31, 34);
@@ -106,7 +106,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1065, 2);
+            this.btnClose.Location = new System.Drawing.Point(1412, 2);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(31, 34);
@@ -121,7 +121,7 @@
             this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMini.FlatAppearance.BorderSize = 0;
             this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMini.Location = new System.Drawing.Point(997, 2);
+            this.btnMini.Location = new System.Drawing.Point(1344, 2);
             this.btnMini.Margin = new System.Windows.Forms.Padding(2);
             this.btnMini.Name = "btnMini";
             this.btnMini.Size = new System.Drawing.Size(31, 34);
@@ -146,6 +146,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 701);
             this.panel2.TabIndex = 129;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 669);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(200, 32);
+            this.btnLogOut.TabIndex = 131;
+            this.btnLogOut.Text = "    LOG-OUT";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // BtnKonfirRetur
             // 
@@ -232,6 +250,7 @@
             this.BtnLapPembelian.Text = "LAPORAN PEMBELIAN";
             this.BtnLapPembelian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnLapPembelian.UseVisualStyleBackColor = true;
+            this.BtnLapPembelian.Click += new System.EventHandler(this.BtnLapPembelian_Click);
             // 
             // pictureBox1
             // 
@@ -281,7 +300,7 @@
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(727, 46);
+            this.panel4.Location = new System.Drawing.Point(1074, 46);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
@@ -329,36 +348,19 @@
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox12.Location = new System.Drawing.Point(199, 35);
+            this.pictureBox12.Location = new System.Drawing.Point(199, 34);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(951, 117);
+            this.pictureBox12.Size = new System.Drawing.Size(1180, 117);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 139;
             this.pictureBox12.TabStop = false;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 669);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(200, 32);
-            this.btnLogOut.TabIndex = 131;
-            this.btnLogOut.Text = "    LOG-OUT";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = true;
             // 
             // Manager_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1258, 701);
+            this.ClientSize = new System.Drawing.Size(1379, 701);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -370,6 +372,7 @@
             this.Name = "Manager_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager_Report";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Manager_Report_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_DealerBengkel.Reports;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,6 +73,20 @@ namespace E_DealerBengkel
         private void Manager_Report_Load(object sender, EventArgs e)
         {
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
+        }
+
+        private void BtnLapPembelian_Click(object sender, EventArgs e)
+        {
+            Laporan_Pembelian lap = new Laporan_Pembelian();
+            lap.Show();
+            this.Hide();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Login logn = new Login();
+            logn.Show();
+            this.Hide();
         }
     }
 }
