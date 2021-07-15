@@ -176,6 +176,18 @@
     <Compile Include="Reports\Laporan_Pembelian.Designer.cs">
       <DependentUpon>Laporan_Pembelian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Laporan_Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Laporan_Penjualan.Designer.cs">
+      <DependentUpon>Laporan_Penjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Laporan_Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Laporan_Service.Designer.cs">
+      <DependentUpon>Laporan_Service.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,7 +282,15 @@
     <EmbeddedResource Include="Reports\Laporan_Pembelian.resx">
       <DependentUpon>Laporan_Pembelian.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Laporan_Penjualan.resx">
+      <DependentUpon>Laporan_Penjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Laporan_Service.resx">
+      <DependentUpon>Laporan_Service.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Rdlc\Laporan_Pembelian.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlc\Laporan_Penjualan.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlc\Laporan_Service.rdlc" />
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>

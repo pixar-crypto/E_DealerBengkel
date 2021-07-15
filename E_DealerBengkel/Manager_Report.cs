@@ -88,5 +88,19 @@ namespace E_DealerBengkel
             logn.Show();
             this.Hide();
         }
+
+        private void BtnLapPenjualan_Click(object sender, EventArgs e)
+        {
+            Laporan_Penjualan lap = new Laporan_Penjualan();
+            lap.Show();
+            this.Hide();
+        }
+
+        private void BtnLapServices_Click(object sender, EventArgs e)
+        {
+            Laporan_Service lap = new Laporan_Service();
+            lap.Show();
+            this.Hide();
+        }
     }
 }

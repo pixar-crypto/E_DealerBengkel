@@ -206,6 +206,7 @@
             this.BtnLapServices.Text = "LAPORAN SERVICES";
             this.BtnLapServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnLapServices.UseVisualStyleBackColor = true;
+            this.BtnLapServices.Click += new System.EventHandler(this.BtnLapServices_Click);
             // 
             // BtnLapRetur
             // 
@@ -235,6 +236,7 @@
             this.BtnLapPenjualan.Text = "LAPORAN PENJUALAN";
             this.BtnLapPenjualan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnLapPenjualan.UseVisualStyleBackColor = true;
+            this.BtnLapPenjualan.Click += new System.EventHandler(this.BtnLapPenjualan_Click);
             // 
             // BtnLapPembelian
             // 

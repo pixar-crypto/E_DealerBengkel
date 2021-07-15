@@ -6,28 +6,28 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.8175cm</Width>
+              <Width>2.69484cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.8175cm</Width>
+              <Width>2.76458cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.135cm</Width>
+              <Width>3.55049cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.95753cm</Width>
+              <Width>3.22706cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.75294cm</Width>
+              <Width>2.90568cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.06081cm</Width>
+              <Width>3.10781cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.66417cm</Width>
+              <Width>2.55292cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.14042cm</Width>
+              <Width>4.43685cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -43,10 +43,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>No Pembelian</Value>
+                              <Value>No Penjualan</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -60,7 +61,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -82,6 +83,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -95,7 +97,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -113,10 +115,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Supplier</Value>
+                              <Value>Pelanggan</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -130,7 +133,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -152,6 +155,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -165,7 +169,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -183,10 +187,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Jumlah</Value>
+                              <Value>Jenis Barang</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -200,7 +205,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -222,6 +227,7 @@
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -235,7 +241,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -253,10 +259,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Jenis Barang</Value>
+                              <Value>Jumlah</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -270,7 +277,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -288,10 +295,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total Pembayaran</Value>
+                              <Value>Total harga</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -305,7 +313,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -321,14 +329,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_pembelian">
+                    <Textbox Name="id_penjualan">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_pembelian.Value</Value>
+                              <Value>=Fields!id_penjualan.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
@@ -339,7 +347,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_pembelian</rd:DefaultName>
+                      <rd:DefaultName>id_penjualan</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -355,14 +363,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="tanggal_pembelian">
+                    <Textbox Name="tanggal">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!tanggal_pembelian.Value</Value>
+                              <Value>=Fields!tanggal.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>dd MMMM yyyy</Format>
@@ -374,7 +382,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>tanggal_pembelian</rd:DefaultName>
+                      <rd:DefaultName>tanggal</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -390,14 +398,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nama_supplier">
+                    <Textbox Name="nama_member">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nama_supplier.Value</Value>
+                              <Value>=Fields!nama_member.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
@@ -408,7 +416,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nama_supplier</rd:DefaultName>
+                      <rd:DefaultName>nama_member</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -458,75 +466,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="jumlah_pembelian">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!jumlah_pembelian.Value)</Value>
-                              <Style>
-                                <FontWeight>Normal</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>jumlah_pembelian</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="harga_beli_satuan">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!harga_beli_satuan.Value)</Value>
-                              <Style>
-                                <FontWeight>Normal</FontWeight>
-                                <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>harga_beli_satuan</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="id_jenisBarang">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -561,14 +500,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="total_pembayaran">
+                    <Textbox Name="harga_jual_satuan">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!total_pembayaran.Value)</Value>
+                              <Value>=Sum(Fields!harga_jual_satuan.Value)</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
@@ -580,7 +519,76 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>total_pembayaran</rd:DefaultName>
+                      <rd:DefaultName>harga_jual_satuan</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="jumlah_pembelian">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!jumlah_pembelian.Value)</Value>
+                              <Style>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>jumlah_pembelian</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="total_harga">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!total_harga.Value)</Value>
+                              <Style>
+                                <FontWeight>Normal</FontWeight>
+                                <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>total_harga</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -601,7 +609,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox55">
+                    <Textbox Name="Textbox21">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -611,13 +619,14 @@
                               <Value />
                               <Style>
                                 <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox55</rd:DefaultName>
+                      <rd:DefaultName>Textbox21</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -646,16 +655,17 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox47">
+                    <Textbox Name="Textbox30">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total Pembelian</Value>
+                              <Value>Total Penjualan</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -664,12 +674,12 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox47</rd:DefaultName>
+                      <rd:DefaultName>Textbox30</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Aqua</BackgroundColor>
+                        <BackgroundColor>DarkBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -687,14 +697,14 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox54">
+                    <Textbox Name="Textbox37">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!total_pembayaran.Value)</Value>
+                              <Value>=Sum(Fields!total_harga.Value)</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
@@ -706,7 +716,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox54</rd:DefaultName>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -743,9 +753,6 @@
             </TablixMember>
             <TablixMember>
               <Group Name="Details" />
-              <TablixMembers>
-                <TablixMember />
-              </TablixMembers>
             </TablixMember>
             <TablixMember>
               <KeepWithGroup>Before</KeepWithGroup>
@@ -755,11 +762,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsPembelian</DataSetName>
-        <Top>2.32833cm</Top>
-        <Left>1.14448cm</Left>
+        <DataSetName>dsPenjualan</DataSetName>
+        <Top>3.12208cm</Top>
+        <Left>1.21259cm</Left>
         <Height>2.4cm</Height>
-        <Width>25.34587cm</Width>
+        <Width>25.24023cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -783,8 +790,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ReportName</rd:DefaultName>
-        <Top>1.30073cm</Top>
-        <Left>12.38659cm</Left>
+        <Top>1.29632cm</Top>
+        <Left>12.3866cm</Left>
         <Height>0.6cm</Height>
         <Width>0.82484cm</Width>
         <ZIndex>1</ZIndex>
@@ -817,8 +824,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.30073cm</Top>
-        <Left>13.28198cm</Left>
+        <Top>1.29632cm</Top>
+        <Left>13.28199cm</Left>
         <Height>0.6cm</Height>
         <Width>2.83513cm</Width>
         <ZIndex>2</ZIndex>
@@ -839,7 +846,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>LAPORAN TRANSAKSI PEMBELIAN</Value>
+                <Value>LAPORAN TRANSAKSI PENJUALAN</Value>
                 <Style>
                   <FontSize>16pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -852,8 +859,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
-        <Top>0.25121cm</Top>
-        <Left>8.71258cm</Left>
+        <Top>0.2468cm</Top>
+        <Left>8.71259cm</Left>
         <Height>0.97896cm</Height>
         <Width>10.19484cm</Width>
         <ZIndex>3</ZIndex>
@@ -875,7 +882,7 @@
   <Width>10.87402in</Width>
   <Page>
     <PageHeader>
-      <Height>3.41328cm</Height>
+      <Height>3.6697cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -883,8 +890,8 @@
           <Source>Embedded</Source>
           <Value>Picture2</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.18756in</Top>
-          <Left>0.4743in</Left>
+          <Top>0.25in</Top>
+          <Left>0.45953in</Left>
           <Height>2.46063cm</Height>
           <Width>2.54cm</Width>
           <Style>
@@ -939,8 +946,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.4764cm</Top>
-          <Left>7.9156cm</Left>
+          <Top>0.635cm</Top>
+          <Left>7.87808cm</Left>
           <Height>2.46063cm</Height>
           <Width>11.7888cm</Width>
           <ZIndex>1</ZIndex>
@@ -956,8 +963,8 @@
           </Style>
         </Textbox>
         <Line Name="Line1">
-          <Top>3.16714cm</Top>
-          <Left>1.20472cm</Left>
+          <Top>3.32574cm</Top>
+          <Left>1.1672cm</Left>
           <Height>0cm</Height>
           <Width>25.28562cm</Width>
           <ZIndex>2</ZIndex>
@@ -997,7 +1004,7 @@
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>1.20472cm</Left>
+          <Left>1.21259cm</Left>
           <Height>0.6cm</Height>
           <Width>4.33444cm</Width>
           <Style>
@@ -1028,7 +1035,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>24.51951cm</Left>
+          <Left>24.48199cm</Left>
           <Height>0.6cm</Height>
           <Width>1.97083cm</Width>
           <ZIndex>1</ZIndex>
@@ -1065,76 +1072,60 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>bfbbbbad-48d2-41b7-861f-860de6481541</rd:DataSourceID>
+      <rd:DataSourceID>b97bda7c-2274-4f9b-970c-4209acc2ab72</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dsPembelian">
+    <DataSet Name="dsPenjualan">
       <Query>
         <DataSourceName>Database_Laporan</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="tanggal_pembelian">
-          <DataField>tanggal_pembelian</DataField>
+        <Field Name="id_penjualan">
+          <DataField>id_penjualan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tanggal">
+          <DataField>tanggal</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="nama_supplier">
-          <DataField>nama_supplier</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="nama_karyawan">
-          <DataField>nama_karyawan</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="total_harga">
+          <DataField>total_harga</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="jumlah_pembelian">
           <DataField>jumlah_pembelian</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="harga_beli_satuan">
-          <DataField>harga_beli_satuan</DataField>
+        <Field Name="harga_jual_satuan">
+          <DataField>harga_jual_satuan</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="nama_karyawan">
+          <DataField>nama_karyawan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nama_member">
+          <DataField>nama_member</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="id_jenisBarang">
           <DataField>id_jenisBarang</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="total_pembayaran">
-          <DataField>total_pembayaran</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="id_pembelian">
-          <DataField>id_pembelian</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Database_Laporan</rd:DataSetName>
         <rd:SchemaPath>D:\Kuliah\Semester 2\Pemrograman 2\PROJECT BESAR\E_DealerBengkel\E_DealerBengkel\Database_Laporan.xsd</rd:SchemaPath>
-        <rd:TableName>Laporan_Beli</rd:TableName>
+        <rd:TableName>Laporan_Jual</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Laporan_BeliTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>Laporan_JualTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <EmbeddedImages>
-    <EmbeddedImage Name="Logo1">
-      <MIMEType>image/png</MIMEType>
-      <ImageData>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</ImageData>
-    </EmbeddedImage>
     <EmbeddedImage Name="Picture2">
       <MIMEType>image/png</MIMEType>
       <ImageData>iVBORw0KGgoAAAANSUhEUgAAALcAAAC3CAYAAABQbs+fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFuoAABbqAeWOQxAAAFZlSURBVHhe7V0HYBTV1p4g9kInZWcTVGyovwV9z/bEBoQkO7NLsaGCFXuv6ANUeFZQFFGaSO9SlN57r6FI7723kH7/77szG1Jmk5nNpgA5+jHZKbece+bMufeee65SRmVURuc2hQHnKUoT4KXzcbxMqdgwRonS71Ei9SeVKO0DJcrTUXF5Bihu70Ql2rtIidbXK6q+W1G1ozgm45iuuLUMeTR+8/xueR/v53OqNkhxaT/L9JhupPc+JQL5VEN+Rr7In+WQ5SmjMgqKyilKnfKKEnuhcklchBKh3a9Eam8pLm9PCORcCOFeCKNQohua8AH8HSowPTNt5qPq+/BiLEC+f+AFeluJSKijXFI/EmW8SFFao5wsbxmVkTVBOCgkd12suGOvhgA9BU3cFYK1HEg6LcS5hbAkYJZF1U9By6+Alu8uy6t6aipK44vLhL2MSBCAJhcoEbHVIBixEJaOiltPxDGj9AiyXVDYvZnASryMPymuhAZKeN3qsn5lgn7OEO3mC5Qqj0QpUQmPQZAHQaAPGMIcatOipGCaNG79IOo3GJr9caVyvMsUdNrrZXQWETQXOmNRD1dRXHocbNd+0G6HlJhGpiBYCcjZAtSP9XT7DgH9YWolSD7IzmmZRj+TqRw+zZfC7KgFm/RLfLI3K9HngkAHgl+je7dAo7dVwuvfqEQmXAI+lWnzM4jOU2L0ikqkp67i8g5HY6aeG1raLrK0eZrkT6S3nqI2rgy+sSNaRqWT6pRXwn3VIdRPQDPNVaIboxHPtI5hMUPyB4Lu0ucrqtZUqe4JN4ZAy6i0UHmlWpMIdJyehVCvlEJderR0pol0A7p5lPBfs3qumEF+gW/kX5T2nORnmSYvUSonNU2E5yk53lv8Qg3B
@@ -1170,5 +1161,5 @@ VMJ0VZMKsD8fhZAskI1T7EJ+piNLUy9QovTHJD/LqFRRmNzoPtKro8GmwF6EkIe643m2gR1F6dI69bSm
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>7ec8927d-098f-4ac1-b26c-bef497d5938f</rd:ReportID>
+  <rd:ReportID>ff96103b-2d21-467d-b069-2e6b35627ba9</rd:ReportID>
 </Report>
