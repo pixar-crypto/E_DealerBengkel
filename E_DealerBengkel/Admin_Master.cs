@@ -66,41 +66,6 @@ namespace E_DealerBengkel
             System.Windows.Forms.Application.ExitThread();
         }
 
-        private void BtnKaryawan_Click(object sender, EventArgs e)
-        {
-            CRUD_Employee M_Emp = new CRUD_Employee();
-            M_Emp.Show();
-            this.Hide();
-        }
-
-        private void BtnPosisi_Click(object sender, EventArgs e)
-        {
-            CRUD_Posisi M_Posisi = new CRUD_Posisi();
-            M_Posisi.Show();
-            this.Hide();
-        }
-
-        private void BtnMember_Click(object sender, EventArgs e)
-        {
-            CRUD_Member M_Member = new CRUD_Member();
-            M_Member.Show();
-            this.Hide();
-        }
-
-        private void BtnSupplier_Click(object sender, EventArgs e)
-        {
-            CRUD_Supplier M_Supplier = new CRUD_Supplier();
-            M_Supplier.Show();
-            this.Hide();
-        }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            Login logn = new Login();
-            logn.Show();
-            this.Hide();
-        }
-
         public void tampilMember()
         {
             int jml = 0;
@@ -330,38 +295,73 @@ namespace E_DealerBengkel
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
         }
 
-        private void BtnMobil_Click(object sender, EventArgs e)
+        private void BtnKaryawan_Click_1(object sender, EventArgs e)
+        {
+            CRUD_Employee M_Emp = new CRUD_Employee();
+            M_Emp.Show();
+            this.Hide();
+        }
+
+        private void BtnPosisi_Click_1(object sender, EventArgs e)
+        {
+            CRUD_Posisi M_Posisi = new CRUD_Posisi();
+            M_Posisi.Show();
+            this.Hide();
+        }
+
+        private void BtnMember_Click_1(object sender, EventArgs e)
+        {
+            CRUD_Member M_Member = new CRUD_Member();
+            M_Member.Show();
+            this.Hide();
+        }
+
+        private void BtnMobil_Click_1(object sender, EventArgs e)
         {
             CRUD_Mobil M_Mobil = new CRUD_Mobil();
             M_Mobil.Show();
             this.Hide();
         }
 
-        private void BtnMotor_Click(object sender, EventArgs e)
+        private void BtnMotor_Click_1(object sender, EventArgs e)
         {
             CRUD_Motor M_Motor = new CRUD_Motor();
             M_Motor.Show();
             this.Hide();
         }
 
-        private void BtnServices_Click(object sender, EventArgs e)
+        private void BtnServices_Click_1(object sender, EventArgs e)
         {
             CRUD_Service M_Services = new CRUD_Service();
             M_Services.Show();
             this.Hide();
         }
 
-        private void BtnSukuCadang_Click(object sender, EventArgs e)
+        private void BtnSukuCadang_Click_1(object sender, EventArgs e)
         {
             CRUD_SukuCadang M_SukuCadang = new CRUD_SukuCadang();
             M_SukuCadang.Show();
             this.Hide();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void BtnSupplier_Click_1(object sender, EventArgs e)
+        {
+            CRUD_Supplier M_Supplier = new CRUD_Supplier();
+            M_Supplier.Show();
+            this.Hide();
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
         {
             TentangAplikasi aplikasi = new TentangAplikasi();
             aplikasi.Show();
+            this.Hide();
+        }
+
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            Login logn = new Login();
+            logn.Show();
             this.Hide();
         }
     }

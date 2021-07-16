@@ -30,22 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laporan_Penjualan));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.laporanJualBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database_Laporan = new E_DealerBengkel.Database_Laporan();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnMax = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnKonfirRetur = new System.Windows.Forms.Button();
-            this.BtnKembali = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BtnLapServices = new System.Windows.Forms.Button();
-            this.BtnLapRetur = new System.Windows.Forms.Button();
-            this.BtnLapPenjualan = new System.Windows.Forms.Button();
-            this.BtnLapPembelian = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbWaktu = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
@@ -61,25 +52,44 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dateAwal = new System.Windows.Forms.DateTimePicker();
             this.lbJudul = new System.Windows.Forms.Label();
-            this.database_Laporan = new E_DealerBengkel.Database_Laporan();
-            this.laporanJualBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.laporan_JualTableAdapter = new E_DealerBengkel.Database_LaporanTableAdapters.Laporan_JualTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnKembali = new System.Windows.Forms.Button();
+            this.BtnKonfirRetur = new System.Windows.Forms.Button();
+            this.BtnLapServices = new System.Windows.Forms.Button();
+            this.BtnLapRetur = new System.Windows.Forms.Button();
+            this.BtnLapPenjualan = new System.Windows.Forms.Button();
+            this.BtnLapPembelian = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.laporanJualBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.laporanJualBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // laporanJualBindingSource
+            // 
+            this.laporanJualBindingSource.DataMember = "Laporan_Jual";
+            this.laporanJualBindingSource.DataSource = this.database_Laporan;
+            // 
+            // database_Laporan
+            // 
+            this.database_Laporan.DataSetName = "Database_Laporan";
+            this.database_Laporan.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.btnMax);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
@@ -98,20 +108,6 @@
             this.label3.TabIndex = 130;
             this.label3.Text = "Halaman Manager - Laporan Penjualan";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnMax
-            // 
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMax.FlatAppearance.BorderSize = 0;
-            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.Location = new System.Drawing.Point(1377, 2);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(31, 34);
-            this.btnMax.TabIndex = 131;
-            this.btnMax.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -135,154 +131,13 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1344, 2);
+            this.button3.Location = new System.Drawing.Point(1377, 2);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 34);
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel2.Controls.Add(this.BtnKonfirRetur);
-            this.panel2.Controls.Add(this.BtnKembali);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.BtnLapServices);
-            this.panel2.Controls.Add(this.BtnLapRetur);
-            this.panel2.Controls.Add(this.BtnLapPenjualan);
-            this.panel2.Controls.Add(this.BtnLapPembelian);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.panel12);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 788);
-            this.panel2.TabIndex = 133;
-            // 
-            // BtnKonfirRetur
-            // 
-            this.BtnKonfirRetur.FlatAppearance.BorderSize = 0;
-            this.BtnKonfirRetur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnKonfirRetur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnKonfirRetur.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnKonfirRetur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKonfirRetur.Location = new System.Drawing.Point(0, 319);
-            this.BtnKonfirRetur.Name = "BtnKonfirRetur";
-            this.BtnKonfirRetur.Size = new System.Drawing.Size(200, 32);
-            this.BtnKonfirRetur.TabIndex = 130;
-            this.BtnKonfirRetur.Text = "KONFIRMASI RETUR";
-            this.BtnKonfirRetur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnKonfirRetur.UseVisualStyleBackColor = true;
-            // 
-            // BtnKembali
-            // 
-            this.BtnKembali.FlatAppearance.BorderSize = 0;
-            this.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnKembali.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnKembali.ForeColor = System.Drawing.Color.Honeydew;
-            this.BtnKembali.Image = ((System.Drawing.Image)(resources.GetObject("BtnKembali.Image")));
-            this.BtnKembali.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKembali.Location = new System.Drawing.Point(0, 659);
-            this.BtnKembali.Name = "BtnKembali";
-            this.BtnKembali.Size = new System.Drawing.Size(200, 42);
-            this.BtnKembali.TabIndex = 129;
-            this.BtnKembali.Text = "   KEMBALI";
-            this.BtnKembali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKembali.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnKembali.UseVisualStyleBackColor = true;
-            this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.SlateGray;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(30, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 31);
-            this.label2.TabIndex = 125;
-            this.label2.Text = "DASHBOARD";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // BtnLapServices
-            // 
-            this.BtnLapServices.FlatAppearance.BorderSize = 0;
-            this.BtnLapServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLapServices.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLapServices.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnLapServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLapServices.Location = new System.Drawing.Point(0, 281);
-            this.BtnLapServices.Name = "BtnLapServices";
-            this.BtnLapServices.Size = new System.Drawing.Size(200, 32);
-            this.BtnLapServices.TabIndex = 61;
-            this.BtnLapServices.Text = "LAPORAN SERVICES";
-            this.BtnLapServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLapServices.UseVisualStyleBackColor = true;
-            // 
-            // BtnLapRetur
-            // 
-            this.BtnLapRetur.FlatAppearance.BorderSize = 0;
-            this.BtnLapRetur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLapRetur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLapRetur.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnLapRetur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLapRetur.Location = new System.Drawing.Point(0, 243);
-            this.BtnLapRetur.Name = "BtnLapRetur";
-            this.BtnLapRetur.Size = new System.Drawing.Size(200, 32);
-            this.BtnLapRetur.TabIndex = 58;
-            this.BtnLapRetur.Text = "LAPORAN RETUR";
-            this.BtnLapRetur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLapRetur.UseVisualStyleBackColor = true;
-            // 
-            // BtnLapPenjualan
-            // 
-            this.BtnLapPenjualan.FlatAppearance.BorderSize = 0;
-            this.BtnLapPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLapPenjualan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLapPenjualan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnLapPenjualan.Location = new System.Drawing.Point(0, 205);
-            this.BtnLapPenjualan.Name = "BtnLapPenjualan";
-            this.BtnLapPenjualan.Size = new System.Drawing.Size(200, 32);
-            this.BtnLapPenjualan.TabIndex = 57;
-            this.BtnLapPenjualan.Text = "LAPORAN PENJUALAN";
-            this.BtnLapPenjualan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLapPenjualan.UseVisualStyleBackColor = true;
-            // 
-            // BtnLapPembelian
-            // 
-            this.BtnLapPembelian.FlatAppearance.BorderSize = 0;
-            this.BtnLapPembelian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLapPembelian.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLapPembelian.ForeColor = System.Drawing.Color.Honeydew;
-            this.BtnLapPembelian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLapPembelian.Location = new System.Drawing.Point(0, 164);
-            this.BtnLapPembelian.Name = "BtnLapPembelian";
-            this.BtnLapPembelian.Size = new System.Drawing.Size(200, 36);
-            this.BtnLapPembelian.TabIndex = 56;
-            this.BtnLapPembelian.Text = "LAPORAN PEMBELIAN";
-            this.BtnLapPembelian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLapPembelian.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.SlateGray;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 151);
-            this.panel12.TabIndex = 128;
             // 
             // panel4
             // 
@@ -405,9 +260,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "dsPenjualan";
-            reportDataSource2.Value = this.laporanJualBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "dsPenjualan";
+            reportDataSource1.Value = this.laporanJualBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "E_DealerBengkel.Reports.Rdlc.Laporan_Penjualan.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(47, 85);
             this.reportViewer1.Name = "reportViewer1";
@@ -446,19 +301,174 @@
             this.lbJudul.Text = "LAPORAN PENJUALAN";
             this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // database_Laporan
-            // 
-            this.database_Laporan.DataSetName = "Database_Laporan";
-            this.database_Laporan.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // laporanJualBindingSource
-            // 
-            this.laporanJualBindingSource.DataMember = "Laporan_Jual";
-            this.laporanJualBindingSource.DataSource = this.database_Laporan;
-            // 
             // laporan_JualTableAdapter
             // 
             this.laporan_JualTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.BtnKembali);
+            this.panel2.Controls.Add(this.BtnKonfirRetur);
+            this.panel2.Controls.Add(this.BtnLapServices);
+            this.panel2.Controls.Add(this.BtnLapRetur);
+            this.panel2.Controls.Add(this.BtnLapPenjualan);
+            this.panel2.Controls.Add(this.BtnLapPembelian);
+            this.panel2.Controls.Add(this.panel12);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(211, 788);
+            this.panel2.TabIndex = 155;
+            // 
+            // BtnKembali
+            // 
+            this.BtnKembali.FlatAppearance.BorderSize = 0;
+            this.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKembali.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKembali.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnKembali.Image = ((System.Drawing.Image)(resources.GetObject("BtnKembali.Image")));
+            this.BtnKembali.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKembali.Location = new System.Drawing.Point(8, 695);
+            this.BtnKembali.Name = "BtnKembali";
+            this.BtnKembali.Size = new System.Drawing.Size(200, 42);
+            this.BtnKembali.TabIndex = 131;
+            this.BtnKembali.Text = "   KEMBALI";
+            this.BtnKembali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKembali.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnKembali.UseVisualStyleBackColor = true;
+            this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click_1);
+            // 
+            // BtnKonfirRetur
+            // 
+            this.BtnKonfirRetur.FlatAppearance.BorderSize = 0;
+            this.BtnKonfirRetur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKonfirRetur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKonfirRetur.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnKonfirRetur.Image = ((System.Drawing.Image)(resources.GetObject("BtnKonfirRetur.Image")));
+            this.BtnKonfirRetur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKonfirRetur.Location = new System.Drawing.Point(0, 319);
+            this.BtnKonfirRetur.Name = "BtnKonfirRetur";
+            this.BtnKonfirRetur.Size = new System.Drawing.Size(200, 37);
+            this.BtnKonfirRetur.TabIndex = 130;
+            this.BtnKonfirRetur.Text = "KONFIRMASI RETUR";
+            this.BtnKonfirRetur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKonfirRetur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnKonfirRetur.UseVisualStyleBackColor = true;
+            this.BtnKonfirRetur.Click += new System.EventHandler(this.BtnKonfirRetur_Click);
+            // 
+            // BtnLapServices
+            // 
+            this.BtnLapServices.FlatAppearance.BorderSize = 0;
+            this.BtnLapServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLapServices.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLapServices.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnLapServices.Image = global::E_DealerBengkel.Properties.Resources.documents_30px;
+            this.BtnLapServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLapServices.Location = new System.Drawing.Point(0, 281);
+            this.BtnLapServices.Name = "BtnLapServices";
+            this.BtnLapServices.Size = new System.Drawing.Size(200, 32);
+            this.BtnLapServices.TabIndex = 61;
+            this.BtnLapServices.Text = "LAPORAN SERVICES";
+            this.BtnLapServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLapServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLapServices.UseVisualStyleBackColor = true;
+            this.BtnLapServices.Click += new System.EventHandler(this.BtnLapServices_Click);
+            // 
+            // BtnLapRetur
+            // 
+            this.BtnLapRetur.FlatAppearance.BorderSize = 0;
+            this.BtnLapRetur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLapRetur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLapRetur.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnLapRetur.Image = global::E_DealerBengkel.Properties.Resources.documents_30px;
+            this.BtnLapRetur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLapRetur.Location = new System.Drawing.Point(0, 243);
+            this.BtnLapRetur.Name = "BtnLapRetur";
+            this.BtnLapRetur.Size = new System.Drawing.Size(200, 32);
+            this.BtnLapRetur.TabIndex = 58;
+            this.BtnLapRetur.Text = "LAPORAN RETUR";
+            this.BtnLapRetur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLapRetur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLapRetur.UseVisualStyleBackColor = true;
+            this.BtnLapRetur.Click += new System.EventHandler(this.BtnLapRetur_Click);
+            // 
+            // BtnLapPenjualan
+            // 
+            this.BtnLapPenjualan.FlatAppearance.BorderSize = 0;
+            this.BtnLapPenjualan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLapPenjualan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLapPenjualan.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnLapPenjualan.Image = global::E_DealerBengkel.Properties.Resources.documents_30px;
+            this.BtnLapPenjualan.Location = new System.Drawing.Point(0, 205);
+            this.BtnLapPenjualan.Name = "BtnLapPenjualan";
+            this.BtnLapPenjualan.Size = new System.Drawing.Size(217, 36);
+            this.BtnLapPenjualan.TabIndex = 57;
+            this.BtnLapPenjualan.Text = "LAPORAN PENJUALAN";
+            this.BtnLapPenjualan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLapPenjualan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLapPenjualan.UseVisualStyleBackColor = true;
+            this.BtnLapPenjualan.Click += new System.EventHandler(this.BtnLapPenjualan_Click);
+            // 
+            // BtnLapPembelian
+            // 
+            this.BtnLapPembelian.FlatAppearance.BorderSize = 0;
+            this.BtnLapPembelian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLapPembelian.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLapPembelian.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnLapPembelian.Image = ((System.Drawing.Image)(resources.GetObject("BtnLapPembelian.Image")));
+            this.BtnLapPembelian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLapPembelian.Location = new System.Drawing.Point(0, 164);
+            this.BtnLapPembelian.Name = "BtnLapPembelian";
+            this.BtnLapPembelian.Size = new System.Drawing.Size(210, 36);
+            this.BtnLapPembelian.TabIndex = 56;
+            this.BtnLapPembelian.Text = "LAPORAN PEMBELIAN";
+            this.BtnLapPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLapPembelian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLapPembelian.UseVisualStyleBackColor = true;
+            this.BtnLapPembelian.Click += new System.EventHandler(this.BtnLapPembelian_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.SlateGray;
+            this.panel12.Controls.Add(this.pictureBox1);
+            this.panel12.Controls.Add(this.label2);
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(211, 151);
+            this.panel12.TabIndex = 128;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(39, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.SlateGray;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Honeydew;
+            this.label2.Location = new System.Drawing.Point(40, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 31);
+            this.label2.TabIndex = 125;
+            this.label2.Text = "DASHBOARD";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Location = new System.Drawing.Point(17, 243);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(176, 3);
+            this.panel5.TabIndex = 155;
             // 
             // Laporan_Penjualan
             // 
@@ -466,6 +476,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1379, 788);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.lbJudul);
             this.Controls.Add(this.panel4);
@@ -473,16 +484,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Laporan_Penjualan";
             this.Text = "Laporan_Penjualan";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Laporan_Penjualan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.laporanJualBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -490,8 +500,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.laporanJualBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,20 +510,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button BtnKonfirRetur;
-        private System.Windows.Forms.Button BtnKembali;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BtnLapServices;
-        private System.Windows.Forms.Button BtnLapRetur;
-        private System.Windows.Forms.Button BtnLapPenjualan;
-        private System.Windows.Forms.Button BtnLapPembelian;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbWaktu;
         private System.Windows.Forms.Label lbUser;
@@ -531,5 +531,16 @@
         private System.Windows.Forms.BindingSource laporanJualBindingSource;
         private Database_Laporan database_Laporan;
         private Database_LaporanTableAdapters.Laporan_JualTableAdapter laporan_JualTableAdapter;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnKembali;
+        private System.Windows.Forms.Button BtnKonfirRetur;
+        private System.Windows.Forms.Button BtnLapServices;
+        private System.Windows.Forms.Button BtnLapRetur;
+        private System.Windows.Forms.Button BtnLapPenjualan;
+        private System.Windows.Forms.Button BtnLapPembelian;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel5;
     }
 }

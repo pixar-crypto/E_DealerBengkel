@@ -78,7 +78,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMax = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -130,6 +129,10 @@
             this.dgvKaryawan = new System.Windows.Forms.DataGridView();
             this.graphMotor = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.graphSukuCadang = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -156,33 +159,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKaryawan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graphMotor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graphSukuCadang)).BeginInit();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.btnMax);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(-84, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1441, 38);
+            this.panel1.Size = new System.Drawing.Size(1465, 38);
             this.panel1.TabIndex = 123;
-            // 
-            // btnMax
-            // 
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMax.FlatAppearance.BorderSize = 0;
-            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.Location = new System.Drawing.Point(1273, 2);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(31, 34);
-            this.btnMax.TabIndex = 131;
-            this.btnMax.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -202,7 +191,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1308, 2);
+            this.button1.Location = new System.Drawing.Point(1406, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 34);
@@ -217,7 +206,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1240, 2);
+            this.button3.Location = new System.Drawing.Point(1374, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 34);
@@ -239,7 +228,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 701);
+            this.panel2.Size = new System.Drawing.Size(200, 769);
             this.panel2.TabIndex = 124;
             // 
             // btnLogOut
@@ -250,7 +239,7 @@
             this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(3, 657);
+            this.btnLogOut.Location = new System.Drawing.Point(3, 713);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(200, 32);
             this.btnLogOut.TabIndex = 126;
@@ -387,7 +376,7 @@
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(966, 45);
+            this.panel4.Location = new System.Drawing.Point(1068, 45);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
@@ -442,7 +431,7 @@
             this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox12.Location = new System.Drawing.Point(197, 35);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(1160, 117);
+            this.pictureBox12.Size = new System.Drawing.Size(1181, 117);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 125;
             this.pictureBox12.TabStop = false;
@@ -455,7 +444,7 @@
             this.graphMobil.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
             chartArea1.Name = "ChartArea1";
             this.graphMobil.ChartAreas.Add(chartArea1);
-            this.graphMobil.Location = new System.Drawing.Point(215, 423);
+            this.graphMobil.Location = new System.Drawing.Point(247, 452);
             this.graphMobil.Name = "graphMobil";
             series1.ChartArea = "ChartArea1";
             series1.Name = "Mobil";
@@ -468,7 +457,7 @@
             // 
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(241, 165);
+            this.lbJudul.Location = new System.Drawing.Point(273, 179);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(324, 23);
             this.lbJudul.TabIndex = 150;
@@ -479,7 +468,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(626, 165);
+            this.label4.Location = new System.Drawing.Point(675, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(324, 23);
             this.label4.TabIndex = 151;
@@ -490,7 +479,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(241, 397);
+            this.label5.Location = new System.Drawing.Point(273, 426);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(324, 23);
             this.label5.TabIndex = 152;
@@ -505,7 +494,7 @@
             this.graphPenjualan.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
             chartArea2.Name = "ChartArea1";
             this.graphPenjualan.ChartAreas.Add(chartArea2);
-            this.graphPenjualan.Location = new System.Drawing.Point(600, 423);
+            this.graphPenjualan.Location = new System.Drawing.Point(649, 452);
             this.graphPenjualan.Name = "graphPenjualan";
             series2.ChartArea = "ChartArea1";
             series2.Name = "Jual";
@@ -518,7 +507,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(627, 397);
+            this.label6.Location = new System.Drawing.Point(676, 426);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(324, 23);
             this.label6.TabIndex = 154;
@@ -529,7 +518,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(923, 164);
+            this.label7.Location = new System.Drawing.Point(1027, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(324, 23);
             this.label7.TabIndex = 155;
@@ -578,7 +567,7 @@
             this.dgPendapatan.Enabled = false;
             this.dgPendapatan.EnableHeadersVisualStyles = false;
             this.dgPendapatan.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgPendapatan.Location = new System.Drawing.Point(1026, 205);
+            this.dgPendapatan.Location = new System.Drawing.Point(1006, 202);
             this.dgPendapatan.MultiSelect = false;
             this.dgPendapatan.Name = "dgPendapatan";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -600,7 +589,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgPendapatan.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgPendapatan.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgPendapatan.Size = new System.Drawing.Size(207, 46);
+            this.dgPendapatan.Size = new System.Drawing.Size(328, 26);
             this.dgPendapatan.TabIndex = 156;
             // 
             // panel11
@@ -608,9 +597,9 @@
             this.panel11.BackColor = System.Drawing.Color.SteelBlue;
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.dgvSup);
-            this.panel11.Location = new System.Drawing.Point(846, 636);
+            this.panel11.Location = new System.Drawing.Point(871, 666);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(104, 65);
+            this.panel11.Size = new System.Drawing.Size(112, 65);
             this.panel11.TabIndex = 163;
             // 
             // label8
@@ -618,7 +607,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Honeydew;
-            this.label8.Location = new System.Drawing.Point(22, 4);
+            this.label8.Location = new System.Drawing.Point(24, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 19);
             this.label8.TabIndex = 107;
@@ -687,7 +676,7 @@
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvSup.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSup.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvSup.Size = new System.Drawing.Size(68, 33);
+            this.dgvSup.Size = new System.Drawing.Size(76, 33);
             this.dgvSup.TabIndex = 28;
             // 
             // panel9
@@ -695,9 +684,9 @@
             this.panel9.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.dgvSukuCadang);
-            this.panel9.Location = new System.Drawing.Point(743, 636);
+            this.panel9.Location = new System.Drawing.Point(755, 666);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(104, 65);
+            this.panel9.Size = new System.Drawing.Size(116, 65);
             this.panel9.TabIndex = 162;
             // 
             // label10
@@ -705,7 +694,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Honeydew;
-            this.label10.Location = new System.Drawing.Point(4, 4);
+            this.label10.Location = new System.Drawing.Point(11, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 19);
             this.label10.TabIndex = 107;
@@ -774,7 +763,7 @@
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvSukuCadang.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvSukuCadang.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvSukuCadang.Size = new System.Drawing.Size(68, 33);
+            this.dgvSukuCadang.Size = new System.Drawing.Size(80, 33);
             this.dgvSukuCadang.TabIndex = 28;
             // 
             // panel7
@@ -782,7 +771,7 @@
             this.panel7.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.dgvMotor);
-            this.panel7.Location = new System.Drawing.Point(526, 636);
+            this.panel7.Location = new System.Drawing.Point(535, 666);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(111, 65);
             this.panel7.TabIndex = 160;
@@ -792,7 +781,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Honeydew;
-            this.label11.Location = new System.Drawing.Point(22, 4);
+            this.label11.Location = new System.Drawing.Point(32, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 19);
             this.label11.TabIndex = 107;
@@ -869,7 +858,7 @@
             this.panel10.BackColor = System.Drawing.Color.SteelBlue;
             this.panel10.Controls.Add(this.label12);
             this.panel10.Controls.Add(this.dgvServis);
-            this.panel10.Location = new System.Drawing.Point(633, 636);
+            this.panel10.Location = new System.Drawing.Point(642, 666);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(115, 65);
             this.panel10.TabIndex = 161;
@@ -879,7 +868,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Honeydew;
-            this.label12.Location = new System.Drawing.Point(29, 4);
+            this.label12.Location = new System.Drawing.Point(35, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 19);
             this.label12.TabIndex = 107;
@@ -956,9 +945,9 @@
             this.panel8.BackColor = System.Drawing.Color.SteelBlue;
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.dgvMobil);
-            this.panel8.Location = new System.Drawing.Point(416, 636);
+            this.panel8.Location = new System.Drawing.Point(421, 666);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(111, 65);
+            this.panel8.Size = new System.Drawing.Size(119, 65);
             this.panel8.TabIndex = 159;
             // 
             // label13
@@ -966,7 +955,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Honeydew;
-            this.label13.Location = new System.Drawing.Point(29, 4);
+            this.label13.Location = new System.Drawing.Point(35, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 19);
             this.label13.TabIndex = 107;
@@ -1035,7 +1024,7 @@
             dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvMobil.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvMobil.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvMobil.Size = new System.Drawing.Size(75, 33);
+            this.dgvMobil.Size = new System.Drawing.Size(83, 33);
             this.dgvMobil.TabIndex = 28;
             // 
             // panel6
@@ -1043,7 +1032,7 @@
             this.panel6.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.dgvMember);
-            this.panel6.Location = new System.Drawing.Point(310, 636);
+            this.panel6.Location = new System.Drawing.Point(310, 666);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(111, 65);
             this.panel6.TabIndex = 158;
@@ -1130,7 +1119,7 @@
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.dgvKaryawan);
-            this.panel5.Location = new System.Drawing.Point(200, 636);
+            this.panel5.Location = new System.Drawing.Point(200, 666);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(111, 65);
             this.panel5.TabIndex = 157;
@@ -1220,7 +1209,7 @@
             this.graphMotor.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
             chartArea3.Name = "ChartArea1";
             this.graphMotor.ChartAreas.Add(chartArea3);
-            this.graphMotor.Location = new System.Drawing.Point(215, 191);
+            this.graphMotor.Location = new System.Drawing.Point(247, 205);
             this.graphMotor.Name = "graphMotor";
             series3.ChartArea = "ChartArea1";
             series3.Name = "Motor";
@@ -1237,7 +1226,7 @@
             this.graphSukuCadang.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
             chartArea4.Name = "ChartArea1";
             this.graphSukuCadang.ChartAreas.Add(chartArea4);
-            this.graphSukuCadang.Location = new System.Drawing.Point(600, 191);
+            this.graphSukuCadang.Location = new System.Drawing.Point(649, 205);
             this.graphSukuCadang.Name = "graphSukuCadang";
             series4.ChartArea = "ChartArea1";
             series4.Name = "SukuCadang";
@@ -1246,12 +1235,63 @@
             this.graphSukuCadang.TabIndex = 132;
             this.graphSukuCadang.Text = "chart1";
             // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel13.Controls.Add(this.label16);
+            this.panel13.Controls.Add(this.button6);
+            this.panel13.Controls.Add(this.button13);
+            this.panel13.Location = new System.Drawing.Point(200, 730);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1178, 38);
+            this.panel13.TabIndex = 164;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Honeydew;
+            this.label16.Location = new System.Drawing.Point(803, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(350, 31);
+            this.label16.TabIndex = 128;
+            this.label16.Text = "©2021 SISTEM INFORMASI - E DEALER BENGKEL";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(1336, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(31, 34);
+            this.button6.TabIndex = 4;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Location = new System.Drawing.Point(1301, 4);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(31, 34);
+            this.button13.TabIndex = 5;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
             // Kasir_Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1258, 701);
+            this.ClientSize = new System.Drawing.Size(1379, 769);
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.graphSukuCadang);
             this.Controls.Add(this.graphMotor);
             this.Controls.Add(this.panel11);
@@ -1280,6 +1320,7 @@
             this.Name = "Kasir_Transaksi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kasir_Transaksi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Kasir_Transaksi_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1315,6 +1356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKaryawan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graphMotor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graphSukuCadang)).EndInit();
+            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1341,7 +1383,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.DataVisualization.Charting.Chart graphMobil;
         private System.Windows.Forms.Label lbJudul;
         private System.Windows.Forms.Label label4;
@@ -1373,5 +1414,9 @@
         private System.Windows.Forms.DataGridView dgvKaryawan;
         private System.Windows.Forms.DataVisualization.Charting.Chart graphMotor;
         private System.Windows.Forms.DataVisualization.Charting.Chart graphSukuCadang;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button13;
     }
 }

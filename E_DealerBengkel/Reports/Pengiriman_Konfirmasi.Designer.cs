@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pengiriman_Konfirmasi));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.rtbBody = new System.Windows.Forms.RichTextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,84 +47,35 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenderPassword = new System.Windows.Forms.TextBox();
             this.txtSenderEmail = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel5);
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-8, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(813, 117);
+            this.panel1.Size = new System.Drawing.Size(813, 140);
             this.panel1.TabIndex = 68;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(775, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 34);
-            this.btnClose.TabIndex = 66;
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(238, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 149;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(333, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 35);
-            this.label1.TabIndex = 150;
-            this.label1.Text = "VROOM! D&&G";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Honeydew;
-            this.panel5.Location = new System.Drawing.Point(323, 89);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(267, 3);
-            this.panel5.TabIndex = 151;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Honeydew;
-            this.panel2.Location = new System.Drawing.Point(227, 97);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 3);
-            this.panel2.TabIndex = 132;
             // 
             // rtbBody
             // 
             this.rtbBody.Enabled = false;
-            this.rtbBody.Location = new System.Drawing.Point(412, 139);
+            this.rtbBody.Location = new System.Drawing.Point(388, 161);
             this.rtbBody.Margin = new System.Windows.Forms.Padding(2);
             this.rtbBody.Name = "rtbBody";
             this.rtbBody.Size = new System.Drawing.Size(288, 268);
@@ -140,10 +86,10 @@
             // 
             this.btnSend.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSend.ForeColor = System.Drawing.Color.White;
-            this.btnSend.Location = new System.Drawing.Point(532, 410);
+            this.btnSend.Location = new System.Drawing.Point(508, 432);
             this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(167, 25);
+            this.btnSend.Size = new System.Drawing.Size(167, 30);
             this.btnSend.TabIndex = 141;
             this.btnSend.Text = "Send Email";
             this.btnSend.UseVisualStyleBackColor = false;
@@ -156,16 +102,16 @@
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtSubject);
-            this.panel3.Location = new System.Drawing.Point(98, 274);
+            this.panel3.Location = new System.Drawing.Point(74, 296);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(291, 88);
+            this.panel3.Size = new System.Drawing.Size(291, 98);
             this.panel3.TabIndex = 140;
             // 
             // cbxHtmlBody
             // 
             this.cbxHtmlBody.AutoSize = true;
-            this.cbxHtmlBody.Location = new System.Drawing.Point(141, 68);
+            this.cbxHtmlBody.Location = new System.Drawing.Point(141, 72);
             this.cbxHtmlBody.Margin = new System.Windows.Forms.Padding(2);
             this.cbxHtmlBody.Name = "cbxHtmlBody";
             this.cbxHtmlBody.Size = new System.Drawing.Size(74, 17);
@@ -177,10 +123,10 @@
             // 
             this.btnBrowseFile.BackColor = System.Drawing.Color.SteelBlue;
             this.btnBrowseFile.ForeColor = System.Drawing.Color.White;
-            this.btnBrowseFile.Location = new System.Drawing.Point(141, 39);
+            this.btnBrowseFile.Location = new System.Drawing.Point(139, 39);
             this.btnBrowseFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseFile.Name = "btnBrowseFile";
-            this.btnBrowseFile.Size = new System.Drawing.Size(66, 25);
+            this.btnBrowseFile.Size = new System.Drawing.Size(70, 26);
             this.btnBrowseFile.TabIndex = 11;
             this.btnBrowseFile.Text = "Browse";
             this.btnBrowseFile.UseVisualStyleBackColor = false;
@@ -219,7 +165,7 @@
             // 
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.txtRecipientEmail);
-            this.panel4.Location = new System.Drawing.Point(98, 231);
+            this.panel4.Location = new System.Drawing.Point(74, 253);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(291, 39);
@@ -251,7 +197,7 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.txtSenderPassword);
             this.panel6.Controls.Add(this.txtSenderEmail);
-            this.panel6.Location = new System.Drawing.Point(98, 139);
+            this.panel6.Location = new System.Drawing.Point(74, 161);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(291, 88);
@@ -309,12 +255,70 @@
             this.txtSenderEmail.Size = new System.Drawing.Size(142, 20);
             this.txtSenderEmail.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(757, 39);
+            this.panel2.TabIndex = 144;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(720, 3);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 34);
+            this.btnClose.TabIndex = 66;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(308, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(215, 25);
+            this.label9.TabIndex = 151;
+            this.label9.Text = "CAKUNG - JAKARTA TIMUR";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(308, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 35);
+            this.label1.TabIndex = 150;
+            this.label1.Text = "VROOM! D&&G";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(221, 45);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 149;
+            this.pictureBox2.TabStop = false;
+            // 
             // Pengiriman_Konfirmasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(750, 491);
             this.Controls.Add(this.rtbBody);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.panel3);
@@ -326,13 +330,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pengiriman_Konfirmasi";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,11 +345,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbBody;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Panel panel3;
@@ -362,5 +362,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSenderPassword;
         private System.Windows.Forms.TextBox txtSenderEmail;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

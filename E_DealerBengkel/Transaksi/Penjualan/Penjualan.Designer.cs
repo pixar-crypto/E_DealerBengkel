@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Penjualan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
@@ -46,7 +46,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMax = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMini = new System.Windows.Forms.Button();
@@ -121,7 +120,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 740);
+            this.panel2.Size = new System.Drawing.Size(200, 769);
             this.panel2.TabIndex = 126;
             // 
             // panel5
@@ -256,28 +255,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.btnMax);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnMini);
             this.panel1.Location = new System.Drawing.Point(-84, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1237, 38);
+            this.panel1.Size = new System.Drawing.Size(1463, 38);
             this.panel1.TabIndex = 127;
-            // 
-            // btnMax
-            // 
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMax.FlatAppearance.BorderSize = 0;
-            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.Location = new System.Drawing.Point(1165, 2);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(31, 34);
-            this.btnMax.TabIndex = 132;
-            this.btnMax.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -297,7 +281,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1200, 2);
+            this.btnClose.Location = new System.Drawing.Point(1401, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(31, 34);
@@ -312,7 +296,7 @@
             this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMini.FlatAppearance.BorderSize = 0;
             this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMini.Location = new System.Drawing.Point(1132, 2);
+            this.btnMini.Location = new System.Drawing.Point(1366, 2);
             this.btnMini.Margin = new System.Windows.Forms.Padding(2);
             this.btnMini.Name = "btnMini";
             this.btnMini.Size = new System.Drawing.Size(31, 34);
@@ -349,7 +333,7 @@
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(850, 45);
+            this.panel4.Location = new System.Drawing.Point(1063, 45);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
@@ -413,9 +397,9 @@
             this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(218, 205);
+            this.panel3.Location = new System.Drawing.Point(247, 205);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(917, 510);
+            this.panel3.Size = new System.Drawing.Size(1067, 510);
             this.panel3.TabIndex = 148;
             // 
             // label8
@@ -423,7 +407,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(710, 55);
+            this.label8.Location = new System.Drawing.Point(837, 55);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 16);
             this.label8.TabIndex = 153;
@@ -435,7 +419,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(710, 24);
+            this.label11.Location = new System.Drawing.Point(837, 24);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 16);
             this.label11.TabIndex = 152;
@@ -444,7 +428,7 @@
             // txtUangKembali
             // 
             this.txtUangKembali.Enabled = false;
-            this.txtUangKembali.Location = new System.Drawing.Point(736, 53);
+            this.txtUangKembali.Location = new System.Drawing.Point(863, 53);
             this.txtUangKembali.Margin = new System.Windows.Forms.Padding(2);
             this.txtUangKembali.Name = "txtUangKembali";
             this.txtUangKembali.Size = new System.Drawing.Size(158, 20);
@@ -455,7 +439,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(475, 121);
+            this.label5.Location = new System.Drawing.Point(602, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 16);
             this.label5.TabIndex = 150;
@@ -467,7 +451,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(475, 90);
+            this.label6.Location = new System.Drawing.Point(602, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 16);
             this.label6.TabIndex = 149;
@@ -475,7 +459,7 @@
             // 
             // txtUangBayar
             // 
-            this.txtUangBayar.Location = new System.Drawing.Point(504, 119);
+            this.txtUangBayar.Location = new System.Drawing.Point(631, 119);
             this.txtUangBayar.Name = "txtUangBayar";
             this.txtUangBayar.Size = new System.Drawing.Size(185, 20);
             this.txtUangBayar.TabIndex = 148;
@@ -566,7 +550,7 @@
             this.btnBayar.IconVisible = true;
             this.btnBayar.IconZoom = 50D;
             this.btnBayar.IsTab = false;
-            this.btnBayar.Location = new System.Drawing.Point(756, 461);
+            this.btnBayar.Location = new System.Drawing.Point(917, 461);
             this.btnBayar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBayar.Name = "btnBayar";
             this.btnBayar.Normalcolor = System.Drawing.Color.SteelBlue;
@@ -586,7 +570,7 @@
             this.BtnKurang.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnKurang.Image = ((System.Drawing.Image)(resources.GetObject("BtnKurang.Image")));
             this.BtnKurang.ImageActive = null;
-            this.BtnKurang.Location = new System.Drawing.Point(864, 200);
+            this.BtnKurang.Location = new System.Drawing.Point(1025, 200);
             this.BtnKurang.Margin = new System.Windows.Forms.Padding(2);
             this.BtnKurang.Name = "BtnKurang";
             this.BtnKurang.Size = new System.Drawing.Size(30, 31);
@@ -601,7 +585,7 @@
             this.BtnTambah.BackColor = System.Drawing.Color.SteelBlue;
             this.BtnTambah.Image = ((System.Drawing.Image)(resources.GetObject("BtnTambah.Image")));
             this.BtnTambah.ImageActive = null;
-            this.BtnTambah.Location = new System.Drawing.Point(864, 165);
+            this.BtnTambah.Location = new System.Drawing.Point(1025, 165);
             this.BtnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTambah.Name = "BtnTambah";
             this.BtnTambah.Size = new System.Drawing.Size(30, 31);
@@ -614,7 +598,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(733, 149);
+            this.label7.Location = new System.Drawing.Point(869, 149);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 13);
             this.label7.TabIndex = 139;
@@ -628,14 +612,14 @@
             this.dgvKeranjang.AllowUserToResizeRows = false;
             this.dgvKeranjang.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvKeranjang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.MediumBlue;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKeranjang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Idd,
@@ -645,12 +629,12 @@
             this.harga,
             this.jumlah,
             this.supplier});
-            this.dgvKeranjang.Location = new System.Drawing.Point(438, 165);
+            this.dgvKeranjang.Location = new System.Drawing.Point(534, 165);
             this.dgvKeranjang.Name = "dgvKeranjang";
             this.dgvKeranjang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvKeranjang.RowHeadersVisible = false;
             this.dgvKeranjang.RowHeadersWidth = 62;
-            this.dgvKeranjang.Size = new System.Drawing.Size(421, 288);
+            this.dgvKeranjang.Size = new System.Drawing.Size(486, 288);
             this.dgvKeranjang.TabIndex = 137;
             // 
             // Idd
@@ -683,10 +667,10 @@
             // 
             // harga
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "#,###";
-            dataGridViewCellStyle8.NullValue = null;
-            this.harga.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle26.Format = "#,###";
+            dataGridViewCellStyle26.NullValue = null;
+            this.harga.DefaultCellStyle = dataGridViewCellStyle26;
             this.harga.HeaderText = "Harga";
             this.harga.MinimumWidth = 8;
             this.harga.Name = "harga";
@@ -694,8 +678,8 @@
             // 
             // jumlah
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.jumlah.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.jumlah.DefaultCellStyle = dataGridViewCellStyle27;
             this.jumlah.HeaderText = "Jumlah";
             this.jumlah.MinimumWidth = 8;
             this.jumlah.Name = "jumlah";
@@ -714,38 +698,38 @@
             this.dgvStok.AllowUserToDeleteRows = false;
             this.dgvStok.AllowUserToResizeColumns = false;
             this.dgvStok.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            this.dgvStok.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            this.dgvStok.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvStok.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvStok.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.MediumBlue;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgvStok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStok.Location = new System.Drawing.Point(23, 165);
             this.dgvStok.Name = "dgvStok";
             this.dgvStok.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvStok.RowHeadersVisible = false;
             this.dgvStok.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvStok.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvStok.Size = new System.Drawing.Size(408, 288);
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvStok.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            this.dgvStok.Size = new System.Drawing.Size(494, 288);
             this.dgvStok.TabIndex = 136;
             this.dgvStok.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellClick);
             // 
             // txtJumlahBayar
             // 
             this.txtJumlahBayar.Enabled = false;
-            this.txtJumlahBayar.Location = new System.Drawing.Point(504, 52);
+            this.txtJumlahBayar.Location = new System.Drawing.Point(631, 52);
             this.txtJumlahBayar.Name = "txtJumlahBayar";
             this.txtJumlahBayar.Size = new System.Drawing.Size(185, 20);
             this.txtJumlahBayar.TabIndex = 135;
@@ -755,7 +739,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(475, 53);
+            this.label13.Location = new System.Drawing.Point(602, 53);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 16);
             this.label13.TabIndex = 134;
@@ -767,7 +751,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(475, 22);
+            this.label4.Location = new System.Drawing.Point(602, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 133;
@@ -872,7 +856,7 @@
             // 
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(504, 166);
+            this.lbJudul.Location = new System.Drawing.Point(642, 166);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(324, 23);
             this.lbJudul.TabIndex = 147;
@@ -895,7 +879,7 @@
             this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox12.Location = new System.Drawing.Point(197, 35);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(951, 117);
+            this.pictureBox12.Size = new System.Drawing.Size(1182, 117);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 128;
             this.pictureBox12.TabStop = false;
@@ -905,7 +889,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1148, 740);
+            this.ClientSize = new System.Drawing.Size(1379, 769);
             this.Controls.Add(this.lbJudul);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label9);
@@ -919,6 +903,7 @@
             this.Name = "Penjualan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Penjualan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Penjualan_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -996,6 +981,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUangBayar;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnMax;
     }
 }

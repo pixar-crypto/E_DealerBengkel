@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Konfirmasi_Retur));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnKonfirRetur = new System.Windows.Forms.Button();
             this.BtnLapServices = new System.Windows.Forms.Button();
             this.BtnLapRetur = new System.Windows.Forms.Button();
@@ -52,12 +53,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbJudul = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvDataRetur = new System.Windows.Forms.DataGridView();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.rbSetuju = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvDataRetur = new System.Windows.Forms.DataGridView();
-            this.BtnKembali = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +74,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.BtnKembali);
             this.panel2.Controls.Add(this.BtnKonfirRetur);
             this.panel2.Controls.Add(this.BtnLapServices);
@@ -85,6 +87,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 788);
             this.panel2.TabIndex = 130;
+            // 
+            // BtnKembali
+            // 
+            this.BtnKembali.FlatAppearance.BorderSize = 0;
+            this.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKembali.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKembali.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnKembali.Image = ((System.Drawing.Image)(resources.GetObject("BtnKembali.Image")));
+            this.BtnKembali.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKembali.Location = new System.Drawing.Point(8, 695);
+            this.BtnKembali.Name = "BtnKembali";
+            this.BtnKembali.Size = new System.Drawing.Size(200, 42);
+            this.BtnKembali.TabIndex = 131;
+            this.BtnKembali.Text = "   KEMBALI";
+            this.BtnKembali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKembali.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnKembali.UseVisualStyleBackColor = true;
+            this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click);
             // 
             // BtnKonfirRetur
             // 
@@ -102,6 +122,7 @@
             this.BtnKonfirRetur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnKonfirRetur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnKonfirRetur.UseVisualStyleBackColor = true;
+            this.BtnKonfirRetur.Click += new System.EventHandler(this.BtnKonfirRetur_Click);
             // 
             // BtnLapServices
             // 
@@ -119,6 +140,7 @@
             this.BtnLapServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLapServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnLapServices.UseVisualStyleBackColor = true;
+            this.BtnLapServices.Click += new System.EventHandler(this.BtnLapServices_Click);
             // 
             // BtnLapRetur
             // 
@@ -136,6 +158,7 @@
             this.BtnLapRetur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLapRetur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnLapRetur.UseVisualStyleBackColor = true;
+            this.BtnLapRetur.Click += new System.EventHandler(this.BtnLapRetur_Click);
             // 
             // BtnLapPenjualan
             // 
@@ -152,6 +175,7 @@
             this.BtnLapPenjualan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLapPenjualan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnLapPenjualan.UseVisualStyleBackColor = true;
+            this.BtnLapPenjualan.Click += new System.EventHandler(this.BtnLapPenjualan_Click);
             // 
             // BtnLapPembelian
             // 
@@ -169,6 +193,7 @@
             this.BtnLapPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnLapPembelian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnLapPembelian.UseVisualStyleBackColor = true;
+            this.BtnLapPembelian.Click += new System.EventHandler(this.BtnLapPembelian_Click);
             // 
             // panel12
             // 
@@ -255,7 +280,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1428, 2);
+            this.btnClose.Location = new System.Drawing.Point(1413, 2);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(31, 34);
@@ -270,7 +295,7 @@
             this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMini.FlatAppearance.BorderSize = 0;
             this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMini.Location = new System.Drawing.Point(1393, 2);
+            this.btnMini.Location = new System.Drawing.Point(1378, 2);
             this.btnMini.Margin = new System.Windows.Forms.Padding(2);
             this.btnMini.Name = "btnMini";
             this.btnMini.Size = new System.Drawing.Size(31, 34);
@@ -366,6 +391,20 @@
             this.panel3.Size = new System.Drawing.Size(1122, 525);
             this.panel3.TabIndex = 155;
             // 
+            // dgvDataRetur
+            // 
+            this.dgvDataRetur.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dgvDataRetur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDataRetur.Location = new System.Drawing.Point(54, 67);
+            this.dgvDataRetur.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDataRetur.Name = "dgvDataRetur";
+            this.dgvDataRetur.RowHeadersVisible = false;
+            this.dgvDataRetur.RowHeadersWidth = 62;
+            this.dgvDataRetur.RowTemplate.Height = 28;
+            this.dgvDataRetur.Size = new System.Drawing.Size(1017, 417);
+            this.dgvDataRetur.TabIndex = 43;
+            this.dgvDataRetur.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataRetur_CellClick);
+            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -410,37 +449,13 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "Status :";
             // 
-            // dgvDataRetur
+            // panel5
             // 
-            this.dgvDataRetur.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dgvDataRetur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataRetur.Location = new System.Drawing.Point(54, 67);
-            this.dgvDataRetur.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvDataRetur.Name = "dgvDataRetur";
-            this.dgvDataRetur.RowHeadersVisible = false;
-            this.dgvDataRetur.RowHeadersWidth = 62;
-            this.dgvDataRetur.RowTemplate.Height = 28;
-            this.dgvDataRetur.Size = new System.Drawing.Size(1017, 417);
-            this.dgvDataRetur.TabIndex = 43;
-            this.dgvDataRetur.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataRetur_CellClick);
-            // 
-            // BtnKembali
-            // 
-            this.BtnKembali.FlatAppearance.BorderSize = 0;
-            this.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnKembali.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnKembali.ForeColor = System.Drawing.Color.Honeydew;
-            this.BtnKembali.Image = ((System.Drawing.Image)(resources.GetObject("BtnKembali.Image")));
-            this.BtnKembali.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKembali.Location = new System.Drawing.Point(8, 695);
-            this.BtnKembali.Name = "BtnKembali";
-            this.BtnKembali.Size = new System.Drawing.Size(200, 42);
-            this.BtnKembali.TabIndex = 131;
-            this.BtnKembali.Text = "   KEMBALI";
-            this.BtnKembali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKembali.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnKembali.UseVisualStyleBackColor = true;
-            this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click);
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Location = new System.Drawing.Point(17, 357);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(176, 3);
+            this.panel5.TabIndex = 149;
             // 
             // Konfirmasi_Retur
             // 
@@ -508,5 +523,6 @@
         private System.Windows.Forms.RadioButton rbSetuju;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnKembali;
+        private System.Windows.Forms.Panel panel5;
     }
 }

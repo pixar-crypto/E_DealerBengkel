@@ -104,7 +104,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(199, 627);
+            this.panel2.Size = new System.Drawing.Size(199, 701);
             this.panel2.TabIndex = 6;
             // 
             // BtnKembali
@@ -188,7 +188,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(-17, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 38);
+            this.panel1.Size = new System.Drawing.Size(1396, 38);
             this.panel1.TabIndex = 7;
             // 
             // label6
@@ -209,7 +209,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1004, 4);
+            this.button1.Location = new System.Drawing.Point(1336, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 34);
@@ -224,7 +224,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(969, 4);
+            this.button3.Location = new System.Drawing.Point(1301, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 34);
@@ -237,7 +237,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox1.Location = new System.Drawing.Point(199, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(824, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(1180, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 140;
             this.pictureBox1.TabStop = false;
@@ -271,7 +271,7 @@
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
-            this.panel4.Location = new System.Drawing.Point(715, 45);
+            this.panel4.Location = new System.Drawing.Point(1064, 45);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
@@ -346,14 +346,14 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.lbStatus);
-            this.panel3.Location = new System.Drawing.Point(220, 207);
+            this.panel3.Location = new System.Drawing.Point(259, 232);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(779, 394);
+            this.panel3.Size = new System.Drawing.Size(1013, 438);
             this.panel3.TabIndex = 145;
             // 
             // TxtJenis
             // 
-            this.TxtJenis.Location = new System.Drawing.Point(139, 119);
+            this.TxtJenis.Location = new System.Drawing.Point(151, 119);
             this.TxtJenis.Name = "TxtJenis";
             this.TxtJenis.Size = new System.Drawing.Size(185, 20);
             this.TxtJenis.TabIndex = 122;
@@ -364,7 +364,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(20, 221);
+            this.label7.Location = new System.Drawing.Point(32, 221);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 16);
             this.label7.TabIndex = 121;
@@ -376,7 +376,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(20, 256);
+            this.label3.Location = new System.Drawing.Point(32, 256);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 120;
@@ -385,7 +385,7 @@
             // TxtHargaJual
             // 
             this.TxtHargaJual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHargaJual.Location = new System.Drawing.Point(163, 184);
+            this.TxtHargaJual.Location = new System.Drawing.Point(175, 184);
             this.TxtHargaJual.Name = "TxtHargaJual";
             this.TxtHargaJual.Size = new System.Drawing.Size(161, 21);
             this.TxtHargaJual.TabIndex = 119;
@@ -395,7 +395,7 @@
             // TxtHargaBeli
             // 
             this.TxtHargaBeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHargaBeli.Location = new System.Drawing.Point(163, 153);
+            this.TxtHargaBeli.Location = new System.Drawing.Point(175, 153);
             this.TxtHargaBeli.Name = "TxtHargaBeli";
             this.TxtHargaBeli.Size = new System.Drawing.Size(161, 21);
             this.TxtHargaBeli.TabIndex = 118;
@@ -409,7 +409,7 @@
             this.cbStatus.Items.AddRange(new object[] {
             "Tersedia",
             "Tidak Tersedia"});
-            this.cbStatus.Location = new System.Drawing.Point(139, 286);
+            this.cbStatus.Location = new System.Drawing.Point(151, 286);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(185, 21);
             this.cbStatus.TabIndex = 117;
@@ -420,7 +420,7 @@
             this.cmbSup.DataSource = this.bindingSource1;
             this.cmbSup.DisplayMember = "nama_supplier";
             this.cmbSup.FormattingEnabled = true;
-            this.cmbSup.Location = new System.Drawing.Point(139, 255);
+            this.cmbSup.Location = new System.Drawing.Point(151, 255);
             this.cmbSup.Name = "cmbSup";
             this.cmbSup.Size = new System.Drawing.Size(185, 21);
             this.cmbSup.TabIndex = 116;
@@ -439,7 +439,7 @@
             // TxtJumlah
             // 
             this.TxtJumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtJumlah.Location = new System.Drawing.Point(139, 221);
+            this.TxtJumlah.Location = new System.Drawing.Point(151, 221);
             this.TxtJumlah.Name = "TxtJumlah";
             this.TxtJumlah.Size = new System.Drawing.Size(185, 21);
             this.TxtJumlah.TabIndex = 115;
@@ -451,7 +451,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(137, 189);
+            this.label11.Location = new System.Drawing.Point(149, 189);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(21, 15);
             this.label11.TabIndex = 113;
@@ -463,7 +463,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(137, 158);
+            this.label8.Location = new System.Drawing.Point(149, 158);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(21, 15);
             this.label8.TabIndex = 111;
@@ -472,7 +472,7 @@
             // TxtTipe
             // 
             this.TxtTipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTipe.Location = new System.Drawing.Point(139, 84);
+            this.TxtTipe.Location = new System.Drawing.Point(151, 84);
             this.TxtTipe.Name = "TxtTipe";
             this.TxtTipe.Size = new System.Drawing.Size(185, 21);
             this.TxtTipe.TabIndex = 88;
@@ -484,7 +484,7 @@
             this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClear.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClear.ForeColor = System.Drawing.Color.Honeydew;
-            this.BtnClear.Location = new System.Drawing.Point(223, 351);
+            this.BtnClear.Location = new System.Drawing.Point(217, 351);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(85, 24);
             this.BtnClear.TabIndex = 87;
@@ -499,7 +499,7 @@
             this.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHapus.ForeColor = System.Drawing.Color.Honeydew;
-            this.BtnHapus.Location = new System.Drawing.Point(132, 351);
+            this.BtnHapus.Location = new System.Drawing.Point(126, 351);
             this.BtnHapus.Name = "BtnHapus";
             this.BtnHapus.Size = new System.Drawing.Size(85, 24);
             this.BtnHapus.TabIndex = 86;
@@ -514,7 +514,7 @@
             this.BtnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSimpan.ForeColor = System.Drawing.Color.Honeydew;
-            this.BtnSimpan.Location = new System.Drawing.Point(41, 351);
+            this.BtnSimpan.Location = new System.Drawing.Point(35, 351);
             this.BtnSimpan.Name = "BtnSimpan";
             this.BtnSimpan.Size = new System.Drawing.Size(85, 24);
             this.BtnSimpan.TabIndex = 85;
@@ -528,7 +528,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(20, 186);
+            this.label5.Location = new System.Drawing.Point(32, 186);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 16);
             this.label5.TabIndex = 84;
@@ -540,7 +540,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(20, 155);
+            this.label2.Location = new System.Drawing.Point(32, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 83;
@@ -551,7 +551,7 @@
             this.rbAll.AutoSize = true;
             this.rbAll.Checked = true;
             this.rbAll.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAll.Location = new System.Drawing.Point(594, 25);
+            this.rbAll.Location = new System.Drawing.Point(606, 25);
             this.rbAll.Name = "rbAll";
             this.rbAll.Size = new System.Drawing.Size(66, 20);
             this.rbAll.TabIndex = 80;
@@ -564,7 +564,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(351, 27);
+            this.label4.Location = new System.Drawing.Point(363, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 16);
             this.label4.TabIndex = 79;
@@ -574,7 +574,7 @@
             // 
             this.rbTidakTersedia.AutoSize = true;
             this.rbTidakTersedia.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTidakTersedia.Location = new System.Drawing.Point(479, 25);
+            this.rbTidakTersedia.Location = new System.Drawing.Point(491, 25);
             this.rbTidakTersedia.Name = "rbTidakTersedia";
             this.rbTidakTersedia.Size = new System.Drawing.Size(111, 20);
             this.rbTidakTersedia.TabIndex = 78;
@@ -587,7 +587,7 @@
             // 
             this.rbTersedia.AutoSize = true;
             this.rbTersedia.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTersedia.Location = new System.Drawing.Point(400, 25);
+            this.rbTersedia.Location = new System.Drawing.Point(412, 25);
             this.rbTersedia.Name = "rbTersedia";
             this.rbTersedia.Size = new System.Drawing.Size(76, 20);
             this.rbTersedia.TabIndex = 77;
@@ -602,7 +602,7 @@
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(20, 52);
+            this.label33.Location = new System.Drawing.Point(32, 52);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(45, 16);
             this.label33.TabIndex = 46;
@@ -611,7 +611,7 @@
             // TxtMerk
             // 
             this.TxtMerk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMerk.Location = new System.Drawing.Point(139, 49);
+            this.TxtMerk.Location = new System.Drawing.Point(151, 49);
             this.TxtMerk.Name = "TxtMerk";
             this.TxtMerk.Size = new System.Drawing.Size(185, 21);
             this.TxtMerk.TabIndex = 73;
@@ -622,7 +622,7 @@
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(20, 87);
+            this.label31.Location = new System.Drawing.Point(32, 87);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(31, 16);
             this.label31.TabIndex = 44;
@@ -645,12 +645,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(354, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(366, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(395, 279);
+            this.dataGridView1.Size = new System.Drawing.Size(597, 327);
             this.dataGridView1.TabIndex = 71;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -660,7 +660,7 @@
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(20, 120);
+            this.label29.Location = new System.Drawing.Point(32, 120);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(39, 16);
             this.label29.TabIndex = 42;
@@ -672,7 +672,7 @@
             this.lbStatus.BackColor = System.Drawing.Color.Transparent;
             this.lbStatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.Black;
-            this.lbStatus.Location = new System.Drawing.Point(20, 287);
+            this.lbStatus.Location = new System.Drawing.Point(32, 287);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(49, 16);
             this.lbStatus.TabIndex = 58;
@@ -683,7 +683,7 @@
             // 
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(472, 169);
+            this.lbJudul.Location = new System.Drawing.Point(632, 182);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(324, 23);
             this.lbJudul.TabIndex = 141;
@@ -699,7 +699,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1019, 627);
+            this.ClientSize = new System.Drawing.Size(1379, 701);
             this.Controls.Add(this.lbJudul);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label9);

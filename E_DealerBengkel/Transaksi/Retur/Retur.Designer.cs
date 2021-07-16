@@ -43,7 +43,6 @@
             this.btnMini = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnMax = new System.Windows.Forms.Button();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -100,7 +99,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 740);
+            this.panel2.Size = new System.Drawing.Size(200, 769);
             this.panel2.TabIndex = 127;
             // 
             // panel5
@@ -238,10 +237,9 @@
             this.panel1.Controls.Add(this.btnMini);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.btnMax);
             this.panel1.Location = new System.Drawing.Point(-84, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1237, 38);
+            this.panel1.Size = new System.Drawing.Size(1462, 38);
             this.panel1.TabIndex = 129;
             // 
             // btnMini
@@ -251,7 +249,7 @@
             this.btnMini.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMini.FlatAppearance.BorderSize = 0;
             this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMini.Location = new System.Drawing.Point(1132, 2);
+            this.btnMini.Location = new System.Drawing.Point(1367, 2);
             this.btnMini.Margin = new System.Windows.Forms.Padding(2);
             this.btnMini.Name = "btnMini";
             this.btnMini.Size = new System.Drawing.Size(31, 34);
@@ -277,7 +275,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1200, 2);
+            this.btnClose.Location = new System.Drawing.Point(1401, 2);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(31, 34);
@@ -285,27 +283,12 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnMax
-            // 
-            this.btnMax.BackColor = System.Drawing.Color.Transparent;
-            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
-            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMax.FlatAppearance.BorderSize = 0;
-            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.Location = new System.Drawing.Point(1165, 2);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(31, 34);
-            this.btnMax.TabIndex = 5;
-            this.btnMax.UseVisualStyleBackColor = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
-            // 
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox12.Location = new System.Drawing.Point(197, 35);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(951, 117);
+            this.pictureBox12.Size = new System.Drawing.Size(1181, 117);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 130;
             this.pictureBox12.TabStop = false;
@@ -350,7 +333,7 @@
             this.panel4.Controls.Add(this.lbWaktu);
             this.panel4.Controls.Add(this.lbUser);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(850, 45);
+            this.panel4.Location = new System.Drawing.Point(1063, 45);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
@@ -409,9 +392,9 @@
             this.panel3.Controls.Add(this.txtNamaCus);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(267, 243);
+            this.panel3.Location = new System.Drawing.Point(247, 205);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(828, 434);
+            this.panel3.Size = new System.Drawing.Size(1067, 510);
             this.panel3.TabIndex = 138;
             // 
             // BtnClear
@@ -435,7 +418,7 @@
             this.BtnClear.IconVisible = true;
             this.BtnClear.IconZoom = 50D;
             this.BtnClear.IsTab = false;
-            this.BtnClear.Location = new System.Drawing.Point(304, 381);
+            this.BtnClear.Location = new System.Drawing.Point(131, 432);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Normalcolor = System.Drawing.Color.SteelBlue;
@@ -471,7 +454,7 @@
             this.btnSimpan.IconVisible = true;
             this.btnSimpan.IconZoom = 50D;
             this.btnSimpan.IsTab = false;
-            this.btnSimpan.Location = new System.Drawing.Point(156, 379);
+            this.btnSimpan.Location = new System.Drawing.Point(22, 432);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Normalcolor = System.Drawing.Color.SteelBlue;
             this.btnSimpan.OnHovercolor = System.Drawing.Color.LightSlateGray;
@@ -523,7 +506,7 @@
             // txtTglRetur
             // 
             this.txtTglRetur.Enabled = false;
-            this.txtTglRetur.Location = new System.Drawing.Point(156, 258);
+            this.txtTglRetur.Location = new System.Drawing.Point(156, 272);
             this.txtTglRetur.Name = "txtTglRetur";
             this.txtTglRetur.Size = new System.Drawing.Size(246, 20);
             this.txtTglRetur.TabIndex = 50;
@@ -540,14 +523,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(389, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 414);
             this.dataGridView1.TabIndex = 49;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 259);
+            this.label4.Location = new System.Drawing.Point(21, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 16);
             this.label4.TabIndex = 47;
@@ -556,7 +539,7 @@
             // txtKet
             // 
             this.txtKet.Enabled = false;
-            this.txtKet.Location = new System.Drawing.Point(156, 298);
+            this.txtKet.Location = new System.Drawing.Point(156, 312);
             this.txtKet.Margin = new System.Windows.Forms.Padding(2);
             this.txtKet.Multiline = true;
             this.txtKet.Name = "txtKet";
@@ -567,7 +550,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 299);
+            this.label7.Location = new System.Drawing.Point(21, 313);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 16);
             this.label7.TabIndex = 45;
@@ -576,7 +559,7 @@
             // txtKaryawan
             // 
             this.txtKaryawan.Enabled = false;
-            this.txtKaryawan.Location = new System.Drawing.Point(156, 223);
+            this.txtKaryawan.Location = new System.Drawing.Point(156, 237);
             this.txtKaryawan.Margin = new System.Windows.Forms.Padding(2);
             this.txtKaryawan.Name = "txtKaryawan";
             this.txtKaryawan.Size = new System.Drawing.Size(247, 20);
@@ -585,7 +568,7 @@
             // txtTanggal
             // 
             this.txtTanggal.Enabled = false;
-            this.txtTanggal.Location = new System.Drawing.Point(156, 153);
+            this.txtTanggal.Location = new System.Drawing.Point(156, 167);
             this.txtTanggal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTanggal.Name = "txtTanggal";
             this.txtTanggal.Size = new System.Drawing.Size(247, 20);
@@ -595,7 +578,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 154);
+            this.label5.Location = new System.Drawing.Point(21, 168);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 16);
             this.label5.TabIndex = 42;
@@ -605,7 +588,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 224);
+            this.label6.Location = new System.Drawing.Point(21, 238);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 16);
             this.label6.TabIndex = 41;
@@ -631,7 +614,7 @@
             // txtHarga
             // 
             this.txtHarga.Enabled = false;
-            this.txtHarga.Location = new System.Drawing.Point(156, 188);
+            this.txtHarga.Location = new System.Drawing.Point(156, 202);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(247, 20);
             this.txtHarga.TabIndex = 35;
@@ -640,7 +623,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 189);
+            this.label10.Location = new System.Drawing.Point(21, 203);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 16);
             this.label10.TabIndex = 34;
@@ -649,7 +632,7 @@
             // txtIdCus
             // 
             this.txtIdCus.Enabled = false;
-            this.txtIdCus.Location = new System.Drawing.Point(155, 89);
+            this.txtIdCus.Location = new System.Drawing.Point(155, 103);
             this.txtIdCus.Name = "txtIdCus";
             this.txtIdCus.Size = new System.Drawing.Size(247, 20);
             this.txtIdCus.TabIndex = 30;
@@ -657,7 +640,7 @@
             // txtNamaCus
             // 
             this.txtNamaCus.Enabled = false;
-            this.txtNamaCus.Location = new System.Drawing.Point(155, 121);
+            this.txtNamaCus.Location = new System.Drawing.Point(155, 135);
             this.txtNamaCus.Name = "txtNamaCus";
             this.txtNamaCus.Size = new System.Drawing.Size(247, 20);
             this.txtNamaCus.TabIndex = 31;
@@ -666,7 +649,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 90);
+            this.label11.Location = new System.Drawing.Point(21, 104);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(86, 16);
             this.label11.TabIndex = 28;
@@ -676,7 +659,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(21, 122);
+            this.label12.Location = new System.Drawing.Point(21, 136);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(112, 16);
             this.label12.TabIndex = 29;
@@ -686,7 +669,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(574, 182);
+            this.label13.Location = new System.Drawing.Point(674, 166);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(211, 28);
             this.label13.TabIndex = 139;
@@ -697,7 +680,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1148, 740);
+            this.ClientSize = new System.Drawing.Size(1379, 769);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label9);
@@ -711,6 +694,7 @@
             this.Name = "Retur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Retur";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Retur_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -743,7 +727,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;

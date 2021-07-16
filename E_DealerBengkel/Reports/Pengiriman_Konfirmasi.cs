@@ -87,6 +87,11 @@ namespace E_DealerBengkel.Reports
             }
         }
 
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
         public Pengiriman_Konfirmasi(int i, String id)
         {
             this.id = id;
