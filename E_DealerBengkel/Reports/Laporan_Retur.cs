@@ -12,11 +12,11 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace E_DealerBengkel.Reports
 {
-    public partial class Laporan_Service : Form
+    public partial class Laporan_Retur : Form
     {
         Timer timer = new Timer();
 
-        public Laporan_Service()
+        public Laporan_Retur()
         {
             InitializeComponent();
 
@@ -49,7 +49,7 @@ namespace E_DealerBengkel.Reports
             this.Hide();
         }
 
-        private void Laporan_Service_Load(object sender, EventArgs e)
+        private void Laporan_Retur_Load(object sender, EventArgs e)
         {
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
             this.reportViewer1.RefreshReport();
@@ -60,7 +60,7 @@ namespace E_DealerBengkel.Reports
             string awal = dateAwal.Text;
             string akhir = dateAkhir.Text;
 
-            this.laporan_ServiceTableAdapter.Fill(this.database_Laporan.Laporan_Service, awal, akhir);
+            this.laporan_ReturTableAdapter.Fill(this.database_Laporan.Laporan_Retur, awal, akhir);
             this.reportViewer1.RefreshReport();
         }
 
@@ -68,8 +68,8 @@ namespace E_DealerBengkel.Reports
         {
             string awal = dateAwal.Text;
             string akhir = dateAkhir.Text;
-           
-            this.laporan_ServiceTableAdapter.Fill(this.database_Laporan.Laporan_Service, awal, akhir);
+
+            this.laporan_ReturTableAdapter.Fill(this.database_Laporan.Laporan_Retur, awal, akhir);
             this.reportViewer1.RefreshReport();
         }
     }

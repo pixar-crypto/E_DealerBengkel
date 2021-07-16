@@ -63,6 +63,16 @@ namespace E_DealerBengkel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap documents_30px {
+            get {
+                object obj = ResourceManager.GetObject("documents_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Cancel_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-Cancel-80", resourceCulture);

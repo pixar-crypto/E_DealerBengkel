@@ -102,5 +102,19 @@ namespace E_DealerBengkel
             lap.Show();
             this.Hide();
         }
+
+        private void BtnLapRetur_Click(object sender, EventArgs e)
+        {
+            Laporan_Retur lap = new Laporan_Retur();
+            lap.Show();
+            this.Hide();
+        }
+
+        private void BtnKonfirRetur_Click(object sender, EventArgs e)
+        {
+            Konfirmasi_Retur konf = new Konfirmasi_Retur();
+            konf.Show();
+            this.Hide();
+        }
     }
 }

@@ -61,7 +61,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -97,7 +97,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -133,7 +133,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -169,7 +169,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -205,7 +205,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -241,7 +241,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -277,7 +277,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -313,7 +313,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -515,7 +515,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -549,7 +549,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -584,7 +584,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -679,7 +679,7 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>DarkBlue</BackgroundColor>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -712,7 +712,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -763,7 +763,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsPenjualan</DataSetName>
-        <Top>3.12208cm</Top>
+        <Top>2.48708cm</Top>
         <Left>1.21259cm</Left>
         <Height>2.4cm</Height>
         <Width>25.24023cm</Width>
@@ -790,7 +790,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ReportName</rd:DefaultName>
-        <Top>1.29632cm</Top>
+        <Top>1.50799cm</Top>
         <Left>12.3866cm</Left>
         <Height>0.6cm</Height>
         <Width>0.82484cm</Width>
@@ -824,7 +824,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.29632cm</Top>
+        <Top>1.50799cm</Top>
         <Left>13.28199cm</Left>
         <Height>0.6cm</Height>
         <Width>2.83513cm</Width>
@@ -848,7 +848,8 @@
               <TextRun>
                 <Value>LAPORAN TRANSAKSI PENJUALAN</Value>
                 <Style>
-                  <FontSize>16pt</FontSize>
+                  <FontFamily>mingLiU-ExtB</FontFamily>
+                  <FontSize>20pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -860,9 +861,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
         <Top>0.2468cm</Top>
-        <Left>8.71259cm</Left>
+        <Left>7.49551cm</Left>
         <Height>0.97896cm</Height>
-        <Width>10.19484cm</Width>
+        <Width>12.78776cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -876,8 +877,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.34375in</Height>
-    <Style />
+    <Height>2.13542in</Height>
+    <Style>
+      <BackgroundColor>#d3d3ff</BackgroundColor>
+    </Style>
   </Body>
   <Width>10.87402in</Width>
   <Page>
@@ -907,7 +910,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>PT. VDROOM JAKARTA</Value>
+                  <Value>PT. VROOM DG</Value>
                   <Style>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -971,6 +974,20 @@
           <Style>
             <Border>
               <Style>Solid</Style>
+              <Width>1.2pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line2">
+          <Top>3.46685cm</Top>
+          <Left>1.1672cm</Left>
+          <Height>0cm</Height>
+          <Width>25.28562cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+              <Width>1.2pt</Width>
             </Border>
           </Style>
         </Line>
@@ -979,6 +996,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>LightSteelBlue</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>
@@ -1054,6 +1072,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>LightSteelBlue</BackgroundColor>
       </Style>
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>

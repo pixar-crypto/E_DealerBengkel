@@ -24,9 +24,6 @@
               <Width>4.27271cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.00271cm</Width>
-            </TablixColumn>
-            <TablixColumn>
               <Width>3.51007cm</Width>
             </TablixColumn>
           </TablixColumns>
@@ -43,7 +40,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID Transaksi</Value>
+                              <Value>No Retur</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -187,7 +184,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Kendaraan</Value>
+                              <Value>Jenis Barang</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -223,7 +220,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Keterangan Service</Value>
+                              <Value>Keterangan</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -252,42 +249,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox13">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Harga Service</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>SteelBlue</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="Textbox15">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -295,7 +256,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total Bayar</Value>
+                              <Value>Status</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -329,14 +290,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="id_transaksi">
+                    <Textbox Name="id_retur">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!id_transaksi.Value</Value>
+                              <Value>=Fields!id_retur.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
@@ -347,7 +308,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>id_transaksi</rd:DefaultName>
+                      <rd:DefaultName>id_retur</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -363,14 +324,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="tanggal">
+                    <Textbox Name="tanggal_retur">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!tanggal.Value</Value>
+                              <Value>=Fields!tanggal_retur.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>dd MMMM yyyy</Format>
@@ -382,7 +343,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>tanggal</rd:DefaultName>
+                      <rd:DefaultName>tanggal_retur</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -466,14 +427,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="jenis_kendaraan">
+                    <Textbox Name="id_jenisBarang">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!jenis_kendaraan.Value</Value>
+                              <Value>=Fields!id_jenisBarang.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
@@ -484,7 +445,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>jenis_kendaraan</rd:DefaultName>
+                      <rd:DefaultName>id_jenisBarang</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -500,14 +461,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="jenis_service">
+                    <Textbox Name="keterangan">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!jenis_service.Value</Value>
+                              <Value>=Fields!keterangan.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
@@ -518,7 +479,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>jenis_service</rd:DefaultName>
+                      <rd:DefaultName>keterangan</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -534,49 +495,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="harga">
+                    <Textbox Name="status">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!harga.Value)</Value>
-                              <Style>
-                                <FontWeight>Normal</FontWeight>
-                                <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>harga</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="total_harga">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!harga.Value)</Value>
+                              <Value>=Fields!status.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
@@ -585,11 +511,11 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>total_harga</rd:DefaultName>
+                      <rd:DefaultName>status</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -640,10 +566,9 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>8</ColSpan>
+                    <ColSpan>7</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell />
                 <TablixCell />
                 <TablixCell />
                 <TablixCell />
@@ -664,7 +589,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total Pendapatan</Value>
+                              <Value>Total Data Retur :</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -688,10 +613,9 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>7</ColSpan>
+                    <ColSpan>6</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell />
                 <TablixCell />
                 <TablixCell />
                 <TablixCell />
@@ -706,10 +630,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!total_harga.Value</Value>
+                              <Value>=Count(Fields!id_retur.Value)</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
-                                <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -745,7 +668,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -764,11 +686,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>dsService</DataSetName>
-        <Top>2.54cm</Top>
-        <Left>1.1445cm</Left>
+        <DataSetName>dsRetur</DataSetName>
+        <Top>2.34542cm</Top>
+        <Left>0.637cm</Left>
         <Height>2.4cm</Height>
-        <Width>25.59221cm</Width>
+        <Width>22.5895cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -792,8 +714,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ReportName</rd:DefaultName>
-        <Top>1.58207cm</Top>
-        <Left>12.3866cm</Left>
+        <Top>1.29646cm</Top>
+        <Left>11.0861cm</Left>
         <Height>0.6cm</Height>
         <Width>0.82484cm</Width>
         <ZIndex>1</ZIndex>
@@ -826,8 +748,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.58207cm</Top>
-        <Left>13.28199cm</Left>
+        <Top>1.29646cm</Top>
+        <Left>11.98149cm</Left>
         <Height>0.6cm</Height>
         <Width>2.83513cm</Width>
         <ZIndex>2</ZIndex>
@@ -848,7 +770,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>LAPORAN TRANSAKSI SERVICE</Value>
+                <Value>LAPORAN TRANSAKSI RETUR</Value>
                 <Style>
                   <FontFamily>mingLiU-ExtB</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -862,8 +784,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
-        <Top>0.462cm</Top>
-        <Left>8.71259cm</Left>
+        <Top>0.17639cm</Top>
+        <Left>7.41209cm</Left>
         <Height>0.97896cm</Height>
         <Width>10.19484cm</Width>
         <ZIndex>3</ZIndex>
@@ -879,15 +801,15 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.19792in</Height>
+    <Height>2in</Height>
     <Style>
       <BackgroundColor>#d3d3ff</BackgroundColor>
     </Style>
   </Body>
-  <Width>10.87402in</Width>
+  <Width>9.36438in</Width>
   <Page>
     <PageHeader>
-      <Height>3.21991cm</Height>
+      <Height>3.00825cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -895,8 +817,8 @@
           <Source>Embedded</Source>
           <Value>Picture2</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.125in</Top>
-          <Left>0.45953in</Left>
+          <Top>0.08333in</Top>
+          <Left>0.46449in</Left>
           <Height>2.46063cm</Height>
           <Width>2.54cm</Width>
           <Style>
@@ -951,8 +873,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.3175cm</Top>
-          <Left>7.87808cm</Left>
+          <Top>0.21166cm</Top>
+          <Left>6.37376cm</Left>
           <Height>2.46063cm</Height>
           <Width>11.7888cm</Width>
           <ZIndex>1</ZIndex>
@@ -968,23 +890,11 @@
           </Style>
         </Textbox>
         <Line Name="Line1">
-          <Top>3.00824cm</Top>
-          <Left>1.1672cm</Left>
+          <Top>2.90241cm</Top>
+          <Left>0.637cm</Left>
           <Height>0cm</Height>
-          <Width>25.28562cm</Width>
+          <Width>22.5895cm</Width>
           <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line2">
-          <Top>3.11408cm</Top>
-          <Left>1.1445cm</Left>
-          <Height>0cm</Height>
-          <Width>25.28562cm</Width>
-          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
@@ -1000,7 +910,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>1.45521cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1021,8 +931,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.97cm</Top>
-          <Left>1.18989cm</Left>
+          <Top>0.41438cm</Top>
+          <Left>0.82072cm</Left>
           <Height>0.6cm</Height>
           <Width>4.33444cm</Width>
           <Style>
@@ -1052,8 +962,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.97cm</Top>
-          <Left>24.45929cm</Left>
+          <Top>0.41438cm</Top>
+          <Left>21.25567cm</Left>
           <Height>0.6cm</Height>
           <Width>1.97083cm</Width>
           <ZIndex>1</ZIndex>
@@ -1091,60 +1001,52 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5eb4e450-36e6-485f-86ae-57aab40e9b61</rd:DataSourceID>
+      <rd:DataSourceID>6dbf23bc-0e03-4573-9066-49932d16f93c</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dsService">
+    <DataSet Name="dsRetur">
       <Query>
         <DataSourceName>Database_Laporan</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="id_transaksi">
-          <DataField>id_transaksi</DataField>
+        <Field Name="id_retur">
+          <DataField>id_retur</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="tanggal">
-          <DataField>tanggal</DataField>
+        <Field Name="tanggal_retur">
+          <DataField>tanggal_retur</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="total_harga">
-          <DataField>total_harga</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="jenis_kendaraan">
-          <DataField>jenis_kendaraan</DataField>
+        <Field Name="keterangan">
+          <DataField>keterangan</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="id_service">
-          <DataField>id_service</DataField>
+        <Field Name="status">
+          <DataField>status</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="jenis_service">
-          <DataField>jenis_service</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="harga">
-          <DataField>harga</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="nama_karyawan">
-          <DataField>nama_karyawan</DataField>
+        <Field Name="id_jenisBarang">
+          <DataField>id_jenisBarang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="nama_member">
           <DataField>nama_member</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="nama_karyawan">
+          <DataField>nama_karyawan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Database_Laporan</rd:DataSetName>
-        <rd:SchemaPath>D:\Kuliah\Semester 2\Pemrograman 2\PROJECT BESAR\E_DealerBengkel\E_DealerBengkel\Database_Laporan.xsd</rd:SchemaPath>
-        <rd:TableName>Laporan_Service</rd:TableName>
+        <rd:SchemaPath>C:\Users\ACER\source\repos\E_DealerBengkel2\E_DealerBengkel\Database_Laporan.xsd</rd:SchemaPath>
+        <rd:TableName>Laporan_Retur</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Laporan_ServiceTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>Laporan_ReturTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -1184,5 +1086,5 @@ VMJ0VZMKsD8fhZAskI1T7EJ+piNLUy9QovTHJD/LqFRRmNzoPtKro8GmwF6EkIe643m2gR1F6dI69bSm
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>9e2145c6-e6e1-4ce9-947f-5fa132f6b481</rd:ReportID>
+  <rd:ReportID>5d63ed1a-3f23-4550-973d-fb3184bc6114</rd:ReportID>
 </Report>

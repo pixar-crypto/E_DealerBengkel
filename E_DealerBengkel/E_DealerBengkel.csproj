@@ -170,6 +170,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Konfirmasi_Retur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Konfirmasi_Retur.Designer.cs">
+      <DependentUpon>Konfirmasi_Retur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Konfirmasi_Retur2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Konfirmasi_Retur2.Designer.cs">
+      <DependentUpon>Konfirmasi_Retur2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Laporan_Pembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,11 +194,23 @@
     <Compile Include="Reports\Laporan_Penjualan.Designer.cs">
       <DependentUpon>Laporan_Penjualan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Laporan_Retur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Laporan_Retur.Designer.cs">
+      <DependentUpon>Laporan_Retur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Laporan_Service.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\Laporan_Service.Designer.cs">
       <DependentUpon>Laporan_Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pengiriman_Konfirmasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Pengiriman_Konfirmasi.Designer.cs">
+      <DependentUpon>Pengiriman_Konfirmasi.cs</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
@@ -279,18 +303,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\Konfirmasi_Retur.resx">
+      <DependentUpon>Konfirmasi_Retur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Konfirmasi_Retur2.resx">
+      <DependentUpon>Konfirmasi_Retur2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Laporan_Pembelian.resx">
       <DependentUpon>Laporan_Pembelian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Laporan_Penjualan.resx">
       <DependentUpon>Laporan_Penjualan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Laporan_Retur.resx">
+      <DependentUpon>Laporan_Retur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Laporan_Service.resx">
       <DependentUpon>Laporan_Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pengiriman_Konfirmasi.resx">
+      <DependentUpon>Pengiriman_Konfirmasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Rdlc\Laporan_Pembelian.rdlc" />
     <EmbeddedResource Include="Reports\Rdlc\Laporan_Penjualan.rdlc" />
     <EmbeddedResource Include="Reports\Rdlc\Laporan_Service.rdlc" />
+    <EmbeddedResource Include="Reports\Rdlc\Laporan_Retur.rdlc" />
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +419,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\documents_30px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
