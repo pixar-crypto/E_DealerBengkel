@@ -265,7 +265,8 @@ namespace E_DealerBengkel.Master.Services
 
                     insert.Parameters.AddWithValue("id_service", id);
                     insert.Parameters.AddWithValue("jenis_service", txtJenisSer.Text);
-                    insert.Parameters.AddWithValue("harga", txtHarga.Text);
+                    string harga = Program.toAngka(txtHarga.Text).ToString();
+                    insert.Parameters.AddWithValue("harga", harga);
                     insert.Parameters.AddWithValue("status", "Tersedia");
 
                     try
@@ -305,7 +306,8 @@ namespace E_DealerBengkel.Master.Services
 
                     update.Parameters.AddWithValue("id_service", id);
                     update.Parameters.AddWithValue("jenis_service", txtJenisSer.Text);
-                    update.Parameters.AddWithValue("harga", txtHarga.Text);
+                    string harga = Program.toAngka(txtHarga.Text).ToString();
+                    update.Parameters.AddWithValue("harga", harga);
                     update.Parameters.AddWithValue("status", cbStatus.SelectedItem);
 
                     try

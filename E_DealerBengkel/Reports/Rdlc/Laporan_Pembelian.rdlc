@@ -765,7 +765,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsPembelian</DataSetName>
-        <Top>2.32833cm</Top>
+        <Top>2.64583cm</Top>
         <Left>1.14448cm</Left>
         <Height>2.4cm</Height>
         <Width>25.34587cm</Width>
@@ -792,7 +792,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ReportName</rd:DefaultName>
-        <Top>1.30073cm</Top>
+        <Top>1.61823cm</Top>
         <Left>12.38659cm</Left>
         <Height>0.6cm</Height>
         <Width>0.82484cm</Width>
@@ -826,7 +826,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.30073cm</Top>
+        <Top>1.61823cm</Top>
         <Left>13.28198cm</Left>
         <Height>0.6cm</Height>
         <Width>2.83513cm</Width>
@@ -850,8 +850,7 @@
               <TextRun>
                 <Value>LAPORAN TRANSAKSI PEMBELIAN</Value>
                 <Style>
-                  <FontFamily>mingLiU-ExtB</FontFamily>
-                  <FontSize>20pt</FontSize>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -967,24 +966,12 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Line Name="Line1">
-          <Top>3.16714cm</Top>
-          <Left>1.20472cm</Left>
-          <Height>0cm</Height>
-          <Width>25.28562cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
         <Line Name="Line2">
           <Top>3.27217cm</Top>
           <Left>1.20473cm</Left>
           <Height>0cm</Height>
           <Width>25.28562cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>

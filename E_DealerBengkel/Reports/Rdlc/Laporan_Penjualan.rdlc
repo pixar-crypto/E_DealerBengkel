@@ -848,8 +848,7 @@
               <TextRun>
                 <Value>LAPORAN TRANSAKSI PENJUALAN</Value>
                 <Style>
-                  <FontFamily>mingLiU-ExtB</FontFamily>
-                  <FontSize>20pt</FontSize>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -885,7 +884,7 @@
   <Width>10.87402in</Width>
   <Page>
     <PageHeader>
-      <Height>3.6697cm</Height>
+      <Height>3.53741cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -893,7 +892,7 @@
           <Source>Embedded</Source>
           <Value>Picture2</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.25in</Top>
+          <Top>0.2in</Top>
           <Left>0.45953in</Left>
           <Height>2.46063cm</Height>
           <Width>2.54cm</Width>
@@ -949,7 +948,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.635cm</Top>
+          <Top>0.508cm</Top>
           <Left>7.87808cm</Left>
           <Height>2.46063cm</Height>
           <Width>11.7888cm</Width>
@@ -965,8 +964,8 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Line Name="Line1">
-          <Top>3.32574cm</Top>
+        <Line Name="Line2">
+          <Top>3.2927cm</Top>
           <Left>1.1672cm</Left>
           <Height>0cm</Height>
           <Width>25.28562cm</Width>
@@ -974,20 +973,6 @@
           <Style>
             <Border>
               <Style>Solid</Style>
-              <Width>1.2pt</Width>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line2">
-          <Top>3.46685cm</Top>
-          <Left>1.1672cm</Left>
-          <Height>0cm</Height>
-          <Width>25.28562cm</Width>
-          <ZIndex>3</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-              <Width>1.2pt</Width>
             </Border>
           </Style>
         </Line>

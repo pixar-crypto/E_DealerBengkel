@@ -21,13 +21,13 @@
               <Width>3.00271cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.27271cm</Width>
+              <Width>3.71566cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.00271cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.51007cm</Width>
+              <Width>3.76053cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -768,7 +768,7 @@
         <Top>2.54cm</Top>
         <Left>1.1445cm</Left>
         <Height>2.4cm</Height>
-        <Width>25.59221cm</Width>
+        <Width>25.28562cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -850,8 +850,8 @@
               <TextRun>
                 <Value>LAPORAN TRANSAKSI SERVICE</Value>
                 <Style>
-                  <FontFamily>mingLiU-ExtB</FontFamily>
-                  <FontSize>20pt</FontSize>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -862,7 +862,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox17</rd:DefaultName>
-        <Top>0.462cm</Top>
+        <Top>0.3175cm</Top>
         <Left>8.71259cm</Left>
         <Height>0.97896cm</Height>
         <Width>10.19484cm</Width>
@@ -887,7 +887,7 @@
   <Width>10.87402in</Width>
   <Page>
     <PageHeader>
-      <Height>3.21991cm</Height>
+      <Height>3.51095cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -895,7 +895,7 @@
           <Source>Embedded</Source>
           <Value>Picture2</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.125in</Top>
+          <Top>0.1875in</Top>
           <Left>0.45953in</Left>
           <Height>2.46063cm</Height>
           <Width>2.54cm</Width>
@@ -951,7 +951,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.3175cm</Top>
+          <Top>0.47625cm</Top>
           <Left>7.87808cm</Left>
           <Height>2.46063cm</Height>
           <Width>11.7888cm</Width>
@@ -967,24 +967,12 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Line Name="Line1">
-          <Top>3.00824cm</Top>
-          <Left>1.1672cm</Left>
-          <Height>0cm</Height>
-          <Width>25.28562cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
         <Line Name="Line2">
-          <Top>3.11408cm</Top>
+          <Top>3.27283cm</Top>
           <Left>1.1445cm</Left>
           <Height>0cm</Height>
           <Width>25.28562cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>Solid</Style>
