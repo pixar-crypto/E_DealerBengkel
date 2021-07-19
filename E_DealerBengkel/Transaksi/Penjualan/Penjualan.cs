@@ -540,7 +540,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Pemberitahuan!",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -557,13 +557,13 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             cek = int.Parse(dgvStok.Rows[n].Cells[5].Value.ToString()) - jumlah;
             if (cek < 0)
             {
-                MessageBox.Show("Maaf, Stok Tidak Cukup", "Pemberitahuan!",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Maaf, Stok Tidak Cukup", "Warning!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-dgvKeranjang.Rows[n].Cells[5].Value = jumlah;
-            cekBeli();
+                dgvKeranjang.Rows[n].Cells[5].Value = jumlah;
+                cekBeli();
             }
            
         }
@@ -594,13 +594,13 @@ dgvKeranjang.Rows[n].Cells[5].Value = jumlah;
         {
             if (txtNamaCus.Text == "" || txtUangBayar.Text == "" || txtJumlahBayar.Text == "")
             {
-                MessageBox.Show("Data masih ada yang kosong", "Pemberitahuan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data masih ada yang kosong", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (double.Parse(txtJumlahBayar.Text) > double.Parse(txtUangBayar.Text))
             {
-                MessageBox.Show("Uang anda kurang", "Pemberitahuan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Uang anda kurang", "Warning",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

@@ -36,7 +36,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.BtnServices = new System.Windows.Forms.Button();
             this.BtnRetur = new System.Windows.Forms.Button();
             this.BtnPenjualan = new System.Windows.Forms.Button();
@@ -143,7 +142,6 @@
             this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.BtnKembali);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.BtnServices);
             this.panel2.Controls.Add(this.BtnRetur);
             this.panel2.Controls.Add(this.BtnPenjualan);
@@ -181,18 +179,6 @@
             this.BtnKembali.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnKembali.UseVisualStyleBackColor = true;
             this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.SlateGray;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(30, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 31);
-            this.label2.TabIndex = 125;
-            this.label2.Text = "DASHBOARD";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // BtnServices
             // 
@@ -334,9 +320,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(80, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -769,7 +756,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button BtnKembali;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnServices;
         private System.Windows.Forms.Button BtnRetur;
         private System.Windows.Forms.Button BtnPenjualan;

@@ -53,6 +53,7 @@ namespace E_DealerBengkel.Master.Motor
             cmbSup.Text = " - PILIH SUPPLIER -";
             cbJenis.Text = " - PILIH JENIS -";
             BtnHapus.Visible = false;
+            lbledit.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -101,6 +102,7 @@ namespace E_DealerBengkel.Master.Motor
             TxtJumlah.Enabled = true;
             cmbSup.Enabled = true;
             cbStatus.Enabled = false;
+            lbledit.Visible = false;
 
             BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH MOTOR";
@@ -121,6 +123,7 @@ namespace E_DealerBengkel.Master.Motor
             TxtJumlah.Enabled = false;
             cmbSup.Enabled = false;
             cbStatus.Enabled = false;
+            lbledit.Visible = true;
 
             BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH MOTOR";

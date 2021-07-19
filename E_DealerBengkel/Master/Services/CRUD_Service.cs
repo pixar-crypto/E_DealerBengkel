@@ -30,6 +30,7 @@ namespace E_DealerBengkel.Master.Services
             timer.Enabled = true;
             timer.Start();
         }
+
         void timer_Tick(object sender, EventArgs e)
         {
             lbWaktu.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
@@ -40,6 +41,7 @@ namespace E_DealerBengkel.Master.Services
             Clear();
             txtHarga.Enabled = true;
             cbStatus.Enabled = false;
+            lbledit.Visible = false;
 
             BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH SERVICE";
@@ -53,6 +55,7 @@ namespace E_DealerBengkel.Master.Services
             Clear();
             txtHarga.Enabled = false;
             cbStatus.Enabled = false;
+            lbledit.Visible = true;
 
             BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH SERVICE";
@@ -109,6 +112,10 @@ namespace E_DealerBengkel.Master.Services
 
             if (lbJudul.Text == "TAMBAH SERVICE")
             {
+                
+            }
+            else
+            {
                 txtHarga.Enabled = false;
                 cbStatus.Enabled = false;
             }
@@ -119,6 +126,7 @@ namespace E_DealerBengkel.Master.Services
             RefreshDg();
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
             BtnHapus.Visible = false;
+            lbledit.Visible = false;
         }
 
         private void txtHarga_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -129,10 +137,10 @@ namespace E_DealerBengkel.Master.Services
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
-            connection.Open();
             SqlDataAdapter adapt = new SqlDataAdapter("select * from tService", connection);
-
             DataTable dt = new DataTable();
+
+            connection.Open();
             adapt.Fill(dt);
 
             DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
@@ -237,7 +245,7 @@ namespace E_DealerBengkel.Master.Services
             {
                 if (txtJenisSer.Text == "" || txtHarga.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBox.Show("Data ada yang kosong!!", "Warning!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -280,7 +288,7 @@ namespace E_DealerBengkel.Master.Services
             {
                 if (txtJenisSer.Text == "" || txtHarga.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBox.Show("Data ada yang kosong!!", "Warning!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -340,7 +348,7 @@ namespace E_DealerBengkel.Master.Services
                     cbStatus.Enabled = true;
 
                     DataGridViewRow row = this.dgvJenisSer.Rows[e.RowIndex];
-                    id = row.Cells[0].Value.ToString();
+                    id = row.Cells[1].Value.ToString();
                     txtJenisSer.Text = row.Cells[2].Value.ToString();
                     String harga = row.Cells[3].Value.ToString();
                     harga = Convert.ToDecimal(harga).ToString("c", culture);

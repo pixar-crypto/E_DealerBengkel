@@ -597,7 +597,7 @@
             this.panel11.BackColor = System.Drawing.Color.SteelBlue;
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.dgvSup);
-            this.panel11.Location = new System.Drawing.Point(871, 666);
+            this.panel11.Location = new System.Drawing.Point(908, 658);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(112, 65);
             this.panel11.TabIndex = 163;
@@ -684,7 +684,7 @@
             this.panel9.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.dgvSukuCadang);
-            this.panel9.Location = new System.Drawing.Point(755, 666);
+            this.panel9.Location = new System.Drawing.Point(792, 658);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(116, 65);
             this.panel9.TabIndex = 162;
@@ -771,7 +771,7 @@
             this.panel7.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.dgvMotor);
-            this.panel7.Location = new System.Drawing.Point(535, 666);
+            this.panel7.Location = new System.Drawing.Point(572, 658);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(111, 65);
             this.panel7.TabIndex = 160;
@@ -858,7 +858,7 @@
             this.panel10.BackColor = System.Drawing.Color.SteelBlue;
             this.panel10.Controls.Add(this.label12);
             this.panel10.Controls.Add(this.dgvServis);
-            this.panel10.Location = new System.Drawing.Point(642, 666);
+            this.panel10.Location = new System.Drawing.Point(679, 658);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(115, 65);
             this.panel10.TabIndex = 161;
@@ -945,7 +945,7 @@
             this.panel8.BackColor = System.Drawing.Color.SteelBlue;
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.dgvMobil);
-            this.panel8.Location = new System.Drawing.Point(421, 666);
+            this.panel8.Location = new System.Drawing.Point(458, 658);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(119, 65);
             this.panel8.TabIndex = 159;
@@ -1032,7 +1032,7 @@
             this.panel6.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.dgvMember);
-            this.panel6.Location = new System.Drawing.Point(310, 666);
+            this.panel6.Location = new System.Drawing.Point(347, 658);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(111, 65);
             this.panel6.TabIndex = 158;
@@ -1119,7 +1119,7 @@
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.dgvKaryawan);
-            this.panel5.Location = new System.Drawing.Point(200, 666);
+            this.panel5.Location = new System.Drawing.Point(237, 658);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(111, 65);
             this.panel5.TabIndex = 157;

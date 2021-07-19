@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Mobil));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -80,6 +80,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
+            this.lbledit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -280,9 +281,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(81, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -320,7 +322,7 @@
             // 
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(669, 180);
+            this.lbJudul.Location = new System.Drawing.Point(707, 182);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(275, 23);
             this.lbJudul.TabIndex = 140;
@@ -331,6 +333,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.lbledit);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.TxtHargaJual);
@@ -357,7 +360,7 @@
             this.panel3.Controls.Add(this.dgvMobil);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.lbStatus);
-            this.panel3.Location = new System.Drawing.Point(260, 232);
+            this.panel3.Location = new System.Drawing.Point(285, 232);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1056, 438);
             this.panel3.TabIndex = 141;
@@ -651,14 +654,14 @@
             this.dgvMobil.AllowUserToResizeRows = false;
             this.dgvMobil.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvMobil.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMobil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMobil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMobil.Location = new System.Drawing.Point(379, 48);
             this.dgvMobil.Name = "dgvMobil";
@@ -697,6 +700,16 @@
             // tSupplierTableAdapter
             // 
             this.tSupplierTableAdapter.ClearBeforeFill = true;
+            // 
+            // lbledit
+            // 
+            this.lbledit.AutoSize = true;
+            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbledit.Location = new System.Drawing.Point(376, 396);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(339, 16);
+            this.lbledit.TabIndex = 122;
+            this.lbledit.Text = "*Klik row pada tabel terlebih dahulu untuk mengedit data";
             // 
             // CRUD_Mobil
             // 
@@ -790,6 +803,7 @@
         private VroomDGDataSet vroomDGDataSet;
         private System.Windows.Forms.BindingSource bindingSource1;
         private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
+        private System.Windows.Forms.Label lbledit;
         //     private VroomDGDataSet2TableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
     }
 }

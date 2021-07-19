@@ -174,16 +174,16 @@
             this.panel5.BackColor = System.Drawing.Color.SlateGray;
             this.panel5.Controls.Add(this.lblKaryawan);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(318, 228);
+            this.panel5.Location = new System.Drawing.Point(325, 205);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(114, 149);
+            this.panel5.Size = new System.Drawing.Size(141, 172);
             this.panel5.TabIndex = 107;
             // 
             // lblKaryawan
             // 
             this.lblKaryawan.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKaryawan.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblKaryawan.Location = new System.Drawing.Point(28, 103);
+            this.lblKaryawan.Location = new System.Drawing.Point(42, 114);
             this.lblKaryawan.Name = "lblKaryawan";
             this.lblKaryawan.Size = new System.Drawing.Size(60, 41);
             this.lblKaryawan.TabIndex = 127;
@@ -192,7 +192,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(20, 11);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(108, 97);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -204,16 +204,16 @@
             this.panel6.BackColor = System.Drawing.Color.SteelBlue;
             this.panel6.Controls.Add(this.lblPosisi);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(545, 227);
+            this.panel6.Location = new System.Drawing.Point(598, 205);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(114, 149);
+            this.panel6.Size = new System.Drawing.Size(141, 172);
             this.panel6.TabIndex = 109;
             // 
             // lblPosisi
             // 
             this.lblPosisi.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosisi.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblPosisi.Location = new System.Drawing.Point(28, 104);
+            this.lblPosisi.Location = new System.Drawing.Point(41, 114);
             this.lblPosisi.Name = "lblPosisi";
             this.lblPosisi.Size = new System.Drawing.Size(60, 41);
             this.lblPosisi.TabIndex = 125;
@@ -222,7 +222,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(16, 11);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(108, 97);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -234,16 +234,16 @@
             this.panel8.BackColor = System.Drawing.Color.SlateGray;
             this.panel8.Controls.Add(this.lblMember);
             this.panel8.Controls.Add(this.pictureBox6);
-            this.panel8.Location = new System.Drawing.Point(779, 228);
+            this.panel8.Location = new System.Drawing.Point(867, 205);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(114, 149);
+            this.panel8.Size = new System.Drawing.Size(141, 172);
             this.panel8.TabIndex = 110;
             // 
             // lblMember
             // 
             this.lblMember.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMember.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblMember.Location = new System.Drawing.Point(27, 103);
+            this.lblMember.Location = new System.Drawing.Point(41, 114);
             this.lblMember.Name = "lblMember";
             this.lblMember.Size = new System.Drawing.Size(60, 41);
             this.lblMember.TabIndex = 126;
@@ -252,7 +252,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox6.Location = new System.Drawing.Point(18, 11);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(108, 97);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -264,16 +264,16 @@
             this.panel7.BackColor = System.Drawing.Color.SteelBlue;
             this.panel7.Controls.Add(this.lblMotor);
             this.panel7.Controls.Add(this.pictureBox8);
-            this.panel7.Location = new System.Drawing.Point(318, 482);
+            this.panel7.Location = new System.Drawing.Point(325, 459);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(114, 149);
+            this.panel7.Size = new System.Drawing.Size(141, 172);
             this.panel7.TabIndex = 111;
             // 
             // lblMotor
             // 
             this.lblMotor.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMotor.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblMotor.Location = new System.Drawing.Point(28, 103);
+            this.lblMotor.Location = new System.Drawing.Point(42, 112);
             this.lblMotor.Name = "lblMotor";
             this.lblMotor.Size = new System.Drawing.Size(60, 41);
             this.lblMotor.TabIndex = 126;
@@ -282,7 +282,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox8.Location = new System.Drawing.Point(20, 12);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(108, 97);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -294,16 +294,16 @@
             this.panel10.BackColor = System.Drawing.Color.SlateGray;
             this.panel10.Controls.Add(this.lblServices);
             this.panel10.Controls.Add(this.pictureBox9);
-            this.panel10.Location = new System.Drawing.Point(545, 482);
+            this.panel10.Location = new System.Drawing.Point(598, 459);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(114, 149);
+            this.panel10.Size = new System.Drawing.Size(141, 172);
             this.panel10.TabIndex = 112;
             // 
             // lblServices
             // 
             this.lblServices.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServices.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblServices.Location = new System.Drawing.Point(28, 103);
+            this.lblServices.Location = new System.Drawing.Point(41, 112);
             this.lblServices.Name = "lblServices";
             this.lblServices.Size = new System.Drawing.Size(60, 41);
             this.lblServices.TabIndex = 126;
@@ -312,7 +312,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox9.Location = new System.Drawing.Point(16, 12);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(108, 97);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -324,16 +324,16 @@
             this.panel9.BackColor = System.Drawing.Color.SteelBlue;
             this.panel9.Controls.Add(this.lblSukuCadang);
             this.panel9.Controls.Add(this.pictureBox10);
-            this.panel9.Location = new System.Drawing.Point(779, 482);
+            this.panel9.Location = new System.Drawing.Point(867, 459);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(114, 149);
+            this.panel9.Size = new System.Drawing.Size(141, 172);
             this.panel9.TabIndex = 113;
             // 
             // lblSukuCadang
             // 
             this.lblSukuCadang.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSukuCadang.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblSukuCadang.Location = new System.Drawing.Point(27, 103);
+            this.lblSukuCadang.Location = new System.Drawing.Point(41, 112);
             this.lblSukuCadang.Name = "lblSukuCadang";
             this.lblSukuCadang.Size = new System.Drawing.Size(60, 41);
             this.lblSukuCadang.TabIndex = 126;
@@ -342,7 +342,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox10.Location = new System.Drawing.Point(18, 12);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(108, 97);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -354,16 +354,16 @@
             this.panel11.BackColor = System.Drawing.Color.SlateGray;
             this.panel11.Controls.Add(this.lblSupplier);
             this.panel11.Controls.Add(this.pictureBox11);
-            this.panel11.Location = new System.Drawing.Point(1002, 482);
+            this.panel11.Location = new System.Drawing.Point(1132, 459);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(114, 149);
+            this.panel11.Size = new System.Drawing.Size(141, 172);
             this.panel11.TabIndex = 114;
             // 
             // lblSupplier
             // 
             this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplier.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblSupplier.Location = new System.Drawing.Point(28, 103);
+            this.lblSupplier.Location = new System.Drawing.Point(41, 112);
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(60, 41);
             this.lblSupplier.TabIndex = 126;
@@ -372,7 +372,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox11.Location = new System.Drawing.Point(18, 12);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(108, 97);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -394,9 +394,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(80, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -447,16 +448,16 @@
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Controls.Add(this.lblMobil);
             this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Location = new System.Drawing.Point(1002, 228);
+            this.panel3.Location = new System.Drawing.Point(1132, 205);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(114, 149);
+            this.panel3.Size = new System.Drawing.Size(141, 172);
             this.panel3.TabIndex = 110;
             // 
             // lblMobil
             // 
             this.lblMobil.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMobil.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblMobil.Location = new System.Drawing.Point(28, 103);
+            this.lblMobil.Location = new System.Drawing.Point(41, 114);
             this.lblMobil.Name = "lblMobil";
             this.lblMobil.Size = new System.Drawing.Size(60, 41);
             this.lblMobil.TabIndex = 126;
@@ -465,7 +466,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Location = new System.Drawing.Point(18, 11);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(108, 97);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -480,9 +481,9 @@
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Honeydew;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(301, 382);
+            this.button2.Location = new System.Drawing.Point(308, 383);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 33);
+            this.button2.Size = new System.Drawing.Size(173, 33);
             this.button2.TabIndex = 64;
             this.button2.Text = "KARYAWAN";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -496,9 +497,9 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(528, 382);
+            this.button4.Location = new System.Drawing.Point(579, 383);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 33);
+            this.button4.Size = new System.Drawing.Size(173, 33);
             this.button4.TabIndex = 64;
             this.button4.Text = "POSISI";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -511,9 +512,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(762, 383);
+            this.button5.Location = new System.Drawing.Point(850, 383);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 33);
+            this.button5.Size = new System.Drawing.Size(173, 33);
             this.button5.TabIndex = 64;
             this.button5.Text = "MEMBER";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -526,9 +527,9 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(984, 383);
+            this.button7.Location = new System.Drawing.Point(1114, 383);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(145, 33);
+            this.button7.Size = new System.Drawing.Size(173, 33);
             this.button7.TabIndex = 119;
             this.button7.Text = "MOBIL";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -541,9 +542,9 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(301, 637);
+            this.button8.Location = new System.Drawing.Point(308, 637);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(145, 33);
+            this.button8.Size = new System.Drawing.Size(173, 33);
             this.button8.TabIndex = 120;
             this.button8.Text = "MOTOR";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -556,9 +557,9 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(528, 637);
+            this.button9.Location = new System.Drawing.Point(579, 637);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(145, 33);
+            this.button9.Size = new System.Drawing.Size(173, 33);
             this.button9.TabIndex = 121;
             this.button9.Text = "SERVICES";
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -571,9 +572,9 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.Location = new System.Drawing.Point(764, 637);
+            this.button10.Location = new System.Drawing.Point(850, 637);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(145, 33);
+            this.button10.Size = new System.Drawing.Size(173, 33);
             this.button10.TabIndex = 122;
             this.button10.Text = "SUKU CADANG";
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -586,9 +587,9 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button11.Location = new System.Drawing.Point(984, 637);
+            this.button11.Location = new System.Drawing.Point(1114, 637);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(145, 33);
+            this.button11.Size = new System.Drawing.Size(173, 33);
             this.button11.TabIndex = 123;
             this.button11.Text = "SUPPLIER";
             this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -692,7 +693,7 @@
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button12.ForeColor = System.Drawing.Color.Honeydew;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.Location = new System.Drawing.Point(-2, 471);
@@ -740,7 +741,7 @@
             this.BtnMobil.FlatAppearance.BorderSize = 0;
             this.BtnMobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMobil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMobil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnMobil.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnMobil.Image = ((System.Drawing.Image)(resources.GetObject("BtnMobil.Image")));
             this.BtnMobil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMobil.Location = new System.Drawing.Point(0, 281);
@@ -758,7 +759,7 @@
             this.BtnSupplier.FlatAppearance.BorderSize = 0;
             this.BtnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSupplier.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSupplier.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnSupplier.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("BtnSupplier.Image")));
             this.BtnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSupplier.Location = new System.Drawing.Point(0, 433);
@@ -776,7 +777,7 @@
             this.BtnSukuCadang.FlatAppearance.BorderSize = 0;
             this.BtnSukuCadang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSukuCadang.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSukuCadang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnSukuCadang.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnSukuCadang.Image = ((System.Drawing.Image)(resources.GetObject("BtnSukuCadang.Image")));
             this.BtnSukuCadang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSukuCadang.Location = new System.Drawing.Point(0, 395);
@@ -794,7 +795,7 @@
             this.BtnServices.FlatAppearance.BorderSize = 0;
             this.BtnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnServices.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnServices.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnServices.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnServices.Image = ((System.Drawing.Image)(resources.GetObject("BtnServices.Image")));
             this.BtnServices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnServices.Location = new System.Drawing.Point(0, 357);
@@ -812,7 +813,7 @@
             this.BtnMotor.FlatAppearance.BorderSize = 0;
             this.BtnMotor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMotor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMotor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnMotor.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnMotor.Image = ((System.Drawing.Image)(resources.GetObject("BtnMotor.Image")));
             this.BtnMotor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMotor.Location = new System.Drawing.Point(0, 319);
@@ -830,7 +831,7 @@
             this.BtnMember.FlatAppearance.BorderSize = 0;
             this.BtnMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMember.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMember.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnMember.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnMember.Image = ((System.Drawing.Image)(resources.GetObject("BtnMember.Image")));
             this.BtnMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMember.Location = new System.Drawing.Point(0, 243);
@@ -848,7 +849,7 @@
             this.BtnPosisi.FlatAppearance.BorderSize = 0;
             this.BtnPosisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPosisi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPosisi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnPosisi.ForeColor = System.Drawing.Color.Honeydew;
             this.BtnPosisi.Image = ((System.Drawing.Image)(resources.GetObject("BtnPosisi.Image")));
             this.BtnPosisi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPosisi.Location = new System.Drawing.Point(0, 205);

@@ -59,6 +59,7 @@ namespace E_DealerBengkel.Master.Posisi
             lbJudul.Text = "TAMBAH POSISI";
             TxtGaji.Enabled = true;
             CbStatus.Enabled = true;
+            lbledit.Visible = false;
 
             BtnSimpan.Text = "SIMPAN";
             BtnHapus.Visible = false;
@@ -72,6 +73,7 @@ namespace E_DealerBengkel.Master.Posisi
             lbJudul.Text = "UBAH POSISI";
             TxtGaji.Enabled = false;
             CbStatus.Enabled = false;
+            lbledit.Visible = true;
 
             BtnSimpan.Text = "UBAH";
             BtnHapus.Visible = true;
@@ -124,6 +126,7 @@ namespace E_DealerBengkel.Master.Posisi
             RefreshDg();
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
             BtnHapus.Visible = false;
+            lbledit.Visible = false;
         }
 
 

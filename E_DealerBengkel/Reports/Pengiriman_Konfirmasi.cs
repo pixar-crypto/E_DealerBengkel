@@ -92,6 +92,16 @@ namespace E_DealerBengkel.Reports
             this.Hide();
         }
 
+        private void Pengiriman_Konfirmasi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxSSL_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public Pengiriman_Konfirmasi(int i, String id)
         {
             this.id = id;
@@ -106,8 +116,8 @@ namespace E_DealerBengkel.Reports
                     "2. Pelanggan wajib mengembalikan barang yang ingin di retur kepada pihak VROOM DG.\n" +
                     "Demikian pemberitahuan ini disampaikan, atas perhatian dan kerja samanya kami ucapkan terimakasih.";
                 txtRecipientEmail.Text = emailTerima;
-                txtSenderEmail.Text = "vdroomjkt@gmail.com";
-                txtSenderPassword.Text = "sakisaki";
+                txtSenderEmail.Text = "vroomdg@gmail.com";
+                txtSenderPassword.Text = "vroomdg123";
                 txtSubject.Text = "VROOM DG";
             }
             else if (i == 2)
@@ -119,8 +129,8 @@ namespace E_DealerBengkel.Reports
                     "2. Pelanggan wajib mengembalikan barang yang ingin di retur kepada pihak VROOM DG.\n" +
                     "Demikian pemberitahuan ini disampaikan, atas perhatian dan kerja samanya kami ucapkan terimakasih.";
                 txtRecipientEmail.Text = emailTerima;
-                txtSenderEmail.Text = "vdroomjkt@gmail.com";
-                txtSenderPassword.Text = "sakisaki";
+                txtSenderEmail.Text = "vroomdg@gmail.com";
+                txtSenderPassword.Text = "vroomdg123";
                 txtSubject.Text = "VROOM DG";
             }
         }

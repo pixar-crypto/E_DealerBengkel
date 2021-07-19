@@ -54,6 +54,7 @@
             this.lbJudul = new System.Windows.Forms.Label();
             this.laporan_ReturTableAdapter = new E_DealerBengkel.Database_LaporanTableAdapters.Laporan_ReturTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnKonfirRetur = new System.Windows.Forms.Button();
             this.BtnLapServices = new System.Windows.Forms.Button();
@@ -62,8 +63,7 @@
             this.BtnLapPembelian = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.laporanReturBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).BeginInit();
             this.panel1.SuspendLayout();
@@ -75,6 +75,7 @@
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // laporanReturBindingSource
@@ -198,9 +199,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(80, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -322,6 +324,14 @@
             this.panel2.Size = new System.Drawing.Size(211, 788);
             this.panel2.TabIndex = 158;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Location = new System.Drawing.Point(17, 280);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(176, 3);
+            this.panel5.TabIndex = 155;
+            // 
             // BtnKembali
             // 
             this.BtnKembali.FlatAppearance.BorderSize = 0;
@@ -432,8 +442,8 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.SlateGray;
+            this.panel12.Controls.Add(this.pictureBox4);
             this.panel12.Controls.Add(this.pictureBox1);
-            this.panel12.Controls.Add(this.label2);
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(211, 151);
@@ -442,7 +452,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::E_DealerBengkel.Properties.Resources.icons8_document_90px;
             this.pictureBox1.Location = new System.Drawing.Point(39, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 94);
@@ -450,25 +460,16 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // pictureBox4
             // 
-            this.label2.BackColor = System.Drawing.Color.SlateGray;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(40, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 31);
-            this.label2.TabIndex = 125;
-            this.label2.Text = "DASHBOARD";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(17, 280);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(176, 3);
-            this.panel5.TabIndex = 155;
+            this.pictureBox4.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(87, 116);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 57;
+            this.pictureBox4.TabStop = false;
             // 
             // Laporan_Retur
             // 
@@ -503,6 +504,7 @@
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -539,7 +541,7 @@
         private System.Windows.Forms.Button BtnLapPembelian;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Service));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnUbah = new System.Windows.Forms.Button();
@@ -65,6 +65,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.dgvJenisSer = new System.Windows.Forms.DataGridView();
             this.lbStatus = new System.Windows.Forms.Label();
+            this.lbledit = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -198,6 +199,7 @@
             this.button1.Size = new System.Drawing.Size(31, 34);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // button3
             // 
@@ -212,6 +214,7 @@
             this.button3.Size = new System.Drawing.Size(31, 34);
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.btnMini_Click);
             // 
             // pictureBox12
             // 
@@ -271,9 +274,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(81, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -302,7 +306,7 @@
             this.lbJudul.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(472, 167);
+            this.lbJudul.Location = new System.Drawing.Point(663, 180);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(275, 26);
             this.lbJudul.TabIndex = 138;
@@ -313,6 +317,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.lbledit);
             this.panel3.Controls.Add(this.cbStatus);
             this.panel3.Controls.Add(this.txtHarga);
             this.panel3.Controls.Add(this.txtJenisSer);
@@ -328,7 +333,7 @@
             this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.dgvJenisSer);
             this.panel3.Controls.Add(this.lbStatus);
-            this.panel3.Location = new System.Drawing.Point(262, 232);
+            this.panel3.Location = new System.Drawing.Point(285, 232);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1013, 438);
             this.panel3.TabIndex = 139;
@@ -500,16 +505,15 @@
             this.dgvJenisSer.AllowUserToResizeColumns = false;
             this.dgvJenisSer.AllowUserToResizeRows = false;
             this.dgvJenisSer.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvJenisSer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvJenisSer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvJenisSer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvJenisSer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvJenisSer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJenisSer.Location = new System.Drawing.Point(369, 48);
             this.dgvJenisSer.Name = "dgvJenisSer";
@@ -532,6 +536,16 @@
             this.lbStatus.TabIndex = 58;
             this.lbStatus.Text = "STATUS";
             this.lbStatus.Visible = false;
+            // 
+            // lbledit
+            // 
+            this.lbledit.AutoSize = true;
+            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbledit.Location = new System.Drawing.Point(366, 371);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(339, 16);
+            this.lbledit.TabIndex = 125;
+            this.lbledit.Text = "*Klik row pada tabel terlebih dahulu untuk mengedit data";
             // 
             // CRUD_Service
             // 
@@ -607,5 +621,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.DataGridView dgvJenisSer;
         private System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.Label lbledit;
     }
 }

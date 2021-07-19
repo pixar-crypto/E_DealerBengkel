@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pengiriman_Konfirmasi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.rtbBody = new System.Windows.Forms.RichTextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,17 +52,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenderPassword = new System.Windows.Forms.TextBox();
             this.txtSenderEmail = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,64 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(813, 140);
             this.panel1.TabIndex = 68;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(308, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(215, 25);
+            this.label9.TabIndex = 151;
+            this.label9.Text = "CAKUNG - JAKARTA TIMUR";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(308, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 35);
+            this.label1.TabIndex = 150;
+            this.label1.Text = "VROOM! D&&G";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(221, 45);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 149;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(757, 39);
+            this.panel2.TabIndex = 144;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(720, 3);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 34);
+            this.btnClose.TabIndex = 66;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // rtbBody
             // 
@@ -215,6 +273,7 @@
             this.cbxSSL.TabIndex = 9;
             this.cbxSSL.Text = "SSL";
             this.cbxSSL.UseVisualStyleBackColor = true;
+            this.cbxSSL.CheckedChanged += new System.EventHandler(this.cbxSSL_CheckedChanged);
             // 
             // label2
             // 
@@ -255,64 +314,6 @@
             this.txtSenderEmail.Size = new System.Drawing.Size(142, 20);
             this.txtSenderEmail.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(757, 39);
-            this.panel2.TabIndex = 144;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(720, 3);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 34);
-            this.btnClose.TabIndex = 66;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(308, 89);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(215, 25);
-            this.label9.TabIndex = 151;
-            this.label9.Text = "CAKUNG - JAKARTA TIMUR";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(308, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 35);
-            this.label1.TabIndex = 150;
-            this.label1.Text = "VROOM! D&&G";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(221, 45);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 149;
-            this.pictureBox2.TabStop = false;
-            // 
             // Pengiriman_Konfirmasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,15 +330,16 @@
             this.Name = "Pengiriman_Konfirmasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pengiriman_Konfirmasi";
+            this.Load += new System.EventHandler(this.Pengiriman_Konfirmasi_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

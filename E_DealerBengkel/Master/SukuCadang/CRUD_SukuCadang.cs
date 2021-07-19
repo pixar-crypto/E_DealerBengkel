@@ -16,9 +16,6 @@ namespace E_DealerBengkel.Master.SukuCadang
 {
     public partial class CRUD_SukuCadang : Form
     {
-        //---SERVER UMUM---
-        string connectionString =
-          "integrated security=true; data source=localhost;initial catalog=VroomDG";
         String id;
 
         Timer timer = new Timer();
@@ -51,6 +48,7 @@ namespace E_DealerBengkel.Master.SukuCadang
             cmbSup.Text = " - PILIH SUPPLIER -";
             cbStatus.Text = " - PILIH STATUS -";
             BtnHapus.Visible = false;
+            lbledit.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -74,6 +72,7 @@ namespace E_DealerBengkel.Master.SukuCadang
             TxtJumlah.Enabled = true;
             cmbSup.Enabled = true;
             cbStatus.Enabled = false;
+            lbledit.Visible = false;
 
             BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH SUKUCADANG";
@@ -94,6 +93,7 @@ namespace E_DealerBengkel.Master.SukuCadang
             TxtJumlah.Enabled = false;
             cmbSup.Enabled = false;
             cbStatus.Enabled = false;
+            lbledit.Visible = true;
 
             BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH SUKUCADANG";

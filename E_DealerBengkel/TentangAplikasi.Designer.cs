@@ -31,31 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TentangAplikasi));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnKembali = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbWaktu = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
             this.lbJudul = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.BtnKembali = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,6 +80,36 @@
             this.label6.Text = "Tentang Aplikasi";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1003, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 34);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(968, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 34);
+            this.button3.TabIndex = 5;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
@@ -91,6 +121,24 @@
             this.panel2.Size = new System.Drawing.Size(199, 627);
             this.panel2.TabIndex = 7;
             // 
+            // BtnKembali
+            // 
+            this.BtnKembali.FlatAppearance.BorderSize = 0;
+            this.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKembali.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKembali.ForeColor = System.Drawing.Color.Honeydew;
+            this.BtnKembali.Image = ((System.Drawing.Image)(resources.GetObject("BtnKembali.Image")));
+            this.BtnKembali.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKembali.Location = new System.Drawing.Point(0, 585);
+            this.BtnKembali.Name = "BtnKembali";
+            this.BtnKembali.Size = new System.Drawing.Size(200, 42);
+            this.BtnKembali.TabIndex = 59;
+            this.BtnKembali.Text = "   KEMBALI";
+            this.BtnKembali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKembali.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnKembali.UseVisualStyleBackColor = true;
+            this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click_1);
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.SlateGray;
@@ -99,6 +147,17 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(200, 151);
             this.panel12.TabIndex = 131;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(55, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 141;
+            this.pictureBox2.TabStop = false;
             // 
             // label9
             // 
@@ -134,6 +193,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 93);
             this.panel4.TabIndex = 146;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 117;
+            this.pictureBox3.TabStop = false;
             // 
             // lbWaktu
             // 
@@ -186,16 +255,6 @@
             this.label3.Text = "RIFQIH SYAHRIAL ANWAR";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(14, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 117;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -217,65 +276,6 @@
             this.pictureBox4.TabIndex = 149;
             this.pictureBox4.TabStop = false;
             // 
-            // BtnKembali
-            // 
-            this.BtnKembali.FlatAppearance.BorderSize = 0;
-            this.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnKembali.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnKembali.ForeColor = System.Drawing.Color.Honeydew;
-            this.BtnKembali.Image = ((System.Drawing.Image)(resources.GetObject("BtnKembali.Image")));
-            this.BtnKembali.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKembali.Location = new System.Drawing.Point(0, 585);
-            this.BtnKembali.Name = "BtnKembali";
-            this.BtnKembali.Size = new System.Drawing.Size(200, 42);
-            this.BtnKembali.TabIndex = 59;
-            this.BtnKembali.Text = "   KEMBALI";
-            this.BtnKembali.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnKembali.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnKembali.UseVisualStyleBackColor = true;
-            this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.SlateGray;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(55, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 141;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1003, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 34);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(968, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 34);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // TentangAplikasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,16 +296,17 @@
             this.Name = "TentangAplikasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TentangAplikasi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TentangAplikasi_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

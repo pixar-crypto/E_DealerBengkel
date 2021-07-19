@@ -55,6 +55,7 @@ namespace E_DealerBengkel.Master.Mobil
             cmbSup.Text = " - PILIH SUPPLIER -";
             cbJenis.Text = " - PILIH JENIS -";
             BtnHapus.Visible = false;
+            lbledit.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -103,6 +104,7 @@ namespace E_DealerBengkel.Master.Mobil
             TxtJumlah.Enabled = true;
             cmbSup.Enabled = true;
             cbStatus.Enabled = false;
+            lbledit.Visible = false;
 
             lbJudul.Text = "TAMBAH MOBIL";
             BtnHapus.Visible = false;
@@ -110,6 +112,7 @@ namespace E_DealerBengkel.Master.Mobil
             cbStatus.Visible = false;
             cmbSup.Text = " - PILIH SUPPLIER -";
             cbJenis.Text = " - PILIH JENIS -";
+            BtnSimpan.Text = "SIMPAN";
         }
 
         private void BtnUbah_Click(object sender, EventArgs e)
@@ -122,6 +125,7 @@ namespace E_DealerBengkel.Master.Mobil
             TxtJumlah.Enabled = false;
             cmbSup.Enabled = false;
             cbStatus.Enabled = false;
+            lbledit.Visible = true;
 
             lbJudul.Text = "UBAH MOBIL";
             BtnHapus.Visible = true;
@@ -130,6 +134,7 @@ namespace E_DealerBengkel.Master.Mobil
             cbStatus.Text = " - PILIH STATUS -";
             cmbSup.Text = " - PILIH SUPPLIER -";
             cbJenis.Text = " - PILIH JENIS -";
+            BtnSimpan.Text = "UBAH";
         }
 
         private void BtnKembali_Click(object sender, EventArgs e)
@@ -363,7 +368,7 @@ namespace E_DealerBengkel.Master.Mobil
                 if (TxtMerek.Text == "" || TxtWarna.Text == "" || cbJenis.Text == " - PILIH JENIS -" ||
                     TxtHargaBeli.Text == "" || TxtJumlah.Text == "" || cmbSup.Text == " - PILIH SUPPLIER -")
                 {
-                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBox.Show("Data ada yang kosong!!", "Warning!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -375,25 +380,25 @@ namespace E_DealerBengkel.Master.Mobil
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     SqlParameter param = new SqlParameter();
 
-                    SqlCommand insert = new SqlCommand("[sp_UpdateMobil]", connection);
-                    insert.CommandType = CommandType.StoredProcedure;
+                    SqlCommand update = new SqlCommand("[sp_UpdateMobil]", connection);
+                    update.CommandType = CommandType.StoredProcedure;
 
-                    insert.Parameters.AddWithValue("id_mobil", id);
-                    insert.Parameters.AddWithValue("merek_mobil", TxtMerek.Text);
-                    insert.Parameters.AddWithValue("warna", TxtWarna.Text);
-                    insert.Parameters.AddWithValue("jenis_mobil", cbJenis.Text);
+                    update.Parameters.AddWithValue("id_mobil", id);
+                    update.Parameters.AddWithValue("merek_mobil", TxtMerek.Text);
+                    update.Parameters.AddWithValue("warna", TxtWarna.Text);
+                    update.Parameters.AddWithValue("jenis_mobil", cbJenis.Text);
                     string hargaBeli = Program.toAngka(TxtHargaBeli.Text).ToString();
-                    insert.Parameters.AddWithValue("harga_beli", hargaBeli);
+                    update.Parameters.AddWithValue("harga_beli", hargaBeli);
                     string hargaJual = Program.toAngka(TxtHargaJual.Text).ToString();
-                    insert.Parameters.AddWithValue("harga_jual", hargaJual);
-                    insert.Parameters.AddWithValue("jumlah", TxtJumlah.Text);
-                    insert.Parameters.AddWithValue("id_supplier", cmbSup.SelectedValue);
-                    insert.Parameters.AddWithValue("status", cbStatus.Text);
+                    update.Parameters.AddWithValue("harga_jual", hargaJual);
+                    update.Parameters.AddWithValue("jumlah", TxtJumlah.Text);
+                    update.Parameters.AddWithValue("id_supplier", cmbSup.SelectedValue);
+                    update.Parameters.AddWithValue("status", cbStatus.Text);
 
                     try
                     {
                         //transaction.Commit();
-                        insert.ExecuteNonQuery();
+                        update.ExecuteNonQuery();
                         MessageBox.Show("Data Berhasil diperbarui", "Information",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 

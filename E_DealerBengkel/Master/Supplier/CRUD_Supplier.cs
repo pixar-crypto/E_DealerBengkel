@@ -132,6 +132,7 @@ namespace E_DealerBengkel.Master.Supplier
             TxtEmail.Enabled = true;
             TxtNoTelp.Enabled = true;
             CbStatus.Enabled = false;
+            lbledit.Visible = false;
 
             BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH SUPPLIER";
@@ -145,6 +146,7 @@ namespace E_DealerBengkel.Master.Supplier
             TxtEmail.Enabled = false;
             TxtNoTelp.Enabled = false;
             CbStatus.Enabled = false;
+            lbledit.Visible = true;
 
             BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH SUPPLIER";
@@ -212,6 +214,7 @@ namespace E_DealerBengkel.Master.Supplier
             RefreshDg();
             lbUser.Text = lbUser.Text + Thread.CurrentPrincipal.Identity.Name;
             BtnHapus.Visible = false;
+            lbledit.Visible = false;
         }
 
         private void TxtNoTelp_KeyPress(object sender, KeyPressEventArgs e)

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Posisi));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,6 +65,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.lbledit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -208,9 +209,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(81, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -238,6 +240,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.lbledit);
             this.panel3.Controls.Add(this.TxtGaji);
             this.panel3.Controls.Add(this.TxtDeskripsi);
             this.panel3.Controls.Add(this.label6);
@@ -253,7 +256,7 @@
             this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.dgvPosisi);
             this.panel3.Controls.Add(this.lbStatus);
-            this.panel3.Location = new System.Drawing.Point(262, 232);
+            this.panel3.Location = new System.Drawing.Point(285, 232);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1013, 438);
             this.panel3.TabIndex = 127;
@@ -426,16 +429,15 @@
             this.dgvPosisi.AllowUserToResizeColumns = false;
             this.dgvPosisi.AllowUserToResizeRows = false;
             this.dgvPosisi.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvPosisi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPosisi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPosisi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPosisi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPosisi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPosisi.Location = new System.Drawing.Point(368, 55);
             this.dgvPosisi.Name = "dgvPosisi";
@@ -464,7 +466,7 @@
             this.lbJudul.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(660, 180);
+            this.lbJudul.Location = new System.Drawing.Point(669, 180);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(275, 26);
             this.lbJudul.TabIndex = 125;
@@ -535,6 +537,16 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 132;
             this.pictureBox12.TabStop = false;
+            // 
+            // lbledit
+            // 
+            this.lbledit.AutoSize = true;
+            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbledit.Location = new System.Drawing.Point(365, 374);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(339, 16);
+            this.lbledit.TabIndex = 124;
+            this.lbledit.Text = "*Klik row pada tabel terlebih dahulu untuk mengedit data";
             // 
             // CRUD_Posisi
             // 
@@ -610,5 +622,6 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.TextBox TxtGaji;
         private System.Windows.Forms.TextBox TxtDeskripsi;
+        private System.Windows.Forms.Label lbledit;
     }
 }

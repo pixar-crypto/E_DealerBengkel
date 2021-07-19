@@ -420,6 +420,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\documents_30px.png" />
+    <None Include="Resources\icons8_document_90px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -47,6 +47,8 @@
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbMataBuka)).BeginInit();
@@ -60,6 +62,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -268,6 +272,28 @@
             this.panel4.Size = new System.Drawing.Size(350, 3);
             this.panel4.TabIndex = 33;
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Honeydew;
+            this.label3.Location = new System.Drawing.Point(46, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(329, 44);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "VROOM! D&&G";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Honeydew;
+            this.label4.Location = new System.Drawing.Point(33, 379);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(353, 44);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "REPAIR OR REPLACE";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +353,8 @@
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 

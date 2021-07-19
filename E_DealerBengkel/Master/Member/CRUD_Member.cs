@@ -81,6 +81,7 @@ namespace E_DealerBengkel.Master.Member
             TxtEmail.Enabled = true;
             TxtNoTelp.Enabled = true;
             CbStatus.Enabled = false;
+            lbledit.Visible = false;
 
             BtnSimpan.Text = "SIMPAN";
             lbJudul.Text = "TAMBAH MEMBER";
@@ -97,6 +98,7 @@ namespace E_DealerBengkel.Master.Member
             TxtEmail.Enabled = false;
             TxtNoTelp.Enabled = false;
             CbStatus.Enabled = false;
+            lbledit.Visible = true;
 
             BtnSimpan.Text = "UBAH";
             lbJudul.Text = "UBAH MEMBER";
@@ -168,6 +170,7 @@ namespace E_DealerBengkel.Master.Member
             RefreshDg();
             CbStatus.Text = " - PILIH STATUS -";
             BtnHapus.Visible = false;
+            lbledit.Visible = false;
         }
 
         public void RefreshDg()

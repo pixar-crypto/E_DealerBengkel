@@ -80,6 +80,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
+            this.lbledit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -280,9 +281,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(81, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -320,7 +322,7 @@
             // 
             this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbJudul.ForeColor = System.Drawing.Color.Black;
-            this.lbJudul.Location = new System.Drawing.Point(636, 180);
+            this.lbJudul.Location = new System.Drawing.Point(666, 182);
             this.lbJudul.Name = "lbJudul";
             this.lbJudul.Size = new System.Drawing.Size(275, 23);
             this.lbJudul.TabIndex = 145;
@@ -331,6 +333,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.lbledit);
             this.panel3.Controls.Add(this.cbJenis);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label3);
@@ -357,7 +360,7 @@
             this.panel3.Controls.Add(this.dgvMotor);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.lbStatus);
-            this.panel3.Location = new System.Drawing.Point(258, 232);
+            this.panel3.Location = new System.Drawing.Point(285, 232);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1013, 438);
             this.panel3.TabIndex = 146;
@@ -699,6 +702,16 @@
             // 
             this.tSupplierTableAdapter.ClearBeforeFill = true;
             // 
+            // lbledit
+            // 
+            this.lbledit.AutoSize = true;
+            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbledit.Location = new System.Drawing.Point(371, 377);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(339, 16);
+            this.lbledit.TabIndex = 123;
+            this.lbledit.Text = "*Klik row pada tabel terlebih dahulu untuk mengedit data";
+            // 
             // CRUD_Motor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -791,6 +804,7 @@
         private VroomDGDataSet vroomDGDataSet;
         private System.Windows.Forms.BindingSource bindingSource1;
         private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
+        private System.Windows.Forms.Label lbledit;
         //       private VroomDGDataSet2TableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
     }
 }

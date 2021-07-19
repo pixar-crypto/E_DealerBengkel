@@ -29,18 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laporan_Service));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.laporanServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database_Laporan = new E_DealerBengkel.Database_Laporan();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbWaktu = new System.Windows.Forms.Label();
             this.lbUser = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,30 +48,34 @@
             this.dateAwal = new System.Windows.Forms.DateTimePicker();
             this.lbJudul = new System.Windows.Forms.Label();
             this.laporan_ServiceTableAdapter = new E_DealerBengkel.Database_LaporanTableAdapters.Laporan_ServiceTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.BtnKembali = new System.Windows.Forms.Button();
             this.BtnKonfirRetur = new System.Windows.Forms.Button();
             this.BtnLapServices = new System.Windows.Forms.Button();
             this.BtnLapRetur = new System.Windows.Forms.Button();
             this.BtnLapPenjualan = new System.Windows.Forms.Button();
             this.BtnLapPembelian = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.laporanServiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // laporanServiceBindingSource
@@ -109,36 +110,6 @@
             this.label3.Text = "Halaman Manager - Laporan Service";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1412, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 34);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1381, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 34);
-            this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -154,9 +125,10 @@
             // lbWaktu
             // 
             this.lbWaktu.AutoSize = true;
+            this.lbWaktu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWaktu.Location = new System.Drawing.Point(80, 59);
             this.lbWaktu.Name = "lbWaktu";
-            this.lbWaktu.Size = new System.Drawing.Size(0, 13);
+            this.lbWaktu.Size = new System.Drawing.Size(0, 16);
             this.lbWaktu.TabIndex = 115;
             // 
             // lbUser
@@ -168,16 +140,6 @@
             this.lbUser.Size = new System.Drawing.Size(135, 19);
             this.lbUser.TabIndex = 18;
             this.lbUser.Text = "Hallo, manager ";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(14, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 104;
-            this.pictureBox3.TabStop = false;
             // 
             // label9
             // 
@@ -239,9 +201,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "dsService";
-            reportDataSource1.Value = this.laporanServiceBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource3.Name = "dsService";
+            reportDataSource3.Value = this.laporanServiceBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "E_DealerBengkel.Reports.Rdlc.Laporan_Service.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(47, 85);
             this.reportViewer1.Name = "reportViewer1";
@@ -284,27 +246,6 @@
             // 
             this.laporan_ServiceTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(216, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 143;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox12.Location = new System.Drawing.Point(200, 34);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(1183, 117);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 142;
-            this.pictureBox12.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
@@ -321,6 +262,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 788);
             this.panel2.TabIndex = 157;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Location = new System.Drawing.Point(17, 318);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(176, 3);
+            this.panel5.TabIndex = 155;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.SlateGray;
+            this.panel12.Controls.Add(this.pictureBox4);
+            this.panel12.Controls.Add(this.pictureBox1);
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(211, 151);
+            this.panel12.TabIndex = 128;
             // 
             // BtnKembali
             // 
@@ -429,20 +388,10 @@
             this.BtnLapPembelian.UseVisualStyleBackColor = true;
             this.BtnLapPembelian.Click += new System.EventHandler(this.BtnLapPembelian_Click);
             // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.SlateGray;
-            this.panel12.Controls.Add(this.pictureBox1);
-            this.panel12.Controls.Add(this.label2);
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(211, 151);
-            this.panel12.TabIndex = 128;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::E_DealerBengkel.Properties.Resources.icons8_document_90px;
             this.pictureBox1.Location = new System.Drawing.Point(39, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 94);
@@ -450,25 +399,77 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // pictureBox3
             // 
-            this.label2.BackColor = System.Drawing.Color.SlateGray;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Honeydew;
-            this.label2.Location = new System.Drawing.Point(40, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 31);
-            this.label2.TabIndex = 125;
-            this.label2.Text = "DASHBOARD";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 104;
+            this.pictureBox3.TabStop = false;
             // 
-            // panel5
+            // pictureBox2
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(17, 318);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(176, 3);
-            this.panel5.TabIndex = 155;
+            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(216, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 143;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox12.Location = new System.Drawing.Point(200, 34);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(1183, 117);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 142;
+            this.pictureBox12.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1412, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 34);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(1381, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 34);
+            this.button3.TabIndex = 5;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(89, 116);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 56;
+            this.pictureBox4.TabStop = false;
             // 
             // Laporan_Service
             // 
@@ -495,14 +496,15 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,7 +542,7 @@
         private System.Windows.Forms.Button BtnLapPembelian;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

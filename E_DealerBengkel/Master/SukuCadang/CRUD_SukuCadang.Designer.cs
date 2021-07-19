@@ -80,6 +80,7 @@
             this.lbStatus = new System.Windows.Forms.Label();
             this.lbJudul = new System.Windows.Forms.Label();
             this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
+            this.lbledit = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -209,7 +210,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1336, 4);
+            this.button1.Location = new System.Drawing.Point(1356, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 34);
@@ -224,7 +225,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1301, 4);
+            this.button3.Location = new System.Drawing.Point(1321, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 34);
@@ -247,7 +248,7 @@
             this.label9.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(295, 91);
+            this.label9.Location = new System.Drawing.Point(301, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(215, 25);
             this.label9.TabIndex = 144;
@@ -259,7 +260,7 @@
             this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label1.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(295, 58);
+            this.label1.Location = new System.Drawing.Point(301, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 35);
             this.label1.TabIndex = 143;
@@ -309,7 +310,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(209, 58);
+            this.pictureBox2.Location = new System.Drawing.Point(215, 56);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -320,6 +321,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.lbledit);
             this.panel3.Controls.Add(this.TxtJenis);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label3);
@@ -346,7 +348,7 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.lbStatus);
-            this.panel3.Location = new System.Drawing.Point(259, 232);
+            this.panel3.Location = new System.Drawing.Point(285, 232);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1013, 438);
             this.panel3.TabIndex = 145;
@@ -694,6 +696,16 @@
             // 
             this.tSupplierTableAdapter.ClearBeforeFill = true;
             // 
+            // lbledit
+            // 
+            this.lbledit.AutoSize = true;
+            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbledit.Location = new System.Drawing.Point(363, 378);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(339, 16);
+            this.lbledit.TabIndex = 127;
+            this.lbledit.Text = "*Klik row pada tabel terlebih dahulu untuk mengedit data";
+            // 
             // CRUD_SukuCadang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,6 +725,7 @@
             this.Name = "CRUD_SukuCadang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD_SukuCadang";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CRUD_SukuCadang_Load);
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -785,6 +798,7 @@
         private VroomDGDataSet vroomDGDataSet;
         private System.Windows.Forms.BindingSource bindingSource1;
         private VroomDGDataSetTableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
+        private System.Windows.Forms.Label lbledit;
         //    private VroomDGDataSet2TableAdapters.tSupplierTableAdapter tSupplierTableAdapter;
     }
 }
