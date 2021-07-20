@@ -102,6 +102,7 @@ namespace E_DealerBengkel
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             String role = "";
+            String status = "";
 
             if (TxtUsername.Text == "" || TxtPassword.Text == "")
             {
@@ -134,12 +135,13 @@ namespace E_DealerBengkel
                 {
                     //---- AMBIL ROLE ----
                     connection.Close();
-                    SqlCommand query = new SqlCommand("SELECT id_posisi FROM tKaryawan WHERE username='" + TxtUsername.Text + "'", connection);
+                    SqlCommand query = new SqlCommand("SELECT id_posisi, status FROM tKaryawan WHERE username='" + TxtUsername.Text + "'", connection);
                     connection.Open();
 
                     SqlDataReader rdr = query.ExecuteReader();
                     rdr.Read();
                     role = rdr.GetString(0);
+                    status = rdr.GetString(1);
                     //-----------------------
 
                     //---- AMBIL USERNAME ----
@@ -154,7 +156,7 @@ namespace E_DealerBengkel
                     Thread.CurrentPrincipal = myPrincipal;
                     //-----------------------
 
-                    if (role == "ROLE-03")
+                    if (role == "ROLE-03" && status == "Aktif")
                     {
                         MessageBox.Show("Login berhasil!", "Pemberitahuan!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -162,7 +164,7 @@ namespace E_DealerBengkel
                         adm.Show();
                         this.Hide();
                     }
-                    else if (role == "ROLE-02")
+                    else if (role == "ROLE-02" && status == "Aktif")
                     {
                         MessageBox.Show("Login berhasil!", "Pemberitahuan!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -170,13 +172,17 @@ namespace E_DealerBengkel
                         kt.Show();
                         this.Hide();
                     }
-                    else if (role == "ROLE-01")
+                    else if (role == "ROLE-01" && status == "Aktif")
                     {
                         MessageBox.Show("Login berhasil!", "Pemberitahuan!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Manager_Report ml = new Manager_Report();
                         ml.Show();
                         this.Hide();
+                    }
+                    else {
+                        MessageBox.Show("Akun anda sudah tidak aktif! Silahkan hubungi Administrator!", "Pemberitahuan!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 connection.Close();
