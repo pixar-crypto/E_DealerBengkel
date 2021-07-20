@@ -793,7 +793,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_mobil", idMobil);
-            insert.Parameters.AddWithValue("merk_mobil", merk);
+            insert.Parameters.AddWithValue("merek_mobil", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_mobil", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
@@ -836,7 +836,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_motor", idMotor);
-            insert.Parameters.AddWithValue("merk_motor", merk);
+            insert.Parameters.AddWithValue("merek_motor", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_motor", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));

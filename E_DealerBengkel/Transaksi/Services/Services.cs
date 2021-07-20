@@ -261,12 +261,12 @@ namespace E_DealerBengkel.Transaksi.Services
         {
             if (TxtNoPlat.Text == "" || TxtUangBayar.Text == "" || TxtJumlahBayar.Text == "" && (rbMobil.Checked == false || rbMotor.Checked == false))
             {
-                MessageBox.Show("Data masih ada yang kosong", "Pemberitahuan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data masih ada yang kosong", "Warning",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (double.Parse(TxtJumlahBayar.Text) > double.Parse(TxtUangBayar.Text))
             {
-                MessageBox.Show("Uang anda kurang", "Pemberitahuan",
+                MessageBox.Show("Uang anda kurang", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else

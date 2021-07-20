@@ -471,7 +471,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_mobil", idMobil);
-            insert.Parameters.AddWithValue("merk_mobil", merek);
+            insert.Parameters.AddWithValue("merek_mobil", merek);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_mobil", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
@@ -517,7 +517,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("id_motor", idMotor);
-            insert.Parameters.AddWithValue("merk_motor", merk);
+            insert.Parameters.AddWithValue("merek_motor", merk);
             insert.Parameters.AddWithValue("warna", tipe);
             insert.Parameters.AddWithValue("jenis_motor", jenis);
             insert.Parameters.AddWithValue("harga_beli", double.Parse(hargaBeli));
@@ -722,8 +722,8 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         {
             if (TxtJumlahBayar.Text == "")
             {
-                MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data ada yang kosong!!", "Warning!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -872,6 +872,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             cbSupplier.Text = " -- PILIH SUPPLIER --";
             cbJenisBarang.Text = " -- PILIH JENIS BARANG --";
             TxtJumlahBayar.Text = "";
+            TxtCariBarang.Text = "";
         }
 
         public string autogenerateID(string firstText, string query)
