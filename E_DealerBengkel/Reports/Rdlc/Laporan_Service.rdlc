@@ -541,7 +541,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!harga.Value)</Value>
+                              <Value>=Fields!harga.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>
@@ -706,7 +706,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!total_harga.Value</Value>
+                              <Value>=Sum(Fields!harga.Value)</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Format>'Rp' #,0.00;'Rp' #,0.00-</Format>

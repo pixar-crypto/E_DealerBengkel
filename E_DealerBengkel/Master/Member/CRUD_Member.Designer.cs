@@ -46,6 +46,7 @@
             this.lbUser = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbledit = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.TxtAlamat = new System.Windows.Forms.TextBox();
             this.TxtNoTelp = new System.Windows.Forms.TextBox();
@@ -70,7 +71,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbledit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -303,6 +303,16 @@
             this.panel3.Size = new System.Drawing.Size(1013, 438);
             this.panel3.TabIndex = 127;
             // 
+            // lbledit
+            // 
+            this.lbledit.AutoSize = true;
+            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbledit.Location = new System.Drawing.Point(373, 378);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(339, 16);
+            this.lbledit.TabIndex = 123;
+            this.lbledit.Text = "*Klik row pada tabel terlebih dahulu untuk mengedit data";
+            // 
             // TxtEmail
             // 
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,6 +344,7 @@
             // 
             this.TxtNoKTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNoKTP.Location = new System.Drawing.Point(161, 84);
+            this.TxtNoKTP.MaxLength = 16;
             this.TxtNoKTP.Name = "TxtNoKTP";
             this.TxtNoKTP.Size = new System.Drawing.Size(185, 21);
             this.TxtNoKTP.TabIndex = 88;
@@ -599,16 +610,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 134;
             this.pictureBox1.TabStop = false;
-            // 
-            // lbledit
-            // 
-            this.lbledit.AutoSize = true;
-            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbledit.Location = new System.Drawing.Point(373, 378);
-            this.lbledit.Name = "lbledit";
-            this.lbledit.Size = new System.Drawing.Size(339, 16);
-            this.lbledit.TabIndex = 123;
-            this.lbledit.Text = "*Klik row pada tabel terlebih dahulu untuk mengedit data";
             // 
             // CRUD_Member
             // 

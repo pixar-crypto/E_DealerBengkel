@@ -61,7 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblMobil = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -91,6 +90,7 @@
             this.BtnKaryawan = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.lblMobil = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -452,16 +452,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(141, 172);
             this.panel3.TabIndex = 110;
-            // 
-            // lblMobil
-            // 
-            this.lblMobil.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMobil.ForeColor = System.Drawing.Color.Honeydew;
-            this.lblMobil.Location = new System.Drawing.Point(41, 114);
-            this.lblMobil.Name = "lblMobil";
-            this.lblMobil.Size = new System.Drawing.Size(60, 41);
-            this.lblMobil.TabIndex = 126;
-            this.lblMobil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox7
             // 
@@ -899,6 +889,16 @@
             this.panel12.Size = new System.Drawing.Size(212, 151);
             this.panel12.TabIndex = 128;
             // 
+            // lblMobil
+            // 
+            this.lblMobil.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobil.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblMobil.Location = new System.Drawing.Point(41, 114);
+            this.lblMobil.Name = "lblMobil";
+            this.lblMobil.Size = new System.Drawing.Size(60, 41);
+            this.lblMobil.TabIndex = 126;
+            this.lblMobil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Admin_Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1008,7 +1008,6 @@
         private System.Windows.Forms.Label lblServices;
         private System.Windows.Forms.Label lblSukuCadang;
         private System.Windows.Forms.Label lblSupplier;
-        private System.Windows.Forms.Label lblMobil;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label4;
@@ -1028,5 +1027,6 @@
         private System.Windows.Forms.Button BtnKaryawan;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label lblMobil;
     }
 }

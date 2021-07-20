@@ -289,9 +289,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TentangAplikasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

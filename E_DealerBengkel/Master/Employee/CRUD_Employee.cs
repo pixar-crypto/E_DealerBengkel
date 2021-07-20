@@ -384,9 +384,9 @@ namespace E_DealerBengkel.Master.Employee
                         MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else if (TxtNoTelp.Text.Length < 13)
+                    else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
                     {
-                        MessageBox.Show("No. Telepon harus 13 digit!!", "Pemberitahuan",
+                        MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
@@ -492,9 +492,9 @@ namespace E_DealerBengkel.Master.Employee
                         MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else if (TxtNoTelp.Text.Length < 13)
+                    else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
                     {
-                        MessageBox.Show("No. Telepon harus 13 digit!!", "Pemberitahuan",
+                        MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
@@ -522,8 +522,8 @@ namespace E_DealerBengkel.Master.Employee
                             insert.Parameters.AddWithValue("email", TxtEmail.Text);
                             insert.Parameters.AddWithValue("no_telepon", TxtNoTelp.Text);
                             insert.Parameters.AddWithValue("id_posisi", CbPosisi.SelectedValue);
-                            insert.Parameters.AddWithValue("username", null);
-                            insert.Parameters.AddWithValue("password", null);
+                            insert.Parameters.AddWithValue("username", DBNull.Value);
+                            insert.Parameters.AddWithValue("password", DBNull.Value);
                             insert.Parameters.AddWithValue("status", "Aktif");
 
                             try
@@ -557,9 +557,9 @@ namespace E_DealerBengkel.Master.Employee
                     {
                         MessageBox.Show("Data ada yang kosong!!");
                     }
-                    else if (TxtNoTelp.Text.Length < 13)
+                    else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
                     {
-                        MessageBox.Show("No. Telepon harus 13 digit!!", "Pemberitahuan",
+                        MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
@@ -841,9 +841,9 @@ namespace E_DealerBengkel.Master.Employee
                     {
                         MessageBox.Show("Data ada yang kosong!!");
                     }
-                    else if (TxtNoTelp.Text.Length < 13)
+                    else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
                     {
-                        MessageBox.Show("No. Telepon harus 13 digit!!", "Pemberitahuan",
+                        MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
@@ -868,8 +868,8 @@ namespace E_DealerBengkel.Master.Employee
                             insert.Parameters.AddWithValue("email", TxtEmail.Text);
                             insert.Parameters.AddWithValue("no_telepon", TxtNoTelp.Text);
                             insert.Parameters.AddWithValue("id_posisi", CbPosisi.SelectedValue);
-                            insert.Parameters.AddWithValue("username", null);
-                            insert.Parameters.AddWithValue("password", null);
+                            insert.Parameters.AddWithValue("username", DBNull.Value);
+                            insert.Parameters.AddWithValue("password", DBNull.Value);
                             insert.Parameters.AddWithValue("status", CbStatus.Text);
 
                             try

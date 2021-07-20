@@ -256,9 +256,9 @@ namespace E_DealerBengkel.Master.Posisi
         {
             if (lbJudul.Text == "TAMBAH POSISI")
             {
-                if (TxtDeskripsi.Text == "" || TxtGaji.Text == "" || CbStatus.Text == "-- Pilih Status --")
+                if (TxtDeskripsi.Text == "" || TxtGaji.Text == "")
                 {
-                    MessageBox.Show("Data ada yang kosong!!", "Information!",
+                    MessageBox.Show("Data ada yang kosong!!", "Warning!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -283,7 +283,8 @@ namespace E_DealerBengkel.Master.Posisi
 
                         insert.Parameters.AddWithValue("id_posisi", id);
                         insert.Parameters.AddWithValue("deskripsi", TxtDeskripsi.Text);
-                        insert.Parameters.AddWithValue("gaji", TxtGaji.Text);
+                        string harga = Program.toAngka(TxtGaji.Text).ToString();
+                        insert.Parameters.AddWithValue("gaji", harga);
                         insert.Parameters.AddWithValue("status", "Aktif");
 
                         try
@@ -333,7 +334,8 @@ namespace E_DealerBengkel.Master.Posisi
 
                         insert.Parameters.AddWithValue("id_posisi", id);
                         insert.Parameters.AddWithValue("deskripsi", TxtDeskripsi.Text);
-                        insert.Parameters.AddWithValue("gaji", TxtGaji.Text);
+                        string harga = Program.toAngka(TxtGaji.Text).ToString();
+                        insert.Parameters.AddWithValue("gaji", harga);
                         insert.Parameters.AddWithValue("status", CbStatus.Text);
 
                         try

@@ -17,10 +17,6 @@ namespace E_DealerBengkel.Master.Supplier
 {
     public partial class CRUD_Supplier : Form
     {
-        //---SERVER UMUM---
-
-        string connectionstring =
-                "integrated security=true;data source=localhost;initial catalog=VroomDG";
         String id;
 
         Timer timer = new Timer();
@@ -28,14 +24,7 @@ namespace E_DealerBengkel.Master.Supplier
         public CRUD_Supplier()
         {
             InitializeComponent();
-            
-            BtnTambah.FlatStyle = FlatStyle.Flat;
-            BtnTambah.FlatAppearance.BorderSize = 0;
-            BtnUbah.FlatStyle = FlatStyle.Flat;
-            BtnUbah.FlatAppearance.BorderSize = 0;
-            BtnKembali.FlatStyle = FlatStyle.Flat;
-            BtnKembali.FlatAppearance.BorderSize = 0;
-
+           
             timer.Tick += new EventHandler(timer_Tick);
             //1000 = 1 detik
             timer.Interval = (1000) * (1);
@@ -295,6 +284,11 @@ namespace E_DealerBengkel.Master.Supplier
                     MessageBox.Show("Data ada yang kosong!!", "Pemberitahuan",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
+                {
+                    MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     string query = "select top 1 id_supplier from tSupplier order by id_supplier desc";
@@ -346,6 +340,11 @@ namespace E_DealerBengkel.Master.Supplier
                 {
                     MessageBox.Show("Data ada yang kosong!!", "Information!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
+                {
+                    MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

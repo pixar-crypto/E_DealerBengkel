@@ -29,6 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Report));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -55,6 +68,37 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.graphSukuCadang = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graphMotor = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dgPendapatan = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.graphPenjualan = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbJudul = new System.Windows.Forms.Label();
+            this.graphMobil = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblKaryawan = new System.Windows.Forms.Label();
+            this.lblMember = new System.Windows.Forms.Label();
+            this.lblMobil = new System.Windows.Forms.Label();
+            this.lblMotor = new System.Windows.Forms.Label();
+            this.lblServices = new System.Windows.Forms.Label();
+            this.lblSukuCadang = new System.Windows.Forms.Label();
+            this.lblSupplier = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -64,6 +108,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.graphSukuCadang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphMotor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPendapatan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphPenjualan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphMobil)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -409,12 +465,436 @@
             this.button13.TabIndex = 5;
             this.button13.UseVisualStyleBackColor = false;
             // 
+            // graphSukuCadang
+            // 
+            this.graphSukuCadang.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphSukuCadang.BackImageTransparentColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphSukuCadang.BackSecondaryColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphSukuCadang.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
+            chartArea1.Name = "ChartArea1";
+            this.graphSukuCadang.ChartAreas.Add(chartArea1);
+            this.graphSukuCadang.Location = new System.Drawing.Point(658, 205);
+            this.graphSukuCadang.Name = "graphSukuCadang";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "SukuCadang";
+            this.graphSukuCadang.Series.Add(series1);
+            this.graphSukuCadang.Size = new System.Drawing.Size(350, 200);
+            this.graphSukuCadang.TabIndex = 160;
+            this.graphSukuCadang.Text = "chart1";
+            // 
+            // graphMotor
+            // 
+            this.graphMotor.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphMotor.BackImageTransparentColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphMotor.BackSecondaryColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphMotor.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
+            chartArea2.Name = "ChartArea1";
+            this.graphMotor.ChartAreas.Add(chartArea2);
+            this.graphMotor.Location = new System.Drawing.Point(256, 205);
+            this.graphMotor.Name = "graphMotor";
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Motor";
+            this.graphMotor.Series.Add(series2);
+            this.graphMotor.Size = new System.Drawing.Size(350, 200);
+            this.graphMotor.TabIndex = 159;
+            this.graphMotor.Text = "chart1";
+            // 
+            // dgPendapatan
+            // 
+            this.dgPendapatan.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgPendapatan.AllowUserToAddRows = false;
+            this.dgPendapatan.AllowUserToDeleteRows = false;
+            this.dgPendapatan.AllowUserToResizeColumns = false;
+            this.dgPendapatan.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgPendapatan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgPendapatan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgPendapatan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgPendapatan.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgPendapatan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgPendapatan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgPendapatan.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPendapatan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgPendapatan.ColumnHeadersHeight = 5;
+            this.dgPendapatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgPendapatan.ColumnHeadersVisible = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgPendapatan.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgPendapatan.Enabled = false;
+            this.dgPendapatan.EnableHeadersVisualStyles = false;
+            this.dgPendapatan.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgPendapatan.Location = new System.Drawing.Point(1015, 202);
+            this.dgPendapatan.MultiSelect = false;
+            this.dgPendapatan.Name = "dgPendapatan";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPendapatan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgPendapatan.RowHeadersVisible = false;
+            this.dgPendapatan.RowHeadersWidth = 30;
+            this.dgPendapatan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgPendapatan.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgPendapatan.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgPendapatan.Size = new System.Drawing.Size(328, 26);
+            this.dgPendapatan.TabIndex = 166;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(1036, 164);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(324, 23);
+            this.label7.TabIndex = 165;
+            this.label7.Text = "TOTAL PENDAPATAN";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(685, 426);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(324, 23);
+            this.label6.TabIndex = 164;
+            this.label6.Text = "PENJUALAN KESELURUHAN";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // graphPenjualan
+            // 
+            this.graphPenjualan.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphPenjualan.BackImageTransparentColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphPenjualan.BackSecondaryColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphPenjualan.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
+            chartArea3.Name = "ChartArea1";
+            this.graphPenjualan.ChartAreas.Add(chartArea3);
+            this.graphPenjualan.Location = new System.Drawing.Point(658, 452);
+            this.graphPenjualan.Name = "graphPenjualan";
+            series3.ChartArea = "ChartArea1";
+            series3.Name = "Jual";
+            this.graphPenjualan.Series.Add(series3);
+            this.graphPenjualan.Size = new System.Drawing.Size(350, 200);
+            this.graphPenjualan.TabIndex = 157;
+            this.graphPenjualan.Text = "chart1";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(282, 426);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(324, 23);
+            this.label5.TabIndex = 163;
+            this.label5.Text = "MOBIL";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(684, 179);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(324, 23);
+            this.label8.TabIndex = 162;
+            this.label8.Text = "SUKU CADANG";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbJudul
+            // 
+            this.lbJudul.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJudul.ForeColor = System.Drawing.Color.Black;
+            this.lbJudul.Location = new System.Drawing.Point(282, 179);
+            this.lbJudul.Name = "lbJudul";
+            this.lbJudul.Size = new System.Drawing.Size(324, 23);
+            this.lbJudul.TabIndex = 161;
+            this.lbJudul.Text = "MOTOR";
+            this.lbJudul.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // graphMobil
+            // 
+            this.graphMobil.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphMobil.BackImageTransparentColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphMobil.BackSecondaryColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.graphMobil.BorderlineColor = System.Drawing.SystemColors.GradientActiveCaption;
+            chartArea4.Name = "ChartArea1";
+            this.graphMobil.ChartAreas.Add(chartArea4);
+            this.graphMobil.Location = new System.Drawing.Point(256, 452);
+            this.graphMobil.Name = "graphMobil";
+            series4.ChartArea = "ChartArea1";
+            series4.Name = "Mobil";
+            this.graphMobil.Series.Add(series4);
+            this.graphMobil.Size = new System.Drawing.Size(350, 200);
+            this.graphMobil.TabIndex = 158;
+            this.graphMobil.Text = "chart1";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel11.Controls.Add(this.lblSupplier);
+            this.panel11.Controls.Add(this.label10);
+            this.panel11.Location = new System.Drawing.Point(919, 658);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(112, 65);
+            this.panel11.TabIndex = 173;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Honeydew;
+            this.label10.Location = new System.Drawing.Point(24, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 19);
+            this.label10.TabIndex = 107;
+            this.label10.Text = "Supplier";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel9.Controls.Add(this.lblSukuCadang);
+            this.panel9.Controls.Add(this.label11);
+            this.panel9.Location = new System.Drawing.Point(803, 658);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(116, 65);
+            this.panel9.TabIndex = 172;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Honeydew;
+            this.label11.Location = new System.Drawing.Point(11, 4);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 19);
+            this.label11.TabIndex = 107;
+            this.label11.Text = "Suku Cadang";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel7.Controls.Add(this.lblMotor);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Location = new System.Drawing.Point(583, 658);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(111, 65);
+            this.panel7.TabIndex = 170;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Honeydew;
+            this.label12.Location = new System.Drawing.Point(32, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 19);
+            this.label12.TabIndex = 107;
+            this.label12.Text = "Motor";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel10.Controls.Add(this.lblServices);
+            this.panel10.Controls.Add(this.label13);
+            this.panel10.Location = new System.Drawing.Point(690, 658);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(115, 65);
+            this.panel10.TabIndex = 171;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Honeydew;
+            this.label13.Location = new System.Drawing.Point(35, 4);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 19);
+            this.label13.TabIndex = 107;
+            this.label13.Text = "Servis";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel8.Controls.Add(this.lblMobil);
+            this.panel8.Controls.Add(this.label14);
+            this.panel8.Location = new System.Drawing.Point(469, 658);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(119, 65);
+            this.panel8.TabIndex = 169;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Honeydew;
+            this.label14.Location = new System.Drawing.Point(35, 4);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 19);
+            this.label14.TabIndex = 107;
+            this.label14.Text = "Mobil";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel6.Controls.Add(this.lblMember);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Location = new System.Drawing.Point(358, 658);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(111, 65);
+            this.panel6.TabIndex = 168;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Honeydew;
+            this.label15.Location = new System.Drawing.Point(22, 4);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 19);
+            this.label15.TabIndex = 107;
+            this.label15.Text = "Member";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel5.Controls.Add(this.lblKaryawan);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Location = new System.Drawing.Point(248, 658);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(111, 65);
+            this.panel5.TabIndex = 167;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Honeydew;
+            this.label16.Location = new System.Drawing.Point(15, 4);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(77, 19);
+            this.label16.TabIndex = 107;
+            this.label16.Text = "Karyawan";
+            // 
+            // lblKaryawan
+            // 
+            this.lblKaryawan.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKaryawan.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblKaryawan.Location = new System.Drawing.Point(22, 23);
+            this.lblKaryawan.Name = "lblKaryawan";
+            this.lblKaryawan.Size = new System.Drawing.Size(60, 41);
+            this.lblKaryawan.TabIndex = 128;
+            this.lblKaryawan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMember
+            // 
+            this.lblMember.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMember.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblMember.Location = new System.Drawing.Point(29, 21);
+            this.lblMember.Name = "lblMember";
+            this.lblMember.Size = new System.Drawing.Size(60, 41);
+            this.lblMember.TabIndex = 127;
+            this.lblMember.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMobil
+            // 
+            this.lblMobil.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobil.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblMobil.Location = new System.Drawing.Point(33, 21);
+            this.lblMobil.Name = "lblMobil";
+            this.lblMobil.Size = new System.Drawing.Size(60, 41);
+            this.lblMobil.TabIndex = 127;
+            this.lblMobil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMotor
+            // 
+            this.lblMotor.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotor.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblMotor.Location = new System.Drawing.Point(25, 21);
+            this.lblMotor.Name = "lblMotor";
+            this.lblMotor.Size = new System.Drawing.Size(60, 41);
+            this.lblMotor.TabIndex = 127;
+            this.lblMotor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblServices
+            // 
+            this.lblServices.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServices.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblServices.Location = new System.Drawing.Point(33, 21);
+            this.lblServices.Name = "lblServices";
+            this.lblServices.Size = new System.Drawing.Size(60, 41);
+            this.lblServices.TabIndex = 127;
+            this.lblServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSukuCadang
+            // 
+            this.lblSukuCadang.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSukuCadang.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblSukuCadang.Location = new System.Drawing.Point(28, 21);
+            this.lblSukuCadang.Name = "lblSukuCadang";
+            this.lblSukuCadang.Size = new System.Drawing.Size(60, 41);
+            this.lblSukuCadang.TabIndex = 127;
+            this.lblSukuCadang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSupplier
+            // 
+            this.lblSupplier.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupplier.ForeColor = System.Drawing.Color.Honeydew;
+            this.lblSupplier.Location = new System.Drawing.Point(29, 23);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(60, 41);
+            this.lblSupplier.TabIndex = 127;
+            this.lblSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Manager_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1379, 769);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.graphSukuCadang);
+            this.Controls.Add(this.graphMotor);
+            this.Controls.Add(this.dgPendapatan);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.graphPenjualan);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbJudul);
+            this.Controls.Add(this.graphMobil);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
@@ -439,6 +919,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.graphSukuCadang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphMotor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPendapatan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphPenjualan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graphMobil)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -471,5 +970,36 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graphSukuCadang;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graphMotor;
+        private System.Windows.Forms.DataGridView dgPendapatan;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graphPenjualan;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbJudul;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graphMobil;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblKaryawan;
+        private System.Windows.Forms.Label lblMember;
+        private System.Windows.Forms.Label lblMobil;
+        private System.Windows.Forms.Label lblMotor;
+        private System.Windows.Forms.Label lblServices;
+        private System.Windows.Forms.Label lblSukuCadang;
+        private System.Windows.Forms.Label lblSupplier;
     }
 }

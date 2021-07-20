@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laporan_Pembelian));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.laporanBeliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database_Laporan = new E_DealerBengkel.Database_Laporan();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -62,8 +62,8 @@
             this.BtnLapPenjualan = new System.Windows.Forms.Button();
             this.BtnLapPembelian = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.laporanBeliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database_Laporan)).BeginInit();
             this.panel1.SuspendLayout();
@@ -74,8 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // laporanBeliBindingSource
@@ -205,9 +205,9 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(646, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 16);
+            this.label4.Size = new System.Drawing.Size(104, 16);
             this.label4.TabIndex = 154;
-            this.label4.Text = "TANGGAL AWAL";
+            this.label4.Text = "TANGGAL AKHIR";
             // 
             // dateAkhir
             // 
@@ -221,9 +221,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource4.Name = "dsPembelian";
-            reportDataSource4.Value = this.laporanBeliBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "dsPembelian";
+            reportDataSource1.Value = this.laporanBeliBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "E_DealerBengkel.Reports.Rdlc.Laporan_Pembelian.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(47, 85);
             this.reportViewer1.Name = "reportViewer1";
@@ -449,17 +449,6 @@
             this.panel12.Size = new System.Drawing.Size(211, 151);
             this.panel12.TabIndex = 128;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.pictureBox1.Image = global::E_DealerBengkel.Properties.Resources.icons8_document_90px;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.SlateGray;
@@ -470,6 +459,17 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 58;
             this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox1.Image = global::E_DealerBengkel.Properties.Resources.icons8_document_90px;
+            this.pictureBox1.Location = new System.Drawing.Point(39, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
             // 
             // Laporan_Pembelian
             // 
@@ -503,8 +503,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

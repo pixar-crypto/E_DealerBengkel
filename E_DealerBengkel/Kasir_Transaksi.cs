@@ -21,7 +21,6 @@ namespace E_DealerBengkel
     {
 
         Timer timerJam = new Timer();
-        Timer timerJual = new Timer();
 
         public Kasir_Transaksi()
         {
@@ -32,21 +31,11 @@ namespace E_DealerBengkel
             timerJam.Interval = (1000) * (1);
             timerJam.Enabled = true;
             timerJam.Start();
-
-            timerJual.Tick += new EventHandler(timer_jual);
-            timerJual.Interval = (1000) * (1);
-            timerJual.Enabled = true;
-            timerJual.Start();
         }
 
         void timer_Tick(object sender, EventArgs e)
         {
             lbWaktu.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
-        }
-
-        void timer_jual(object sender, EventArgs e)
-        {
-            //fillGraph();
         }
 
         public void isiPendapatan()
@@ -70,17 +59,15 @@ namespace E_DealerBengkel
             }
         }
 
-        public void DgKaryawan()
+        public void tampilKaryawan()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
 
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tKaryawan", connection);
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dgvKaryawan.DataSource = dt;
+                SqlCommand command = new SqlCommand("SELECT count(*) FROM tKaryawan", connection);
+                lblKaryawan.Text = command.ExecuteScalar().ToString();
 
                 connection.Close();
             }
@@ -90,17 +77,15 @@ namespace E_DealerBengkel
             }
         }
 
-        public void DgMember()
+        public void tampilMember()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
 
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tMember", connection);
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dgvMember.DataSource = dt;
+                SqlCommand command = new SqlCommand("SELECT count(*) FROM tMember", connection);
+                lblMember.Text = command.ExecuteScalar().ToString();
 
                 connection.Close();
             }
@@ -110,18 +95,15 @@ namespace E_DealerBengkel
             }
         }
 
-
-        public void DgMobil()
+        public void tampilMobil()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
 
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tMobil", connection);
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dgvMobil.DataSource = dt;
+                SqlCommand command = new SqlCommand("SELECT count(*) FROM tMobil", connection);
+                lblMobil.Text = command.ExecuteScalar().ToString();
 
                 connection.Close();
             }
@@ -131,17 +113,15 @@ namespace E_DealerBengkel
             }
         }
 
-        public void DgMotor()
+        public void tampilMotor()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
 
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tMotor", connection);
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dgvMotor.DataSource = dt;
+                SqlCommand command = new SqlCommand("SELECT count(*) FROM tMotor", connection);
+                lblMotor.Text = command.ExecuteScalar().ToString();
 
                 connection.Close();
             }
@@ -151,17 +131,15 @@ namespace E_DealerBengkel
             }
         }
 
-        public void DgServis()
+        public void tampilService()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
 
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tService", connection);
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dgvServis.DataSource = dt;
+                SqlCommand command = new SqlCommand("SELECT count(*) FROM tService", connection);
+                lblServices.Text = command.ExecuteScalar().ToString();
 
                 connection.Close();
             }
@@ -171,17 +149,15 @@ namespace E_DealerBengkel
             }
         }
 
-        public void DgSukuCadang()
+        public void tampilSuku()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
 
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tSukucadang", connection);
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dgvSukuCadang.DataSource = dt;
+                SqlCommand command = new SqlCommand("SELECT count(*) FROM tSukucadang", connection);
+                lblSukuCadang.Text = command.ExecuteScalar().ToString();
 
                 connection.Close();
             }
@@ -191,17 +167,15 @@ namespace E_DealerBengkel
             }
         }
 
-        public void DgSup()
+        public void tampilSupplier()
         {
             SqlConnection connection = new SqlConnection(Program.koneksi());
 
             try
             {
                 connection.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT count(*) FROM tSupplier", connection);
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dgvSup.DataSource = dt;
+                SqlCommand command = new SqlCommand("SELECT count(*) FROM tSupplier", connection);
+                lblSupplier.Text = command.ExecuteScalar().ToString();
 
                 connection.Close();
             }
@@ -382,13 +356,13 @@ namespace E_DealerBengkel
             fillJualMotor();
             fillJualSukuCadang();
 
-            DgKaryawan();
-            DgMember();
-            DgMobil();
-            DgMotor();
-            DgServis();
-            DgSukuCadang();
-            DgSup();
+            tampilKaryawan();
+            tampilMember();
+            tampilMobil();
+            tampilMotor();
+            tampilService();
+            tampilSuku();
+            tampilSupplier();
         }
     }
 }

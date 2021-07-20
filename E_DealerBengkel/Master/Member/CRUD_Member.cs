@@ -16,10 +16,6 @@ namespace E_DealerBengkel.Master.Member
 {
     public partial class CRUD_Member : Form
     {
-        //---SERVER UMUM---
-
-        string connectionstring =
-                "integrated security=true;data source=localhost;initial catalog=VroomDG";
         String id;
 
         Timer timer = new Timer();
@@ -320,6 +316,16 @@ namespace E_DealerBengkel.Master.Member
                     MessageBox.Show("Data ada yang kosong!", "Pemberitahuan",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
+                {
+                    MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (TxtNoKTP.Text.Length > 16 || TxtNoTelp.Text.Length < 16)
+                {
+                    MessageBox.Show("No. KTP harus 16 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     string query = "select top 1 id_member from tMember order by id_member desc";
@@ -375,6 +381,16 @@ namespace E_DealerBengkel.Master.Member
                 {
                     MessageBox.Show("Data ada yang kosong!", "Pemberitahuan",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (TxtNoTelp.Text.Length > 13 || TxtNoTelp.Text.Length < 12)
+                {
+                    MessageBox.Show("No. Telepon maksimal 13 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (TxtNoKTP.Text.Length > 16 || TxtNoTelp.Text.Length < 16)
+                {
+                    MessageBox.Show("No. KTP harus 16 digit!!", "Pemberitahuan",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
