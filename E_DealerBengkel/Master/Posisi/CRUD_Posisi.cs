@@ -89,37 +89,7 @@ namespace E_DealerBengkel.Master.Posisi
             this.Hide();
         }
 
-        public string autogenerateID(string firstText, string query)
-        {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
-            string result = "";
-            int num = 0;
-            try
-            {
-                sqlCon = new SqlConnection(Program.koneksi());
-                sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
-                {
-                    num = 1;
-                }
-                sqlCon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            result = firstText + num.ToString().PadLeft(2, '0');
-            return result;
-        }
+      
 
         private void CRUD_Posisi_Load(object sender, EventArgs e)
         {
@@ -269,7 +239,7 @@ namespace E_DealerBengkel.Master.Posisi
                     if (hasil == DialogResult.Yes)
                     {
                         string query = "select top 1 id_posisi from tPosisi order by id_posisi desc";
-                        String id = autogenerateID("ROLE-", query);
+                        String id = Program.autogenerateID("ROLE-", query);
 
                         SqlConnection connection = new SqlConnection(Program.koneksi());
 

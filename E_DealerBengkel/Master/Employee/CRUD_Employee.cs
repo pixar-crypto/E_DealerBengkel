@@ -339,39 +339,6 @@ namespace E_DealerBengkel.Master.Employee
             }
         }
 
-
-        public string autogenerateID(string firstText, string query)
-        {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
-            string result = "";
-            int num = 0;
-            try
-            {
-                sqlCon = new SqlConnection(Program.koneksi());
-                sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
-                {
-                    num = 1;
-                }
-                sqlCon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            result = firstText + num.ToString().PadLeft(2, '0');
-            return result;
-        }
-
         private void BtnSimpan_Click(object sender, EventArgs e)
         {
             if (lbJudul.Text == "TAMBAH KARYAWAN")
@@ -431,7 +398,7 @@ namespace E_DealerBengkel.Master.Employee
                                         if (TxtPassword.Text == TxtPassword2.Text)
                                         {
                                             string query = "select top 1 id_karyawan from tKaryawan order by id_karyawan desc";
-                                            id = autogenerateID("KRY-", query);
+                                            id = Program.autogenerateID("KRY-", query);
 
                                             bool validateEmail = ValidateEmail();
 
@@ -500,7 +467,7 @@ namespace E_DealerBengkel.Master.Employee
                     else
                     {
                         string query = "select top 1 id_karyawan from tKaryawan order by id_karyawan desc";
-                        id = autogenerateID("KRY-", query);
+                        id = Program.autogenerateID("KRY-", query);
 
                         bool validateEmail = ValidateEmail();
 
@@ -631,14 +598,14 @@ namespace E_DealerBengkel.Master.Employee
                                             }
                                             else
                                             {
-                                                MessageBox.Show("Format email salah !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBox.Show("Format email salah !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Kata sandi tidak cocok !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            MessageBox.Show("Kata sandi tidak cocok !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
                                     }
                                     else if (Reader.HasRows)
@@ -689,14 +656,14 @@ namespace E_DealerBengkel.Master.Employee
                                             }
                                             else
                                             {
-                                                MessageBox.Show("Format email salah !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBox.Show("Format email salah !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Kata sandi tidak cocok !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            MessageBox.Show("Kata sandi tidak cocok !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
                                     }
                                 }
@@ -761,14 +728,14 @@ namespace E_DealerBengkel.Master.Employee
                                             }
                                             else
                                             {
-                                                MessageBox.Show("Format email salah !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBox.Show("Format email salah !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Kata sandi tidak cocok !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            MessageBox.Show("Kata sandi tidak cocok !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
                                     }
                                     else if (Reader.HasRows)
@@ -807,8 +774,8 @@ namespace E_DealerBengkel.Master.Employee
                                                 try
                                                 {
                                                     insert.ExecuteNonQuery();
-                                                    MessageBox.Show("Data berhasil disimpan", "Information",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                    MessageBox.Show("Data berhasil disimpan", "Warning",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                                                     RefreshDg();
                                                     Clear();
@@ -820,14 +787,14 @@ namespace E_DealerBengkel.Master.Employee
                                             }
                                             else
                                             {
-                                                MessageBox.Show("Format email salah !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                MessageBox.Show("Format email salah !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Kata sandi tidak cocok !", "Pemberitahuan!",
-                                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            MessageBox.Show("Kata sandi tidak cocok !", "Warning!",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         }
                                     }
                                 }
@@ -888,8 +855,8 @@ namespace E_DealerBengkel.Master.Employee
                         }
                         else
                         {
-                            MessageBox.Show("Format email salah !", "Pemberitahuan!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Format email salah !", "Warning!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }

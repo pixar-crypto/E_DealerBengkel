@@ -193,40 +193,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             dgvKeranjang.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
-        public string autogenerateID(string firstText, string query)
-        {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
-            string result = "";
-            int num = 0;
-            try
-            {
-                sqlCon = new SqlConnection(Program.koneksi());
-                sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
-                {
-                    num = 1;
-                }
-                sqlCon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            result = firstText + num.ToString().PadLeft(2, '0');
-            return result;
-        }
-
-
+        
         private void dgvKeranjang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BtnTambah.Enabled = true;
@@ -624,7 +591,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         public void isiTPenjualan()
         {
             string query = "select top 1 id_penjualan from tPenjualan order by id_penjualan desc";
-            idTran = autogenerateID("TJB-", query);
+            idTran = Program.autogenerateID("TJB-", query);
             string waktu = DateTime.Now.ToString("yyyy-MM-dd");
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);

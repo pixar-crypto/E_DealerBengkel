@@ -149,37 +149,6 @@ namespace E_DealerBengkel.Transaksi.Services
             }
         }
 
-        public string autogenerateID(string firstText, string query)
-        {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
-            string result = "";
-            int num = 0;
-            try
-            {
-                sqlCon = new SqlConnection(Program.koneksi());
-                sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
-                {
-                    num = 1;
-                }
-                sqlCon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            result = firstText + num.ToString().PadLeft(2, '0');
-            return result;
-        }
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
@@ -327,7 +296,7 @@ namespace E_DealerBengkel.Transaksi.Services
         private void isiTServis()
         {
             string query = "select top 1 id_transaksi from tTransaksiService order by id_transaksi desc";
-            idTran = autogenerateID("TSR-", query);
+            idTran = Program.autogenerateID("TSR-", query);
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);
             string waktu = DateTime.Now.ToString("yyyy-MM-dd");

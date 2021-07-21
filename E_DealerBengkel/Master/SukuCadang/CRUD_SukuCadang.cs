@@ -111,37 +111,7 @@ namespace E_DealerBengkel.Master.SukuCadang
             this.Hide();
         }
 
-        public string autogenerateID(string firstText, string query)
-        {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
-            string result = "";
-            int num = 0;
-            try
-            {
-                sqlCon = new SqlConnection(Program.koneksi());
-                sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
-                {
-                    num = 1;
-                }
-                sqlCon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            result = firstText + num.ToString().PadLeft(2, '0');
-            return result;
-        }
+       
 
         private void Clear()
         {
@@ -294,7 +264,7 @@ namespace E_DealerBengkel.Master.SukuCadang
                 else
                 {
                     string query = "select top 1 id_sukucadang from tSukucadang order by id_sukucadang desc";
-                    id = autogenerateID("SCD-", query);
+                    id = Program.autogenerateID("SCD-", query);
 
                     SqlConnection connection = new SqlConnection(Program.koneksi());
 

@@ -82,38 +82,6 @@ namespace E_DealerBengkel.Master.Supplier
             }
         }
 
-        public string autogenerateID(string firstText, string query)
-        {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
-            string result = "";
-            int num = 0;
-            try
-            {
-                sqlCon = new SqlConnection(Program.koneksi());
-                sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
-                {
-                    num = 1;
-                }
-                sqlCon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            result = firstText + num.ToString().PadLeft(2, '0');
-            return result;
-        }
-
         private void BtnTambah_Click(object sender, EventArgs e)
         {
             Clear();
@@ -292,7 +260,7 @@ namespace E_DealerBengkel.Master.Supplier
                 else
                 {
                     string query = "select top 1 id_supplier from tSupplier order by id_supplier desc";
-                    id = autogenerateID("SUP-", query);
+                    id = Program.autogenerateID("SUP-", query);
 
                     bool validateEmail = ValidateEmail();
 

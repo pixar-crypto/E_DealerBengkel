@@ -142,37 +142,7 @@ namespace E_DealerBengkel.Master.Motor
             this.Hide();
         }
 
-        public string autogenerateID(string firstText, string query)
-        {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
-            string result = "";
-            int num = 0;
-            try
-            {
-                sqlCon = new SqlConnection(Program.koneksi());
-                sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
-                {
-                    num = 1;
-                }
-                sqlCon.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            result = firstText + num.ToString().PadLeft(2, '0');
-            return result;
-        }
+       
 
         public void RefreshDg()
         {
@@ -320,7 +290,7 @@ namespace E_DealerBengkel.Master.Motor
                 else
                 {
                     string query = "select top 1 id_motor from tMotor order by id_motor desc";
-                    String id = autogenerateID("MTR-", query);
+                    String id = Program.autogenerateID("MTR-", query);
 
                     SqlConnection connection = new SqlConnection(Program.koneksi());
 
