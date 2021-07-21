@@ -362,7 +362,7 @@
             // 
             // BtnClear
             // 
-            this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnClear.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnClear.FlatAppearance.BorderSize = 0;
             this.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,7 +377,7 @@
             // 
             // BtnHapus
             // 
-            this.BtnHapus.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnHapus.BackColor = System.Drawing.Color.DodgerBlue;
             this.BtnHapus.FlatAppearance.BorderSize = 0;
             this.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHapus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
