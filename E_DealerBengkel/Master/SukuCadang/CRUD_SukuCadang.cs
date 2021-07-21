@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -142,7 +143,7 @@ namespace E_DealerBengkel.Master.SukuCadang
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
                 "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier", connection);
             DataTable dt = new DataTable();
@@ -222,7 +223,7 @@ namespace E_DealerBengkel.Master.SukuCadang
                                             MessageBoxIcon.Question);
                 if (hasil == DialogResult.Yes)
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -266,7 +267,7 @@ namespace E_DealerBengkel.Master.SukuCadang
                     string query = "select top 1 id_sukucadang from tSukucadang order by id_sukucadang desc";
                     id = Program.autogenerateID("SCD-", query);
 
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -314,7 +315,7 @@ namespace E_DealerBengkel.Master.SukuCadang
                 }
                 else
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -400,7 +401,7 @@ namespace E_DealerBengkel.Master.SukuCadang
         private void rbTersedia_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
                 "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier WHERE a.status='Tersedia'", connection);
             DataTable dt = new DataTable();
@@ -463,7 +464,7 @@ namespace E_DealerBengkel.Master.SukuCadang
         private void rbTidakTersedia_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
                 "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier WHERE a.status='Tidak tersedia'", connection);
             DataTable dt = new DataTable();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -119,7 +120,7 @@ namespace E_DealerBengkel.Master.Supplier
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select * from tSupplier", connection);
             DataTable dt = new DataTable();
 
@@ -205,7 +206,7 @@ namespace E_DealerBengkel.Master.Supplier
                                             MessageBoxIcon.Question);
                     if (hasil == DialogResult.Yes)
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -266,7 +267,7 @@ namespace E_DealerBengkel.Master.Supplier
 
                     if (validateEmail == true)
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -320,7 +321,7 @@ namespace E_DealerBengkel.Master.Supplier
 
                     if (validateEmail == true)
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -367,7 +368,7 @@ namespace E_DealerBengkel.Master.Supplier
             }
             else
             {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlDataAdapter adapt = new SqlDataAdapter("select * from tSupplier where nama_supplier like '" + TxtCompName.Text + "%'", connection);
                 DataTable dt = new DataTable();
 
@@ -450,7 +451,7 @@ namespace E_DealerBengkel.Master.Supplier
         private void rbAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tSupplier WHERE status='Aktif'", connection);
             DataTable dt = new DataTable();
 
@@ -500,7 +501,7 @@ namespace E_DealerBengkel.Master.Supplier
         private void rbTidakAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tSupplier WHERE status='Tidak Aktif'", connection);
             DataTable dt = new DataTable();
 

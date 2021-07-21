@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -146,7 +147,7 @@ namespace E_DealerBengkel.Master.Motor
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
                 "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier", connection);
             DataTable dt = new DataTable();
@@ -244,7 +245,7 @@ namespace E_DealerBengkel.Master.Motor
                                          MessageBoxIcon.Question);
                 if (hasil == DialogResult.Yes)
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -292,7 +293,7 @@ namespace E_DealerBengkel.Master.Motor
                     string query = "select top 1 id_motor from tMotor order by id_motor desc";
                     String id = Program.autogenerateID("MTR-", query);
 
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -340,7 +341,7 @@ namespace E_DealerBengkel.Master.Motor
                 }
                 else
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -430,7 +431,7 @@ namespace E_DealerBengkel.Master.Motor
         private void rbTersedia_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
                 "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tersedia'", connection);
             DataTable dt = new DataTable();
@@ -488,7 +489,7 @@ namespace E_DealerBengkel.Master.Motor
         private void rbTidakTersedia_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
                 "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tidak Tersedia'", connection);
             DataTable dt = new DataTable();

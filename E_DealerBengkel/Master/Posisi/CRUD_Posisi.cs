@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
@@ -103,7 +104,7 @@ namespace E_DealerBengkel.Master.Posisi
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             connection.Open();
             SqlDataAdapter adapt = new SqlDataAdapter("select * from tPosisi", connection);
 
@@ -189,7 +190,7 @@ namespace E_DealerBengkel.Master.Posisi
                             MessageBoxIcon.Question);
                 if (hasil == DialogResult.Yes)
                 {
-                    SqlConnection Connection = new SqlConnection(Program.koneksi());
+                    SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     Connection.Open();
 
@@ -241,7 +242,7 @@ namespace E_DealerBengkel.Master.Posisi
                         string query = "select top 1 id_posisi from tPosisi order by id_posisi desc";
                         String id = Program.autogenerateID("ROLE-", query);
 
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -292,7 +293,7 @@ namespace E_DealerBengkel.Master.Posisi
                                MessageBoxIcon.Question);
                     if (hasil == DialogResult.Yes)
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -339,7 +340,7 @@ namespace E_DealerBengkel.Master.Posisi
             }
             else
             {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlConnection con;
                 SqlDataAdapter adapt;
                 DataTable dt;
@@ -427,7 +428,7 @@ namespace E_DealerBengkel.Master.Posisi
         private void rbAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tPosisi WHERE status='Aktif'", connection);
             DataTable dt = new DataTable();
             adapt.Fill(dt);
@@ -479,7 +480,7 @@ namespace E_DealerBengkel.Master.Posisi
         private void rbTidakAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tPosisi WHERE status='Tidak aktif'", connection);
             DataTable dt = new DataTable();
             adapt.Fill(dt);

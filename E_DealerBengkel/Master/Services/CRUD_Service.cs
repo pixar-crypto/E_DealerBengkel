@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -106,7 +107,7 @@ namespace E_DealerBengkel.Master.Services
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select * from tService", connection);
             DataTable dt = new DataTable();
 
@@ -176,7 +177,7 @@ namespace E_DealerBengkel.Master.Services
                                          MessageBoxIcon.Question);
                 if (hasil == DialogResult.Yes)
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -223,7 +224,7 @@ namespace E_DealerBengkel.Master.Services
                     string query = "select top 1 id_service from tService order by id_service desc";
                     String id = Program.autogenerateID("SRV-", query);
 
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -264,7 +265,7 @@ namespace E_DealerBengkel.Master.Services
                 }
                 else
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -337,7 +338,7 @@ namespace E_DealerBengkel.Master.Services
         private void rbTidakAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tService WHERE status='Tidak tersedia'", connection);
             DataTable dt = new DataTable();
 
@@ -410,7 +411,7 @@ namespace E_DealerBengkel.Master.Services
         private void rbAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tService WHERE status='Tersedia'", connection);
             DataTable dt = new DataTable();
 

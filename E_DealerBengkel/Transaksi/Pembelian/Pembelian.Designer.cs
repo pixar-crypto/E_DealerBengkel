@@ -47,6 +47,7 @@
             this.BtnRetur = new System.Windows.Forms.Button();
             this.BtnPenjualan = new System.Windows.Forms.Button();
             this.BtnPembelian = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.BtnKurang = new Bunifu.Framework.UI.BunifuImageButton();
             this.BtnTambah = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label7 = new System.Windows.Forms.Label();
             this.BtnSimpan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvKeranjang = new System.Windows.Forms.DataGridView();
             this.Idd = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,9 +84,11 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.tSupplierTableAdapter = new E_DealerBengkel.VroomDGDataSetTableAdapters.tSupplierTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbledit = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -98,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -268,6 +269,17 @@
             this.BtnPembelian.UseVisualStyleBackColor = true;
             this.BtnPembelian.Click += new System.EventHandler(this.BtnPembelian_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.SlateGray;
@@ -376,9 +388,10 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lbledit);
             this.panel3.Controls.Add(this.BtnKurang);
             this.panel3.Controls.Add(this.BtnTambah);
-            this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.BtnSimpan);
             this.panel3.Controls.Add(this.dgvKeranjang);
             this.panel3.Controls.Add(this.dgvStok);
@@ -427,15 +440,6 @@
             this.BtnTambah.TabStop = false;
             this.BtnTambah.Zoom = 10;
             this.BtnTambah.Click += new System.EventHandler(this.BtnTambah_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 456);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 13);
-            this.label7.TabIndex = 139;
-            this.label7.Text = "*Pilih data terlebih dahulu";
             // 
             // BtnSimpan
             // 
@@ -747,16 +751,26 @@
             // 
             this.tSupplierTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
+            // lbledit
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
+            this.lbledit.AutoSize = true;
+            this.lbledit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbledit.Location = new System.Drawing.Point(20, 456);
+            this.lbledit.Name = "lbledit";
+            this.lbledit.Size = new System.Drawing.Size(397, 16);
+            this.lbledit.TabIndex = 142;
+            this.lbledit.Text = "*Klik row pada tabel untuk menambahkan data ke tabel keranjang";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(526, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(535, 16);
+            this.label2.TabIndex = 143;
+            this.label2.Text = "*Untuk menambahkan atau mengurangi jumlah, klik row pada tabel lalu klik button (" +
+    "+) / (-)";
             // 
             // Pembelian
             // 
@@ -781,6 +795,7 @@
             this.Load += new System.EventHandler(this.Pembelian_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -794,7 +809,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tSupplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vroomDGDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -829,7 +843,6 @@
         private System.Windows.Forms.ComboBox cbSupplier;
         private Bunifu.Framework.UI.BunifuImageButton BtnKurang;
         private Bunifu.Framework.UI.BunifuImageButton BtnTambah;
-        private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuFlatButton BtnSimpan;
         private System.Windows.Forms.DataGridView dgvKeranjang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Idd;
@@ -850,5 +863,7 @@
         private System.Windows.Forms.Button BtnKembali;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbledit;
     }
 }
