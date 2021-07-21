@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -74,7 +75,7 @@ namespace E_DealerBengkel.Transaksi.Retur
 
         private void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tPenjualan", connection);
             DataTable dt = new DataTable();
 
@@ -123,7 +124,7 @@ namespace E_DealerBengkel.Transaksi.Retur
             {
                 string query1 = "SELECT * FROM tMember WHERE id_member = '" + txtIdCus.Text + "'";
 
-                SqlConnection connection1 = new SqlConnection(Program.koneksi());
+                SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand search1 = new SqlCommand(query1, connection1);
 
                 connection1.Open();
@@ -167,7 +168,7 @@ namespace E_DealerBengkel.Transaksi.Retur
             string query = "SELECT * FROM tPenjualan p, tDetailPenjualan d WHERE d.id_penjualan= '" + txtTrans.Text + "'"
                 + "AND p.id_penjualan= '" + txtTrans.Text + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -217,7 +218,7 @@ namespace E_DealerBengkel.Transaksi.Retur
                 id = Program.autogenerateID("RTR-", query);
                 status = "Menunggu";
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                 connection.Open();
 
@@ -261,7 +262,7 @@ namespace E_DealerBengkel.Transaksi.Retur
         {
             string query = "SELECT * FROM tReturPembelian WHERE id_penjualan= '" + txtTrans.Text + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -282,7 +283,7 @@ namespace E_DealerBengkel.Transaksi.Retur
         {
             string query = "SELECT * FROM tMember WHERE id_member = '" + txtIdCus.Text + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();

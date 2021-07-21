@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -140,7 +141,7 @@ namespace E_DealerBengkel.Master.Employee
             }
             else
             {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan where nama_karyawan like '" + TxtNamaEmp.Text + "%'", connection);
                 DataTable dt = new DataTable();
 
@@ -193,7 +194,7 @@ namespace E_DealerBengkel.Master.Employee
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT k.id_karyawan, k.nama_karyawan, k.alamat, k.email, k.no_telepon, p.deskripsi, k.username, k.status FROM tKaryawan AS k" +
                 " INNER JOIN tPosisi p on k.id_posisi = p.id_posisi", connection);
             DataTable dt = new DataTable();
@@ -300,7 +301,7 @@ namespace E_DealerBengkel.Master.Employee
                                 MessageBoxIcon.Question);
                     if (hasil == DialogResult.Yes)
                     {
-                        SqlConnection Connection = new SqlConnection(Program.koneksi());
+                        SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         Connection.Open();
 
@@ -358,7 +359,7 @@ namespace E_DealerBengkel.Master.Employee
                     }
                     else
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                         SqlCommand CekUser = new SqlCommand("[sp_CekUsername]", connection);
 
                         if (!string.IsNullOrEmpty(TxtUsername.Text.Trim()))
@@ -376,7 +377,7 @@ namespace E_DealerBengkel.Master.Employee
                             }
                             else
                             {
-                                SqlConnection Connection = new SqlConnection(Program.koneksi());
+                                SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                                 SqlCommand CekPass = new SqlCommand("[sp_CekPass]", Connection);
 
                                 if (!string.IsNullOrEmpty(TxtPassword.Text.Trim()))
@@ -473,7 +474,7 @@ namespace E_DealerBengkel.Master.Employee
 
                         if (validateEmail == true)
                         {
-                            SqlConnection connection = new SqlConnection(Program.koneksi());
+                            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                             connection.Open();
 
@@ -531,7 +532,7 @@ namespace E_DealerBengkel.Master.Employee
                     }
                     else
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                         SqlCommand CekUser = new SqlCommand("[sp_CekUsername]", connection);
 
                         if (!string.IsNullOrEmpty(TxtUsername.Text.Trim()))
@@ -545,7 +546,7 @@ namespace E_DealerBengkel.Master.Employee
                             if (user == TxtUsername.Text)
                             {
                                 reader.Close();
-                                SqlConnection Connection = new SqlConnection(Program.koneksi());
+                                SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                                 SqlCommand CekPass = new SqlCommand("[sp_CekPass]", Connection);
 
                                 if (!string.IsNullOrEmpty(TxtPassword.Text.Trim()))
@@ -677,7 +678,7 @@ namespace E_DealerBengkel.Master.Employee
                             else
                             {
                                 reader.Close();
-                                SqlConnection Connection = new SqlConnection(Program.koneksi());
+                                SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                                 SqlCommand CekPass = new SqlCommand("[sp_CekPass]", Connection);
 
                                 if (!string.IsNullOrEmpty(TxtPassword.Text.Trim()))
@@ -819,7 +820,7 @@ namespace E_DealerBengkel.Master.Employee
 
                         if (validateEmail == true)
                         {
-                            SqlConnection connection = new SqlConnection(Program.koneksi());
+                            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                             connection.Open();
 
@@ -914,7 +915,7 @@ namespace E_DealerBengkel.Master.Employee
         {
             string query = "select * from tKaryawan where id_karyawan='" + id + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -935,7 +936,7 @@ namespace E_DealerBengkel.Master.Employee
         private void rbAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan WHERE status='Aktif'", connection);
             DataTable dt = new DataTable();
 
@@ -988,7 +989,7 @@ namespace E_DealerBengkel.Master.Employee
         private void rbTidakAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan WHERE status='Tidak aktif'", connection);
             DataTable dt = new DataTable();
 

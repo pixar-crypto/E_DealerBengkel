@@ -98,7 +98,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
 
             try
             {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                 sup = cbSupplier.SelectedValue.ToString();
 
@@ -221,7 +221,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         {
             string query = "select * from tKaryawan where username='" + user + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -256,7 +256,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
                 {
                     string cari = TxtCariBarang.Text;
 
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                     SqlDataAdapter adapt = new SqlDataAdapter(
                         "SELECT * FROM tKategoriBarangPenjualan WHERE id_jenisBarang='" + idKat + "'", connection);
 
@@ -285,7 +285,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
 
                 if (kategori == "MBL")
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -312,7 +312,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
                 }
                 else if (kategori == "MTR")
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -339,7 +339,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
                 }
                 else if (kategori == "SCD")
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -376,7 +376,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             {
                 string query = "select * from tMobil where id_mobil='" + idKat + "'";
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand search = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -400,7 +400,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             {
                 string query = "select * from tMotor where id_motor='" + idKat + "'";
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand search = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -424,7 +424,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             {
                 string query = "select * from tSukucadang where id_sukucadang='" + idKat + "'";
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand search = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -460,7 +460,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             hargaJual = hargaJual.Replace(".", "");
             hargaJual = hargaJual.Replace("Rp ", "");
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -506,7 +506,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             CariMotor(idMotor);
             hargaJual = hargaJual.Replace(".", "");
             hargaJual = hargaJual.Replace("Rp ", "");
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -551,7 +551,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             CariSukuCadang(idSukuCadang);
             hargaJual = hargaJual.Replace(".", "");
             hargaJual = hargaJual.Replace("Rp ", "");
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -588,7 +588,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         {
             string query = "select * from tMobil where id_mobil='" + idMobil + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -610,7 +610,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         {
             string query = "select * from tMotor where id_motor='" + idMotor + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -632,7 +632,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
         {
             string query = "select * from tSukucadang where id_sukucadang='" + idSukuCadang + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -692,7 +692,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             {
                 string cari = TxtCariBarang.Text;
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlDataAdapter adapt = new SqlDataAdapter(
                     "SELECT id_mobil AS ID, merek_mobil AS Merek, warna AS Warna, jenis_mobil AS Jenis, harga_beli AS HargaBeli, harga_jual AS HargaJual, jumlah AS Jumlah, id_supplier AS Supplier FROM tMobil "
                     + "WHERE merek_mobil='" + cari + "'"
@@ -752,7 +752,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -787,7 +787,7 @@ namespace E_DealerBengkel.Transaksi.Pembelian
                 string jumlah = dgvKeranjang.Rows[i].Cells[5].Value.ToString();
                 string sup = dgvKeranjang.Rows[i].Cells[6].Value.ToString();
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                 harga = harga.Replace(".", "");
                 harga = harga.Replace("Rp ", "");

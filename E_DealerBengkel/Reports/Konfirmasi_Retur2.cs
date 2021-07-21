@@ -124,8 +124,8 @@ namespace E_DealerBengkel.Reports
                 SqlCommand insert = new SqlCommand("[sp_UpdateRetur]", connection);
                 insert.CommandType = CommandType.StoredProcedure;
 
-                string setuju = "Disetujui";
-                insert.Parameters.AddWithValue("status", setuju);
+                string ditolak = "Ditolak";
+                insert.Parameters.AddWithValue("status", ditolak);
                 insert.Parameters.AddWithValue("id_retur", txtIDRetur.Text);
 
                 try

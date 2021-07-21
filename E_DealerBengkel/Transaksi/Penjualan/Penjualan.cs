@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 using E_DealerBengkel.Transaksi.Pembelian;
+using System.Configuration;
 
 namespace E_DealerBengkel.Transaksi.Penjualan
 {
@@ -102,7 +103,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
 
             try
             {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlDataAdapter adapt = new SqlDataAdapter("SELECT " + kolom + "FROM " + jenis + " WHERE status='Tersedia'", connection);
                 DataTable dt = new DataTable();
 
@@ -235,7 +236,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         {
             string query = "select * from tKaryawan where username='" + user + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -333,7 +334,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
                 {
                     string cari = TxtCariBarang.Text;
 
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                     SqlDataAdapter adapt = new SqlDataAdapter(
                         "SELECT * FROM tKategoriBarangPenjualan WHERE id_jenisBarang='" + idKat + "'", connection);
 
@@ -362,7 +363,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
 
                 if (kategori == "MBL")
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -389,7 +390,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
                 }
                 else if (kategori == "MTR")
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -416,7 +417,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
                 }
                 else if (kategori == "SCD")
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -460,7 +461,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         {
             string query = "select * from tMember where id_member='" + txtIdCus.Text + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -485,7 +486,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             {
                 string cari = TxtCariBarang.Text;
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlDataAdapter adapt = new SqlDataAdapter(
                     "SELECT id_mobil AS ID, merek_mobil AS Merek, warna AS Warna, jenis_mobil AS Jenis, harga_jual AS Harga, jumlah AS Jumlah, id_supplier AS Supplier FROM tMobil "
                     + "WHERE merek_mobil='" + cari + "'"
@@ -597,7 +598,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             CariId(user);
             string idMember = txtIdCus.Text;
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -632,7 +633,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
                 Harga = dgvKeranjang.Rows[i].Cells[4].Value.ToString();
                 Jumlah = dgvKeranjang.Rows[i].Cells[5].Value.ToString();
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                 connection.Open();
 
@@ -667,7 +668,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             {
                 string query = "select * from tMobil where id_mobil='" + idKat + "'";
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand search = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -691,7 +692,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             {
                 string query = "select * from tMotor where id_motor='" + idKat + "'";
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand search = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -715,7 +716,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             {
                 string query = "select * from tSukucadang where id_sukucadang='" + idKat + "'";
 
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlCommand search = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -749,7 +750,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             CariMobil(idMobil);
             hargaJual = hargaJual.Replace(".", "");
             hargaJual = hargaJual.Replace("Rp ", "");
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -792,7 +793,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             CariMotor(idMotor);
             hargaJual = hargaJual.Replace(".", "");
             hargaJual = hargaJual.Replace("Rp ", "");
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -835,7 +836,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             CariSpare(idSpare);
             hargaJual = hargaJual.Replace(".", "");
             hargaJual = hargaJual.Replace("Rp ", "");
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -870,7 +871,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         {
             string query = "select * from tMobil where id_mobil='" + idMobil + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -892,7 +893,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         {
             string query = "select * from tMotor where id_motor='" + idMotor + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -914,7 +915,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
         {
             string query = "select * from tSukucadang where id_sukucadang='" + idSpare + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();

@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
+using System.Configuration;
 
 namespace E_DealerBengkel.Transaksi.Services
 {
@@ -94,7 +95,7 @@ namespace E_DealerBengkel.Transaksi.Services
         {
             string query = "select * from tMember where id_member='" + TxtIdCus.Text + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -157,7 +158,7 @@ namespace E_DealerBengkel.Transaksi.Services
 
         private void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tService WHERE status='Tersedia'", connection);
             DataTable dt = new DataTable();
 
@@ -310,7 +311,7 @@ namespace E_DealerBengkel.Transaksi.Services
                 jenis = "Motor";
             }
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
             connection.Open();
 
@@ -342,7 +343,7 @@ namespace E_DealerBengkel.Transaksi.Services
         {
             string query = "select * from tKaryawan where username='" + user + "'";
 
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlCommand search = new SqlCommand(query, connection);
 
             connection.Open();
@@ -370,7 +371,7 @@ namespace E_DealerBengkel.Transaksi.Services
                     idSer = dgvService.Rows[i].Cells[1].Value.ToString();
                     harga = dgvService.Rows[i].Cells[3].Value.ToString();
 
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 

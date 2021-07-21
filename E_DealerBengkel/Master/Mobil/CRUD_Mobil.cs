@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -146,7 +147,7 @@ namespace E_DealerBengkel.Master.Mobil
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
                 "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier", connection);
             DataTable dt = new DataTable();
@@ -245,7 +246,7 @@ namespace E_DealerBengkel.Master.Mobil
                                          MessageBoxIcon.Question);
                 if (hasil == DialogResult.Yes)
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -293,7 +294,7 @@ namespace E_DealerBengkel.Master.Mobil
                     string query = "select top 1 id_mobil from tMobil order by id_mobil desc";
                     String id = Program.autogenerateID("MBL-", query);
 
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -341,7 +342,7 @@ namespace E_DealerBengkel.Master.Mobil
                 }
                 else
                 {
-                    SqlConnection connection = new SqlConnection(Program.koneksi());
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                     connection.Open();
 
@@ -389,7 +390,7 @@ namespace E_DealerBengkel.Master.Mobil
             }
             else
             {
-                SqlConnection connection = new SqlConnection(Program.koneksi());
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
                 SqlDataAdapter adapt = new SqlDataAdapter("select * from tMobil where merek_mobil like '" + TxtMerek.Text + "%'", connection);
                 DataTable dt = new DataTable();
 
@@ -489,7 +490,7 @@ namespace E_DealerBengkel.Master.Mobil
         private void rbTersedia_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
                 "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tersedia'", connection);
             DataTable dt = new DataTable();
@@ -547,7 +548,7 @@ namespace E_DealerBengkel.Master.Mobil
         private void rbTidakTersedia_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
                 "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tidak Tersedia'", connection);
             DataTable dt = new DataTable();

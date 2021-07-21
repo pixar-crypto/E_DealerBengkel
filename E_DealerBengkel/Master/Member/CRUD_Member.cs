@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -141,7 +142,7 @@ namespace E_DealerBengkel.Master.Member
 
         public void RefreshDg()
         {
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("select * from tMember", connection);
             DataTable dt = new DataTable();
 
@@ -238,7 +239,7 @@ namespace E_DealerBengkel.Master.Member
                                       MessageBoxIcon.Question);
                     if (hasil == DialogResult.Yes)
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -305,7 +306,7 @@ namespace E_DealerBengkel.Master.Member
 
                     if (validateEmail == true)
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -368,7 +369,7 @@ namespace E_DealerBengkel.Master.Member
 
                     if (validateEmail == true)
                     {
-                        SqlConnection connection = new SqlConnection(Program.koneksi());
+                        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 
                         connection.Open();
 
@@ -450,7 +451,7 @@ namespace E_DealerBengkel.Master.Member
         private void rbAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMember WHERE status='Aktif'", connection);
             DataTable dt = new DataTable();
 
@@ -502,7 +503,7 @@ namespace E_DealerBengkel.Master.Member
         private void rbTidakAktif_CheckedChanged(object sender, EventArgs e)
         {
             Clear();
-            SqlConnection connection = new SqlConnection(Program.koneksi());
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMember WHERE status='Tidak aktif'", connection);
             DataTable dt = new DataTable();
 
