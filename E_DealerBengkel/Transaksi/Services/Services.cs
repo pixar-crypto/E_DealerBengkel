@@ -296,8 +296,7 @@ namespace E_DealerBengkel.Transaksi.Services
 
         private void isiTServis()
         {
-            string query = "select top 1 id_transaksi from tTransaksiService order by id_transaksi desc";
-            idTran = Program.autogenerateID("TSR-", query);
+            idTran = Program.autogenerateID("TSR-", "sp_IdTrsService");
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);
             string waktu = DateTime.Now.ToString("yyyy-MM-dd");

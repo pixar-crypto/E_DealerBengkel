@@ -591,8 +591,7 @@ namespace E_DealerBengkel.Transaksi.Penjualan
 
         public void isiTPenjualan()
         {
-            string query = "select top 1 id_penjualan from tPenjualan order by id_penjualan desc";
-            idTran = Program.autogenerateID("TJB-", query);
+            idTran = Program.autogenerateID("TJB-", "sp_IdPenjualan");
             string waktu = DateTime.Now.ToString("yyyy-MM-dd");
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);

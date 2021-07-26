@@ -214,8 +214,7 @@ namespace E_DealerBengkel.Transaksi.Retur
             {
 
                 String id, status;
-                string query = "SELECT TOP 1 id_retur FROM tReturPembelian ORDER BY id_retur DESC";
-                id = Program.autogenerateID("RTR-", query);
+                id = Program.autogenerateID("RTR-", "sp_IdRetur");
                 status = "Menunggu";
 
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
