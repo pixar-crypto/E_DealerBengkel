@@ -398,8 +398,7 @@ namespace E_DealerBengkel.Master.Employee
                                     {
                                         if (TxtPassword.Text == TxtPassword2.Text)
                                         {
-                                            string query = "select top 1 id_karyawan from tKaryawan order by id_karyawan desc";
-                                            id = Program.autogenerateID("KRY-", query);
+                                            id = Program.autogenerateID("KRY-", "sp_IdKaryawan");
 
                                             bool validateEmail = ValidateEmail();
 
@@ -467,8 +466,7 @@ namespace E_DealerBengkel.Master.Employee
                     }
                     else
                     {
-                        string query = "select top 1 id_karyawan from tKaryawan order by id_karyawan desc";
-                        id = Program.autogenerateID("KRY-", query);
+                        id = Program.autogenerateID("KRY-", "sp_IdKaryawan");
 
                         bool validateEmail = ValidateEmail();
 

@@ -290,8 +290,7 @@ namespace E_DealerBengkel.Master.Motor
                 }
                 else
                 {
-                    string query = "select top 1 id_motor from tMotor order by id_motor desc";
-                    String id = Program.autogenerateID("MTR-", query);
+                    String id = Program.autogenerateID("MTR-", "sp_IdMotor");
 
                     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 

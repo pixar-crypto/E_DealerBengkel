@@ -239,8 +239,7 @@ namespace E_DealerBengkel.Master.Posisi
                                MessageBoxIcon.Question);
                     if (hasil == DialogResult.Yes)
                     {
-                        string query = "select top 1 id_posisi from tPosisi order by id_posisi desc";
-                        String id = Program.autogenerateID("ROLE-", query);
+                        String id = Program.autogenerateID("ROLE-", "sp_IdPosisi");
 
                         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 

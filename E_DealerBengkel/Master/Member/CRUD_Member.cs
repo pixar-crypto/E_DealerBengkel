@@ -299,8 +299,7 @@ namespace E_DealerBengkel.Master.Member
                 }
                 else
                 {
-                    string query = "select top 1 id_member from tMember order by id_member desc";
-                    id = Program.autogenerateID("MBR-", query);
+                    id = Program.autogenerateID("MBR-", "sp_IdMember");
 
                     bool validateEmail = ValidateEmail();
 

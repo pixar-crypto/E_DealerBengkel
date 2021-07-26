@@ -221,8 +221,7 @@ namespace E_DealerBengkel.Master.Services
                 }
                 else
                 {
-                    string query = "select top 1 id_service from tService order by id_service desc";
-                    String id = Program.autogenerateID("SRV-", query);
+                    String id = Program.autogenerateID("SRV-", "sp_IdService");
 
                     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 

@@ -264,8 +264,7 @@ namespace E_DealerBengkel.Master.SukuCadang
                 }
                 else
                 {
-                    string query = "select top 1 id_sukucadang from tSukucadang order by id_sukucadang desc";
-                    id = Program.autogenerateID("SCD-", query);
+                    id = Program.autogenerateID("SCD-", "sp_IdSuku");
 
                     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 

@@ -291,8 +291,7 @@ namespace E_DealerBengkel.Master.Mobil
                 }
                 else
                 {
-                    string query = "select top 1 id_mobil from tMobil order by id_mobil desc";
-                    String id = Program.autogenerateID("MBL-", query);
+                    String id = Program.autogenerateID("MBL-", "sp_IdMobil");
 
                     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
 

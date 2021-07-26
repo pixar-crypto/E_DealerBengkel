@@ -156,7 +156,7 @@ namespace E_DealerBengkel
                     Thread.CurrentPrincipal = myPrincipal;
                     //-----------------------
 
-                    if (role == "ROLE-03" && status == "Aktif")
+                    if (role == "ROLE-0003" && status == "Aktif")
                     {
                         MessageBox.Show("Login berhasil!", "Pemberitahuan!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -164,7 +164,7 @@ namespace E_DealerBengkel
                         adm.Show();
                         this.Hide();
                     }
-                    else if (role == "ROLE-02" && status == "Aktif")
+                    else if (role == "ROLE-0002" && status == "Aktif")
                     {
                         MessageBox.Show("Login berhasil!", "Pemberitahuan!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -172,7 +172,7 @@ namespace E_DealerBengkel
                         kt.Show();
                         this.Hide();
                     }
-                    else if (role == "ROLE-01" && status == "Aktif")
+                    else if (role == "ROLE-0001" && status == "Aktif")
                     {
                         MessageBox.Show("Login berhasil!", "Pemberitahuan!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);

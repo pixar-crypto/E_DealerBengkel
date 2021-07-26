@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
@@ -37,35 +39,51 @@ namespace E_DealerBengkel
             return int.Parse(Regex.Replace(rupiah, @",.*|\D", ""));
         }
 
-        public static string autogenerateID(string firstText, string query)
+        public static string autogenerateID(string firstText, string sp)
         {
-            SqlCommand sqlCmd;
-            SqlConnection sqlCon;
             string result = "";
+            SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
+            SqlCommand sqlCmd;
             int num = 0;
             try
             {
-                sqlCon = new SqlConnection(Program.koneksi());
+                sqlCmd = new SqlCommand(sp, sqlCon);
+                sqlCmd.CommandType = CommandType.StoredProcedure;
                 sqlCon.Open();
-                sqlCmd = new SqlCommand(query, sqlCon);
-                SqlDataReader reader = sqlCmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    string last = reader[0].ToString();
-                    num = Convert.ToInt32(last.Remove(0, firstText.Length)) + 1;
-                }
-                else
+                SqlDataReader dr = sqlCmd.ExecuteReader();
+                dr.Read();
+                if (dr["idReturn"].ToString() == "")
                 {
                     num = 1;
                 }
+                else
+                {
+                    num = Int32.Parse(dr["idReturn"].ToString());
+                }
+                if (num < 10000)
+                {
+                    result = firstText + "000" + num;
+                }
+                else if (num < 100000)
+                {
+                    result = firstText + "00" + num;
+                }
+                else if (num < 1000000)
+                {
+                    result = firstText + "0" + num;
+                }
+                else
+                {
+                    result = firstText + num;
+                }
+                dr.Close();
                 sqlCon.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Exception caught: {0}", ex);
             }
 
-            result = firstText + num.ToString().PadLeft(2, '0');
             return result;
         }
     }

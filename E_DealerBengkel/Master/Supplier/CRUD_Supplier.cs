@@ -260,8 +260,7 @@ namespace E_DealerBengkel.Master.Supplier
                 }
                 else
                 {
-                    string query = "select top 1 id_supplier from tSupplier order by id_supplier desc";
-                    id = Program.autogenerateID("SUP-", query);
+                    id = Program.autogenerateID("SUP-", "sp_IdSupplier");
 
                     bool validateEmail = ValidateEmail();
 
