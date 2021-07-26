@@ -278,6 +278,60 @@ namespace E_DealerBengkel.Master.Member
             }
         }
 
+        class IdOtomatis
+        {
+            string result;
+            public void setID(string firstText, string sp)
+            {
+                SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
+                SqlCommand sqlCmd;
+                int num = 0;
+                try
+                {
+                    sqlCmd = new SqlCommand(sp, sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCon.Open();
+                    SqlDataReader dr = sqlCmd.ExecuteReader();
+                    dr.Read();
+                    if (dr["idReturn"].ToString() == "")
+                    {
+                        num = 1;
+                    }
+                    else
+                    {
+                        num = Int32.Parse(dr["idReturn"].ToString());
+                    }
+                    if (num < 10)
+                    {
+                        result = firstText + "000" + num;
+                    }
+                    else if (num < 100)
+                    {
+                        result = firstText + "00" + num;
+                    }
+                    else if (num < 1000)
+                    {
+                        result = firstText + "0" + num;
+                    }
+                    else
+                    {
+                        result = firstText + num;
+                    }
+                    dr.Close();
+                    sqlCon.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception caught: {0}", ex);
+                }
+            }
+
+            public string getID()
+            {
+                return result;
+            }
+        }
+
         private void BtnSimpan_Click(object sender, EventArgs e)
         {
             if (lbJudul.Text == "TAMBAH MEMBER")
@@ -299,7 +353,11 @@ namespace E_DealerBengkel.Master.Member
                 }
                 else
                 {
-                    id = Program.autogenerateID("MBR-", "sp_IdMember");
+                    //id = Program.autogenerateID("MBR-", "sp_IdMember");
+                    IdOtomatis a = new IdOtomatis();
+                    string sp = "sp_IdMember";
+                    a.setID("MBR-", sp);
+                    string id = a.getID();
 
                     bool validateEmail = ValidateEmail();
 
