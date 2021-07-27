@@ -143,7 +143,9 @@ namespace E_DealerBengkel.Master.Member
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tMember", connection);
+            SqlCommand view = new SqlCommand("sp_dgvMember", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -509,7 +511,9 @@ namespace E_DealerBengkel.Master.Member
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMember WHERE status='Aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_MemberAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -561,7 +565,9 @@ namespace E_DealerBengkel.Master.Member
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tMember WHERE status='Tidak aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_MemberTidakAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();

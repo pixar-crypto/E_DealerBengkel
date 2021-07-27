@@ -144,8 +144,9 @@ namespace E_DealerBengkel.Master.SukuCadang
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
-                "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier", connection);
+            SqlCommand view = new SqlCommand("sp_dgvSuku", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -459,8 +460,9 @@ namespace E_DealerBengkel.Master.SukuCadang
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
-                "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier WHERE a.status='Tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_SukuTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -522,8 +524,9 @@ namespace E_DealerBengkel.Master.SukuCadang
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select a.id_sukucadang, a.merek_sukucadang, a.tipe, a.jenis_sukucadang, a.harga_beli, a.harga_jual, a.jumlah," +
-                "s.nama_supplier, a.status from tSukucadang AS a INNER JOIN tSupplier s on a.id_supplier = s.id_supplier WHERE a.status='Tidak tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_SukuTidakTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();

@@ -135,68 +135,15 @@ namespace E_DealerBengkel.Master.Employee
 
         private void txtCari_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH KARYAWAN")
-            {
 
-            }
-            else
-            {
-                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-                SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan where nama_karyawan like '" + TxtNamaEmp.Text + "%'", connection);
-                DataTable dt = new DataTable();
-
-                connection.Open();
-                adapt.Fill(dt);
-
-                DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
-                col.SetOrdinal(0);
-                int a = 1;
-                foreach (DataRow r in dt.Rows)
-                {
-                    r["No"] = a;
-                    a++;
-                }
-
-                dgvKaryawan.DataSource = dt;
-                dgvKaryawan.Columns[1].HeaderText = "ID";
-                dgvKaryawan.Columns[2].HeaderText = "Nama Karyawan";
-                dgvKaryawan.Columns[3].HeaderText = "Alamat";
-                dgvKaryawan.Columns[4].HeaderText = "Email";
-                dgvKaryawan.Columns[5].HeaderText = "No Telepon";
-                dgvKaryawan.Columns[6].HeaderText = "Posisi";
-                dgvKaryawan.Columns[7].HeaderText = "Username";
-                dgvKaryawan.Columns[8].HeaderText = "Status";
-
-
-                this.dgvKaryawan.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvKaryawan.Columns["no_telepon"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-                connection.Close();
-
-                dgvKaryawan.BorderStyle = BorderStyle.None;
-                dgvKaryawan.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-                dgvKaryawan.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dgvKaryawan.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-                dgvKaryawan.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-                dgvKaryawan.BackgroundColor = Color.White;
-
-                foreach (DataGridViewColumn colm in dgvKaryawan.Columns)
-                {
-                    colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                }
-                dgvKaryawan.EnableHeadersVisualStyles = false;
-                dgvKaryawan.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-                dgvKaryawan.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-                dgvKaryawan.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            }
         }
 
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT k.id_karyawan, k.nama_karyawan, k.alamat, k.email, k.no_telepon, p.deskripsi, k.username, k.status FROM tKaryawan AS k" +
-                " INNER JOIN tPosisi p on k.id_posisi = p.id_posisi", connection);
+            SqlCommand view = new SqlCommand("sp_dgvKaryawan", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -969,10 +916,11 @@ namespace E_DealerBengkel.Master.Employee
 
         private void CariKar(string id)
         {
-            string query = "select * from tKaryawan where id_karyawan='" + id + "'";
-
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlCommand search = new SqlCommand(query, connection);
+            SqlCommand search = new SqlCommand("sp_CariKaryawan", connection);
+            search.CommandType = CommandType.StoredProcedure;
+
+            search.Parameters.AddWithValue("id_karyawan", id);
 
             connection.Open();
 
@@ -993,7 +941,9 @@ namespace E_DealerBengkel.Master.Employee
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan WHERE status='Aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_KaryawanAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -1046,7 +996,9 @@ namespace E_DealerBengkel.Master.Employee
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT id_karyawan, nama_karyawan, alamat, email, no_telepon, id_posisi, username, status FROM tKaryawan WHERE status='Tidak aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_KaryawanTidakAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();

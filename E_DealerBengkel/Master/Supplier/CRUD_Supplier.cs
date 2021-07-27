@@ -121,7 +121,9 @@ namespace E_DealerBengkel.Master.Supplier
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tSupplier", connection);
+            SqlCommand view = new SqlCommand("sp_dgvSup", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -419,58 +421,7 @@ namespace E_DealerBengkel.Master.Supplier
 
         private void TxtCompName_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH SUPPLIER")
-            {
 
-            }
-            else
-            {
-                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-                SqlDataAdapter adapt = new SqlDataAdapter("select * from tSupplier where nama_supplier like '" + TxtCompName.Text + "%'", connection);
-                DataTable dt = new DataTable();
-
-                connection.Open();
-                adapt.Fill(dt);
-
-                DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
-                col.SetOrdinal(0);
-                int a = 1;
-                foreach (DataRow r in dt.Rows)
-                {
-                    r["No"] = a;
-                    a++;
-                }
-
-                dgvSupplier.DataSource = dt;
-                dgvSupplier.Columns[1].HeaderText = "ID";
-                dgvSupplier.Columns[2].HeaderText = "Nama Supplier";
-                dgvSupplier.Columns[3].HeaderText = "Alamat";
-                dgvSupplier.Columns[4].HeaderText = "Email";
-                dgvSupplier.Columns[5].HeaderText = "No Telepon";
-                dgvSupplier.Columns[6].HeaderText = "Status";
-
-                foreach (DataGridViewColumn colm in dgvSupplier.Columns)
-                {
-                    colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                }
-
-                this.dgvSupplier.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvSupplier.Columns["no_telepon"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                connection.Close();
-
-                dgvSupplier.BorderStyle = BorderStyle.None;
-                dgvSupplier.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-                dgvSupplier.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dgvSupplier.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-                dgvSupplier.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-                dgvSupplier.BackgroundColor = Color.White;
-
-                dgvSupplier.EnableHeadersVisualStyles = false;
-                dgvSupplier.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-                dgvSupplier.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-                dgvSupplier.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            }
         }
 
         private void dgvSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -509,7 +460,9 @@ namespace E_DealerBengkel.Master.Supplier
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tSupplier WHERE status='Aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_SupAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -559,7 +512,9 @@ namespace E_DealerBengkel.Master.Supplier
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tSupplier WHERE status='Tidak Aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_SupTidakAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();

@@ -148,8 +148,9 @@ namespace E_DealerBengkel.Master.Mobil
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
-                "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier", connection);
+            SqlCommand view = new SqlCommand("sp_dgvMobil", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -441,65 +442,7 @@ namespace E_DealerBengkel.Master.Mobil
 
         private void TxtMerek_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH MOBIL")
-            {
 
-            }
-            else
-            {
-                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-                SqlDataAdapter adapt = new SqlDataAdapter("select * from tMobil where merek_mobil like '" + TxtMerek.Text + "%'", connection);
-                DataTable dt = new DataTable();
-
-                connection.Open();
-                adapt.Fill(dt);
-
-                DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
-                col.SetOrdinal(0);
-                int a = 1;
-                foreach (DataRow r in dt.Rows)
-                {
-                    r["No"] = a;
-                    a++;
-                }
-
-                dgvMobil.DataSource = dt;
-                dgvMobil.Columns[1].HeaderText = "ID";
-                dgvMobil.Columns[2].HeaderText = "Merek";
-                dgvMobil.Columns[3].HeaderText = "Warna";
-                dgvMobil.Columns[4].HeaderText = "Jenis";
-                dgvMobil.Columns[5].HeaderText = "Harga Beli";
-                dgvMobil.Columns[6].HeaderText = "Harga Jual";
-                dgvMobil.Columns[7].HeaderText = "Jumlah";
-                dgvMobil.Columns[8].HeaderText = "Supplier";
-                dgvMobil.Columns[9].HeaderText = "Status";
-
-                foreach (DataGridViewColumn colm in dgvMobil.Columns)
-                {
-                    colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                }
-
-                this.dgvMobil.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvMobil.Columns["harga_beli"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                this.dgvMobil.Columns["harga_jual"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                this.dgvMobil.Columns["jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvMobil.Columns[5].DefaultCellStyle.Format = "Rp #,###.00";
-                dgvMobil.Columns[6].DefaultCellStyle.Format = "Rp #,###.00";
-                connection.Close();
-
-                dgvMobil.BorderStyle = BorderStyle.None;
-                dgvMobil.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-                dgvMobil.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dgvMobil.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-                dgvMobil.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-                dgvMobil.BackgroundColor = Color.White;
-
-                dgvMobil.EnableHeadersVisualStyles = false;
-                dgvMobil.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-                dgvMobil.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-                dgvMobil.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            }
         }
 
         private void dgvMobil_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -548,8 +491,9 @@ namespace E_DealerBengkel.Master.Mobil
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
-                "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_MobilTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -606,8 +550,9 @@ namespace E_DealerBengkel.Master.Mobil
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_mobil, m.merek_mobil, m.warna, m.jenis_mobil, m.harga_beli, m.harga_jual, m.jumlah, " +
-                "s.nama_supplier, m.status from tMobil AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tidak Tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_MobilTidakTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();

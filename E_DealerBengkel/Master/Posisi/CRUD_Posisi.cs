@@ -106,7 +106,9 @@ namespace E_DealerBengkel.Master.Posisi
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
             connection.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tPosisi", connection);
+            SqlCommand view = new SqlCommand("sp_dgvPosisi", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
 
             DataTable dt = new DataTable();
             adapt.Fill(dt);
@@ -391,65 +393,7 @@ namespace E_DealerBengkel.Master.Posisi
 
         private void TxtDeskripsi_TextChanged(object sender, EventArgs e)
         {
-            if (lbJudul.Text == "TAMBAH POSISI")
-            {
 
-            }
-            else
-            {
-                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-                SqlConnection con;
-                SqlDataAdapter adapt;
-                DataTable dt;
-
-                connection.Open();
-                adapt = new SqlDataAdapter("select * from tPosisi where deskripsi like '" + TxtDeskripsi.Text + "%'", connection);
-                dt = new DataTable();
-                adapt.Fill(dt);
-
-                DataColumn col = dt.Columns.Add("No", typeof(System.Int32));
-                col.SetOrdinal(0);
-                int a = 1;
-                foreach (DataRow r in dt.Rows)
-                {
-                    r["No"] = a;
-                    a++;
-                }
-
-                dgvPosisi.DataSource = dt;
-                dgvPosisi.Columns[1].HeaderText = "ID";
-                dgvPosisi.Columns[2].HeaderText = "Jabatan";
-                dgvPosisi.Columns[3].HeaderText = "Gaji";
-                dgvPosisi.Columns[4].HeaderText = "Status";
-
-                foreach (DataGridViewColumn colm in dgvPosisi.Columns)
-                {
-                    colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                }
-
-                this.dgvPosisi.Columns["No"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvPosisi.Columns["Gaji"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvPosisi.Columns[3].DefaultCellStyle.Format = "Rp #,###.00";
-                connection.Close();
-
-                dgvPosisi.BorderStyle = BorderStyle.None;
-                dgvPosisi.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-                dgvPosisi.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-                dgvPosisi.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-                dgvPosisi.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-                dgvPosisi.BackgroundColor = Color.White;
-
-                foreach (DataGridViewColumn colm in dgvPosisi.Columns)
-                {
-                    colm.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    colm.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
-                }
-                dgvPosisi.EnableHeadersVisualStyles = false;
-                dgvPosisi.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-                dgvPosisi.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-                dgvPosisi.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            }
         }
 
         private void dgvPosisi_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -486,7 +430,9 @@ namespace E_DealerBengkel.Master.Posisi
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tPosisi WHERE status='Aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_PosisiAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
             adapt.Fill(dt);
 
@@ -538,7 +484,9 @@ namespace E_DealerBengkel.Master.Posisi
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tPosisi WHERE status='Tidak aktif'", connection);
+            SqlCommand view = new SqlCommand("sp_PosisiTidakAktif", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
             adapt.Fill(dt);
 

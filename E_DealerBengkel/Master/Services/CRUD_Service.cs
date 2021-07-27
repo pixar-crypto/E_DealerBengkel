@@ -108,7 +108,9 @@ namespace E_DealerBengkel.Master.Services
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select * from tService", connection);
+            SqlCommand view = new SqlCommand("sp_dgvService", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -396,7 +398,9 @@ namespace E_DealerBengkel.Master.Services
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tService WHERE status='Tidak tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_ServiceTidakTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             adapt.Fill(dt);
@@ -469,7 +473,9 @@ namespace E_DealerBengkel.Master.Services
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM tService WHERE status='Tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_ServiceTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             adapt.Fill(dt);

@@ -148,8 +148,9 @@ namespace E_DealerBengkel.Master.Motor
         public void RefreshDg()
         {
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
-                "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier", connection);
+            SqlCommand view = new SqlCommand("sp_dgvMotor", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -489,8 +490,9 @@ namespace E_DealerBengkel.Master.Motor
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
-                "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_MotorTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
@@ -547,8 +549,9 @@ namespace E_DealerBengkel.Master.Motor
         {
             Clear();
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
-            SqlDataAdapter adapt = new SqlDataAdapter("select m.id_motor, m.merek_motor, m.warna, m.jenis_motor, m.harga_beli, m.harga_jual, m.jumlah," +
-                "s.nama_supplier, m.status from tMotor AS m INNER JOIN tSupplier s on m.id_supplier = s.id_supplier WHERE m.status='Tidak Tersedia'", connection);
+            SqlCommand view = new SqlCommand("sp_MotorTidakTersedia", connection);
+            view.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adapt = new SqlDataAdapter(view);
             DataTable dt = new DataTable();
 
             connection.Open();
