@@ -518,11 +518,12 @@ namespace E_DealerBengkel.Transaksi.Penjualan
             int cek;
 
             int n = dgvKeranjang.CurrentCell.RowIndex;
+            int a = dgvStok.CurrentCell.RowIndex;
             jumlah = int.Parse(dgvKeranjang.Rows[n].Cells[5].Value.ToString());
 
             jumlah = jumlah + 1;
 
-            cek = int.Parse(dgvStok.Rows[n].Cells[5].Value.ToString()) - jumlah;
+            cek = int.Parse(dgvStok.Rows[a].Cells[5].Value.ToString()) - jumlah;
             if (cek < 0)
             {
                 MessageBox.Show("Maaf, Stok Tidak Cukup", "Warning!",
