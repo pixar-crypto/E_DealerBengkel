@@ -744,9 +744,68 @@ namespace E_DealerBengkel.Transaksi.Pembelian
             }
         }
 
+        class IdOtomatis
+        {
+            string result;
+            public void setID(string firstText, string sp)
+            {
+                SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString);
+                SqlCommand sqlCmd;
+                int num = 0;
+                try
+                {
+                    sqlCmd = new SqlCommand(sp, sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCon.Open();
+                    SqlDataReader dr = sqlCmd.ExecuteReader();
+                    dr.Read();
+                    if (dr["idReturn"].ToString() == "")
+                    {
+                        num = 1;
+                    }
+                    else
+                    {
+                        num = Int32.Parse(dr["idReturn"].ToString());
+                    }
+                    if (num < 10)
+                    {
+                        result = firstText + "000" + num;
+                    }
+                    else if (num < 100)
+                    {
+                        result = firstText + "00" + num;
+                    }
+                    else if (num < 1000)
+                    {
+                        result = firstText + "0" + num;
+                    }
+                    else
+                    {
+                        result = firstText + num;
+                    }
+                    dr.Close();
+                    sqlCon.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception caught: {0}", ex);
+                }
+            }
+
+            public string getID()
+            {
+                return result;
+            }
+        }
+
         private void isiTPembelian()
         {
-            idTran = Program.autogenerateID("TBB-", "sp_IdPembelian");
+            //idTran = Program.autogenerateID("TBB-", "sp_IdPembelian");
+            IdOtomatis a = new IdOtomatis();
+            string sp = "sp_IdPembelian";
+            a.setID("TBB-", sp);
+            idTran = a.getID();
+
             string waktu = DateTime.Now.ToString("yyyy-MM-dd");
             user = lbUser.Text.Replace("Hallo, kasir ", "");
             CariId(user);
