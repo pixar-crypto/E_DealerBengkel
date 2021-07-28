@@ -401,7 +401,7 @@
             // BtnClear
             // 
             this.BtnClear.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnClear.BackColor = System.Drawing.Color.DodgerBlue;
             this.BtnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnClear.BorderRadius = 0;
             this.BtnClear.ButtonText = "BATAL";
@@ -544,7 +544,7 @@
             // BtnCari
             // 
             this.BtnCari.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.BtnCari.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnCari.BackColor = System.Drawing.Color.CadetBlue;
             this.BtnCari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnCari.BorderRadius = 0;
             this.BtnCari.ButtonText = "CARI";

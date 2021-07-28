@@ -36,6 +36,7 @@
             this.BtnRetur = new System.Windows.Forms.Button();
             this.BtnPenjualan = new System.Windows.Forms.Button();
             this.BtnPembelian = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMini = new System.Windows.Forms.Button();
@@ -71,8 +72,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,7 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -197,6 +197,17 @@
             this.BtnPembelian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnPembelian.UseVisualStyleBackColor = true;
             this.BtnPembelian.Click += new System.EventHandler(this.BtnPembelian_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
             // 
             // panel12
             // 
@@ -376,7 +387,7 @@
             // BtnClear
             // 
             this.BtnClear.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.BtnClear.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnClear.BackColor = System.Drawing.Color.DodgerBlue;
             this.BtnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnClear.BorderRadius = 0;
             this.BtnClear.ButtonText = "BATAL";
@@ -397,7 +408,7 @@
             this.BtnClear.Location = new System.Drawing.Point(319, 383);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.BtnClear.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.BtnClear.OnHovercolor = System.Drawing.Color.LightSlateGray;
             this.BtnClear.OnHoverTextColor = System.Drawing.Color.White;
             this.BtnClear.selected = false;
@@ -447,7 +458,7 @@
             // btnCariIDtransaksi
             // 
             this.btnCariIDtransaksi.Activecolor = System.Drawing.Color.LightSlateGray;
-            this.btnCariIDtransaksi.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCariIDtransaksi.BackColor = System.Drawing.Color.CadetBlue;
             this.btnCariIDtransaksi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCariIDtransaksi.BorderRadius = 0;
             this.btnCariIDtransaksi.ButtonText = "CARI";
@@ -467,7 +478,7 @@
             this.btnCariIDtransaksi.IsTab = false;
             this.btnCariIDtransaksi.Location = new System.Drawing.Point(340, 48);
             this.btnCariIDtransaksi.Name = "btnCariIDtransaksi";
-            this.btnCariIDtransaksi.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btnCariIDtransaksi.Normalcolor = System.Drawing.Color.CadetBlue;
             this.btnCariIDtransaksi.OnHovercolor = System.Drawing.Color.LightSlateGray;
             this.btnCariIDtransaksi.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCariIDtransaksi.selected = false;
@@ -651,17 +662,6 @@
             this.label13.TabIndex = 139;
             this.label13.Text = "RETUR PEMBELIAN";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
-            // 
             // Retur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,6 +684,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Retur_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -693,7 +694,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
